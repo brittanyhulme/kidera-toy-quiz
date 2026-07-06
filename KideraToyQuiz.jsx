@@ -218,7 +218,7 @@ const PRODUCTS = [
   },
   {
     id:"p23", name:"9 Pcs Rainbow Play Scarves", age_min:12, age_max:84,
-    dev_areas:["sensory","social","gross","language"], tags:["sensory","pretend-play","movement","open-ended"],
+    dev_areas:["sensory","social","gross","language"], tags:["sensory","pretend-play","movement","open-ended","music"],
     price:15, asin:"B0D9LZ3ZVQ", afflink:"https://www.amazon.com.au/dp/B0D9LZ3ZVQ/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/81kIJk6PcNL._AC_SX679_.jpg",
     note:"Silks for play are one of the most underrated toys. Peek-a-boo, dress-up, dancing, sensory exploration — endless uses.",
@@ -856,11 +856,11 @@ const PRODUCTS = [
     search:"bee crawl toy baby music lights crawling"
   },
   {
-    id:"p102", name:"VTech Ocean Buddies Animal Band", age_min:6, age_max:12,
-    dev_areas:["language","sensory","cognitive"], tags:["music","cause-effect","language","animals"],
-    price:28, asin:null, img:null,
-    note:"Lights, sounds, animal names, and music. Supports early language development and auditory exploration.",
-    search:"VTech Ocean Buddies Animal Band baby toy"
+    id:"p102", fam:"instrument-set", name:"Lehoo Castle Kids Musical Instruments Set", age_min:12, age_max:60,
+    dev_areas:["sensory","language","fine","social"], tags:["music","rhythm","cause-effect","instruments"],
+    price:28, asin:null, afflink:"https://link.amazon/B0f1MuLS1", img:"https://m.media-amazon.com/images/I/718lR46PMYL._AC_SL1500_.jpg",
+    note:"Shakers, tambourine, bells and more. Real instruments little hands can actually play. Banging out a rhythm builds coordination, listening skills and pure joy.",
+    search:"Lehoo Castle kids musical instruments set toddler"
   },
   {
     id:"p103", name:"Lamaze Fun with Colours Soft Book", age_min:0, age_max:12,
@@ -983,10 +983,10 @@ const PRODUCTS = [
     search:"doll pram nursery set accessories toddler pretend play"
   },
   {
-    id:"p120", name:"Step Stool for Kids", age_min:18, age_max:60,
+    id:"p120", name:"Learning Tower (Kitchen Helper)", age_min:18, age_max:60,
     dev_areas:["selfcare","gross","cognitive"], tags:["independence","selfcare","life-skills"],
-    price:20, asin:"B0DDPCSKKW", afflink:"https://www.amazon.com.au/dp/B0DDPCSKKW/?tag=brittanyot0c-22	https://m.media-amazon.com/images/I/61cCr2P-1bL._AC_SY879_.jpg", img:null,
-    note:"Reaching the sink, climbing onto the toilet, getting to the bench. A step stool is one of the best independence tools in the house.",
+    price:112, asin:"B0DDPCSKKW", afflink:"https://www.amazon.com.au/dp/B0DDPCSKKW/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/61cCr2P-1bL._AC_SL1500_.jpg",
+    note:"Brings them safely up to bench height so they can join in cooking, washing up and everyday life. Being part of the action alongside you is rich, hands-on learning.",
     search:"kids step stool toddler bathroom independence"
   },
   {
@@ -1514,28 +1514,28 @@ const PRODUCTS = [
     search:"6 Piece Large Dinosaur Figures Set kids"
   },
   {
-    id:"p195", name:"Melissa & Doug Pet Vet Play Set", age_min:36, age_max:96,
+    id:"p195", name:"Melissa & Doug Pet Vet Play Set", age_min:36, age_max:120,
     dev_areas:["social","language","cognitive"], tags:["animals","pretend-play","role-play","nurturing","empathy"], fam:"vet-set",
     price:52.9, asin:null, afflink:"https://link.amazon/B07fd56G4", img:"https://m.media-amazon.com/images/I/714NIH2CVFL._AC_SL1500_.jpg",
     note:"Check-ups, bandages and lots of caring talk. Vet play builds empathy and language, and it's a lovely bridge for kids who find doctor visits scary.",
     search:"Melissa & Doug Pet Vet Play Set kids"
   },
   {
-    id:"p196", name:"Critter Clinic Vet Set", age_min:24, age_max:72,
+    id:"p196", name:"Critter Clinic Vet Set", age_min:24, age_max:120,
     dev_areas:["fine","social","cognitive"], tags:["animals","pretend-play","fine-motor","problem-solving","nurturing"], fam:"vet-set",
     price:99.99, asin:null, afflink:"https://link.amazon/B07Uw326b", img:"https://m.media-amazon.com/images/I/81EJpdwEpDL._AC_SL1500_.jpg",
     note:"Six little doors, six keys, and patients waiting inside. The lock and key work is sneaky fine motor gold on top of the caring play.",
     search:"Critter Clinic Vet Set kids"
   },
   {
-    id:"p197", name:"Hape Puppy Care Clinic Vet Set", age_min:36, age_max:84,
+    id:"p197", name:"Hape Puppy Care Clinic Vet Set", age_min:36, age_max:120,
     dev_areas:["social","language","cognitive"], tags:["animals","pretend-play","role-play","nurturing","empathy"], fam:"vet-set",
     price:49.99, asin:null, afflink:"https://link.amazon/B0dV33seI", img:"https://m.media-amazon.com/images/I/81PQ6knFe0L._AC_SL1500_.jpg",
     note:"A beautiful wooden clinic for looking after a poorly puppy. Nurturing pretend play that builds empathy and sequencing.",
     search:"Hape Puppy Care Clinic Vet Set kids"
   },
   {
-    id:"p198", name:"Play-Doh Care 'n Carry Vet Set", age_min:36, age_max:84,
+    id:"p198", name:"Play-Doh Care 'n Carry Vet Set", age_min:36, age_max:120,
     dev_areas:["fine","sensory","social"], tags:["animals","pretend-play","sensory","tactile","nurturing"], fam:"vet-set",
     price:24.0, asin:null, afflink:"https://link.amazon/B0flFzxTj", img:"https://m.media-amazon.com/images/I/81dNr8hjbNL._AC_SL1500_.jpg",
     note:"Vet play plus playdough in one. Squeezing and rolling the dough strengthens little hands while the caring storylines run.",
@@ -1612,7 +1612,7 @@ const PRODUCTS = [
     search:"Galt Rainbow Lab kids"
   },
   {
-    id:"p209", name:"Learning Resources Code & Go Robot Mouse", age_min:48, age_max:96,
+    id:"p209", name:"Learning Resources Code & Go Robot Mouse", age_min:48, age_max:120,
     dev_areas:["cognitive","fine"], tags:["STEM","coding","problem-solving","sequencing","cause-effect"], fam:"coding-robot",
     price:60.6, asin:null, afflink:"https://link.amazon/B0b4cnk1L", img:"https://m.media-amazon.com/images/I/81SVjjQPCWL._AC_SL1500_.jpg",
     note:"Program the mouse to find the cheese, no screen needed. Screen-free coding that teaches sequencing and planning through play.",
@@ -1717,7 +1717,7 @@ const PRODUCTS = [
     search:"Taco Cat Goat Cheese Pizza kids"
   },
   {
-    id:"p224", name:"Pop Up Pirate", age_min:36, age_max:96,
+    id:"p224", name:"Pop Up Pirate", age_min:36, age_max:120,
     dev_areas:["fine","cognitive","social"], tags:["board-game","turn-taking","fine-motor","cause-effect","suspense"],
     price:14.95, asin:null, afflink:"https://link.amazon/B02qOPxKy", img:"https://m.media-amazon.com/images/I/812lSGtI33L._AC_SL1500_.jpg",
     note:"Slide the swords in and wait for the pirate to pop. Turn-taking, fine motor and managing the suspense. Kids beg to play it again.",
@@ -1759,7 +1759,7 @@ const PRODUCTS = [
     search:"Pop-Up Soccer Goal Set kids"
   },
   {
-    id:"p230", name:"Little Tikes T-Ball Set", age_min:18, age_max:72,
+    id:"p230", name:"Little Tikes T-Ball Set", age_min:18, age_max:120,
     dev_areas:["gross"], tags:["outdoor","sports","hand-eye","coordination","bilateral"],
     price:29.0, asin:null, afflink:"https://link.amazon/B06s4CGzx", img:"https://m.media-amazon.com/images/I/61nGSQIlFeL._AC_SL1500_.jpg",
     note:"The ball sits still so little sluggers can connect. T-ball is the perfect first hitting sport, building hand-eye coordination without the frustration.",
@@ -1920,14 +1920,14 @@ const PRODUCTS = [
     search:"LEGO City Rides Police Truck kids"
   },
   {
-    id:"p253", name:"Crazy Aaron's Thinking Putty", age_min:36, age_max:144,
+    id:"p253", name:"Crazy Aaron's Thinking Putty", age_min:36, age_max:120,
     dev_areas:["sensory","fine"], tags:["sensory","fidget","hand-strength","tactile","calm-down"], fam:"putty",
     price:14.99, asin:null, afflink:"https://link.amazon/B0fLOwsag", img:"https://m.media-amazon.com/images/I/81J2cIswLwL._AC_SL1500_.jpg",
     note:"The premium putty. Stretch it, snap it, sculpt it. Wonderful tactile input for busy hands and genuinely calming to work with.",
     search:"Crazy Aaron's Thinking Putty kids"
   },
   {
-    id:"p254", name:"Sensory Stress Cube Set", age_min:36, age_max:144,
+    id:"p254", name:"Sensory Stress Cube Set", age_min:36, age_max:120,
     dev_areas:["sensory","fine"], tags:["sensory","fidget","tactile","calm-down","self-regulation"],
     price:54.99, asin:null, afflink:"https://link.amazon/B05lAF34Z", img:"https://m.media-amazon.com/images/I/61du20U9CcL._AC_SL1280_.jpg",
     note:"Squeeze, press and squish. A set of stress cubes gives fidgety hands somewhere legal to go during homework, car trips and big feelings.",
@@ -2059,6 +2059,28 @@ const PRODUCTS = [
     note:"Four vehicle puzzles in rising difficulty. Diggers and trucks pull vehicle fans into puzzle play they'd otherwise skip.",
     search:"Galt 4 Vehicle Puzzles in a Box kids"
   },
+{
+    id:"p273", name:"Electronic Dance Mat", age_min:36, age_max:120,
+    dev_areas:["gross","sensory","cognitive"], tags:["music","movement","coordination","cause-effect","dance"],
+    price:45, asin:null, afflink:"https://link.amazon/B06iNCATi", img:"https://m.media-amazon.com/images/I/81hLfap3RGL._AC_SL1500_.jpg",
+    note:"Step on the lights and follow the beat. Dancing along builds coordination, motor planning and rhythm, and it burns serious energy indoors.",
+    search:"kids electronic dance mat music lights"
+  },
+  {
+    id:"p274", name:"Wooden Musical Instruments Set", age_min:36, age_max:120,
+    dev_areas:["sensory","fine","social","language"], tags:["music","rhythm","instruments"], fam:"instrument-set",
+    price:40, asin:null, afflink:"https://link.amazon/B0iVEOSjB", img:"https://m.media-amazon.com/images/I/81Rtx8wXZgL._AC_SL1500_.jpg",
+    note:"A beautiful wooden set of shakers, drums and more. Making music together builds rhythm, listening and turn-taking, and wooden instruments last for years.",
+    search:"wooden musical instruments set kids toddler"
+  },
+  {
+    id:"p275", name:"Boomwhackers Musical Tubes", age_min:36, age_max:144,
+    dev_areas:["gross","cognitive","social","sensory"], tags:["music","rhythm","instruments","coordination","social"],
+    price:45, asin:null, afflink:"https://link.amazon/B0i3oE1JP", img:"https://m.media-amazon.com/images/I/710my2-medL._SL1500_.jpg",
+    note:"Colour-coded tubes you whack to play real notes. Follow along with YouTube videos to play actual songs together, or grab a song book. Brilliant for music lovers and even better as a family band.",
+    search:"Boomwhackers musical tubes kids set"
+  },
+
 ];
 
 // ─── QUIZ STEPS ──────────────────────────────────────────────────────────────
@@ -2144,7 +2166,7 @@ const STEPS = [
       {value:"movement",      label:"Running, jumping, climbing, outdoor play 🏃", minAge:13},
       {value:"sports",        label:"Sports and ball games ⚽", minAge:19},
       {value:"art",           label:"Drawing, painting and crafts 🎨", minAge:13},
-      {value:"music",         label:"Music and singing 🎵"},
+      {value:"music",         label:"Music, singing and dancing 🎵"},
       {value:"stories",       label:"Books and stories 📚"},
       {value:"puzzles",       label:"Puzzles and figuring things out 🧩", minAge:13},
       {value:"games",         label:"Board games and card games 🎲", minAge:30},
@@ -2241,7 +2263,9 @@ function ageLabel(months){
 // relaxed: a toy rated older than the child is never suggested, for safety.
 function hasDelaySignals(answers){
   const text=((answers.child_snapshot||"")+" "+(answers.wildcard||"")).toLowerCase();
-  return /(develop\w*\s+delay|delay(ed)?\b|non[\s-]?verbal|not\s+(yet\s+)?talking|can'?t\s+talk|doesn'?t\s+talk|no\s+words|autis|\basd\b|down\s+syndrome|disabilit|special\s+needs|global\s+delay|behind\s+(his|her|their)\s+peers|regress|intellectual|cerebral\s+palsy|\bndis\b)/i.test(text);
+  // Only DEFINITE indicators relax the age ceiling. Everyday phrases like
+  // "not talking yet" are normal toddler descriptions and must NOT trigger this.
+  return /(develop\w*\s+delay|developmental(ly)?\s+delayed|global\s+delay|\bgdd\b|delay(ed)?\s+(in|with)\s|non[\s-]?verbal|autis|\basd\b|down\s+syndrome|disabilit|intellectual\s+disab|cerebral\s+palsy|special\s+needs|\bndis\b|regressi)/i.test(text);
 }
 
 function hasNonverbalSignals(answers){
@@ -2641,7 +2665,7 @@ ${productList}
 
 The development goals this parent told us they want to support: ${goalsList||"none specified, so focus on their interests and the child's described stage"}
 
-Write a warm reason for each toy. Every reason MUST explicitly connect the toy back to this specific child, to a development goal they chose, an interest they ticked, something they described, or the child's current stage. Name the connection out loud. For example: "This one is brilliant for the fine motor goal you mentioned, because pressing the buttons builds the hand strength she'll later use for writing" or "Since he's obsessed with trains, this taps straight into that while sneaking in some problem-solving."
+Write a warm reason for each toy. Where the quiz answers give you real material, connect the toy back to this specific child, to a development goal they chose, an interest they ticked, something they described, or the child's current stage. But NEVER invent or strain a connection that isn't there. If very little was shared (common for gifts), an honest, warm, age-based reason is better than a fake personal one. For example: \"We don't know heaps about this little one yet, but this is a reliable crowd pleaser at this age\" or lead with what the toy genuinely does for development at that age. Honest and warm beats forced and specific. Name the connection out loud. For example: "This one is brilliant for the fine motor goal you mentioned, because pressing the buttons builds the hand strength she'll later use for writing" or "Since he's obsessed with trains, this taps straight into that while sneaking in some problem-solving."
 
 Where a toy genuinely supports MORE THAN ONE of the goals or areas the parent cares about, say so. Do not limit a toy to a single goal. For example a lift-the-flap book is great for both fine motor and language, so name both. Toddler cutlery supports both fine motor and self-care. Only mention the goals that genuinely apply, do not stretch.
 
@@ -2777,6 +2801,7 @@ JSON only (no markdown):
 
         <div style={{background:"#F9F7F0",borderRadius:12,padding:"14px 18px",marginTop:14,fontSize:12,color:MUTED,lineHeight:1.7}}>
           <p style={{margin:"0 0 6px"}}><strong>Affiliate disclosure:</strong> Links above are Amazon AU affiliate links. Kidera earns a small commission at no extra cost to you.</p>
+          <p style={{margin:"0 0 8px"}}>Prices shown are our best estimate and can change without notice, so double-check on Amazon before you buy.</p>
           <p style={{margin:0}}>This quiz was built and curated by Brittany using her professional OT expertise and knowledge of child development. It uses smart technology to personalise results, and while every recommendation has been carefully considered, these are a starting point rather than a definitive guide. {isGift?"Their parents know them best.":"You know your child best."}</p>
         </div>
 
@@ -2860,4 +2885,3 @@ JSON only (no markdown):
     </div>
   );
 }
-
