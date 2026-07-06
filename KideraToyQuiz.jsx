@@ -45,7 +45,7 @@ const PRODUCTS = [
     search:"Young Wonderer High Contrast Baby Book"
   },
   {
-    id:"p2", name:"Young Wonderer Sensory Water Mat", age_min:0, age_max:12,
+    id:"p2", fam:"water-mat", name:"Young Wonderer Sensory Water Mat", age_min:0, age_max:12,
     dev_areas:["sensory","gross","fine"], tags:["tummy-time","sensory","water"],
     price:39.99, asin:"B0DBH9PSP2", afflink:"https://www.amazon.com.au/dp/B0DBH9PSP2/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/71dCRSG7tWL._AC_SX679_.jpg",
@@ -53,7 +53,7 @@ const PRODUCTS = [
     search:"Young Wonderer Sensory Water Mat tummy time"
   },
   {
-    id:"p3", name:"High Contrast Black & White Tummy Time Water Mat", age_min:0, age_max:12,
+    id:"p3", fam:"water-mat", name:"High Contrast Black & White Tummy Time Water Mat", age_min:0, age_max:12,
     dev_areas:["sensory","gross"], tags:["tummy-time","water","visual"],
     price:24.99, asin:"B0DBH9PSP2", afflink:"https://www.amazon.com.au/dp/B0DBH9PSP2/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/71dCRSG7tWL._AC_SX679_.jpg",
@@ -832,7 +832,7 @@ const PRODUCTS = [
   },
   {
     id:"p99", name:"Sibling Doll Set (Baby & Toddler Dolls)", age_min:24, age_max:72,
-    dev_areas:["social","language","cognitive"], tags:["pretend-play","nurturing","role-play","social","emotions"],
+    dev_areas:["social","language","cognitive"], tags:["pretend-play","nurturing","role-play","social","emotions","dolls"],
     price:25, asin:"B0F8QJCHT2", afflink:"https://www.amazon.com.au/dp/B0F8QJCHT2/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/71r9GTNOpDL._AC_SX679_.jpg",
     note:"Two dolls — a baby and a toddler — opens up sibling and family storylines in pretend play. Brilliant for kids with a new baby at home.",
@@ -906,7 +906,7 @@ const PRODUCTS = [
   },
   {
     id:"p109", name:"Lamaze My Friend Range (Interactive Plush)", age_min:0, age_max:12,
-    dev_areas:["social","sensory","language"], tags:["sensory","social","faces","language"],
+    dev_areas:["social","sensory","language"], tags:["sensory","social","faces","language","plush"],
     price:25, asin:"B000I2Q0FO", afflink:"https://www.amazon.com.au/dp/B000I2Q0FO/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/618sATXIZHL._AC_SX679_.jpg",
     note:"Faces, textures, and sounds babies love. Great for early social development and visual engagement with faces.",
     search:"Lamaze My Friend interactive plush baby toy faces"
@@ -977,7 +977,7 @@ const PRODUCTS = [
   },
   {
     id:"p119", name:"Doll Pram & Nursery Accessories Set", age_min:18, age_max:60,
-    dev_areas:["social","language","cognitive"], tags:["pretend-play","nurturing","role-play","social","emotions"],
+    dev_areas:["social","language","cognitive"], tags:["pretend-play","nurturing","role-play","social","emotions","dolls"],
     price:45, asin:"B0GVHL148L", afflink:"https://www.amazon.com.au/dp/B0GVHL148L/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81-y8Ffg+eL._AC_SX679_.jpg",
     note:"Pram, bed, feeding accessories — this opens up rich nurturing pretend play that builds empathy and language.",
     search:"doll pram nursery set accessories toddler pretend play"
@@ -1012,7 +1012,7 @@ const PRODUCTS = [
   },
   {
     id:"p124", name:"Toys with Clothing / Dressing Doll", age_min:24, age_max:60,
-    dev_areas:["fine","selfcare","social"], tags:["selfcare","fine-motor","pretend-play","independence","buttons"],
+    dev_areas:["fine","selfcare","social"], tags:["selfcare","fine-motor","pretend-play","independence","buttons","dolls"],
     price:22, asin:"B07JZ5ZBFC", afflink:"https://www.amazon.com.au/dp/B07JZ5ZBFC/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/51hCK-AgIUL._AC_SX679_.jpg",
     note:"Dolls with zippers, buttons, and velcro help kids practice dressing skills on something other than themselves first.",
     search:"dressing doll toy buttons zippers velcro toddler fine motor"
@@ -1169,7 +1169,7 @@ const PRODUCTS = [
   },
   {
     id:"p146", name:"Bananas in Pyjamas Talking Plush", age_min:12, age_max:36,
-    dev_areas:["language","social","cognitive"], tags:["language","social","cause-effect","pretend-play"],
+    dev_areas:["language","social","cognitive"], tags:["language","social","cause-effect","pretend-play","plush"],
     price:28, asin:"B07H8YXV1L", afflink:"https://www.amazon.com.au/dp/B07H8YXV1L/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/51OQosG1piL._AC_SX679_.jpg",
     note:"A very Australian classic. Press the tummy and hear B1 and B2. Brilliant for early language, familiar characters, and cause-and-effect play.",
     search:"Bananas in Pyjamas talking plush toy B1 B2"
@@ -2064,6 +2064,18 @@ const PRODUCTS = [
 // ─── QUIZ STEPS ──────────────────────────────────────────────────────────────
 const STEPS = [
   {
+    id:"recipient",
+    question:"Who are you finding toys for?",
+    subtitle:"",
+    type:"single",
+    options:[
+      {value:"my-child", label:"My own child"},
+      {value:"family",   label:"A grandchild, niece, nephew or family member"},
+      {value:"friend",   label:"A friend's child"},
+      {value:"other",    label:"Another special kid in my life"},
+    ],
+  },
+  {
     id:"child_age",
     question:"How old is your child?",
     subtitle:"Don't worry, this is not purely about age. We will also look at your child's interests, abilities and the goals you care about to find the right fit. Age is just our starting point.",
@@ -2122,20 +2134,23 @@ const STEPS = [
     subtitle:"Tick everything that applies. This directly shapes what I suggest.",
     type:"multi",
     options:[
+      {value:"baby-discovery",label:"Watching, reaching and grabbing everything 👶", maxAge:19},
       {value:"animals",       label:"Animals and creatures 🐾"},
-      {value:"vehicles",      label:"Cars, trucks and trains 🚂"},
-      {value:"dinosaurs",     label:"Dinosaurs 🦕"},
-      {value:"building",      label:"Building and making things 🏗️"},
-      {value:"pretend-play",  label:"Pretend play and role play 👑"},
-      {value:"movement",      label:"Running, jumping, climbing, outdoor play 🏃"},
-      {value:"sports",        label:"Sports and ball games ⚽"},
-      {value:"art",           label:"Drawing, painting and crafts 🎨"},
+      {value:"vehicles",      label:"Cars, trucks and trains 🚂", minAge:13},
+      {value:"dinosaurs",     label:"Dinosaurs 🦕", minAge:19},
+      {value:"building",      label:"Building and making things 🏗️", minAge:13},
+      {value:"pretend-play",  label:"Pretend play and role play 👑", minAge:13},
+      {value:"dolls",         label:"Dolls and soft toys 🍼", minAge:13},
+      {value:"movement",      label:"Running, jumping, climbing, outdoor play 🏃", minAge:13},
+      {value:"sports",        label:"Sports and ball games ⚽", minAge:19},
+      {value:"art",           label:"Drawing, painting and crafts 🎨", minAge:13},
       {value:"music",         label:"Music and singing 🎵"},
       {value:"stories",       label:"Books and stories 📚"},
-      {value:"puzzles",       label:"Puzzles and figuring things out 🧩"},
-      {value:"games",         label:"Board games and card games 🎲"},
+      {value:"puzzles",       label:"Puzzles and figuring things out 🧩", minAge:13},
+      {value:"games",         label:"Board games and card games 🎲", minAge:30},
       {value:"water",         label:"Water, slime and messy play 💧"},
-      {value:"science",       label:"Science, experiments and how things work 🔬"},
+      {value:"science",       label:"Science, experiments and how things work 🔬", minAge:30},
+      {value:"not-sure",      label:"Not sure yet, surprise me! ✨"},
     ],
   },
   {
@@ -2160,13 +2175,16 @@ const STEPS = [
     subtitle:"Helps me find toys they'll actually use.",
     type:"multi",
     options:[
+      {value:"exploring-mouthing",    label:"Exploring with hands and mouth 👶", maxAge:19},
+      {value:"watching-listening",    label:"Watching, listening and taking it all in 👀", maxAge:30},
       {value:"independent",           label:"Happy to play independently for stretches 🧍"},
       {value:"with-adults",           label:"Loves playing with a grown-up 🧑‍🤝‍🧑"},
       {value:"with-siblings-friends", label:"Loves playing with other kids 👯"},
       {value:"active-physical",       label:"Always moving, can't sit still 🏃"},
       {value:"calm-focused",          label:"Gets absorbed in calm, focused activities 🧘"},
       {value:"open-ended",            label:"Gets creative with open-ended toys 🎭"},
-      {value:"structured",            label:"Likes toys with clear rules or a goal 🎯"},
+      {value:"structured",            label:"Likes toys with clear rules or a goal 🎯", minAge:30},
+      {value:"not-sure",              label:"Not sure 🤷"},
     ],
   },
   {
@@ -2181,7 +2199,12 @@ const STEPS = [
       {value:"craft-supplies", label:"Art and craft supplies"},
       {value:"outdoor-toys",   label:"Outdoor play equipment"},
       {value:"pretend-play",   label:"Pretend play toys (kitchen, dress-ups etc.)"},
-      {value:"board-games",    label:"Board games"},
+      {value:"board-games",    label:"Board games and card games"},
+      {value:"vehicles-already",label:"Cars, trucks and vehicles"},
+      {value:"dolls-already",  label:"Dolls and soft toys"},
+      {value:"dinosaurs-already",label:"Dinosaur toys"},
+      {value:"sensory-fidget", label:"Fidget and sensory toys"},
+      {value:"stem-already",   label:"Science and STEM kits"},
       {value:"nothing",        label:"Nothing, all suggestions welcome"},
     ],
   },
@@ -2242,6 +2265,12 @@ function scoreProduct(p, answers){
   if(alreadyHave.includes("craft-supplies")&&(p.tags.includes("craft")||p.tags.includes("drawing")&&!p.tags.includes("vertical-surface")))return -1;
   if(alreadyHave.includes("pretend-play")&&p.tags.includes("pretend-play")&&!p.tags.includes("tool-use")&&!p.tags.includes("dinosaurs")&&!p.tags.includes("vehicles")&&!p.tags.includes("trains"))return -1;
   if(alreadyHave.includes("outdoor-toys")&&p.tags.includes("outdoor")&&p.dev_areas.length===1&&p.dev_areas[0]==="gross")return -1;
+  if(alreadyHave.includes("puzzles")&&(p.tags.includes("jigsaw")||p.fam==="jigsaw"))return -1;
+  if(alreadyHave.includes("vehicles-already")&&p.tags.includes("vehicles")&&!p.tags.includes("constructive"))return -1;
+  if(alreadyHave.includes("dolls-already")&&(p.tags.includes("dolls")||p.tags.includes("plush")))return -1;
+  if(alreadyHave.includes("dinosaurs-already")&&p.tags.includes("dinosaurs")&&!(p.fam==="jigsaw"||p.tags.includes("constructive")))return -1;
+  if(alreadyHave.includes("sensory-fidget")&&(p.tags.includes("fidget")||p.fam==="putty"))return -1;
+  if(alreadyHave.includes("stem-already")&&(p.fam==="science-kit"||p.fam==="circuit-kit"))return -1;
 
   // Functional/everyday equipment (cups, potty, step stool, cutlery, dressing doll) is only relevant
   // when self-care is a chosen goal, or when the parent picked no goals at all. Otherwise exclude it
@@ -2266,6 +2295,8 @@ function scoreProduct(p, answers){
 
   const interests=answers.interests||[];
   const directTagMap={
+    "baby-discovery":["visual","tummy-time","grasping","sensory","cause-effect"],
+    dolls:["dolls","nurturing","plush"],
     animals:["animals"],vehicles:["vehicles","trains"],dinosaurs:["dinosaurs"],
     building:["constructive","tool-use"],
     "pretend-play":["pretend-play","role-play","storytelling","cooking","nurturing","emotions"],
@@ -2493,7 +2524,7 @@ function FeedbackWidget(){
 // ─── LOADING SCREEN (rotating messages) ───────────────────────────────────────
 function LoadingScreen(){
   const messages=[
-    "Matching your child's info...",
+    "Matching all the info you shared...",
     "Making sure they will love these",
     "Finding a just right challenge",
     "Adding a little OT flair",
@@ -2549,7 +2580,9 @@ export default function KideraToyQuiz(){
   const[result,setResult]=useState(null);const[loading,setLoading]=useState(false);
   const[swappingIndex,setSwappingIndex]=useState(null);const[excludedIds,setExcludedIds]=useState([]);
 
-  const current=STEPS[step];const progress=(step/STEPS.length)*100;
+  const current=STEPS[step];
+  const isGift=answers.recipient&&answers.recipient!=="my-child";
+  const adapt=(t)=>{if(!t||!isGift)return t;return t.replace(/your child/g,"this child").replace(/Your child/g,"This child");};const progress=(step/STEPS.length)*100;
 
   function setSingle(id,value){setAnswers(p=>({...p,[id]:value}));}
   function toggleMulti(id,value){setAnswers(p=>{const ex=p[id]||[];return ex.includes(value)?{...p,[id]:ex.filter(v=>v!==value)}:{...p,[id]:[...ex,value]};});}
@@ -2567,9 +2600,10 @@ export default function KideraToyQuiz(){
     const summary=`Child's age: ${ageLabel(answers.child_age)}
 Occasion: ${answers.occasion}. Budget: ${answers.budget}.
 Parent's description of their child: "${answers.child_snapshot||"not provided"}"
-Interests ticked: ${(answers.interests||[]).join(", ")||"none specified"}
+Buying for: ${answers.recipient==="my-child"||!answers.recipient?"their own child":"a child who is NOT their own (this is a gift)"}
+Interests ticked: ${(answers.interests||[]).filter(v=>v!=="not-sure").join(", ")||"not sure / none specified"}
 Development goals the parent wants to support: ${(answers.dev_focus||[]).join(", ")||"none specified"}
-How the child likes to play: ${(answers.play_style||[]).join(", ")||"not specified"}
+How the child likes to play: ${(answers.play_style||[]).filter(v=>v!=="not-sure").join(", ")||"not sure / not specified"}
 Already have plenty of: ${(answers.already_have||[]).join(", ")||"nothing specified"}
 Extra notes: ${answers.wildcard||"none"}`;
 
@@ -2597,7 +2631,7 @@ JSON only: {"reason":"..."}`;
     const goalsList=goalsRaw.map(g=>devLabelMap[g]||g).join(", ");
     const prompt=`You are Brittany, a paediatric occupational therapist with 8 years of experience and founder of Kidera, a children's development brand in Perth, Australia.
 
-Your writing style: warm, direct, genuine. Write like you're talking to a friend who trusts your expertise. Short sentences. Plain language. No em dashes. No AI words like "seamlessly", "fostering", "ensuring", "delve", "empowering", "testament", "navigate". Specific and practical.
+Your writing style: warm, direct, genuine. Write like you're talking to a friend who trusts your expertise. Short sentences. Plain language. No em dashes. No AI words like "seamlessly", "fostering", "ensuring", "delve", "empowering", "testament", "navigate". Never use the words "workhorse", "arsenal" or "toolkit" when talking about children or their development. Specific and practical.
 
 Parent's answers:
 ${summary}
@@ -2617,9 +2651,11 @@ IMPORTANT COVERAGE RULE: The parent chose these development goals: ${goalsList||
 
 ${hasDelaySignals(answers)?`IMPORTANT CONTEXT: The parent's description suggests this child may have developmental delays or additional needs. Some picks may be rated for younger ages on purpose. They were chosen to meet the child at their current developmental level, which is exactly the right approach. Frame every reason around what this child enjoys and can do right now and the next small step it builds, never around age. Never describe a toy as being for younger kids, for babies, or simple. Speak about the child with the same warmth and respect as any other child.
 
+`:""}${answers.recipient&&answers.recipient!=="my-child"?`GIFT MODE: The person taking this quiz is choosing a gift for a child who is NOT their own. Never say "your child". Refer to the child as "this child" or "this little one". Return an empty string for every play_idea, no play ideas in gift mode. Frame each reason as why this makes a great gift for this specific child. For the curator note, speak to a thoughtful gift-giver: acknowledge the care they are putting into choosing well, and end with the sentiment that this child's parents know them best and any of these picks will land beautifully.
+
 `:""}GROUNDING RULE: Each toy's listing above tells you what it actually is and does. Base every reason and play idea ONLY on the product's real features. Never invent features it does not have. Think through the practical reality of the suggestion before writing it: if the toy itself gives the cues (lights, sounds, spoken commands, music), do not tell the parent to give the cue, the child responds to the toy. If a toy launches, flies, or travels a long way, suggest an open space like a park or oval rather than assuming a backyard is big enough. If an activity is messy, only suggest it somewhere that makes sense. Every play idea must be something a real parent could physically do with that exact product.
 
-For EVERY toy, always include a play idea. Never leave one blank. Use Brittany's style from her 30 Day Play Calendar: specific, active, one sentence, a little playful. Examples of her style:
+Unless GIFT MODE above applies, for EVERY toy always include a play idea. Never leave one blank. Use Brittany's style from her 30 Day Play Calendar: specific, active, one sentence, a little playful. Examples of her style:
 - "Set up a dinosaur hospital where the T-Rex has crashed and needs the doctor kit to fix his leg"
 - "Use the scarves for peek-a-boo or wave them around like ocean waves while you sing a song"
 - "Make it a challenge, can they stack it higher than last time before it falls?"
@@ -2633,9 +2669,9 @@ SPECIAL RULE FOR FUNCTIONAL OR EVERYDAY EQUIPMENT (learning towers, step stools,
 - Learning tower or step stool: "Pop them up at the bench and let them join in cooking or washing up. Being part of the everyday alongside you is rich, hands-on learning and play for a little one"
 - Open cup: "Practice in the bath or at a tea party with the dolls first, where a spill doesn't matter"
 - Dressing doll: "Let them dress and undress the doll as a game before tackling their own buttons"
-And in the REASON for these functional items, it is good to also mention they help at mealtimes or daily routines, and to link that to the self-care and independence goal where the parent picked it. Functional equipment is play AND practical, say both. ALWAYS include a play idea for functional equipment, never leave it blank, even if it does not match a stated interest.
+And in the REASON for these functional items, it is good to also mention they help at mealtimes or daily routines, and to link that to the self-care and independence goal where the parent picked it. Functional equipment is play AND practical, say both. ALWAYS include a play idea for functional equipment, never leave it blank, even if it does not match a stated interest (unless GIFT MODE applies).
 
-Then write a warm, individualised 2-3 sentence note from Brittany. It must feel personal to THIS family, never generic. If the parent gave lots of detail, reference something specific they said. If they gave very little, still make it feel individual by drawing on their actual quiz choices: their child's age (${ageLabel(answers.child_age)}), the goals they picked, the interests they ticked, or the occasion. Speak to their situation directly. No em dashes. Short sentences. End with this sentiment in Brittany's own words: every child develops at their own pace, and you know yours best.
+Then write a warm, individualised 2-3 sentence note from Brittany. It must feel personal to THIS family, never generic. If the parent gave lots of detail, reference something specific they said. If they gave very little, still make it feel individual by drawing on their actual quiz choices: their child's age (${ageLabel(answers.child_age)}), the goals they picked, the interests they ticked, or the occasion. Speak to their situation directly. No em dashes. Short sentences. End with this sentiment in Brittany's own words: every child develops at their own pace, and you know yours best. (If GIFT MODE applies, use the gift ending described there instead.)
 
 VARIETY RULE: The five toys are deliberately varied. Never present two toys as interchangeable or repeat the same reasoning for two different toys. Each reason should make clear what this specific toy adds that the others don't.
 
@@ -2690,7 +2726,7 @@ JSON only (no markdown):
       <div style={{background:K_YELLOW,padding:"28px 24px",textAlign:"center"}}>
         <img src={LOGO} alt="Kidera" style={{height:56,objectFit:"contain",marginBottom:10}} onError={e=>{e.target.style.display="none";}}/>
         <h1 style={{fontSize:"clamp(18px,4vw,26px)",fontWeight:800,color:TEXT,margin:"0 0 6px"}}>Your personalised toy picks</h1>
-        <p style={{fontSize:14,color:TEXT,margin:0,opacity:0.7}}>Matched to your child by a paediatric OT</p>
+        <p style={{fontSize:14,color:TEXT,margin:0,opacity:0.7}}>{isGift?"Matched to this child by a paediatric OT":"Matched to your child by a paediatric OT"}</p>
       </div>
       <div style={{maxWidth:640,margin:"0 auto",padding:"0 20px"}}>
         {result.recs.map((toy,i)=>(
@@ -2741,7 +2777,7 @@ JSON only (no markdown):
 
         <div style={{background:"#F9F7F0",borderRadius:12,padding:"14px 18px",marginTop:14,fontSize:12,color:MUTED,lineHeight:1.7}}>
           <p style={{margin:"0 0 6px"}}><strong>Affiliate disclosure:</strong> Links above are Amazon AU affiliate links. Kidera earns a small commission at no extra cost to you.</p>
-          <p style={{margin:0}}>This quiz was built and curated by Brittany using her professional OT expertise and knowledge of child development. It uses smart technology to personalise results, and while every recommendation has been carefully considered, these are a starting point rather than a definitive guide. You know your child best.</p>
+          <p style={{margin:0}}>This quiz was built and curated by Brittany using her professional OT expertise and knowledge of child development. It uses smart technology to personalise results, and while every recommendation has been carefully considered, these are a starting point rather than a definitive guide. {isGift?"Their parents know them best.":"You know your child best."}</p>
         </div>
 
         <FreebieSignup/>
@@ -2772,12 +2808,12 @@ JSON only (no markdown):
         <div style={{height:"100%",width:`${progress+100/STEPS.length}%`,background:K_GREEN,transition:"width 0.4s ease"}}/>
       </div>
       <div style={{maxWidth:640,margin:"0 auto",padding:"32px 20px 24px"}}>
-        <h2 style={{fontSize:"clamp(20px,5vw,26px)",fontWeight:700,color:TEXT,margin:"0 0 6px",lineHeight:1.3}}>{current.question}</h2>
-        <p style={{fontSize:15,color:MUTED,margin:"0 0 26px",lineHeight:1.5}}>{current.subtitle}</p>
+        <h2 style={{fontSize:"clamp(20px,5vw,26px)",fontWeight:700,color:TEXT,margin:"0 0 6px",lineHeight:1.3}}>{adapt(current.question)}</h2>
+        <p style={{fontSize:15,color:MUTED,margin:"0 0 26px",lineHeight:1.5}}>{adapt(current.subtitle)}</p>
 
         {current.type==="single"&&(
           <div style={{display:"grid",gap:10}}>
-            {current.options.map(opt=>{
+            {current.options.filter(o=>{const a=answers.child_age;if(a==null)return true;return(!o.minAge||a>=o.minAge)&&(!o.maxAge||a<=o.maxAge);}).map(opt=>{
               const sel=answers[current.id]===opt.value;
               return(<button key={opt.value} onClick={()=>setSingle(current.id,opt.value)}
                 style={{textAlign:"left",padding:"13px 16px",borderRadius:12,border:`2px solid ${sel?K_GREEN:BORDER}`,background:sel?`${K_GREEN}14`:CARD,cursor:"pointer",fontSize:15,color:TEXT,display:"flex",alignItems:"center",gap:10,transition:"all 0.15s"}}>
@@ -2791,7 +2827,7 @@ JSON only (no markdown):
 
         {current.type==="multi"&&(
           <div style={{display:"flex",flexWrap:"wrap",gap:10}}>
-            {current.options.map(opt=>{
+            {current.options.filter(o=>{const a=answers.child_age;if(a==null)return true;return(!o.minAge||a>=o.minAge)&&(!o.maxAge||a<=o.maxAge);}).map(opt=>{
               const sel=(answers[current.id]||[]).includes(opt.value);
               return(<button key={opt.value} onClick={()=>toggleMulti(current.id,opt.value)}
                 style={{padding:"10px 16px",borderRadius:24,border:`2px solid ${sel?K_GREEN:BORDER}`,background:sel?`${K_GREEN}15`:CARD,cursor:"pointer",fontSize:14,color:sel?TEXT:MUTED,fontWeight:sel?700:400,transition:"all 0.15s"}}>
