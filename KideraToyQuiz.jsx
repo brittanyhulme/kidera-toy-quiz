@@ -354,7 +354,7 @@ const PRODUCTS = [
     search:"sand water activity table kids outdoor"
   },
   {
-    id:"p40", name:"Wooden Magnetic Fishing Set", age_min:36, age_max:72,
+    id:"p40", fam:"fishing-game", name:"Wooden Magnetic Fishing Set", age_min:36, age_max:72,
     dev_areas:["fine","language","social"], tags:["hand-eye","turn-taking","vocabulary"],
     price:16, asin:"B07XDPJDBN", afflink:"https://www.amazon.com.au/dp/B07XDPJDBN/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/71Fd6w5qwDL._AC_SX679_.jpg",
@@ -371,7 +371,7 @@ const PRODUCTS = [
   },
   {
     id:"p42", name:"Stomp Rocket Launcher", age_min:36, age_max:120,
-    dev_areas:["gross"], tags:["outdoor","jumping","cause-effect","movement"],
+    dev_areas:["gross"], tags:["outdoor","jumping","cause-effect","movement","STEM"],
     price:36, asin:"B098B24R1P", afflink:"https://www.amazon.com.au/dp/B098B24R1P/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/71093GmxSfS._AC_SX679_.jpg",
     note:"Jump on it and watch the rocket fly. Kids who can't sit still love this one. Good for siblings too.",
@@ -499,7 +499,7 @@ const PRODUCTS = [
     search:"TIME Timer Original Large 60 Minute Visual Timer"
   },
   {
-    id:"p58", name:"Fat Brain Air Toobz Ball Tube Set", age_min:36, age_max:96,
+    id:"p58", fam:"ball-run", name:"Fat Brain Air Toobz Ball Tube Set", age_min:36, age_max:96,
     dev_areas:["cognitive","fine","gross"], tags:["constructive","cause-effect","problem-solving","STEM"],
     price:179, asin:"B0C21LRH2K", afflink:"https://www.amazon.com.au/dp/B0C21LRH2K/?tag=brittanyot0c-22",
     img:null,
@@ -540,7 +540,7 @@ const PRODUCTS = [
   },
   {
     id:"p63", name:"Twister Party Game (Ages 6+)", age_min:72, age_max:144,
-    dev_areas:["gross","social"], tags:["balance","coordination","turn-taking","movement"],
+    dev_areas:["gross","social"], tags:["balance","coordination","turn-taking","movement","board-game"],
     price:25, asin:"B0723923ZP", afflink:"https://www.amazon.com.au/dp/B0723923ZP/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/51pLykE9KVL._AC_SX679_.jpg",
     note:"Gross motor, coordination, following instructions, and loads of laughs. Works for mixed ages too.",
@@ -548,7 +548,7 @@ const PRODUCTS = [
   },
   {
     id:"p64", name:"Hasbro Bop It Extreme", age_min:96, age_max:144,
-    dev_areas:["gross","cognitive","social"], tags:["hand-eye","reaction-time","listening"],
+    dev_areas:["gross","cognitive","social"], tags:["hand-eye","reaction-time","listening","board-game"],
     price:40, asin:"B09JDMZ8X4", afflink:"https://www.amazon.com.au/dp/B09JDMZ8X4/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/71n6Ctm70mL._AC_SX679_.jpg",
     note:"Fast, loud, and fun. Builds reaction time, listening skills, and hand-eye coordination.",
@@ -603,7 +603,7 @@ const PRODUCTS = [
     search:"JOYIN Big Bubble Wands Set Giant Bubble Maker"
   },
   {
-    id:"p71", name:"Magnetic Blocks Building Set (150 pcs)", age_min:36, age_max:120,
+    id:"p71", fam:"magnetic-tiles", name:"Magnetic Blocks Building Set (150 pcs)", age_min:36, age_max:120,
     dev_areas:["fine","cognitive","social"], tags:["magnetic-tiles","constructive","open-ended","blocks-tiles"],
     price:45, asin:"B0B2QQL3MW", afflink:"https://www.amazon.com.au/dp/B0B2QQL3MW/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/71vWgpHjwsL._AC_SX679_.jpg",
@@ -720,7 +720,7 @@ const PRODUCTS = [
   // ── OUTDOOR & ACTIVE PLAY ────────────────────────────────────────────────────
   {
     id:"p85", name:"Kids Bowling Set (Indoor/Outdoor)", age_min:24, age_max:72,
-    dev_areas:["gross","cognitive","social"], tags:["outdoor","hand-eye","turn-taking","movement"],
+    dev_areas:["gross","cognitive","social"], tags:["outdoor","hand-eye","turn-taking","movement","sports"],
     price:20, asin:"B00AU0O7OU", afflink:"https://www.amazon.com.au/dp/B00AU0O7OU/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/712DRbBOwzL._AC_SX679_.jpg",
     note:"Aiming, rolling, counting pins — hand-eye coordination and turn-taking without needing much space.",
@@ -744,7 +744,7 @@ const PRODUCTS = [
   },
   {
     id:"p88", name:"Quick Sticks / Reaction Sticks Game", age_min:60, age_max:144,
-    dev_areas:["gross","cognitive","social"], tags:["hand-eye","reaction-time","outdoor","turn-taking","movement"],
+    dev_areas:["gross","cognitive","social"], tags:["hand-eye","reaction-time","outdoor","turn-taking","movement","sports"],
     price:22, asin:"B0GJL2ZSF8", afflink:"https://www.amazon.com.au/dp/B0GJL2ZSF8/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/61isSZ2xosL._AC_SX679_.jpg",
     note:"Drop the stick, catch it before it hits the ground. Reaction time, hand-eye coordination, and competitive fun. Works inside too.",
@@ -808,7 +808,7 @@ const PRODUCTS = [
   },
   {
     id:"p96", name:"Frisbee", age_min:60, age_max:144,
-    dev_areas:["gross","social"], tags:["outdoor","hand-eye","coordination","movement"],
+    dev_areas:["gross","social"], tags:["outdoor","hand-eye","coordination","movement","sports"],
     price:10, asin:"B0813DBQ36", afflink:"https://www.amazon.com.au/dp/B0813DBQ36/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/71g3xfUfNRL._AC_SX679_.jpg",
     note:"Throwing and catching a frisbee is deceptively hard. Great for hand-eye coordination, timing, and bilateral movement.",
@@ -956,7 +956,7 @@ const PRODUCTS = [
   },
   {
     id:"p116", name:"Large Outdoor Play Ball", age_min:12, age_max:60,
-    dev_areas:["gross","social"], tags:["outdoor","movement","hand-eye","bilateral","throwing"],
+    dev_areas:["gross","social"], tags:["outdoor","movement","hand-eye","bilateral","throwing","sports"],
     price:12, asin:"B0FWBBQ7KW", afflink:"https://www.amazon.com.au/dp/B0FWBBQ7KW/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/71k5uVk+0CL._AC_SX679_.jpg",
     note:"Rolling, kicking, throwing, chasing — a large ball is one of the most versatile gross motor tools you can own.",
     search:"large outdoor play ball toddler kids"
@@ -1019,8 +1019,8 @@ const PRODUCTS = [
   },
   // ── FROM 3 YEAR OLD GUIDE ─────────────────────────────────────────────────
   {
-    id:"p125", name:"Connetix Magnetic Tiles (Rainbow Starter Pack)", age_min:36, age_max:120,
-    dev_areas:["fine","cognitive","social"], tags:["magnetic-tiles","constructive","open-ended","blocks-tiles"],
+    id:"p125", fam:"magnetic-tiles", name:"Connetix Magnetic Tiles (Rainbow Starter Pack)", age_min:36, age_max:120,
+    dev_areas:["fine","cognitive","social"], tags:["magnetic-tiles","constructive","open-ended","blocks-tiles","STEM"],
     price:119, asin:"B0CLLPJ8TK", afflink:"https://www.amazon.com.au/dp/B0CLLPJ8TK/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/61WUM-54HfL._AC_SX679_.jpg",
     note:"The premium magnetic tile set. Translucent colours, premium quality, and endlessly open-ended. Worth the investment.",
     search:"Connetix magnetic tiles rainbow starter pack"
@@ -1035,7 +1035,7 @@ const PRODUCTS = [
   // ── FROM 4 YEAR OLD GUIDE ─────────────────────────────────────────────────
   {
     id:"p127", name:"Agility Ladder for Kids", age_min:36, age_max:96,
-    dev_areas:["gross"], tags:["coordination","bilateral","outdoor","movement","balance"],
+    dev_areas:["gross"], tags:["coordination","bilateral","outdoor","movement","balance","sports"],
     price:20, asin:"B0C5JRD4QD", afflink:"https://www.amazon.com.au/dp/B0C5JRD4QD/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/61zNnh5RAuL._AC_SX679_.jpg",
     note:"Stepping through rungs in different patterns is great for foot-eye coordination, motor planning, and bilateral integration.",
     search:"agility ladder kids exercise coordination outdoor"
@@ -1049,7 +1049,7 @@ const PRODUCTS = [
   },
   {
     id:"p129", name:"Movement Foam Dice", age_min:24, age_max:72,
-    dev_areas:["gross","cognitive","social"], tags:["movement","outdoor","balance","coordination","turn-taking"],
+    dev_areas:["gross","cognitive","social"], tags:["movement","outdoor","balance","coordination","turn-taking","animals"],
     price:22, asin:"B096SKTL77", afflink:"https://www.amazon.com.au/dp/B096SKTL77/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/71n5en7LA3L._AC_SX679_.jpg",
     note:"Roll the dice and do the movement — jump, hop, balance. Adds unpredictability to physical play and is great for obstacle courses.",
     search:"movement foam dice kids action gross motor play"
@@ -1224,7 +1224,7 @@ const PRODUCTS = [
     search:"truck construction tool set kids play toys toddler"
   },
   {
-    id:"p154", name:"Magnetic Castle Tiles", age_min:36, age_max:84,
+    id:"p154", fam:"magnetic-tiles", name:"Magnetic Castle Tiles", age_min:36, age_max:84,
     dev_areas:["fine","cognitive"], tags:["magnetic-tiles","constructive","blocks-tiles","creative"],
     price:45, asin:"B0CL7QV63C", afflink:"https://www.amazon.com.au/dp/B0CL7QV63C/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81ugjSvS3FL._AC_SX679_.jpg",
     note:"Magnetic tiles with castle and brick designs. Build worlds, castles, and structures with an imaginative twist.",
@@ -1238,8 +1238,8 @@ const PRODUCTS = [
     search:"kids puppet theatre fabric foldable children plays"
   },
   {
-    id:"p156", name:"Connetix Ball Run Expansion Pack", age_min:48, age_max:120,
-    dev_areas:["cognitive","fine","sensory"], tags:["constructive","cause-effect","problem-solving","magnetic-tiles","blocks-tiles"],
+    id:"p156", fam:"ball-run", name:"Connetix Ball Run Expansion Pack", age_min:48, age_max:120,
+    dev_areas:["cognitive","fine","sensory"], tags:["constructive","cause-effect","problem-solving","magnetic-tiles","blocks-tiles","STEM"],
     price:85, asin:"B0BLCPYDL5", afflink:"https://www.amazon.com.au/dp/B0BLCPYDL5/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/61FHULJNkLL._AC_SX679_.jpg",
     note:"Add tubes and funnels to magnetic tiles and watch balls run through. Engineering thinking and spatial reasoning at their best.",
     search:"Connetix ball run expansion pack magnetic tiles"
@@ -1252,7 +1252,7 @@ const PRODUCTS = [
     search:"pop tubes sensory fidget set kids tactile"
   },
   {
-    id:"p158", name:"Therapy Putty / Resistive Putty Set", age_min:48, age_max:144,
+    id:"p158", fam:"putty", name:"Therapy Putty / Resistive Putty Set", age_min:48, age_max:144,
     dev_areas:["fine","sensory"], tags:["hand-strength","sensory","fine-motor","tactile","fidget"],
     price:18, asin:"B07YF9X67Z", afflink:"https://www.amazon.com.au/dp/B07YF9X67Z/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/719lR4Gm+-L._AC_SX679_.jpg",
     note:"Different resistance levels for different hand strength needs. Squeezing, stretching, hiding objects — great for hand strengthening and sensory input.",
@@ -1282,7 +1282,7 @@ const PRODUCTS = [
   // ── FROM 5-6 YEAR GUIDE / GIFTING GUIDE 5-10 ─────────────────────────────
   {
     id:"p162", name:"Noodle Knock Out Game", age_min:48, age_max:120,
-    dev_areas:["gross","social","cognitive"], tags:["outdoor","movement","turn-taking","hand-eye","social"],
+    dev_areas:["gross","social","cognitive"], tags:["outdoor","movement","turn-taking","hand-eye","social","sports"],
     price:22, asin:"B0F4KYG3BC", afflink:"https://www.amazon.com.au/dp/B0F4KYG3BC/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/31TYpvfcJBL._AC_SX679_.jpg",
     note:"Knock pool noodles off pedestals with a ball. Active, funny, and great for hand-eye coordination and turn-taking.",
     search:"noodle knock out game kids outdoor active"
@@ -1352,7 +1352,7 @@ const PRODUCTS = [
   },
   {
     id:"p172", name:"Basket and Soft Toy Throwing Game", age_min:24, age_max:72,
-    dev_areas:["gross","cognitive","social"], tags:["throwing","hand-eye","turn-taking","outdoor","movement"],
+    dev_areas:["gross","cognitive","social"], tags:["throwing","hand-eye","turn-taking","outdoor","movement","sports"],
     price:18, asin:"B0D8BRH5TC", afflink:"https://www.amazon.com.au/dp/B0D8BRH5TC/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81Jqn6EAB2L._AC_SX679_.jpg",
     note:"Throw soft toys or balls into a basket from different distances. Turn-taking, aiming, and adjusting throw strength.",
     search:"basket throwing game soft toys kids indoor outdoor"
@@ -1370,6 +1370,694 @@ const PRODUCTS = [
     price:20, asin:"0646879340", afflink:"https://www.amazon.com.au/dp/0646879340/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/71kBKnub47L._SY522_.jpg",
     note:"High contrast black and white bath book. Sensory play in the bath plus early visual development and language. A lovely combination.",
     search:"Duckie Goes On An Adventure High Contrast Bath Book baby"
+  },
+
+  // ── GAP-FILL EXPANSION (from Brittany's worksheet) ──────────────────────────
+  {
+    id:"p175", name:"Animal Barn Playset", age_min:12, age_max:36,
+    dev_areas:["social","language","cognitive"], tags:["animals","pretend-play","cause-effect","language"],
+    price:32.99, asin:null, afflink:"https://link.amazon/B0fNJdiYr", img:"https://m.media-amazon.com/images/I/81Wy6HIjoTL._AC_SL1500_.jpg",
+    note:"Open the doors, pop the animals in and out, make the sounds. Barn play is packed with early vocabulary and simple pretend play.",
+    search:"Animal Barn Playset kids"
+  },
+  {
+    id:"p176", name:"Wild Animal Figurines Set", age_min:36, age_max:120,
+    dev_areas:["language","cognitive","social"], tags:["animals","pretend-play","small-world","language"], fam:"animal-figures",
+    price:16.5, asin:null, afflink:"https://link.amazon/B0fVx9mcW", img:"https://m.media-amazon.com/images/I/81rAoT7X8uL._AC_SL1500_.jpg",
+    note:"A tub of wild animals goes further than almost any toy. Sorting, naming, habitats, storytelling, small world play. It grows with them for years.",
+    search:"Wild Animal Figurines Set kids"
+  },
+  {
+    id:"p177", name:"24 Pack Mini Animal Plush Set", age_min:36, age_max:120,
+    dev_areas:["social","language","cognitive"], tags:["animals","plush","pretend-play","storytelling"],
+    price:31.99, asin:null, afflink:"https://link.amazon/B05NlgB8R", img:"https://m.media-amazon.com/images/I/9186RDRJomL._AC_SL1500_.jpg",
+    note:"A whole zoo of little soft friends. Brilliant for sorting, counting, hiding games and endless storylines.",
+    search:"24 Pack Mini Animal Plush Set kids"
+  },
+  {
+    id:"p178", name:"Skillmatics Guess in 10: Animal Kingdom", age_min:36, age_max:72,
+    dev_areas:["language","cognitive","social"], tags:["animals","turn-taking","vocabulary","board-game","questions"], fam:"guess-in-10",
+    price:15.29, asin:null, afflink:"https://link.amazon/B0hIlequT", img:"https://m.media-amazon.com/images/I/81zJwhaGlIL._AC_SX679_.jpg",
+    note:"Ask smart questions to guess the animal in ten. Builds question asking, categorising and vocabulary, all skills I work on in therapy constantly.",
+    search:"Skillmatics Guess in 10: Animal Kingdom kids"
+  },
+  {
+    id:"p179", name:"LEGO Creator 3-in-1 Cute Animals", age_min:96, age_max:120,
+    dev_areas:["fine","cognitive"], tags:["animals","constructive","blocks-tiles","problem-solving"], fam:"lego",
+    price:31.49, asin:null, afflink:"https://link.amazon/B0flNdA3S", img:"https://m.media-amazon.com/images/I/81nXrJT7jkL._AC_SX679_.jpg",
+    note:"Build three different animals from one set. Following the instructions builds sequencing and visual perception, and rebuilding keeps it fresh.",
+    search:"LEGO Creator 3-in-1 Cute Animals kids"
+  },
+  {
+    id:"p180", name:"Toddler Learning Farm Train Set", age_min:12, age_max:36,
+    dev_areas:["cognitive","language","fine"], tags:["animals","cause-effect","sorting","trains"],
+    price:45.99, asin:null, afflink:"https://link.amazon/B0iqnQX7s", img:"https://m.media-amazon.com/images/I/81kVIPnqrDL._AC_SX679_.jpg",
+    note:"Animals, sorting and a train all in one. Lots of cause and effect and early language for little farm fans.",
+    search:"Toddler Learning Farm Train Set kids"
+  },
+  {
+    id:"p181", name:"Weighted Dragon Plush", age_min:60, age_max:120,
+    dev_areas:["sensory","social"], tags:["deep-pressure","plush","animals","self-regulation","calm-down"],
+    price:57.94, asin:null, afflink:"https://link.amazon/B0dCMfh64", img:"https://m.media-amazon.com/images/I/51VD8R5RN4L._AC_SX679_.jpg",
+    note:"Weighted plush gives lovely calming deep pressure across the lap or shoulders. A cuddly regulation tool that doesn't look like one.",
+    search:"Weighted Dragon Plush kids"
+  },
+  {
+    id:"p182", name:"Spot It! Animals Card Game", age_min:48, age_max:120,
+    dev_areas:["cognitive","social"], tags:["animals","visual","reaction-time","card-game","turn-taking"],
+    price:17.95, asin:null, afflink:"https://link.amazon/B02X5JKJZ", img:"https://m.media-amazon.com/images/I/71lMRod-nIL._AC_SX679_.jpg",
+    note:"Find the matching animal before everyone else. Fast, funny, and brilliant for visual scanning and processing speed.",
+    search:"Spot It! Animals Card Game kids"
+  },
+  {
+    id:"p183", name:"Skillmatics Guess in 10: Animal Planet", age_min:72, age_max:120,
+    dev_areas:["language","cognitive","social"], tags:["animals","turn-taking","vocabulary","board-game","questions"], fam:"guess-in-10",
+    price:17.99, asin:null, afflink:"https://link.amazon/B00cLKjbI", img:"https://m.media-amazon.com/images/I/81i169CgFhL._AC_SL1500_.jpg",
+    note:"The step-up version for school age animal lovers. Question asking, deduction and animal facts in one quick game.",
+    search:"Skillmatics Guess in 10: Animal Planet kids"
+  },
+  {
+    id:"p184", name:"Skillmatics Guess in 10: Underwater Animals", age_min:96, age_max:120,
+    dev_areas:["language","cognitive","social"], tags:["animals","turn-taking","vocabulary","board-game","questions"], fam:"guess-in-10",
+    price:19.99, asin:null, afflink:"https://link.amazon/B0c9Q85km", img:"https://m.media-amazon.com/images/I/81nNa7qaMnL._AC_SL1500_.jpg",
+    note:"Ocean edition for older kids who know their hammerheads from their humpbacks. Deduction and language dressed up as a game.",
+    search:"Skillmatics Guess in 10: Underwater Animals kids"
+  },
+  {
+    id:"p185", name:"Farm Animal Memory Cards", age_min:36, age_max:120,
+    dev_areas:["cognitive","social"], tags:["animals","memory","turn-taking","card-game"], fam:"memory-cards",
+    price:9.29, asin:null, afflink:"https://link.amazon/B05Xda5t4", img:"https://m.media-amazon.com/images/I/7180poFdu1L._SL1500_.jpg",
+    note:"A classic memory game with friendly farm faces. Working memory, turn-taking and a genuine chance for kids to beat the grown-ups.",
+    search:"Farm Animal Memory Cards kids"
+  },
+  {
+    id:"p186", name:"I Spy Animals Book", age_min:24, age_max:48,
+    dev_areas:["language","cognitive"], tags:["animals","books","visual","language"], fam:"i-spy-book",
+    price:20.21, asin:null, afflink:"https://link.amazon/B0dbjwbzv", img:"https://m.media-amazon.com/images/I/61PYd0Em4LL._SL1000_.jpg",
+    note:"Search the page, find the animal, name it together. I spy books build visual scanning and vocabulary side by side.",
+    search:"I Spy Animals Book kids"
+  },
+  {
+    id:"p187", name:"Melissa & Doug Magnetic Fishing Game", age_min:36, age_max:60,
+    dev_areas:["fine","cognitive"], tags:["animals","fine-motor","hand-eye","patience"], fam:"fishing-game",
+    price:16.37, asin:null, afflink:"https://link.amazon/B0aq1iy3i", img:"https://m.media-amazon.com/images/I/817blwa0MZL._AC_SX679_.jpg",
+    note:"Steady hands and patience to hook each fish. Magnetic fishing is a quiet fine motor workout kids ask to repeat.",
+    search:"Melissa & Doug Magnetic Fishing Game kids"
+  },
+  {
+    id:"p188", name:"I Spy Ocean Animals Book", age_min:36, age_max:96,
+    dev_areas:["language","cognitive"], tags:["animals","books","visual","language"], fam:"i-spy-book",
+    price:19.21, asin:null, afflink:"https://link.amazon/B07qHSBLV", img:"https://m.media-amazon.com/images/I/71cycnoRvdL._SL1000_.jpg",
+    note:"Under the sea seek and find. Great for visual attention and ocean vocabulary, and it works beautifully as a calm-down activity.",
+    search:"I Spy Ocean Animals Book kids"
+  },
+  {
+    id:"p189", name:"Skillmatics Search & Find: Animals at Play", age_min:48, age_max:96,
+    dev_areas:["cognitive","fine"], tags:["animals","visual","reusable","focus","mark-making"],
+    price:19.99, asin:null, afflink:"https://link.amazon/B00oHlB50", img:"https://m.media-amazon.com/images/I/81nEi3D6b0L._AC_SL1500_.jpg",
+    note:"Wipe clean search and find boards you can use over and over. Visual scanning, focus and pen control in one reusable pack.",
+    search:"Skillmatics Search & Find: Animals at Play kids"
+  },
+  {
+    id:"p190", name:"Learning Resources Ocean Emotions Seashells", age_min:18, age_max:72,
+    dev_areas:["social","language"], tags:["emotions","animals","social","language"],
+    price:72.87, asin:null, afflink:"https://link.amazon/B01nGqvBG", img:"https://m.media-amazon.com/images/I/71AZmaVLNrL._AC_SL1400_.jpg",
+    note:"Each little shell friend shows a different feeling. A gentle, hands-on way to name emotions, which is the first step to managing them.",
+    search:"Learning Resources Ocean Emotions Seashells kids"
+  },
+  {
+    id:"p191", name:"Baby Einstein Ocean Explorers Bath Pals", age_min:3, age_max:48,
+    dev_areas:["sensory","cognitive"], tags:["water","animals","sensory","bath","cause-effect"],
+    price:22.55, asin:null, afflink:"https://link.amazon/B0fe2SAeq", img:"https://m.media-amazon.com/images/I/71e21inAv+L._AC_SL1500_.jpg",
+    note:"Bath time is sensory play time. Pouring, squeezing and splashing with ocean friends builds hand skills while they soak.",
+    search:"Baby Einstein Ocean Explorers Bath Pals kids"
+  },
+  {
+    id:"p192", name:"60 Piece Sea Animals Set", age_min:36, age_max:120,
+    dev_areas:["language","cognitive","social"], tags:["animals","pretend-play","small-world","sorting"], fam:"animal-figures",
+    price:18.99, asin:null, afflink:"https://link.amazon/B0flEZ9PK", img:"https://m.media-amazon.com/images/I/71ex794AjeL._AC_SL1500_.jpg",
+    note:"A whole ocean in a tub. Sort them, name them, build underwater worlds. Add water or kinetic sand and it becomes a sensory bin too.",
+    search:"60 Piece Sea Animals Set kids"
+  },
+  {
+    id:"p193", name:"60 Piece Farm Animals Set", age_min:36, age_max:120,
+    dev_areas:["language","cognitive","social"], tags:["animals","pretend-play","small-world","sorting"], fam:"animal-figures",
+    price:35.27, asin:null, afflink:"https://link.amazon/B05kNAT35", img:"https://m.media-amazon.com/images/I/71utz6V4J2L._AC_SL1500_.jpg",
+    note:"Sixty farm friends for sorting, matching, counting and small world play. Simple figures like these carry years of play.",
+    search:"60 Piece Farm Animals Set kids"
+  },
+  {
+    id:"p194", name:"6 Piece Large Dinosaur Figures Set", age_min:36, age_max:120,
+    dev_areas:["language","cognitive","social"], tags:["dinosaurs","animals","pretend-play","small-world"], fam:"animal-figures",
+    price:57.99, asin:null, afflink:"https://link.amazon/B0cNdcdgK", img:"https://m.media-amazon.com/images/I/91J8hbHJvvL._AC_SL1500_.jpg",
+    note:"Big, realistic dinosaurs that hold up to serious play. Perfect for storytelling, sensory bins and backyard dino digs.",
+    search:"6 Piece Large Dinosaur Figures Set kids"
+  },
+  {
+    id:"p195", name:"Melissa & Doug Pet Vet Play Set", age_min:36, age_max:96,
+    dev_areas:["social","language","cognitive"], tags:["animals","pretend-play","role-play","nurturing","empathy"], fam:"vet-set",
+    price:52.9, asin:null, afflink:"https://link.amazon/B07fd56G4", img:"https://m.media-amazon.com/images/I/714NIH2CVFL._AC_SL1500_.jpg",
+    note:"Check-ups, bandages and lots of caring talk. Vet play builds empathy and language, and it's a lovely bridge for kids who find doctor visits scary.",
+    search:"Melissa & Doug Pet Vet Play Set kids"
+  },
+  {
+    id:"p196", name:"Critter Clinic Vet Set", age_min:24, age_max:72,
+    dev_areas:["fine","social","cognitive"], tags:["animals","pretend-play","fine-motor","problem-solving","nurturing"], fam:"vet-set",
+    price:99.99, asin:null, afflink:"https://link.amazon/B07Uw326b", img:"https://m.media-amazon.com/images/I/81EJpdwEpDL._AC_SL1500_.jpg",
+    note:"Six little doors, six keys, and patients waiting inside. The lock and key work is sneaky fine motor gold on top of the caring play.",
+    search:"Critter Clinic Vet Set kids"
+  },
+  {
+    id:"p197", name:"Hape Puppy Care Clinic Vet Set", age_min:36, age_max:84,
+    dev_areas:["social","language","cognitive"], tags:["animals","pretend-play","role-play","nurturing","empathy"], fam:"vet-set",
+    price:49.99, asin:null, afflink:"https://link.amazon/B0dV33seI", img:"https://m.media-amazon.com/images/I/81PQ6knFe0L._AC_SL1500_.jpg",
+    note:"A beautiful wooden clinic for looking after a poorly puppy. Nurturing pretend play that builds empathy and sequencing.",
+    search:"Hape Puppy Care Clinic Vet Set kids"
+  },
+  {
+    id:"p198", name:"Play-Doh Care 'n Carry Vet Set", age_min:36, age_max:84,
+    dev_areas:["fine","sensory","social"], tags:["animals","pretend-play","sensory","tactile","nurturing"], fam:"vet-set",
+    price:24.0, asin:null, afflink:"https://link.amazon/B0flFzxTj", img:"https://m.media-amazon.com/images/I/81dNr8hjbNL._AC_SL1500_.jpg",
+    note:"Vet play plus playdough in one. Squeezing and rolling the dough strengthens little hands while the caring storylines run.",
+    search:"Play-Doh Care 'n Carry Vet Set kids"
+  },
+  {
+    id:"p199", name:"Galt Bubble Lab", age_min:60, age_max:120,
+    dev_areas:["cognitive","sensory"], tags:["STEM","science","cause-effect","experiments"], fam:"science-kit",
+    price:22.99, asin:null, afflink:"https://link.amazon/B09RR6znD", img:"https://m.media-amazon.com/images/I/61OVpF+53aL._AC_SL1080_.jpg",
+    note:"Real bubble experiments with a proper wow factor. Science that feels like magic is exactly how curiosity starts.",
+    search:"Galt Bubble Lab kids"
+  },
+  {
+    id:"p200", name:"70 Lab Experiments Science Kit", age_min:96, age_max:120,
+    dev_areas:["cognitive","fine"], tags:["STEM","science","experiments","problem-solving"], fam:"science-kit",
+    price:34.99, asin:null, afflink:"https://link.amazon/B0f9whsfu", img:"https://m.media-amazon.com/images/I/81ooFv9f7kL._AC_SL1500_.jpg",
+    note:"Seventy experiments means weeks of what happens if. Following the steps builds sequencing and the results build a little scientist.",
+    search:"70 Lab Experiments Science Kit kids"
+  },
+  {
+    id:"p201", name:"National Geographic Science Magic Kit", age_min:96, age_max:120,
+    dev_areas:["cognitive","social"], tags:["STEM","science","experiments","performance"], fam:"science-kit",
+    price:39.99, asin:null, afflink:"https://link.amazon/B0c9bE2RU", img:"https://m.media-amazon.com/images/I/81zJwByLeFL._AC_SL1500_.jpg",
+    note:"Science tricks they can perform for the family. Learning the science AND presenting the show builds confidence on both fronts.",
+    search:"National Geographic Science Magic Kit kids"
+  },
+  {
+    id:"p202", name:"150 Science Experiments Kit", age_min:96, age_max:120,
+    dev_areas:["cognitive","fine"], tags:["STEM","science","experiments","problem-solving"], fam:"science-kit",
+    price:39.99, asin:null, afflink:"https://link.amazon/B09QQhUsc", img:"https://m.media-amazon.com/images/I/818eRP4CCUL._AC_SL1500_.jpg",
+    note:"A big box of proper experiments for a kid who asks why about everything. Independence, sequencing and real science thinking.",
+    search:"150 Science Experiments Kit kids"
+  },
+  {
+    id:"p203", name:"Doctor Jupiter Girls Science Kit", age_min:72, age_max:120,
+    dev_areas:["cognitive","fine"], tags:["STEM","science","experiments"], fam:"science-kit",
+    price:45.99, asin:null, afflink:"https://link.amazon/B07Woi59A", img:"https://m.media-amazon.com/images/I/71siUaJa5gL._AC_SL1500_.jpg",
+    note:"Designed to pull girls into science early, and it works. Hands-on experiments that make STEM feel like it belongs to them.",
+    search:"Doctor Jupiter Girls Science Kit kids"
+  },
+  {
+    id:"p204", name:"Electric Circuit Motor Kit", age_min:96, age_max:120,
+    dev_areas:["cognitive","fine"], tags:["STEM","science","circuits","cause-effect","problem-solving"], fam:"circuit-kit",
+    price:19.99, asin:null, afflink:"https://link.amazon/B0gJE5JZz", img:"https://m.media-amazon.com/images/I/61B5GfDiIYL._AC_SL1000_.jpg",
+    note:"Build a working circuit and watch the motor spin. Cause and effect at its most satisfying, and a great budget entry into electronics.",
+    search:"Electric Circuit Motor Kit kids"
+  },
+  {
+    id:"p205", name:"Galt Science Lab", age_min:72, age_max:120,
+    dev_areas:["cognitive","fine"], tags:["STEM","science","experiments"], fam:"science-kit",
+    price:34.95, asin:null, afflink:"https://link.amazon/B08KeUwOv", img:"https://m.media-amazon.com/images/I/613uYRsOFoL._AC_SL1080_.jpg",
+    note:"A solid first proper science kit. Clear instructions, real reactions, and the pride of doing it themselves.",
+    search:"Galt Science Lab kids"
+  },
+  {
+    id:"p206", name:"Doctor Jupiter Super Science Kit", age_min:72, age_max:120,
+    dev_areas:["cognitive","fine"], tags:["STEM","science","experiments"], fam:"science-kit",
+    price:39.99, asin:null, afflink:"https://link.amazon/B07CeXMth", img:"https://m.media-amazon.com/images/I/81PTUy0feoL._AC_SL1500_.jpg",
+    note:"A big variety kit for kids who ask how everything works. Every experiment is a little lesson in following steps and predicting outcomes.",
+    search:"Doctor Jupiter Super Science Kit kids"
+  },
+  {
+    id:"p207", name:"Snap Circuits Flight Deck", age_min:96, age_max:120,
+    dev_areas:["cognitive","fine"], tags:["STEM","science","circuits","problem-solving","constructive"], fam:"circuit-kit",
+    price:44.1, asin:null, afflink:"https://link.amazon/B07GEBYcx", img:"https://m.media-amazon.com/images/I/71KOXQhpz5L._AC_SL1268_.jpg",
+    note:"Snap the pieces together and things actually fly. Snap Circuits are the gold standard for teaching real electronics safely.",
+    search:"Snap Circuits Flight Deck kids"
+  },
+  {
+    id:"p208", name:"Galt Rainbow Lab", age_min:60, age_max:120,
+    dev_areas:["cognitive","sensory"], tags:["STEM","science","experiments","colours"], fam:"science-kit",
+    price:38.24, asin:null, afflink:"https://link.amazon/B03NHkZmm", img:"https://m.media-amazon.com/images/I/61wtOHQBYFL._AC_SL1080_.jpg",
+    note:"Colour mixing science with big visual payoffs. Perfect for younger scientists who need to see something happen right now.",
+    search:"Galt Rainbow Lab kids"
+  },
+  {
+    id:"p209", name:"Learning Resources Code & Go Robot Mouse", age_min:48, age_max:96,
+    dev_areas:["cognitive","fine"], tags:["STEM","coding","problem-solving","sequencing","cause-effect"], fam:"coding-robot",
+    price:60.6, asin:null, afflink:"https://link.amazon/B0b4cnk1L", img:"https://m.media-amazon.com/images/I/81SVjjQPCWL._AC_SL1500_.jpg",
+    note:"Program the mouse to find the cheese, no screen needed. Screen-free coding that teaches sequencing and planning through play.",
+    search:"Learning Resources Code & Go Robot Mouse kids"
+  },
+  {
+    id:"p210", name:"Apitor Coding Robot Building Kit", age_min:96, age_max:120,
+    dev_areas:["cognitive","fine"], tags:["STEM","coding","constructive","problem-solving"], fam:"coding-robot",
+    price:89.99, asin:null, afflink:"https://link.amazon/B00HvI7BW", img:"https://m.media-amazon.com/images/I/714gnKxoPSL._AC_SL1500_.jpg",
+    note:"Build the robot, then code it to move. A genuine step-up project for an older kid ready to be stretched.",
+    search:"Apitor Coding Robot Building Kit kids"
+  },
+  {
+    id:"p211", name:"Snap Circuits Junior 100 Experiments", age_min:96, age_max:120,
+    dev_areas:["cognitive","fine"], tags:["STEM","science","circuits","problem-solving"], fam:"circuit-kit",
+    price:65.55, asin:null, afflink:"https://link.amazon/B0fvhynmZ", img:"https://m.media-amazon.com/images/I/91THy3rMlCL._AC_SL1500_.jpg",
+    note:"One hundred circuit projects that snap together safely. Lights, sounds and sirens they built themselves. The confidence payoff is huge.",
+    search:"Snap Circuits Junior 100 Experiments kids"
+  },
+  {
+    id:"p212", name:"National Geographic Circuit Maker Electronics Kit", age_min:96, age_max:120,
+    dev_areas:["cognitive","fine"], tags:["STEM","science","circuits","problem-solving"], fam:"circuit-kit",
+    price:120.97, asin:null, afflink:"https://link.amazon/B0aVGjLUz", img:"https://m.media-amazon.com/images/I/91EMQqNa7aL._AC_SL1500_.jpg",
+    note:"A serious electronics kit for a seriously curious kid. The kind of present that starts a lifelong interest.",
+    search:"National Geographic Circuit Maker Electronics Kit kids"
+  },
+  {
+    id:"p213", name:"Snap Circuits BRIC: Bricks & Circuits Kit", age_min:96, age_max:120,
+    dev_areas:["cognitive","fine"], tags:["STEM","science","circuits","constructive","blocks-tiles"], fam:"circuit-kit",
+    price:62.74, asin:null, afflink:"https://link.amazon/B02V1FALM", img:"https://m.media-amazon.com/images/I/61kKPO5qK6L._AC_SL1097_.jpg",
+    note:"Building bricks meet working circuits. Perfect for a builder who's ready to make their creations light up and move.",
+    search:"Snap Circuits BRIC: Bricks & Circuits Kit kids"
+  },
+  {
+    id:"p214", name:"Doctor Jupiter Electricity Kit", age_min:96, age_max:120,
+    dev_areas:["cognitive","fine"], tags:["STEM","science","circuits","experiments"], fam:"circuit-kit",
+    price:39.99, asin:null, afflink:"https://link.amazon/B01o3i6mh", img:"https://m.media-amazon.com/images/I/71iTlefcwNL._AC_SL1000_.jpg",
+    note:"Hands-on electricity experiments that answer the how does that work questions properly. Great value for the depth you get.",
+    search:"Doctor Jupiter Electricity Kit kids"
+  },
+  {
+    id:"p215", name:"Snap Circuits Arcade", age_min:96, age_max:120,
+    dev_areas:["cognitive","fine"], tags:["STEM","science","circuits","problem-solving"], fam:"circuit-kit",
+    price:104.82, asin:null, afflink:"https://link.amazon/B027s96N3", img:"https://m.media-amazon.com/images/I/71dyfiqJ3iL._AC_SL1500_.jpg",
+    note:"Build your own working arcade games from circuits. The most motivating version of Snap Circuits for game-loving kids.",
+    search:"Snap Circuits Arcade kids"
+  },
+  {
+    id:"p216", name:"UNO Card Game", age_min:84, age_max:120,
+    dev_areas:["cognitive","social"], tags:["card-game","turn-taking","colours","numbers","board-game"],
+    price:6.0, asin:null, afflink:"https://link.amazon/B05f6mBWE", img:"https://m.media-amazon.com/images/I/71ozbtH8PbL._AC_SL1500_.jpg",
+    note:"The classic for a reason. Colour and number matching, turn-taking, and coping when someone hits you with a draw four. All real skills.",
+    search:"UNO Card Game kids"
+  },
+  {
+    id:"p217", name:"5 Second Rule Game", age_min:96, age_max:120,
+    dev_areas:["language","cognitive","social"], tags:["card-game","language","vocabulary","reaction-time","board-game"],
+    price:9.95, asin:null, afflink:"https://link.amazon/B0hzFxSuN", img:"https://m.media-amazon.com/images/I/61Jb80Mp5oL._AC_SL1200_.jpg",
+    note:"Name three things in five seconds. Brilliant for word retrieval and thinking under pressure, and it gets very funny very fast.",
+    search:"5 Second Rule Game kids"
+  },
+  {
+    id:"p218", name:"Old Maid Card Game", age_min:48, age_max:120,
+    dev_areas:["cognitive","social"], tags:["card-game","turn-taking","matching","board-game"],
+    price:6.45, asin:null, afflink:"https://link.amazon/B0az647MF", img:"https://m.media-amazon.com/images/I/710I31VASCL._AC_SL1500_.jpg",
+    note:"Simple, quick and a little bit cheeky. Matching, holding a hand of cards, and learning to keep a poker face.",
+    search:"Old Maid Card Game kids"
+  },
+  {
+    id:"p219", name:"Monopoly Deal Card Game", age_min:96, age_max:120,
+    dev_areas:["cognitive","social"], tags:["card-game","strategy","numbers","turn-taking","board-game"],
+    price:7.0, asin:null, afflink:"https://link.amazon/B050ix1Xh", img:"https://m.media-amazon.com/images/I/81-tKuW1IqL._AC_SL1500_.jpg",
+    note:"All the property-dealing fun of Monopoly in fifteen minutes. Strategy, money maths and losing gracefully, without the three-hour meltdown.",
+    search:"Monopoly Deal Card Game kids"
+  },
+  {
+    id:"p220", name:"Tapple Word Game", age_min:96, age_max:120,
+    dev_areas:["language","cognitive","social"], tags:["word-game","language","vocabulary","letters","reaction-time","board-game"],
+    price:25.0, asin:null, afflink:"https://link.amazon/B06Zhi5Al", img:"https://m.media-amazon.com/images/I/81dTQBmNewL._AC_SL1500_.jpg",
+    note:"Hit the timer, name a word, don't repeat a letter. Fast word retrieval under pressure, which is exactly the skill kids need for classroom answers.",
+    search:"Tapple Word Game kids"
+  },
+  {
+    id:"p221", name:"Guess Who", age_min:72, age_max:120,
+    dev_areas:["language","cognitive","social"], tags:["board-game","questions","language","deduction","turn-taking"],
+    price:19.99, asin:null, afflink:"https://link.amazon/B0dW5ZcfA", img:"https://m.media-amazon.com/images/I/81Y72Ho77dL._AC_SL1500_.jpg",
+    note:"Does your person wear glasses? Guess Who quietly teaches question asking, deduction and describing features. A therapy room staple for good reason.",
+    search:"Guess Who kids"
+  },
+  {
+    id:"p222", name:"Monopoly Junior: Bluey Edition", age_min:60, age_max:120,
+    dev_areas:["cognitive","social"], tags:["board-game","numbers","turn-taking","bluey"],
+    price:22.0, asin:null, afflink:"https://link.amazon/B09NDA80D", img:"https://m.media-amazon.com/images/I/81DPZQ6tQYL._AC_SL1500_.jpg",
+    note:"A first board game with the Heeler family along for the ride. Counting, turn-taking and simple money concepts at just the right level.",
+    search:"Monopoly Junior: Bluey Edition kids"
+  },
+  {
+    id:"p223", name:"Taco Cat Goat Cheese Pizza", age_min:96, age_max:120,
+    dev_areas:["cognitive","social"], tags:["card-game","reaction-time","attention","board-game"],
+    price:15.0, asin:null, afflink:"https://link.amazon/B07JR692b", img:"https://m.media-amazon.com/images/I/61NYm2jYMHL._AC_SL1465_.jpg",
+    note:"Say the word, flip the card, slap when they match. Pure attention and impulse control training disguised as chaos.",
+    search:"Taco Cat Goat Cheese Pizza kids"
+  },
+  {
+    id:"p224", name:"Pop Up Pirate", age_min:36, age_max:96,
+    dev_areas:["fine","cognitive","social"], tags:["board-game","turn-taking","fine-motor","cause-effect","suspense"],
+    price:14.95, asin:null, afflink:"https://link.amazon/B02qOPxKy", img:"https://m.media-amazon.com/images/I/812lSGtI33L._AC_SL1500_.jpg",
+    note:"Slide the swords in and wait for the pirate to pop. Turn-taking, fine motor and managing the suspense. Kids beg to play it again.",
+    search:"Pop Up Pirate kids"
+  },
+  {
+    id:"p225", name:"Jenga", age_min:72, age_max:120,
+    dev_areas:["fine","cognitive","social"], tags:["board-game","fine-motor","balance","turn-taking","hand-eye"],
+    price:29.99, asin:null, afflink:"https://link.amazon/B08T6H9Ih", img:"https://m.media-amazon.com/images/I/81xyPFZTrfL._AC_SL1500_.jpg",
+    note:"Steady hands, careful planning and the delicious tension of a wobbling tower. Fine motor control under pressure, plus a big crash payoff.",
+    search:"Jenga kids"
+  },
+  {
+    id:"p226", name:"Hedbanz", age_min:72, age_max:120,
+    dev_areas:["language","cognitive","social"], tags:["board-game","questions","language","deduction","turn-taking"],
+    price:20.0, asin:null, afflink:"https://link.amazon/B0gkGGvho", img:"https://m.media-amazon.com/images/I/81vv05gBltL._AC_SL1500_.jpg",
+    note:"What am I? Asking the right questions to work out the card on your own head. Question forming and categorising, wrapped in giggles.",
+    search:"Hedbanz kids"
+  },
+  {
+    id:"p227", name:"Trouble", age_min:60, age_max:120,
+    dev_areas:["cognitive","social"], tags:["board-game","counting","turn-taking","numbers"],
+    price:19.95, asin:null, afflink:"https://link.amazon/B0d42A2h2", img:"https://m.media-amazon.com/images/I/81M3F7FcsyL._AC_SL1500_.jpg",
+    note:"Pop the dice, count the moves, cope with getting sent home. Counting and good sportsmanship practice in every round.",
+    search:"Trouble kids"
+  },
+  {
+    id:"p228", name:"Bananagrams", age_min:84, age_max:120,
+    dev_areas:["language","cognitive","fine"], tags:["word-game","letters","language","spelling","board-game"],
+    price:19.95, asin:null, afflink:"https://link.amazon/B0cPPgcCJ", img:"https://m.media-amazon.com/images/I/719SDWO2ldL._AC_SL1500_.jpg",
+    note:"Build your own crossword faster than everyone else. Spelling and word building at speed, and the banana pouch travels anywhere.",
+    search:"Bananagrams kids"
+  },
+  {
+    id:"p229", name:"Pop-Up Soccer Goal Set", age_min:72, age_max:120,
+    dev_areas:["gross","social"], tags:["outdoor","sports","movement","coordination","bilateral"],
+    price:57.0, asin:null, afflink:"https://link.amazon/B02hRPQa8", img:"https://m.media-amazon.com/images/I/81b7qvRpFSL._AC_SL1500_.jpg",
+    note:"A backyard goal turns kicking practice into a game. Striking a moving ball builds timing, balance and coordination, and it's World Cup year.",
+    search:"Pop-Up Soccer Goal Set kids"
+  },
+  {
+    id:"p230", name:"Little Tikes T-Ball Set", age_min:18, age_max:72,
+    dev_areas:["gross"], tags:["outdoor","sports","hand-eye","coordination","bilateral"],
+    price:29.0, asin:null, afflink:"https://link.amazon/B06s4CGzx", img:"https://m.media-amazon.com/images/I/61nGSQIlFeL._AC_SL1500_.jpg",
+    note:"The ball sits still so little sluggers can connect. T-ball is the perfect first hitting sport, building hand-eye coordination without the frustration.",
+    search:"Little Tikes T-Ball Set kids"
+  },
+  {
+    id:"p231", name:"Totem Tennis Set", age_min:72, age_max:120,
+    dev_areas:["gross"], tags:["outdoor","sports","hand-eye","coordination","reaction-time"],
+    price:75.95, asin:null, afflink:"https://link.amazon/B02Gt20Dt", img:"https://m.media-amazon.com/images/I/51JvRnkHNBL._AC_SL1500_.jpg",
+    note:"An Aussie backyard classic. Tracking a ball on a string builds visual tracking and timing, and one kid can play solo when no one's free.",
+    search:"Totem Tennis Set kids"
+  },
+  {
+    id:"p232", name:"LEGO Friends Nature Glamping Cabin", age_min:72, age_max:120,
+    dev_areas:["fine","cognitive","social"], tags:["constructive","blocks-tiles","pretend-play","lego"], fam:"lego",
+    price:31.99, asin:"B0FPXFTCCG", afflink:"https://www.amazon.com.au/dp/B0FPXFTCCG?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81DCgWqZUcL._AC_SL1500_.jpg",
+    note:"Build it, then play in it. LEGO Friends sets roll construction and pretend play into one, so the fun keeps going after the build.",
+    search:"LEGO Friends Nature Glamping Cabin kids"
+  },
+  {
+    id:"p233", name:"LEGO City Fire Rescue Boat", age_min:60, age_max:120,
+    dev_areas:["fine","cognitive","social"], tags:["constructive","blocks-tiles","vehicles","pretend-play","lego"], fam:"lego",
+    price:50.61, asin:"B0DHZVJST6", afflink:"https://www.amazon.com.au/dp/B0DHZVJST6?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81Vcy6pZ24L._AC_SL1500_.jpg",
+    note:"A rescue boat build with rescue missions to follow. Following LEGO instructions is brilliant for sequencing and visual perception.",
+    search:"LEGO City Fire Rescue Boat kids"
+  },
+  {
+    id:"p234", name:"LEGO Disney Belle & the Beast's Enchanted Castle", age_min:60, age_max:120,
+    dev_areas:["fine","cognitive","social"], tags:["constructive","blocks-tiles","pretend-play","storytelling","lego"], fam:"lego",
+    price:47.99, asin:"B0FPXG66P7", afflink:"https://www.amazon.com.au/dp/B0FPXG66P7?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81c9-SVwXeL._AC_SL1500_.jpg",
+    note:"Build the castle, then retell the tale as old as time. Story-driven builds keep imaginative kids playing long after the last brick.",
+    search:"LEGO Disney Belle & the Beast's Enchanted Castle kids"
+  },
+  {
+    id:"p235", name:"LEGO Friends Heartlake City Mini Supermarket", age_min:60, age_max:120,
+    dev_areas:["fine","cognitive","social"], tags:["constructive","blocks-tiles","pretend-play","role-play","lego"], fam:"lego",
+    price:23.99, asin:"B0FPXBHY2V", afflink:"https://www.amazon.com.au/dp/B0FPXBHY2V?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/818Nax0kqqL._AC_SL1500_.jpg",
+    note:"A build plus shop play in one. Great starter LEGO price, and the supermarket storylines bring in loads of language.",
+    search:"LEGO Friends Heartlake City Mini Supermarket kids"
+  },
+  {
+    id:"p236", name:"LEGO Friends Unicorn & Flamingo Pool Party", age_min:60, age_max:120,
+    dev_areas:["fine","cognitive"], tags:["constructive","blocks-tiles","pretend-play","animals","lego"], fam:"lego",
+    price:9.6, asin:"B0DWF4JFMF", afflink:"https://www.amazon.com.au/dp/B0DWF4JFMF?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81DrJVckQfL._AC_SL1500_.jpg",
+    note:"A pocket-money LEGO set with maximum cute factor. A great first build for small hands and short attention spans.",
+    search:"LEGO Friends Unicorn & Flamingo Pool Party kids"
+  },
+  {
+    id:"p237", name:"LEGO Classic Creative Vehicles", age_min:60, age_max:120,
+    dev_areas:["fine","cognitive"], tags:["constructive","blocks-tiles","vehicles","open-ended","lego"], fam:"lego",
+    price:63.99, asin:"B0H4NHQ343", afflink:"https://www.amazon.com.au/dp/B0H4NHQ343?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81bVSZ51cFL._AC_SL1500_.jpg",
+    note:"Open-ended bricks with vehicle ideas to spark them. Classic sets are my pick for creativity because there's no single right answer.",
+    search:"LEGO Classic Creative Vehicles kids"
+  },
+  {
+    id:"p238", name:"LEGO Toy Story 5 Blaze's Horse Ranch", age_min:48, age_max:120,
+    dev_areas:["fine","cognitive","social"], tags:["constructive","blocks-tiles","pretend-play","animals","lego"], fam:"lego",
+    price:59.0, asin:"B0FPXG718F", afflink:"https://www.amazon.com.au/dp/B0FPXG718F?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81v0PoitvGL._AC_SL1500_.jpg",
+    note:"A 4+ set with chunkier pieces and beloved characters. A lovely bridge between DUPLO and proper LEGO.",
+    search:"LEGO Toy Story 5 Blaze's Horse Ranch kids"
+  },
+  {
+    id:"p239", name:"LEGO Friends Unicorn Dream Café", age_min:72, age_max:120,
+    dev_areas:["fine","cognitive","social"], tags:["constructive","blocks-tiles","pretend-play","role-play","lego"], fam:"lego",
+    price:47.99, asin:"B0FPVZ2B9Y", afflink:"https://www.amazon.com.au/dp/B0FPVZ2B9Y?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81GqoPqfLrL._AC_SL1500_.jpg",
+    note:"Cafe role play meets a satisfying build. Taking orders and serving customers is social skills practice in disguise.",
+    search:"LEGO Friends Unicorn Dream Café kids"
+  },
+  {
+    id:"p240", name:"LEGO Disney Mini Belle & Tiana with Castle", age_min:60, age_max:120,
+    dev_areas:["fine","cognitive","social"], tags:["constructive","blocks-tiles","pretend-play","storytelling","lego"], fam:"lego",
+    price:39.0, asin:"B0FPXG9QQL", afflink:"https://www.amazon.com.au/dp/B0FPXG9QQL?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81RXoNhd7FL._AC_SL1500_.jpg",
+    note:"Two princesses, one castle, endless storylines. Build first, then let the imaginative play take over.",
+    search:"LEGO Disney Mini Belle & Tiana with Castle kids"
+  },
+  {
+    id:"p241", name:"LEGO Classic Medium Creative Brick Box", age_min:48, age_max:120,
+    dev_areas:["fine","cognitive"], tags:["constructive","blocks-tiles","open-ended","lego"], fam:"lego",
+    price:34.4, asin:"B0C7F8G2L2", afflink:"https://www.amazon.com.au/dp/B0C7F8G2L2?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81TNNA5OXCL._AC_SL1500_.jpg",
+    note:"Just bricks and imagination. If I could only recommend one LEGO product, it's the classic box, because open-ended building never gets outgrown.",
+    search:"LEGO Classic Medium Creative Brick Box kids"
+  },
+  {
+    id:"p242", name:"LEGO Classic Creative Dinosaurs", age_min:60, age_max:120,
+    dev_areas:["fine","cognitive"], tags:["constructive","blocks-tiles","dinosaurs","open-ended","lego"], fam:"lego",
+    price:34.4, asin:"B0G7JDFL1B", afflink:"https://www.amazon.com.au/dp/B0G7JDFL1B?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81UhCOtHsKL._AC_SL1500_.jpg",
+    note:"Build a T-Rex, pull it apart, build a triceratops. Dino love plus construction skills in one box.",
+    search:"LEGO Classic Creative Dinosaurs kids"
+  },
+  {
+    id:"p243", name:"LEGO Friends Fun Water Park Day", age_min:72, age_max:120,
+    dev_areas:["fine","cognitive","social"], tags:["constructive","blocks-tiles","pretend-play","water","lego"], fam:"lego",
+    price:34.0, asin:"B0FPXGQ1DK", afflink:"https://www.amazon.com.au/dp/B0FPXGQ1DK?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81C08sfT4fL._AC_SL1500_.jpg",
+    note:"Water slides and summer storylines. The build is the warm-up, the pretend play is the main event.",
+    search:"LEGO Friends Fun Water Park Day kids"
+  },
+  {
+    id:"p244", name:"LEGO City F1 Pit Stop & Pit Crew with Ferrari", age_min:72, age_max:120,
+    dev_areas:["fine","cognitive"], tags:["constructive","blocks-tiles","vehicles","lego"], fam:"lego",
+    price:31.2, asin:"B0DHSHH218", afflink:"https://www.amazon.com.au/dp/B0DHSHH218?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81NSva3jycL._AC_SL1500_.jpg",
+    note:"A pit stop build for speed-obsessed kids. Cars plus construction is a winning combination for keeping vehicle lovers building.",
+    search:"LEGO City F1 Pit Stop & Pit Crew with Ferrari kids"
+  },
+  {
+    id:"p245", name:"LEGO Friends Cat Birthday Party & Tree House", age_min:72, age_max:120,
+    dev_areas:["fine","cognitive","social"], tags:["constructive","blocks-tiles","animals","pretend-play","lego"], fam:"lego",
+    price:31.2, asin:"B0DWDWMVZ4", afflink:"https://www.amazon.com.au/dp/B0DWDWMVZ4?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81FL73NR3DL._AC_SL1500_.jpg",
+    note:"A tree house build with a cat party inside it. Animal lovers get their fix while the fine motor work happens quietly.",
+    search:"LEGO Friends Cat Birthday Party & Tree House kids"
+  },
+  {
+    id:"p246", name:"LEGO Disney Moana's Island Fun", age_min:60, age_max:120,
+    dev_areas:["fine","cognitive","social"], tags:["constructive","blocks-tiles","pretend-play","storytelling","lego"], fam:"lego",
+    price:29.0, asin:"B0DSBQ2ZG2", afflink:"https://www.amazon.com.au/dp/B0DSBQ2ZG2?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81Oe7tvhHwL._AC_SL1500_.jpg",
+    note:"Moana's island in brick form. Familiar characters lower the entry bar for kids who find building tricky.",
+    search:"LEGO Disney Moana's Island Fun kids"
+  },
+  {
+    id:"p247", name:"LEGO City Doughnut Truck", age_min:60, age_max:120,
+    dev_areas:["fine","cognitive"], tags:["constructive","blocks-tiles","vehicles","pretend-play","lego"], fam:"lego",
+    price:23.99, asin:"B0H4178848", afflink:"https://www.amazon.com.au/dp/B0H4178848?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81DkCvjbH7L._AC_SL1500_.jpg",
+    note:"A doughnut truck. Enough said. A fun, affordable build that rolls straight into pretend play.",
+    search:"LEGO City Doughnut Truck kids"
+  },
+  {
+    id:"p248", name:"LEGO Disney Ariel's Magical Mini Palace", age_min:60, age_max:120,
+    dev_areas:["fine","cognitive","social"], tags:["constructive","blocks-tiles","pretend-play","storytelling","lego"], fam:"lego",
+    price:23.2, asin:"B0FPXJHB6S", afflink:"https://www.amazon.com.au/dp/B0FPXJHB6S?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/811fGe6WTTL._AC_SL1500_.jpg",
+    note:"An under-the-sea palace at a lovely price point. Compact builds like this are perfect confidence builders.",
+    search:"LEGO Disney Ariel's Magical Mini Palace kids"
+  },
+  {
+    id:"p249", name:"LEGO City Blue Monster Truck", age_min:60, age_max:120,
+    dev_areas:["fine","cognitive"], tags:["constructive","blocks-tiles","vehicles","lego"], fam:"lego",
+    price:19.0, asin:"B0DNMJRKKD", afflink:"https://www.amazon.com.au/dp/B0DNMJRKKD?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81T4G46DlOL._AC_SL1500_.jpg",
+    note:"A monster truck they build themselves hits different. Great value entry into LEGO City for vehicle fans.",
+    search:"LEGO City Blue Monster Truck kids"
+  },
+  {
+    id:"p250", name:"LEGO Friends Axolotl Adventure Boat", age_min:60, age_max:120,
+    dev_areas:["fine","cognitive"], tags:["constructive","blocks-tiles","animals","lego"], fam:"lego",
+    price:10.0, asin:"B0FPXDDHKQ", afflink:"https://www.amazon.com.au/dp/B0FPXDDHKQ?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81U4jdPZoTL._AC_SL1500_.jpg",
+    note:"An axolotl boat for ten dollars. A perfect party gift or first solo build.",
+    search:"LEGO Friends Axolotl Adventure Boat kids"
+  },
+  {
+    id:"p251", name:"LEGO City Rides Construction Loader", age_min:60, age_max:120,
+    dev_areas:["fine","cognitive"], tags:["constructive","blocks-tiles","vehicles","lego"], fam:"lego",
+    price:9.0, asin:"B0H1YSKW8X", afflink:"https://www.amazon.com.au/dp/B0H1YSKW8X?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/713CdcEJQ8L._AC_SL1500_.jpg",
+    note:"A pocket-money loader build for little construction fans. Small sets are underrated for building independence.",
+    search:"LEGO City Rides Construction Loader kids"
+  },
+  {
+    id:"p252", name:"LEGO City Rides Police Truck", age_min:60, age_max:120,
+    dev_areas:["fine","cognitive"], tags:["constructive","blocks-tiles","vehicles","lego"], fam:"lego",
+    price:9.0, asin:"B0H41948HP", afflink:"https://www.amazon.com.au/dp/B0H41948HP?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/71JQlHxPNNL._AC_SL1500_.jpg",
+    note:"Nine dollars, one police truck, one very proud builder. A brilliant low-stakes way to test the LEGO waters.",
+    search:"LEGO City Rides Police Truck kids"
+  },
+  {
+    id:"p253", name:"Crazy Aaron's Thinking Putty", age_min:36, age_max:144,
+    dev_areas:["sensory","fine"], tags:["sensory","fidget","hand-strength","tactile","calm-down"], fam:"putty",
+    price:14.99, asin:null, afflink:"https://link.amazon/B0fLOwsag", img:"https://m.media-amazon.com/images/I/81J2cIswLwL._AC_SL1500_.jpg",
+    note:"The premium putty. Stretch it, snap it, sculpt it. Wonderful tactile input for busy hands and genuinely calming to work with.",
+    search:"Crazy Aaron's Thinking Putty kids"
+  },
+  {
+    id:"p254", name:"Sensory Stress Cube Set", age_min:36, age_max:144,
+    dev_areas:["sensory","fine"], tags:["sensory","fidget","tactile","calm-down","self-regulation"],
+    price:54.99, asin:null, afflink:"https://link.amazon/B05lAF34Z", img:"https://m.media-amazon.com/images/I/61du20U9CcL._AC_SL1280_.jpg",
+    note:"Squeeze, press and squish. A set of stress cubes gives fidgety hands somewhere legal to go during homework, car trips and big feelings.",
+    search:"Sensory Stress Cube Set kids"
+  },
+  {
+    id:"p255", name:"QUOKKA Toddler Floor Puzzle: Farm Animals (40pc)", age_min:24, age_max:48,
+    dev_areas:["cognitive","fine"], tags:["puzzle","jigsaw","animals","problem-solving","visual"], fam:"jigsaw",
+    price:16.99, asin:"B0DP6VXBNT", afflink:"https://www.amazon.com.au/dp/B0DP6VXBNT?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/819kZNiA4xL._AC_SL1500_.jpg",
+    note:"Big floor pieces sized for little hands. Working a puzzle on the floor adds crawling and reaching, so the whole body joins in.",
+    search:"QUOKKA Toddler Floor Puzzle: Farm Animals (40pc) kids"
+  },
+  {
+    id:"p256", name:"Toddler Wooden Animal Jigsaw Puzzles", age_min:12, age_max:36,
+    dev_areas:["cognitive","fine"], tags:["puzzle","jigsaw","animals","colours","shapes"], fam:"jigsaw",
+    price:28.99, asin:"B07WK74S3V", afflink:"https://www.amazon.com.au/dp/B07WK74S3V?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/71yMMQ9m2HL._AC_SL1500_.jpg",
+    note:"Chunky wooden pieces for the very first puzzlers. Grasping, rotating and fitting builds fine motor and visual skills together.",
+    search:"Toddler Wooden Animal Jigsaw Puzzles kids"
+  },
+  {
+    id:"p257", name:"Ravensburger Bluey Family Time Puzzle (35pc)", age_min:36, age_max:84,
+    dev_areas:["cognitive","fine"], tags:["puzzle","jigsaw","bluey","problem-solving","visual"], fam:"jigsaw",
+    price:14.95, asin:"B0GSXML71J", afflink:"https://www.amazon.com.au/dp/B0GSXML71J?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/71VlSBuY+RL._AC_SL1500_.jpg",
+    note:"A just-right 35 pieces with the Heeler family. Familiar characters keep kids at the table long enough to finish, and finishing is the win.",
+    search:"Ravensburger Bluey Family Time Puzzle (35pc) kids"
+  },
+  {
+    id:"p258", name:"Ravensburger On the Farm My First Puzzle", age_min:18, age_max:36,
+    dev_areas:["cognitive","fine"], tags:["puzzle","jigsaw","animals","problem-solving"], fam:"jigsaw",
+    price:14.95, asin:"B0CMX8CS7S", afflink:"https://www.amazon.com.au/dp/B0CMX8CS7S?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/713c6IC45oL._AC_SL1314_.jpg",
+    note:"Four little puzzles that grow from two pieces to five. A perfect first jigsaw that meets a toddler exactly where they are.",
+    search:"Ravensburger On the Farm My First Puzzle kids"
+  },
+  {
+    id:"p259", name:"Melissa & Doug Pets Peg Puzzle", age_min:24, age_max:48,
+    dev_areas:["fine","cognitive","language"], tags:["puzzle","animals","fine-motor","grasping"], fam:"jigsaw",
+    price:12.99, asin:"B01G6Q5S08", afflink:"https://www.amazon.com.au/dp/B01G6Q5S08?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81gKuesFB0L._AC_SL1500_.jpg",
+    note:"Little pegs make the pieces easy to lift, and pinching them is quiet pincer grip practice. Name each pet as it goes in for a language boost.",
+    search:"Melissa & Doug Pets Peg Puzzle kids"
+  },
+  {
+    id:"p260", name:"Melissa & Doug Safari Peg Puzzle", age_min:24, age_max:48,
+    dev_areas:["fine","cognitive","language"], tags:["puzzle","animals","fine-motor","grasping"], fam:"jigsaw",
+    price:12.99, asin:"B01F33AOAE", afflink:"https://www.amazon.com.au/dp/B01F33AOAE?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81m+6WmU4FL._AC_SL1500_.jpg",
+    note:"Safari friends with easy-grip pegs. Puzzle play plus animal names, and the pincer grip work sets up pencil skills later.",
+    search:"Melissa & Doug Safari Peg Puzzle kids"
+  },
+  {
+    id:"p261", name:"6 Wooden Animal Jigsaw Puzzles Set (30pc each)", age_min:48, age_max:96,
+    dev_areas:["cognitive","fine"], tags:["puzzle","jigsaw","animals","problem-solving"], fam:"jigsaw",
+    price:16.98, asin:"B0CBR8GDNZ", afflink:"https://www.amazon.com.au/dp/B0CBR8GDNZ?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/91hPsJMBqTL._AC_SL1500_.jpg",
+    note:"Six puzzles in one box means the challenge keeps refreshing. Thirty pieces is the sweet spot for building persistence without frustration.",
+    search:"6 Wooden Animal Jigsaw Puzzles Set (30pc each) kids"
+  },
+  {
+    id:"p262", name:"Ravensburger Disney Princess Puzzle (100pc)", age_min:72, age_max:120,
+    dev_areas:["cognitive","fine"], tags:["puzzle","jigsaw","problem-solving","focus"], fam:"jigsaw",
+    price:22.49, asin:"B0CQ59DYJJ", afflink:"https://www.amazon.com.au/dp/B0CQ59DYJJ?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/61pI0LMmpmL._AC_SL1024_.jpg",
+    note:"One hundred pieces is a proper sit-down challenge. Sustained focus, visual scanning and the pride of the finished picture.",
+    search:"Ravensburger Disney Princess Puzzle (100pc) kids"
+  },
+  {
+    id:"p263", name:"Magnetic Dinosaur Travel Puzzle Book (3-in-1)", age_min:36, age_max:72,
+    dev_areas:["cognitive","fine"], tags:["puzzle","dinosaurs","travel","problem-solving","magnetic"], fam:"jigsaw",
+    price:19.99, asin:"B0DT1MC1K4", afflink:"https://www.amazon.com.au/dp/B0DT1MC1K4?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81zIZ4GsewL._AC_SL1500_.jpg",
+    note:"Magnetic pieces that stay put in the car or cafe. Three dino puzzles in a book that travels anywhere. Genius for waiting rooms.",
+    search:"Magnetic Dinosaur Travel Puzzle Book (3-in-1) kids"
+  },
+  {
+    id:"p264", name:"Galt 4 Dinosaur Puzzles in a Box", age_min:36, age_max:84,
+    dev_areas:["cognitive","fine"], tags:["puzzle","jigsaw","dinosaurs","problem-solving"], fam:"jigsaw",
+    price:13.0, asin:"B0G99QYZ3K", afflink:"https://www.amazon.com.au/dp/B0G99QYZ3K?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81dcmL3AKzL._AC_SL1500_.jpg",
+    note:"Four dino puzzles that step up from 12 to 24 pieces. The built-in progression means it grows with them.",
+    search:"Galt 4 Dinosaur Puzzles in a Box kids"
+  },
+  {
+    id:"p265", name:"Galt 4 Farm Animal Puzzles in a Box", age_min:36, age_max:72,
+    dev_areas:["cognitive","fine"], tags:["puzzle","jigsaw","animals","problem-solving"], fam:"jigsaw",
+    price:13.79, asin:"B0G99M91ZN", afflink:"https://www.amazon.com.au/dp/B0G99M91ZN?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/61skV5W9SsL._AC_SL1000_.jpg",
+    note:"Farm puzzles that start at four pieces and build up. Perfect for a younger puzzler finding their confidence.",
+    search:"Galt 4 Farm Animal Puzzles in a Box kids"
+  },
+  {
+    id:"p266", name:"Ravensburger Spider-Man 4-in-1 Puzzles", age_min:36, age_max:84,
+    dev_areas:["cognitive","fine"], tags:["puzzle","jigsaw","problem-solving"], fam:"jigsaw",
+    price:19.95, asin:"B07175FQXG", afflink:"https://www.amazon.com.au/dp/B07175FQXG?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/91UBglx5v6L._AC_SL1500_.jpg",
+    note:"Four Spidey puzzles in rising sizes. A favourite character can be the difference between refusing puzzles and requesting them.",
+    search:"Ravensburger Spider-Man 4-in-1 Puzzles kids"
+  },
+  {
+    id:"p267", name:"QUOKKA 100pc Floor Puzzles 3-Pack (Ocean, Animals, Dinosaurs)", age_min:48, age_max:96,
+    dev_areas:["cognitive","fine"], tags:["puzzle","jigsaw","animals","dinosaurs","problem-solving"], fam:"jigsaw",
+    price:39.99, asin:"B0FJMV19J8", afflink:"https://www.amazon.com.au/dp/B0FJMV19J8?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81c2m--Ie8L._AC_SL1500_.jpg",
+    note:"Three big floor puzzles covering ocean, animals and dinos. Floor puzzles get the whole body moving while the brain works.",
+    search:"QUOKKA 100pc Floor Puzzles 3-Pack (Ocean, Animals, Dinosaurs) kids"
+  },
+  {
+    id:"p268", name:"QUOKKA Puzzles 4x60 (Space, Dino, Firefighters)", age_min:48, age_max:96,
+    dev_areas:["cognitive","fine"], tags:["puzzle","jigsaw","dinosaurs","problem-solving"], fam:"jigsaw",
+    price:36.99, asin:"B0DGGX79J8", afflink:"https://www.amazon.com.au/dp/B0DGGX79J8?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/812+OguWS2L._AC_SL1500_.jpg",
+    note:"Four 60-piece puzzles across space, dinos and firefighters. Enough variety to follow whatever they're obsessed with this month.",
+    search:"QUOKKA Puzzles 4x60 (Space, Dino, Firefighters) kids"
+  },
+  {
+    id:"p269", name:"Skillmatics World Map Puzzle (96pc + facts)", age_min:72, age_max:144,
+    dev_areas:["cognitive","language"], tags:["puzzle","jigsaw","problem-solving","geography","STEM"], fam:"jigsaw",
+    price:39.99, asin:"B0C1NWSCBN", afflink:"https://www.amazon.com.au/dp/B0C1NWSCBN?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81g77RSCzzL._AC_SL1500_.jpg",
+    note:"Build the world and learn 400 facts along the way. Puzzle skills plus geography for curious school-age kids.",
+    search:"Skillmatics World Map Puzzle (96pc + facts) kids"
+  },
+  {
+    id:"p270", name:"QUOKKA World Puzzle with Flashcards (70pc)", age_min:72, age_max:96,
+    dev_areas:["cognitive","language"], tags:["puzzle","jigsaw","problem-solving","geography"], fam:"jigsaw",
+    price:29.99, asin:"B0DP52SRRT", afflink:"https://www.amazon.com.au/dp/B0DP52SRRT?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81+7FwOAjsL._AC_SL1500_.jpg",
+    note:"A world map puzzle with flashcards to match. Great for kids starting to ask where places are.",
+    search:"QUOKKA World Puzzle with Flashcards (70pc) kids"
+  },
+  {
+    id:"p271", name:"Ravensburger Minecraft Cutaway Puzzle (300pc)", age_min:96, age_max:144,
+    dev_areas:["cognitive","fine"], tags:["puzzle","jigsaw","problem-solving","focus","minecraft"], fam:"jigsaw",
+    price:24.95, asin:"B0D6LLPBN7", afflink:"https://www.amazon.com.au/dp/B0D6LLPBN7?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81+gk5fF-CL._AC_SL1500_.jpg",
+    note:"Three hundred pieces of Minecraft. For a gaming-mad kid, this converts screen love into sustained offline focus.",
+    search:"Ravensburger Minecraft Cutaway Puzzle (300pc) kids"
+  },
+  {
+    id:"p272", name:"Galt 4 Vehicle Puzzles in a Box", age_min:36, age_max:84,
+    dev_areas:["cognitive","fine"], tags:["puzzle","jigsaw","vehicles","problem-solving"], fam:"jigsaw",
+    price:13.0, asin:"B0CHN8C5X5", afflink:"https://www.amazon.com.au/dp/B0CHN8C5X5?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/814dGapN+oL._AC_SL1500_.jpg",
+    note:"Four vehicle puzzles in rising difficulty. Diggers and trucks pull vehicle fans into puzzle play they'd otherwise skip.",
+    search:"Galt 4 Vehicle Puzzles in a Box kids"
   },
 ];
 
@@ -1440,11 +2128,13 @@ const STEPS = [
       {value:"building",      label:"Building and making things 🏗️"},
       {value:"pretend-play",  label:"Pretend play and role play 👑"},
       {value:"movement",      label:"Running, jumping, climbing, outdoor play 🏃"},
+      {value:"sports",        label:"Sports and ball games ⚽"},
       {value:"art",           label:"Drawing, painting and crafts 🎨"},
       {value:"music",         label:"Music and singing 🎵"},
       {value:"stories",       label:"Books and stories 📚"},
       {value:"puzzles",       label:"Puzzles and figuring things out 🧩"},
-      {value:"water",         label:"Water and messy play 💧"},
+      {value:"games",         label:"Board games and card games 🎲"},
+      {value:"water",         label:"Water, slime and messy play 💧"},
       {value:"science",       label:"Science, experiments and how things work 🔬"},
     ],
   },
@@ -1521,9 +2211,26 @@ function ageLabel(months){
   return map[months]||(months+" months");
 }
 
+
+// Detect when a parent's description suggests developmental delays or additional needs.
+// When present, toys rated for younger ages become eligible (gently penalised so
+// age-typical options still lead when equally relevant). The age MINIMUM is never
+// relaxed: a toy rated older than the child is never suggested, for safety.
+function hasDelaySignals(answers){
+  const text=((answers.child_snapshot||"")+" "+(answers.wildcard||"")).toLowerCase();
+  return /(develop\w*\s+delay|delay(ed)?\b|non[\s-]?verbal|not\s+(yet\s+)?talking|can'?t\s+talk|doesn'?t\s+talk|no\s+words|autis|\basd\b|down\s+syndrome|disabilit|special\s+needs|global\s+delay|behind\s+(his|her|their)\s+peers|regress|intellectual|cerebral\s+palsy|\bndis\b)/i.test(text);
+}
+
+function hasNonverbalSignals(answers){
+  const text=((answers.child_snapshot||"")+" "+(answers.wildcard||"")).toLowerCase();
+  return /(non[\s-]?verbal|no\s+words|can'?t\s+talk|doesn'?t\s+talk|not\s+(yet\s+)?talking|minimally\s+verbal|few\s+words)/i.test(text);
+}
+
 function scoreProduct(p, answers){
   const age=answers.child_age;
-  if(age<p.age_min||age>p.age_max)return -1;
+  if(age<p.age_min)return -1; // hard floor: never a toy rated for older kids
+  const _overAge=age>p.age_max;
+  if(_overAge&&!hasDelaySignals(answers))return -1;
   const[,budgetMax]=parseBudget(answers.budget);
   if(p.price>budgetMax)return -1;
 
@@ -1545,7 +2252,13 @@ function scoreProduct(p, answers){
   if(FUNCTIONAL_IDS.includes(p.id)&&!selfcareWanted)return -1;
 
 
-  let score=0;
+  let score=_overAge?-Math.min(6,Math.ceil((age-p.age_max)/12)):0;
+  // A child described as nonverbal or minimally verbal: down-rank games whose core
+  // mechanic demands expressive language. Books and receptive-language toys stay.
+  if(hasNonverbalSignals(answers)){
+    const speechDemanding=["questions","word-game","vocabulary","spelling","deduction"];
+    if(p.tags.some(t=>speechDemanding.includes(t)))score-=5;
+  }
   const devFocus=answers.dev_focus||[];
   if(!devFocus.includes("no-preference")){
     score+=p.dev_areas.filter(d=>devFocus.includes(d)).length*3;
@@ -1560,7 +2273,9 @@ function scoreProduct(p, answers){
     art:["drawing","craft","mark-making","pre-writing","art","creative"],
     music:["music","rhythm","audio"],stories:["books","storytelling","audio"],
     puzzles:["problem-solving","puzzle","sorting","memory","patterns"],
-    water:["water","sensory","breath-control"],science:["STEM","cause-effect"],
+    sports:["sports"],
+    games:["board-game","card-game","word-game"],
+    water:["water","sensory","breath-control","tactile","fidget"],science:["STEM","science","experiments","coding","circuits"],
   };
   // Sensory dev area — direct boost for sensory-specific tags
   if((answers.dev_focus||[]).includes("sensory")){
@@ -1593,25 +2308,26 @@ const INTEREST_CAP=2;
 function getRecommendations(answers,count=5,excluded=[]){
   const scored=PRODUCTS
     .filter(p=>!excluded.includes(p.id))
-    .map(p=>({...p,score:scoreProduct(p,answers)}))
+    .map(p=>{const score=scoreProduct(p,answers);return{...p,score,_matchedInterests:p._matchedInterests};})
     .filter(p=>p.score>=0)
     .sort((a,b)=>b.score-a.score);
 
-  const result=[];const usedAreas=new Set();const interestCount={};
+  const CAP=(answers.interests||[]).length<=1?3:INTEREST_CAP;
+  const result=[];const usedAreas=new Set();const interestCount={};const famUsed=new Set();
+  const famBlocked=(p)=>p.fam&&famUsed.has(p.fam); // never two of the same kind (e.g. two science kits)
+  const take=(p)=>{result.push(p);p.dev_areas.forEach(a=>usedAreas.add(a));if(p.fam)famUsed.add(p.fam);
+    (p._matchedInterests||[]).forEach(int=>{interestCount[int]=(interestCount[int]||0)+1;});};
 
   // ── GOAL COVERAGE: ensure at least one toy per chosen development goal ──
   const chosenGoals=(answers.dev_focus||[]).filter(g=>g!=="no-preference");
   for(const goal of chosenGoals){
     if(result.length>=count)break;
     // highest scoring toy that covers this goal and isn't already picked
-    const pick=scored.find(p=>p.dev_areas.includes(goal)&&!result.find(r=>r.id===p.id));
+    const pick=scored.find(p=>p.dev_areas.includes(goal)&&!result.find(r=>r.id===p.id)&&!famBlocked(p));
     if(pick){
       const ints=pick._matchedInterests||[];
-      const capped=ints.some(int=>(interestCount[int]||0)>=INTEREST_CAP);
-      if(!capped){
-        result.push(pick);pick.dev_areas.forEach(a=>usedAreas.add(a));
-        ints.forEach(int=>{interestCount[int]=(interestCount[int]||0)+1;});
-      }
+      const capped=ints.some(int=>(interestCount[int]||0)>=CAP);
+      if(!capped)take(pick);
     }
   }
 
@@ -1619,21 +2335,20 @@ function getRecommendations(answers,count=5,excluded=[]){
   for(const p of scored){
     if(result.length>=count)break;
     if(result.find(r=>r.id===p.id))continue;
+    if(famBlocked(p))continue;
     const ints=p._matchedInterests||[];
-    const capped=ints.some(int=>(interestCount[int]||0)>=INTEREST_CAP);
+    const capped=ints.some(int=>(interestCount[int]||0)>=CAP);
     if(capped)continue;
     const newArea=p.dev_areas.find(a=>!usedAreas.has(a));
-    if(newArea||result.length<2){
-      result.push(p);p.dev_areas.forEach(a=>usedAreas.add(a));
-      ints.forEach(int=>{interestCount[int]=(interestCount[int]||0)+1;});
-    }
+    if(newArea||result.length<2||ints.length>0)take(p);
   }
   for(const p of scored){
     if(result.length>=count)break;
     if(result.find(r=>r.id===p.id))continue;
+    if(famBlocked(p))continue;
     const ints=p._matchedInterests||[];
-    const capped=ints.some(int=>(interestCount[int]||0)>=INTEREST_CAP);
-    if(!capped){result.push(p);ints.forEach(int=>{interestCount[int]=(interestCount[int]||0)+1;});}
+    const capped=ints.some(int=>(interestCount[int]||0)>=CAP);
+    if(!capped)take(p);
   }
   for(const p of scored){
     if(result.length>=count)break;
@@ -1808,6 +2523,26 @@ function LoadingScreen(){
   );
 }
 
+
+// Map AI output to the recs by explicit key (n), falling back to product-name match,
+// so a shuffled or shifted AI response can never put text on the wrong card.
+function normalizeAI(parsed, recs){
+  if(parsed&&parsed.personalised_reasons)return parsed; // old shape, pass through
+  if(parsed&&Array.isArray(parsed.items)){
+    const byName=(p)=>parsed.items.find(x=>x.product&&(
+      String(x.product).toLowerCase().includes(p.name.toLowerCase().slice(0,14))||
+      p.name.toLowerCase().includes(String(x.product).toLowerCase().slice(0,14))
+    ));
+    const pick=(p,i)=>parsed.items.find(x=>Number(x.n)===i+1)||byName(p);
+    return{
+      personalised_reasons:recs.map((p,i)=>{const it=pick(p,i);return(it&&it.reason)||p.note;}),
+      play_ideas:recs.map((p,i)=>{const it=pick(p,i);return(it&&it.play_idea)||"";}),
+      curator_note:parsed.curator_note||"",
+    };
+  }
+  return parsed;
+}
+
 // ─── MAIN COMPONENT ───────────────────────────────────────────────────────────
 export default function KideraToyQuiz(){
   const[step,setStep]=useState(0);const[answers,setAnswers]=useState({});
@@ -1844,7 +2579,9 @@ Extra notes: ${answers.wildcard||"none"}`;
 
 Child: ${summary}
 
-Write ONE sentence explaining why "${toy.name}" is a good match for this specific child. Draw on what the parent described. Be specific, not generic.
+The toy: "${toy.name}". What it actually is and does: ${toy.note}
+
+Write ONE sentence explaining why this toy is a good match for this specific child. Draw on what the parent described and only on the product's real features. Be specific, not generic.
 
 JSON only: {"reason":"..."}`;
       const res=await fetch("/api/personalise",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({max_tokens:200,messages:[{role:"user",content:prompt}]})});
@@ -1855,7 +2592,7 @@ JSON only: {"reason":"..."}`;
     const devLabelMap={gross:"gross motor",fine:"fine motor",cognitive:"problem-solving and learning",language:"communication and language",social:"social and emotional skills",sensory:"sensory",selfcare:"self-care and independence"};
     const FUNCTIONAL_IDS=["p120","p121","p122","p123","p124"]; // step stool, learning tower, cup, potty, cutlery, dressing doll
     const isFunctional=(p)=>FUNCTIONAL_IDS.includes(p.id)||/learning tower|step stool|cutlery|open cup|potty|toilet seat|dressing doll/i.test(p.name);
-    const productList=recs.map((p,i)=>`${i+1}. ${p.name} ($${p.price}) supports: ${p.dev_areas.map(d=>devLabelMap[d]||d).join(", ")}${isFunctional(p)?" [FUNCTIONAL EVERYDAY EQUIPMENT, apply the special functional rule]":""}`).join("\n");
+    const productList=recs.map((p,i)=>`${i+1}. ${p.name} ($${p.price}) supports: ${p.dev_areas.map(d=>devLabelMap[d]||d).join(", ")}. What it is and does: ${p.note}${isFunctional(p)?" [FUNCTIONAL EVERYDAY EQUIPMENT, apply the special functional rule]":""}`).join("\n");
     const goalsRaw=(answers.dev_focus||[]).filter(g=>g!=="no-preference");
     const goalsList=goalsRaw.map(g=>devLabelMap[g]||g).join(", ");
     const prompt=`You are Brittany, a paediatric occupational therapist with 8 years of experience and founder of Kidera, a children's development brand in Perth, Australia.
@@ -1878,6 +2615,10 @@ Even when a toy is picked because the child LOVES it (an interest match), still 
 
 IMPORTANT COVERAGE RULE: The parent chose these development goals: ${goalsList||"(none)"}. Across the five reasons, make sure EVERY ONE of those goals is explicitly named and covered by at least one toy. If a toy supports one of their goals, say so directly using the goal's name, for example "good for your fine motor goal because...". Do not leave any chosen goal unmentioned.
 
+${hasDelaySignals(answers)?`IMPORTANT CONTEXT: The parent's description suggests this child may have developmental delays or additional needs. Some picks may be rated for younger ages on purpose. They were chosen to meet the child at their current developmental level, which is exactly the right approach. Frame every reason around what this child enjoys and can do right now and the next small step it builds, never around age. Never describe a toy as being for younger kids, for babies, or simple. Speak about the child with the same warmth and respect as any other child.
+
+`:""}GROUNDING RULE: Each toy's listing above tells you what it actually is and does. Base every reason and play idea ONLY on the product's real features. Never invent features it does not have. Think through the practical reality of the suggestion before writing it: if the toy itself gives the cues (lights, sounds, spoken commands, music), do not tell the parent to give the cue, the child responds to the toy. If a toy launches, flies, or travels a long way, suggest an open space like a park or oval rather than assuming a backyard is big enough. If an activity is messy, only suggest it somewhere that makes sense. Every play idea must be something a real parent could physically do with that exact product.
+
 For EVERY toy, always include a play idea. Never leave one blank. Use Brittany's style from her 30 Day Play Calendar: specific, active, one sentence, a little playful. Examples of her style:
 - "Set up a dinosaur hospital where the T-Rex has crashed and needs the doctor kit to fix his leg"
 - "Use the scarves for peek-a-boo or wave them around like ocean waves while you sing a song"
@@ -1896,12 +2637,17 @@ And in the REASON for these functional items, it is good to also mention they he
 
 Then write a warm, individualised 2-3 sentence note from Brittany. It must feel personal to THIS family, never generic. If the parent gave lots of detail, reference something specific they said. If they gave very little, still make it feel individual by drawing on their actual quiz choices: their child's age (${ageLabel(answers.child_age)}), the goals they picked, the interests they ticked, or the occasion. Speak to their situation directly. No em dashes. Short sentences. End with this sentiment in Brittany's own words: every child develops at their own pace, and you know yours best.
 
-JSON only (no markdown):
-{"personalised_reasons":["r1","r2","r3","r4","r5"],"play_ideas":["idea or empty string","","","",""],"curator_note":"..."}`;
+VARIETY RULE: The five toys are deliberately varied. Never present two toys as interchangeable or repeat the same reasoning for two different toys. Each reason should make clear what this specific toy adds that the others don't.
 
-    const res=await fetch("/api/personalise",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({max_tokens:1400,messages:[{role:"user",content:prompt}]})});
+ALIGNMENT RULE: Number every item to match the numbered toy list above exactly. The object with n=1 must be about toy 1 and no other toy, n=2 about toy 2, and so on. Repeat the product name in the "product" field as a check.
+
+JSON only (no markdown):
+{"items":[{"n":1,"product":"exact name of toy 1","reason":"...","play_idea":"..."},{"n":2,"product":"...","reason":"...","play_idea":"..."},{"n":3,"product":"...","reason":"...","play_idea":"..."},{"n":4,"product":"...","reason":"...","play_idea":"..."},{"n":5,"product":"...","reason":"...","play_idea":"..."}],"curator_note":"..."}`;
+
+    const res=await fetch("/api/personalise",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({max_tokens:1500,messages:[{role:"user",content:prompt}]})});
     const data=await res.json();
-    return JSON.parse(data.content.map(b=>b.text||"").join("").replace(/```json|```/g,"").trim());
+    const parsed=JSON.parse(data.content.map(b=>b.text||"").join("").replace(/```json|```/g,"").trim());
+    return normalizeAI(parsed,recs);
   }
 
   async function handleSubmit(){
@@ -2078,3 +2824,4 @@ JSON only (no markdown):
     </div>
   );
 }
+
