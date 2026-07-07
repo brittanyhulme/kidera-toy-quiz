@@ -249,9 +249,9 @@ const PRODUCTS = [
     search:"Dinosaur Color Sorting Sensory Toy toddler Montessori"
   },
   {
-    id:"p27", name:"BRIO My First Railway Beginner Pack", age_min:18, age_max:60,
+    id:"p27", name:"BRIO My First Railway Beginner Pack", age_min:18, age_max:36,
     dev_areas:["fine","cognitive","social"], tags:["vehicles","trains","constructive","pretend-play"],
-    price:55, asin:"B00RMLUWGW", afflink:"https://www.amazon.com.au/dp/B00RMLUWGW/?tag=brittanyot0c-22",
+    price:74, asin:"B00RMLUWGW", afflink:"https://www.amazon.com.au/dp/B00RMLUWGW/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/71FLO8ky54L._AC_SX679_.jpg",
     note:"A proper wooden train set. Magnetic connections, rainbow bridge, quality that lasts years. Good for train lovers from 18 months.",
     search:"BRIO My First Railway Beginner Pack 33727 wooden train"
@@ -491,18 +491,10 @@ const PRODUCTS = [
     search:"Yoto Mini 2024 screen-free audio player kids"
   },
   {
-    id:"p57", name:"TIME Timer Visual Analogue Timer (60 min)", age_min:36, age_max:144,
-    dev_areas:["cognitive","selfcare"], tags:["independence","executive-function","transitions"],
-    price:71, asin:"B08FBHVLWB", afflink:"https://www.amazon.com.au/dp/B08FBHVLWB/?tag=brittanyot0c-22",
-    img:"https://m.media-amazon.com/images/I/81NGboLz2PL._AC_SX679_.jpg",
-    note:"A visual timer that shows time passing as a red disc shrinking. Brilliant for transitions, task completion, and independence.",
-    search:"TIME Timer Original Large 60 Minute Visual Timer"
-  },
-  {
     id:"p58", fam:"ball-run", name:"Fat Brain Air Toobz Ball Tube Set", age_min:36, age_max:96,
     dev_areas:["cognitive","fine","gross"], tags:["constructive","cause-effect","problem-solving","STEM"],
     price:179, asin:"B0C21LRH2K", afflink:"https://www.amazon.com.au/dp/B0C21LRH2K/?tag=brittanyot0c-22",
-    img:null,
+    img:"https://m.media-amazon.com/images/I/71xosN2CvgL._AC_SY300_SX300_QL70_ML2_.jpg",
     note:"Build the tube system and watch balls zoom through it. Cause and effect, spatial reasoning, and engineering thinking.",
     search:"Fat Brain Air Toobz Ball Tube Physics Toy"
   },
@@ -646,7 +638,7 @@ const PRODUCTS = [
   },
   {
     id:"p76", name:"Scooter Board", age_min:36, age_max:120,
-    dev_areas:["gross","sensory"], tags:["vestibular","proprioceptive","movement","sensory","heavy-work"],
+    dev_areas:["gross","sensory"], tags:["vestibular","proprioceptive","movement","sensory","heavy-work","sports"],
     price:45, asin:"B008AK6WMC", afflink:"https://www.amazon.com.au/dp/B008AK6WMC/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/61SYSbIv+ZL._SX522_.jpg",
     note:"One of the best vestibular and proprioceptive tools going. Lying prone and scooting builds core strength and upper body — kids love it.",
@@ -654,7 +646,7 @@ const PRODUCTS = [
   },
   {
     id:"p77", name:"Body Sock / Sensory Compression Suit", age_min:36, age_max:96,
-    dev_areas:["sensory","gross"], tags:["proprioceptive","deep-pressure","sensory","vestibular"],
+    dev_areas:["sensory","gross"], tags:["proprioceptive","deep-pressure","sensory","vestibular","sports"],
     price:35, asin:"B0CQX932VD", afflink:"https://www.amazon.com.au/dp/B0CQX932VD/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/51GH5idognL._AC_SX679_.jpg",
     note:"Deep pressure input from head to toe. Really calming for kids who seek proprioceptive input or need help with body awareness.",
@@ -662,23 +654,23 @@ const PRODUCTS = [
   },
   {
     id:"p78", name:"Lycra Sensory Swing", age_min:24, age_max:96,
-    dev_areas:["sensory","gross"], tags:["vestibular","proprioceptive","sensory","deep-pressure","swing"],
+    dev_areas:["sensory","gross"], tags:["vestibular","proprioceptive","sensory","deep-pressure","swing","sports"],
     price:65, asin:"B0829WS6MW", afflink:"https://www.amazon.com.au/dp/B0829WS6MW/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/71xeJs9UJ-L._AC_SX679_.jpg",
     note:"Vestibular and deep pressure input together — great for sensory seekers and kids who need help with regulation. Hangs from a doorframe or beam.",
     search:"lycra sensory swing kids therapy indoor cocoon"
   },
   {
-    id:"p79", name:"Crash Mat / Sensory Crash Pad", age_min:24, age_max:96,
-    dev_areas:["sensory","gross"], tags:["proprioceptive","heavy-work","sensory","movement","vestibular"],
-    price:89, asin:"B0GQDCZ8Z5", afflink:"https://www.amazon.com.au/dp/B0GQDCZ8Z5/?tag=brittanyot0c-22",
+    id:"p79", fam:"crash-pad", name:"Crash Mat / Sensory Crash Pad", age_min:24, age_max:96,
+    dev_areas:["sensory","gross"], tags:["proprioceptive","heavy-work","sensory","movement","vestibular","sports"],
+    price:189, asin:"B0GQDCZ8Z5", afflink:"https://www.amazon.com.au/dp/B0GQDCZ8Z5/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/61-tk0popiL._AC_SX679_.jpg",
     note:"Jump into it, roll on it, crash into it. Proprioceptive input kids who need it absolutely love. Great paired with a lycra swing.",
     search:"crash mat sensory crash pad kids therapy bean bag"
   },
   {
     id:"p80", name:"Yoga Ball / Exercise Ball (Kids Size)", age_min:36, age_max:144,
-    dev_areas:["gross","sensory"], tags:["proprioceptive","vestibular","balance","heavy-work","sensory"],
+    dev_areas:["gross","sensory"], tags:["proprioceptive","vestibular","balance","heavy-work","sensory","sports"],
     price:25, asin:"B01M25TPKV", afflink:"https://www.amazon.com.au/dp/B01M25TPKV/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/91zwDDnfb5L._AC_SX679_.jpg",
     note:"Sitting on it, rolling over it, bouncing on it — all great for core strength, balance, and vestibular input. Super versatile.",
@@ -686,7 +678,7 @@ const PRODUCTS = [
   },
   {
     id:"p81", name:"Peanut Ball / Therapy Peanut Roller", age_min:12, age_max:72,
-    dev_areas:["gross","sensory"], tags:["proprioceptive","vestibular","tummy-time","heavy-work","balance"],
+    dev_areas:["gross","sensory"], tags:["proprioceptive","vestibular","tummy-time","heavy-work","balance","sports"],
     price:30, asin:"B01N7KH666", afflink:"https://www.amazon.com.au/dp/B01N7KH666/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/61E75yvmspL._AC_SX679_.jpg",
     note:"The peanut shape stops it rolling away — great for tummy time with babies and for rolling proprioceptive input with toddlers.",
@@ -752,7 +744,7 @@ const PRODUCTS = [
   },
   {
     id:"p89", name:"Eezy Peezy Swing Car Ride-On", age_min:18, age_max:60,
-    dev_areas:["gross","sensory"], tags:["vestibular","coordination","movement","outdoor","bilateral"],
+    dev_areas:["gross","sensory"], tags:["vestibular","coordination","movement","outdoor","bilateral","sports"],
     price:45, asin:"B0DZ64KXM7", afflink:"https://www.amazon.com.au/dp/B0DZ64KXM7/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/61ezTckD5GL._AC_SX679_.jpg",
     note:"Twist and turn to move — no pedals or pushing needed. Builds bilateral coordination and vestibular processing. Kids are obsessed with these.",
@@ -760,7 +752,7 @@ const PRODUCTS = [
   },
   {
     id:"p90", name:"Roller Coaster Ride-On", age_min:36, age_max:72,
-    dev_areas:["gross","sensory"], tags:["vestibular","movement","outdoor","sensory"],
+    dev_areas:["gross","sensory"], tags:["vestibular","movement","outdoor","sensory","sports"],
     price:139, asin:"B0GWR1V48F", afflink:"https://www.amazon.com.au/dp/B0GWR1V48F/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/61G8nv8BOwL._AC_SX679_.jpg",
     note:"Repetitive movement up and over — vestibular input, anticipation, and the kind of thrill kids who love movement absolutely seek out.",
@@ -784,7 +776,7 @@ const PRODUCTS = [
   },
   {
     id:"p93", name:"Trio Rocker / Three-Way Rocker", age_min:12, age_max:60,
-    dev_areas:["gross","sensory","social"], tags:["vestibular","movement","balance","sensory","turn-taking"],
+    dev_areas:["gross","sensory","social"], tags:["vestibular","movement","balance","sensory","turn-taking","sports"],
     price:79, asin:"B0GTLQPDBY", afflink:"https://www.amazon.com.au/dp/B0GTLQPDBY/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/51Y6k83ImHL._AC_SX679_.jpg",
     note:"Rock solo or with a friend. Great vestibular input and the cooperative element when two kids rock together builds social skills.",
@@ -800,7 +792,7 @@ const PRODUCTS = [
   },
   {
     id:"p95", name:"Swivel See Saw", age_min:36, age_max:84,
-    dev_areas:["gross","sensory","social"], tags:["vestibular","balance","outdoor","turn-taking","social"],
+    dev_areas:["gross","sensory","social"], tags:["vestibular","balance","outdoor","turn-taking","social","sports"],
     price:89, asin:"B07BKVSB27", afflink:"https://www.amazon.com.au/dp/B07BKVSB27/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/51zJGDUmRQL._AC_SX679_.jpg",
     note:"More dynamic than a standard see saw — the swivel motion adds a vestibular challenge. Great cooperative play too.",
@@ -823,7 +815,7 @@ const PRODUCTS = [
     search:"pool noodles bulk pack 6 kids play"
   },
   {
-    id:"p98", name:"Outdoor Sidewalk Chalk (Jumbo Pack)", age_min:24, age_max:96,
+    id:"p98", name:"Outdoor Sidewalk Chalk (Jumbo Pack)", age_min:36, age_max:96,
     dev_areas:["fine","gross","cognitive","social"], tags:["outdoor","drawing","creative","movement","pre-writing"],
     price:12, asin:"B00AHAJGXK", afflink:"https://www.amazon.com.au/dp/B00AHAJGXK/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/61mhqNvT+dL._AC_SX679_.jpg",
@@ -831,16 +823,15 @@ const PRODUCTS = [
     search:"jumbo sidewalk chalk kids outdoor washable pack"
   },
   {
-    id:"p99", name:"Sibling Doll Set (Baby & Toddler Dolls)", age_min:24, age_max:72,
-    dev_areas:["social","language","cognitive"], tags:["pretend-play","nurturing","role-play","social","emotions","dolls"],
-    price:25, asin:"B0F8QJCHT2", afflink:"https://www.amazon.com.au/dp/B0F8QJCHT2/?tag=brittanyot0c-22",
-    img:"https://m.media-amazon.com/images/I/71r9GTNOpDL._AC_SX679_.jpg",
-    note:"Two dolls — a baby and a toddler — opens up sibling and family storylines in pretend play. Brilliant for kids with a new baby at home.",
-    search:"sibling doll set baby toddler soft doll pretend play"
+    id:"p99", name:"Basket Plush Baby Dolls Multicultural Sensory Set (6 Piece)", age_min:12, age_max:36,
+    dev_areas:["social","language","sensory","cognitive"], tags:["dolls","pretend-play","nurturing","plush","emotions","social"],
+    price:69, asin:null, afflink:"https://link.amazon/B09VYhCqZ", img:"https://m.media-amazon.com/images/I/71PxArzE0IL._AC_SL1254_.jpg",
+    note:"Six soft, huggable babies with different skin tones, in a basket ready for play. Beautiful for nurturing play, early language, and seeing the whole world reflected back in their toys.",
+    search:"multicultural plush baby dolls sensory set basket"
   },
   {
     id:"p100", name:"Step-On Rocket Launcher", age_min:36, age_max:96,
-    dev_areas:["gross","cognitive","sensory"], tags:["outdoor","jumping","cause-effect","movement","proprioceptive"],
+    dev_areas:["gross","cognitive","sensory"], tags:["outdoor","jumping","cause-effect","movement","proprioceptive","sports"],
     price:22, asin:"B0006O8Q7Y", afflink:"https://www.amazon.com.au/dp/B0006O8Q7Y/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/71mli4BTVvL._AC_SX679_.jpg",
     note:"Stomp on the pad and the rocket flies. Running, jumping, chasing — and the cause-and-effect element keeps kids coming back.",
@@ -1042,7 +1033,7 @@ const PRODUCTS = [
   },
   {
     id:"p128", name:"Jungle Gym Climbing Dome", age_min:36, age_max:96,
-    dev_areas:["gross","sensory"], tags:["climbing","outdoor","strength","movement","proprioceptive","vestibular"],
+    dev_areas:["gross","sensory"], tags:["climbing","outdoor","strength","movement","proprioceptive","vestibular","sports"],
     price:120, asin:"B0CGQY9DCH", afflink:"https://www.amazon.com.au/dp/B0CGQY9DCH/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/61qgyqtxSXL._AC_SX679_.jpg",
     note:"More options than a standard frame — reach the top, hang upside down, set challenges. Great for confident movers.",
     search:"kids jungle gym climbing dome outdoor backyard"
@@ -1190,7 +1181,7 @@ const PRODUCTS = [
   },
   {
     id:"p149", name:"Nest Swing / Platform Swing", age_min:36, age_max:144,
-    dev_areas:["sensory","gross","social"], tags:["vestibular","swing","outdoor","sensory","social"],
+    dev_areas:["sensory","gross","social"], tags:["vestibular","swing","outdoor","sensory","social","sports"],
     price:219, asin:"B082T3RJ2J", afflink:"https://www.amazon.com.au/dp/B082T3RJ2J/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81iLT87ekAL._AC_SX679_.jpg",
     note:"Multiple kids can swing together on a nest swing — vestibular input plus the cooperative element. A backyard favourite.",
     search:"nest swing platform swing kids outdoor backyard"
@@ -1309,7 +1300,7 @@ const PRODUCTS = [
     search:"Early Years Activity Book Kidera Brittany OT printable"
   },
   {
-    id:"p166", name:"Mess-Free Painting Set", age_min:24, age_max:60,
+    id:"p166", name:"Mess-Free Painting Set", age_min:36, age_max:60,
     dev_areas:["fine","sensory","cognitive"], tags:["drawing","art","sensory","creative","mark-making"],
     price:18, asin:"B084Y3DLFJ", afflink:"https://www.amazon.com.au/dp/B084Y3DLFJ/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81q13+KL29L._AC_SX679_.jpg",
     note:"All the benefits of painting without the mess. Builds brush skills that transfer directly to pencil control later.",
@@ -1759,7 +1750,7 @@ const PRODUCTS = [
     search:"Pop-Up Soccer Goal Set kids"
   },
   {
-    id:"p230", name:"Little Tikes T-Ball Set", age_min:18, age_max:120,
+    id:"p230", name:"Little Tikes T-Ball Set", age_min:18, age_max:36,
     dev_areas:["gross"], tags:["outdoor","sports","hand-eye","coordination","bilateral"],
     price:29.0, asin:null, afflink:"https://link.amazon/B06s4CGzx", img:"https://m.media-amazon.com/images/I/61nGSQIlFeL._AC_SL1500_.jpg",
     note:"The ball sits still so little sluggers can connect. T-ball is the perfect first hitting sport, building hand-eye coordination without the frustration.",
@@ -2081,6 +2072,90 @@ const PRODUCTS = [
     search:"Boomwhackers musical tubes kids set"
   },
 
+  {
+    id:"p276", name:"Aerial Silks / Hammock Swing", age_min:72, age_max:144,
+    dev_areas:["gross","sensory"], tags:["sports","movement","vestibular","proprioceptive","climbing","heavy-work","swing"],
+    price:132, asin:null, afflink:"https://link.amazon/B06oSypJO", img:"https://m.media-amazon.com/images/I/51F8lGFpyqL._AC_SL1098_.jpg",
+    note:"Climbing, hanging and spinning builds serious strength and body awareness, and the deep pressure is wonderfully regulating. You'll need somewhere sturdy to hang it, an outdoor monkey bar frame works well.",
+    search:"kids aerial silks hammock swing"
+  },
+  {
+    id:"p277", name:"Ninja Warrior Obstacle Course Kit", age_min:72, age_max:144,
+    dev_areas:["gross","sensory","cognitive"], tags:["sports","outdoor","movement","climbing","strength","proprioceptive","motor-planning"],
+    price:149, asin:null, afflink:"https://link.amazon/B07EjvjgH", img:"https://m.media-amazon.com/images/I/81HDiwi6VIL._AC_SL1500_.jpg",
+    note:"A backyard ninja course for climbing, swinging and balancing. Brilliant for motor planning, strength and the kind of big movement that helps kids focus afterwards. You'll need two solid trees or a park to set it up.",
+    search:"kids ninja warrior obstacle course slackline kit"
+  },
+  {
+    id:"p278", name:"Cornhole Bean Bag Toss Set (Deluxe)", age_min:60, age_max:144,
+    dev_areas:["gross","cognitive","social"], tags:["sports","outdoor","hand-eye","turn-taking","coordination"], fam:"cornhole",
+    price:116, asin:null, afflink:"https://link.amazon/B0iRse7KA", img:"https://m.media-amazon.com/images/I/81X2xOX7UBL._AC_SL1500_.jpg",
+    note:"Aiming and tossing bean bags at the board builds hand-eye coordination and gentle competition. A brilliant one for the whole family to play together outdoors.",
+    search:"cornhole bean bag toss set kids outdoor"
+  },
+  {
+    id:"p279", name:"Cornhole Bean Bag Toss Set (Value)", age_min:60, age_max:144,
+    dev_areas:["gross","cognitive","social"], tags:["sports","outdoor","hand-eye","turn-taking","coordination"], fam:"cornhole",
+    price:69, asin:null, afflink:"https://link.amazon/B08ckB90K", img:"https://m.media-amazon.com/images/I/61fR27mq97L._AC_SL1500_.jpg",
+    note:"The same great bean bag toss fun at a friendlier price. Aiming and throwing for hand-eye coordination, and everyone can join in.",
+    search:"cornhole bean bag toss set kids budget"
+  },
+  {
+    id:"p280", name:"Throw & Catch Game Set (Paddle & Ball)", age_min:36, age_max:144,
+    dev_areas:["gross","social"], tags:["sports","outdoor","hand-eye","coordination","bilateral"],
+    price:25, asin:null, afflink:"https://link.amazon/B0fmhyFhJ", img:"https://m.media-amazon.com/images/I/81MnIuR6o-L._AC_SL1500_.jpg",
+    note:"The catch mitts give a big surface area, so little ones learning to catch actually succeed. A fun, forgiving way to build throwing and catching for any age.",
+    search:"throw catch game set paddle ball kids"
+  },
+  {
+    id:"p281", name:"Gymnastics Tumbling Mat", age_min:48, age_max:144,
+    dev_areas:["gross","sensory"], tags:["sports","gymnastics","movement","proprioceptive","heavy-work","balance"],
+    price:132, asin:null, afflink:"https://link.amazon/B0bXvqh4d", img:"https://m.media-amazon.com/images/I/61quw4sWayL._AC_SL1500_.jpg",
+    note:"A padded mat that makes cartwheels, rolls and handstands safe to practise at home. Wonderful for the child who is always tumbling, and the landing surface gives peace of mind.",
+    search:"kids gymnastics tumbling mat folding"
+  },
+  {
+    id:"p282", fam:"crash-pad", name:"Sensory Crash Pad (Large)", age_min:36, age_max:144,
+    dev_areas:["sensory","gross"], tags:["sports","proprioceptive","deep-pressure","heavy-work","sensory","movement"],
+    price:145, asin:null, afflink:"https://link.amazon/B08L9MFbR", img:"https://m.media-amazon.com/images/I/71nrU-d2rqL._AC_SL1500_.jpg",
+    note:"Jumping and crashing into this gives powerful proprioceptive input, which is deeply regulating for movement seekers. For extra fun, pair it with climbing and a safe jump down onto the pad.",
+    search:"sensory crash pad kids large proprioceptive"
+  },
+  {
+    id:"p283", name:"Adjustable Basketball Hoop", age_min:60, age_max:144,
+    dev_areas:["gross","social"], tags:["sports","outdoor","hand-eye","coordination","throwing"],
+    price:139, asin:null, afflink:"https://link.amazon/B00ae7Uec", img:"https://m.media-amazon.com/images/I/61hDmLa1F8L._AC_SL1500_.jpg",
+    note:"Shooting hoops builds hand-eye coordination, aim and gross motor power, and the height adjusts as they grow. Brilliant for the outdoorsy kid who loves throwing.",
+    search:"kids adjustable basketball hoop outdoor"
+  },
+  {
+    id:"p284", name:"Lehoo Castle Wooden Train Set", age_min:36, age_max:96,
+    dev_areas:["fine","cognitive","social","language"], tags:["trains","vehicles","constructive","pretend-play"], fam:"wooden-train",
+    price:50, asin:null, afflink:"https://link.amazon/B0bJskZ7b", img:"https://m.media-amazon.com/images/I/81BVQzMPE7L._AC_SL1500_.jpg",
+    note:"A lovely combination of trains and construction. I love sets like this with pieces to build a whole story rather than just a track, because they open up such rich pretend play.",
+    search:"Lehoo Castle wooden train set construction kids"
+  },
+  {
+    id:"p285", name:"Lehoo Castle Wooden Train Set (Fantasy)", age_min:36, age_max:96,
+    dev_areas:["fine","cognitive","social","language"], tags:["trains","vehicles","constructive","pretend-play"], fam:"wooden-train",
+    price:39.99, asin:null, afflink:"https://link.amazon/B0hgWf7S3", img:"https://m.media-amazon.com/images/I/716SIjBLrML._AC_SL1500_.jpg",
+    note:"Trains and construction together, perfect for building a whole fantasy world with princesses and unicorns. Sets with story pieces like this spark so much more pretend play than a track alone.",
+    search:"Lehoo Castle wooden train set princesses unicorns"
+  },
+  {
+    id:"p286", name:"60PCS Wooden Train Set", age_min:36, age_max:96,
+    dev_areas:["fine","cognitive","social"], tags:["trains","vehicles","constructive","pretend-play","magnetic"], fam:"wooden-train",
+    price:53, asin:null, afflink:"https://link.amazon/B0gqnEyV5", img:"https://m.media-amazon.com/images/I/81rTOPPP6iL._AC_SL1500_.jpg",
+    note:"Trains and construction in one, with fun magnetic pieces added to the mix. Building the story alongside the track makes for really rich, open-ended pretend play.",
+    search:"60 piece wooden train set magnetic kids"
+  },
+  {
+    id:"p287", name:"110PCS Montessori Wooden Train Set", age_min:36, age_max:96,
+    dev_areas:["fine","cognitive","social","language"], tags:["trains","vehicles","constructive","pretend-play"], fam:"wooden-train",
+    price:72, asin:null, afflink:"https://link.amazon/B0hFaIL2N", img:"https://m.media-amazon.com/images/I/91e3Z50M2GL._AC_SL1500_.jpg",
+    note:"This is the ultimate set. If you want to get the lot, this is the one. I absolutely love that you can build a whole town to play out, so the possibilities really are endless.",
+    search:"110 piece Montessori wooden train set town kids"
+  },
 ];
 
 // ─── QUIZ STEPS ──────────────────────────────────────────────────────────────
@@ -2108,7 +2183,7 @@ const STEPS = [
       {value:7,  label:"7 to 12 months",          emoji:"🐣"},
       {value:13, label:"12 to 18 months",         emoji:"🐥"},
       {value:19, label:"18 months to 2 years",    emoji:"🐦"},
-      {value:30, label:"2 to 3 years",            emoji:"🌿"},
+      {value:24, label:"2 years old",             emoji:"🌿"},
       {value:42, label:"3 to 4 years",            emoji:"🌻"},
       {value:54, label:"4 to 5 years",            emoji:"⭐"},
       {value:66, label:"5 to 6 years",            emoji:"🚀"},
@@ -2165,10 +2240,11 @@ const STEPS = [
       {value:"dolls",         label:"Dolls and soft toys 🍼", minAge:13},
       {value:"movement",      label:"Running, jumping, climbing, outdoor play 🏃", minAge:13},
       {value:"sports",        label:"Sports and ball games ⚽", minAge:19},
+      {value:"gymnastics",    label:"Gymnastics, tumbling and cartwheels 🤸", minAge:36},
       {value:"art",           label:"Drawing, painting and crafts 🎨", minAge:13},
       {value:"music",         label:"Music, singing and dancing 🎵"},
       {value:"stories",       label:"Books and stories 📚"},
-      {value:"puzzles",       label:"Puzzles and figuring things out 🧩", minAge:13},
+      {value:"puzzles",       label:"Puzzles and figuring things out 🧩", minAge:18},
       {value:"games",         label:"Board games and card games 🎲", minAge:30},
       {value:"water",         label:"Water, slime and messy play 💧"},
       {value:"science",       label:"Science, experiments and how things work 🔬", minAge:30},
@@ -2187,6 +2263,7 @@ const STEPS = [
       {value:"cognitive",     label:"Problem-solving and learning 🧠"},
       {value:"social",        label:"Social skills, turn-taking and emotional regulation 🤝"},
       {value:"sensory",       label:"Sensory play and exploration 🌈"},
+      {value:"sensory-tools", label:"Sensory tools and regulation supports 🧩"},
       {value:"selfcare",      label:"Self-care and independence 🙌"},
       {value:"no-preference", label:"Just want great, engaging play 🎉"},
     ],
@@ -2252,7 +2329,7 @@ function parseBudget(b){
 
 // Convert stored months value to the friendly age label used in the quiz
 function ageLabel(months){
-  const map={2:"0 to 3 months",4:"4 to 6 months",7:"7 to 12 months",13:"12 to 18 months",19:"18 months to 2 years",30:"2 to 3 years",42:"3 to 4 years",54:"4 to 5 years",66:"5 to 6 years",84:"6 to 8 years",108:"8 to 10 years"};
+  const map={2:"0 to 3 months",4:"4 to 6 months",7:"7 to 12 months",13:"12 to 18 months",19:"18 months to 2 years",24:"2 years old",42:"3 to 4 years",54:"4 to 5 years",66:"5 to 6 years",84:"6 to 8 years",108:"8 to 10 years"};
   return map[months]||(months+" months");
 }
 
@@ -2329,6 +2406,7 @@ function scoreProduct(p, answers){
     music:["music","rhythm","audio"],stories:["books","storytelling","audio"],
     puzzles:["problem-solving","puzzle","sorting","memory","patterns"],
     sports:["sports"],
+    gymnastics:["gymnastics","sports","balance","proprioceptive","vestibular","heavy-work"],
     games:["board-game","card-game","word-game"],
     water:["water","sensory","breath-control","tactile","fidget"],science:["STEM","science","experiments","coding","circuits"],
   };
@@ -2336,6 +2414,10 @@ function scoreProduct(p, answers){
   if((answers.dev_focus||[]).includes("sensory")){
     const sensoryTags=["vestibular","proprioceptive","deep-pressure","sensory","fidget","stretchy","heavy-work","swing","soft-play"];
     if(p.tags.some(t=>sensoryTags.includes(t)))score+=4;
+  }
+  if((answers.dev_focus||[]).includes("sensory-tools")){
+    const toolTags=["vestibular","proprioceptive","deep-pressure","fidget","heavy-work","swing","soft-play","self-regulation","calm-down","tactile"];
+    if(p.tags.some(t=>toolTags.includes(t)))score+=5;
   }
   // Active/movement play style — boost heavy work and outdoor
   if((answers.play_style||[]).includes("active-physical")){
@@ -2375,10 +2457,11 @@ function getRecommendations(answers,count=5,excluded=[]){
 
   // ── GOAL COVERAGE: ensure at least one toy per chosen development goal ──
   const chosenGoals=(answers.dev_focus||[]).filter(g=>g!=="no-preference");
+  const goalArea=(g)=>g==="sensory-tools"?"sensory":g;
   for(const goal of chosenGoals){
     if(result.length>=count)break;
     // highest scoring toy that covers this goal and isn't already picked
-    const pick=scored.find(p=>p.dev_areas.includes(goal)&&!result.find(r=>r.id===p.id)&&!famBlocked(p));
+    const pick=scored.find(p=>p.dev_areas.includes(goalArea(goal))&&!result.find(r=>r.id===p.id)&&!famBlocked(p));
     if(pick){
       const ints=pick._matchedInterests||[];
       const capped=ints.some(int=>(interestCount[int]||0)>=CAP);
@@ -2647,7 +2730,7 @@ JSON only: {"reason":"..."}`;
       return JSON.parse(data.content.map(b=>b.text||"").join("").replace(/```json|```/g,"").trim());
     }
 
-    const devLabelMap={gross:"gross motor",fine:"fine motor",cognitive:"problem-solving and learning",language:"communication and language",social:"social and emotional skills",sensory:"sensory",selfcare:"self-care and independence"};
+    const devLabelMap={gross:"gross motor",fine:"fine motor",cognitive:"problem-solving and learning",language:"communication and language",social:"social and emotional skills",sensory:"sensory",selfcare:"self-care and independence","sensory-tools":"sensory tools and regulation"};
     const FUNCTIONAL_IDS=["p120","p121","p122","p123","p124"]; // step stool, learning tower, cup, potty, cutlery, dressing doll
     const isFunctional=(p)=>FUNCTIONAL_IDS.includes(p.id)||/learning tower|step stool|cutlery|open cup|potty|toilet seat|dressing doll/i.test(p.name);
     const productList=recs.map((p,i)=>`${i+1}. ${p.name} ($${p.price}) supports: ${p.dev_areas.map(d=>devLabelMap[d]||d).join(", ")}. What it is and does: ${p.note}${isFunctional(p)?" [FUNCTIONAL EVERYDAY EQUIPMENT, apply the special functional rule]":""}`).join("\n");
@@ -2753,6 +2836,9 @@ JSON only (no markdown):
         <p style={{fontSize:14,color:TEXT,margin:0,opacity:0.7}}>{isGift?"Matched to this child by a paediatric OT":"Matched to your child by a paediatric OT"}</p>
       </div>
       <div style={{maxWidth:640,margin:"0 auto",padding:"0 20px"}}>
+        <div style={{background:`${K_BLUE}14`,border:`1px solid ${K_BLUE}44`,borderRadius:12,padding:"11px 15px",marginTop:16,fontSize:13.5,color:TEXT,lineHeight:1.5}}>
+          Results feeling too similar, or want a different option? Hit the <strong>Swap</strong> button on any card to trade it for another pick.
+        </div>
         {result.recs.map((toy,i)=>(
           <div key={`${toy.id}-${i}`} style={{background:CARD,borderRadius:16,border:`1px solid ${BORDER}`,marginTop:20,boxShadow:"0 2px 8px rgba(0,0,0,0.05)",overflow:"hidden",opacity:swappingIndex===i?0.45:1,transition:"opacity 0.25s"}}>
             <ProductImage toy={toy}/>
@@ -2780,7 +2866,7 @@ JSON only (no markdown):
                 </a>
                 <button onClick={()=>handleSwap(i)} disabled={swappingIndex!==null}
                   style={{fontSize:13,color:MUTED,background:"none",border:`1px solid ${BORDER}`,borderRadius:8,padding:"9px 14px",cursor:swappingIndex!==null?"default":"pointer"}}>
-                  {swappingIndex===i?"Finding a swap...":"Already have / not quite right"}
+                  {swappingIndex===i?"Finding a swap...":"🔄 Swap this (already have it or not quite right)"}
                 </button>
               </div>
             </div>
