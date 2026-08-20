@@ -2682,9 +2682,86 @@ function normalizeAI(parsed, recs){
 }
 
 // ─── MAIN COMPONENT ───────────────────────────────────────────────────────────
+// ─── EMAIL GATE: unlock results ─────────────────────────────────
+function EmailGate({count,onUnlock,isGift}){
+  const [email,setEmail] = useState("");
+  const [busy,setBusy]   = useState(false);
+  const [err,setErr]     = useState("");
+
+  function detectSource(){
+    try{
+      const p = new URLSearchParams(window.location.search);
+      let s = p.get("utm_source") || p.get("src") || "";
+      if(!s && document.referrer){
+        const r = document.referrer.toLowerCase();
+        if(r.indexOf("tiktok")>-1) s = "tiktok";
+        else if(r.indexOf("instagram")>-1) s = "instagram";
+        else if(r.indexOf("facebook")>-1) s = "facebook";
+        else if(r.indexOf("pinterest")>-1) s = "pinterest";
+      }
+      s = (s || "direct").toLowerCase().replace(/[^a-z0-9]+/g,"-").slice(0,24);
+      return "quiz-src-" + s;
+    }catch(e){ return "quiz-src-unknown"; }
+  }
+
+  async function submit(e){
+    e.preventDefault();
+    if(busy) return;
+    const clean = email.trim();
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(clean)){ setErr("Please enter a valid email address."); return; }
+    setErr(""); setBusy(true);
+    try{
+      const res = await fetch("/api/subscribe",{
+        method:"POST",
+        headers:{"Content-Type":"application/json"},
+        body:JSON.stringify({ email:clean, tags:["quiz-gated", detectSource()] })
+      });
+      let data = {};
+      try{ data = await res.json(); }catch(e2){}
+      if(res.ok){ onUnlock(); return; }
+      if(res.status >= 500){ onUnlock(); return; }
+      setBusy(false);
+      setErr((data && data.error) ? data.error : "Could not sign you up right now. Please try again.");
+    }catch(e3){
+      onUnlock();
+    }
+  }
+
+  return (
+    <div style={{minHeight:"100vh",background:BG,fontFamily:"system-ui,sans-serif",paddingBottom:60}}>
+      <div style={{background:K_YELLOW,padding:"28px 24px",textAlign:"center"}}>
+        <img src={LOGO} alt="Kidera" style={{height:56,objectFit:"contain",marginBottom:10}} onError={(e)=>{e.target.style.display="none";}}/>
+        <h1 style={{fontSize:"clamp(18px,4vw,26px)",fontWeight:800,color:TEXT,margin:"0 0 6px"}}>Your picks are ready</h1>
+        <p style={{fontSize:14,color:TEXT,margin:0,opacity:0.75}}>
+          {count} toys matched {isGift ? "to this child" : "to your child"} by a paediatric OT.
+        </p>
+      </div>
+      <div style={{maxWidth:560,margin:"0 auto",padding:"0 20px"}}>
+        <div style={{background:CARD,border:"1px solid "+BORDER,borderRadius:16,padding:"24px 20px",marginTop:20}}>
+          <p style={{fontSize:15,color:TEXT,margin:"0 0 14px",lineHeight:1.5}}>
+            Pop in your email and I will unlock your picks straight away. You will also get my monthly play and toy ideas, written by me.
+          </p>
+          <form onSubmit={submit}>
+            <input type="email" value={email} onChange={(e)=>setEmail(e.target.value)} placeholder="you@email.com" autoComplete="email"
+              style={{width:"100%",boxSizing:"border-box",padding:"14px 16px",fontSize:16,borderRadius:12,border:"1px solid "+BORDER,background:"#FFFFFF",color:TEXT,outline:"none",marginBottom:10}}/>
+            {err ? <p style={{color:K_PINK,fontSize:13,margin:"0 0 10px"}}>{err}</p> : null}
+            <button type="submit" disabled={busy}
+              style={{width:"100%",padding:"15px 18px",fontSize:16,fontWeight:800,borderRadius:12,border:"none",cursor:busy?"default":"pointer",background:busy?MUTED:K_GREEN,color:"#FFFFFF"}}>
+              {busy ? "Unlocking..." : "Show me my toy picks"}
+            </button>
+          </form>
+          <p style={{fontSize:12,color:MUTED,margin:"12px 0 0",lineHeight:1.5}}>
+            No spam, unsubscribe any time. I will never share your email.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function KideraToyQuiz(){
   const[step,setStep]=useState(0);const[answers,setAnswers]=useState({});
-  const[result,setResult]=useState(null);const[loading,setLoading]=useState(false);
+  const[result,setResult]=useState(null);const[gateOpen,setGateOpen]=useState(false);const[loading,setLoading]=useState(false);
   const[swappingIndex,setSwappingIndex]=useState(null);const[excludedIds,setExcludedIds]=useState([]);
 
   const current=STEPS[step];
@@ -2825,9 +2902,11 @@ JSON only (no markdown):
     }finally{setSwappingIndex(null);}
   }
 
-  function reset(){setStep(0);setAnswers({});setResult(null);setLoading(false);setSwappingIndex(null);setExcludedIds([]);}
+  function reset(){setStep(0);setAnswers({});setResult(null);setGateOpen(false);setLoading(false);setSwappingIndex(null);setExcludedIds([]);}
 
   // ── RESULT ─────────────────────────────────────────────────────────────────
+  if(result&&!gateOpen)return(<EmailGate count={(result.recs||[]).length} isGift={isGift} onUnlock={()=>setGateOpen(true)}/>);
+
   if(result)return(
     <div style={{minHeight:"100vh",background:BG,fontFamily:"system-ui,sans-serif",paddingBottom:60}}>
       <div style={{background:K_YELLOW,padding:"28px 24px",textAlign:"center"}}>
