@@ -2970,7 +2970,6 @@ JSON only (no markdown):
           <p style={{margin:0}}>This quiz was built and curated by Brittany using her professional OT expertise and knowledge of child development. It uses smart technology to personalise results, and while every recommendation has been carefully considered, these are a starting point rather than a definitive guide. {isGift?"Their parents know them best.":"You know your child best."}</p>
         </div>
 
-        <FreebieSignup/>
 
         <FeedbackWidget/>
 
