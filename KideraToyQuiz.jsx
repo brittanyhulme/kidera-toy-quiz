@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { COUNTRIES_COMMON, COUNTRIES_REST } from "./countries.js";
 
 // ─── BRAND ───────────────────────────────────────────────────────────────────
 const LOGO = "https://images.squarespace-cdn.com/content/v1/63f6a22a05d1f52c5fbc9958/828c459a-9f72-4475-8cc5-b0045694bd96/Primary+Logo.png?format=300w";
@@ -2513,9 +2514,28 @@ function ProductImage({toy}){
 }
 
 // ─── FEEDBACK WIDGET ──────────────────────────────────────────────────────────
+// ─── COUNTRY SELECT (optional, shared) ────────────────────────────────────────
+// Optional on every form. Left blank it sends nothing, so it costs no signups.
+function CountrySelect({value,onChange,disabled,style}){
+  return(
+    <select value={value} onChange={e=>onChange(e.target.value)} disabled={disabled}
+      aria-label="Country (optional)" autoComplete="country-name"
+      style={{padding:"12px 14px",borderRadius:10,border:`1.5px solid ${BORDER}`,fontSize:15,color:value?TEXT:MUTED,outline:"none",boxSizing:"border-box",fontFamily:"system-ui",background:CARD,...style}}>
+      <option value="">Country (optional)</option>
+      <optgroup label="Most common">
+        {COUNTRIES_COMMON.map(c=><option key={c} value={c}>{c}</option>)}
+      </optgroup>
+      <optgroup label="All countries">
+        {COUNTRIES_REST.map(c=><option key={c} value={c}>{c}</option>)}
+      </optgroup>
+    </select>
+  );
+}
+
 // ─── FREEBIE SIGNUP (Mailchimp) ───────────────────────────────────────────────
 function FreebieSignup(){
   const[email,setEmail]=useState("");
+  const[country,setCountry]=useState("");
   const[sending,setSending]=useState(false);
   const[done,setDone]=useState(false);
   const[error,setError]=useState("");
@@ -2527,7 +2547,7 @@ function FreebieSignup(){
     try{
       const res=await fetch("/api/subscribe",{
         method:"POST",headers:{"Content-Type":"application/json"},
-        body:JSON.stringify({email:e}),
+        body:JSON.stringify({email:e,country}),
       });
       const data=await res.json();
       if(res.ok&&data.ok){setDone(true);}
@@ -2560,6 +2580,7 @@ function FreebieSignup(){
           onKeyDown={e=>{if(e.key==="Enter")subscribe();}}
           placeholder="you@email.com" disabled={sending}
           style={{flex:1,minWidth:180,padding:"12px 14px",borderRadius:10,border:`1.5px solid ${BORDER}`,fontSize:15,color:TEXT,outline:"none",boxSizing:"border-box",fontFamily:"system-ui",background:CARD}}/>
+        <CountrySelect value={country} onChange={setCountry} disabled={sending} style={{flex:1,minWidth:180}}/>
         <button onClick={subscribe} disabled={sending}
           style={{padding:"12px 22px",borderRadius:10,border:"none",background:sending?BORDER:K_GREEN,color:sending?MUTED:"#fff",fontSize:15,fontWeight:700,cursor:sending?"default":"pointer",transition:"all 0.2s",whiteSpace:"nowrap"}}>
           {sending?"Signing up...":"Send me the freebies"}
@@ -2685,6 +2706,7 @@ function normalizeAI(parsed, recs){
 // ─── EMAIL GATE: unlock results ─────────────────────────────────
 function EmailGate({count,onUnlock,isGift}){
   const [email,setEmail] = useState("");
+  const [country,setCountry] = useState("");
   const [busy,setBusy]   = useState(false);
   const [err,setErr]     = useState("");
 
@@ -2714,7 +2736,7 @@ function EmailGate({count,onUnlock,isGift}){
       const res = await fetch("/api/subscribe",{
         method:"POST",
         headers:{"Content-Type":"application/json"},
-        body:JSON.stringify({ email:clean, tags:["quiz-gated", detectSource()] })
+        body:JSON.stringify({ email:clean, country, tags:["quiz-gated", detectSource()] })
       });
       let data = {};
       try{ data = await res.json(); }catch(e2){}
@@ -2744,6 +2766,8 @@ function EmailGate({count,onUnlock,isGift}){
           <form onSubmit={submit}>
             <input type="email" value={email} onChange={(e)=>setEmail(e.target.value)} placeholder="you@email.com" autoComplete="email"
               style={{width:"100%",boxSizing:"border-box",padding:"14px 16px",fontSize:16,borderRadius:12,border:"1px solid "+BORDER,background:"#FFFFFF",color:TEXT,outline:"none",marginBottom:10}}/>
+            <CountrySelect value={country} onChange={setCountry} disabled={busy}
+              style={{width:"100%",padding:"14px 16px",fontSize:16,borderRadius:12,border:"1px solid "+BORDER,marginBottom:10}}/>
             {err ? <p style={{color:K_PINK,fontSize:13,margin:"0 0 10px"}}>{err}</p> : null}
             <button type="submit" disabled={busy}
               style={{width:"100%",padding:"15px 18px",fontSize:16,fontWeight:800,borderRadius:12,border:"none",cursor:busy?"default":"pointer",background:busy?MUTED:K_GREEN,color:"#FFFFFF"}}>
