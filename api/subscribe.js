@@ -3,6 +3,7 @@
 // The Mailchimp API key is held securely server-side (never in the browser).
 
 import crypto from "crypto";
+import { isValidCountry } from "../countries.js";
 
 const DC = "us12"; // Mailchimp data center / server prefix
 const LIST_ID = "ea68a39776"; // Kidera audience ID
@@ -35,7 +36,7 @@ export default async function handler(req, res) {
   globalThis._rlSub[ip] = now;
 
   try {
-    const { email, tags } = req.body || {};
+    const { email, tags, country } = req.body || {};
     if (!email || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
       return res.status(400).json({ error: "Please enter a valid email address." });
     }
@@ -58,17 +59,24 @@ export default async function handler(req, res) {
 
     const url = `https://${DC}.api.mailchimp.com/3.0/lists/${LIST_ID}/members/${subscriberHash}`;
 
+    // Country is optional. It is only sent when the value is one we recognise,
+    // so an empty or unexpected value never overwrites what is already stored.
+    const payload = {
+      email_address: email,
+      status_if_new: "subscribed",
+      tags: finalTags,
+    };
+    if (isValidCountry(country)) {
+      payload.merge_fields = { COUNTRY: country };
+    }
+
     const mcRes = await fetch(url, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${apiKey}`,
       },
-      body: JSON.stringify({
-        email_address: email,
-        status_if_new: "subscribed",
-        tags: finalTags,
-      }),
+      body: JSON.stringify(payload),
     });
 
     const data = await mcRes.json();
