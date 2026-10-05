@@ -2923,7 +2923,7 @@ function FreebieSignup(){
         body:JSON.stringify({email:e}),
       });
       const data=await res.json();
-      if(res.ok&&data.ok){setDone(true);}
+      if(res.ok&&data.ok){setDone(true);try{if(window.parent&&window.parent!==window)window.parent.postMessage({type:"kidera:signup",list:"main",source:"toy-quiz"},"https://kidera.com.au");}catch(_){}}
       else{setError(data.error||"Could not sign up right now. Please try again.");}
     }catch{
       setError("Could not sign up right now. Please try again.");
