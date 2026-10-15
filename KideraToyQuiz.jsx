@@ -2359,6 +2359,18 @@ function hasDelaySignals(answers){
   return /(develop\w*\s+delay|developmental(ly)?\s+delayed|global\s+delay|\bgdd\b|delay(ed)?\s+(in|with)\s|non[\s-]?verbal|autis|\basd\b|down\s+syndrome|disabilit|intellectual\s+disab|cerebral\s+palsy|special\s+needs|\bndis\b|regressi)/i.test(text);
 }
 
+// A parent telling us the child still mouths things, or asking for nothing small,
+// is a choking-risk instruction. It is the one free-text signal that must change
+// what we suggest rather than just how we describe it.
+function hasMouthingSignals(answers){
+  const text=((answers.child_snapshot||"")+" "+(answers.wildcard||"")).toLowerCase();
+  // "mouth" on its own is not enough. An Australian parent saying their kid has a
+  // big mouth on them is describing a talker, not a choking risk.
+  const mouths=/(in\s+(his|her|their|its|the)\s+mouth|mouths?\s+(everything|things|toys|them|it)|mouthing\b|still\s+mouths?\b|chew(s|ing)?\s+(on|everything|things|toys)|swallow)/i.test(text);
+  const noSmall=/(no(thing)?\s+(with\s+)?(tiny|small|little)\s+(piece|part|bit)s?|avoid\s+(tiny|small)\s+(piece|part)s?|too\s+many\s+small\s+pieces|choking|chok(e|ing)\s+hazard|small\s+parts?\s+(risk|worry|concern))/i.test(text);
+  return mouths || noSmall;
+}
+
 function hasNonverbalSignals(answers){
   const text=((answers.child_snapshot||"")+" "+(answers.wildcard||"")).toLowerCase();
   return /(non[\s-]?verbal|no\s+words|can'?t\s+talk|doesn'?t\s+talk|not\s+(yet\s+)?talking|minimally\s+verbal|few\s+words)/i.test(text);
@@ -3247,7 +3259,9 @@ ${hasDelaySignals(answers)?`IMPORTANT CONTEXT: The parent's description suggests
 
 `:""}INTEREST GROUNDING RULE: the child's interests are ONLY what the parent ticked or typed. Never infer an interest from the products you were given. If the list contains two train sets, that does not mean this child likes trains. Saying "since he's obsessed with trains" when the parent wrote diggers and dinosaurs is the single most damaging mistake you can make here, because it tells the parent nobody read what they wrote. When a pick does not match a stated interest, say what the toy is and why it suits them for another reason, or say plainly that it is a change from their usual.
 
-GROUNDING RULE: Each toy's listing above tells you what it actually is and does. Base every reason and play idea ONLY on the product's real features. Never invent features it does not have. Think through the practical reality of the suggestion before writing it: if the toy itself gives the cues (lights, sounds, spoken commands, music), do not tell the parent to give the cue, the child responds to the toy. If a toy launches, flies, or travels a long way, suggest an open space like a park or oval rather than assuming a backyard is big enough. If an activity is messy, only suggest it somewhere that makes sense. Every play idea must be something a real parent could physically do with that exact product.
+${hasMouthingSignals(answers)?`SMALL PARTS RULE: this parent has told us their child still puts things in their mouth, or has asked for nothing with small pieces. The results page already tells them to check the age rating and the listing themselves, so do not repeat it, do not promise any toy is safe, and do not reassure them about choking. Never suggest a play idea that adds loose small items such as beads, buttons, coins, dry rice, pasta or water beads.
+
+`:""}GROUNDING RULE: Each toy's listing above tells you what it actually is and does. Base every reason and play idea ONLY on the product's real features. Never invent features it does not have. Think through the practical reality of the suggestion before writing it: if the toy itself gives the cues (lights, sounds, spoken commands, music), do not tell the parent to give the cue, the child responds to the toy. If a toy launches, flies, or travels a long way, suggest an open space like a park or oval rather than assuming a backyard is big enough. If an activity is messy, only suggest it somewhere that makes sense. Every play idea must be something a real parent could physically do with that exact product.
 
 Unless GIFT MODE above applies, for EVERY toy always include a play idea. Never leave one blank. Use Brittany's style from her 30 Day Play Calendar: specific, active, one sentence, a little playful. Examples of her style:
 - "Set up a dinosaur hospital where the T-Rex has crashed and needs the doctor kit to fix his leg"
@@ -3332,6 +3346,11 @@ JSON only (no markdown):
         <div style={{background:`${K_BLUE}14`,border:`1px solid ${K_BLUE}44`,borderRadius:12,padding:"11px 15px",marginTop:16,fontSize:13.5,color:TEXT,lineHeight:1.5}}>
           Results feeling too similar, or want a different option? Hit the <strong>Swap</strong> button on any card to trade it for another pick.
         </div>
+        {hasMouthingSignals(answers)&&(
+          <div style={{background:`${K_YELLOW}2E`,border:`1px solid ${K_YELLOW}`,borderRadius:12,padding:"11px 15px",marginTop:12,fontSize:13.5,color:TEXT,lineHeight:1.5}}>
+            You mentioned small parts. These picks go by the maker's age rating, and anything rated 3 and up can still have small pieces in it. Have a look at the listing yourself before you hand it over.
+          </div>
+        )}
         {result.recs.map((toy,i)=>(
           <div key={`${toy.id}-${i}`} style={{background:CARD,borderRadius:16,border:`1px solid ${BORDER}`,marginTop:20,boxShadow:"0 2px 8px rgba(0,0,0,0.05)",overflow:"hidden",opacity:swappingIndex===i?0.45:1,transition:"opacity 0.25s"}}>
             <ProductImage toy={toy}/>
