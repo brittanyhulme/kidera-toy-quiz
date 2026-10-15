@@ -145,7 +145,7 @@ const PRODUCTS = [
   },
   {
     id:"p14", name:"LEGO DUPLO My First Number Train", age_min:18, age_max:48,
-    dev_areas:["fine","cognitive","language"], tags:["constructive","vehicles","trains","blocks-tiles","numbers"],
+    dev_areas:["fine","cognitive","language"], tags:["constructive","vehicles","trains","blocks-tiles","numbers"],fam:"train-set",
     price:22, asin:"B08W5FV9GN", afflink:"https://www.amazon.com.au/dp/B08W5FV9GN/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/81HByhoQf1L._AC_SX679_.jpg",
     note:"Trains kids can actually build and count with. Great for vehicle lovers who are starting to put things together.",
@@ -250,7 +250,7 @@ const PRODUCTS = [
   },
   {
     id:"p27", name:"BRIO My First Railway Beginner Pack", age_min:18, age_max:36,
-    dev_areas:["fine","cognitive","social"], tags:["vehicles","trains","constructive","pretend-play"],
+    dev_areas:["fine","cognitive","social"], tags:["vehicles","trains","constructive","pretend-play"],fam:"train-set",
     price:74, asin:"B00RMLUWGW", afflink:"https://www.amazon.com.au/dp/B00RMLUWGW/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/71FLO8ky54L._AC_SX679_.jpg",
     note:"A proper wooden train set. Magnetic connections, rainbow bridge, quality that lasts years. Good for train lovers from 18 months.",
@@ -1401,7 +1401,7 @@ const PRODUCTS = [
   },
   {
     id:"p180", name:"Toddler Learning Farm Train Set", age_min:12, age_max:36,
-    dev_areas:["cognitive","language","fine"], tags:["animals","cause-effect","sorting","trains"],
+    dev_areas:["cognitive","language","fine"], tags:["animals","cause-effect","sorting","trains"],fam:"train-set",
     price:45.99, asin:null, afflink:"https://link.amazon/B0iqnQX7s", img:"https://m.media-amazon.com/images/I/81kVIPnqrDL._AC_SX679_.jpg",
     note:"Animals, sorting and a train all in one. Lots of cause and effect and early language for little farm fans.",
     search:"Toddler Learning Farm Train Set kids"
@@ -2130,28 +2130,28 @@ const PRODUCTS = [
   },
   {
     id:"p284", name:"Lehoo Castle Wooden Train Set", age_min:36, age_max:96,
-    dev_areas:["fine","cognitive","social","language"], tags:["trains","vehicles","constructive","pretend-play"], fam:"wooden-train",
+    dev_areas:["fine","cognitive","social","language"], tags:["trains","vehicles","constructive","pretend-play"], fam:"train-set",
     price:50, asin:null, afflink:"https://link.amazon/B0bJskZ7b", img:"https://m.media-amazon.com/images/I/81BVQzMPE7L._AC_SL1500_.jpg",
     note:"A lovely combination of trains and construction. I love sets like this with pieces to build a whole story rather than just a track, because they open up such rich pretend play.",
     search:"Lehoo Castle wooden train set construction kids"
   },
   {
     id:"p285", name:"Lehoo Castle Wooden Train Set (Fantasy)", age_min:36, age_max:96,
-    dev_areas:["fine","cognitive","social","language"], tags:["trains","vehicles","constructive","pretend-play"], fam:"wooden-train",
+    dev_areas:["fine","cognitive","social","language"], tags:["trains","vehicles","constructive","pretend-play"], fam:"train-set",
     price:39.99, asin:null, afflink:"https://link.amazon/B0hgWf7S3", img:"https://m.media-amazon.com/images/I/716SIjBLrML._AC_SL1500_.jpg",
     note:"Trains and construction together, perfect for building a whole fantasy world with princesses and unicorns. Sets with story pieces like this spark so much more pretend play than a track alone.",
     search:"Lehoo Castle wooden train set princesses unicorns"
   },
   {
     id:"p286", name:"60PCS Wooden Train Set", age_min:36, age_max:96,
-    dev_areas:["fine","cognitive","social"], tags:["trains","vehicles","constructive","pretend-play","magnetic"], fam:"wooden-train",
+    dev_areas:["fine","cognitive","social"], tags:["trains","vehicles","constructive","pretend-play","magnetic"], fam:"train-set",
     price:53, asin:null, afflink:"https://link.amazon/B0gqnEyV5", img:"https://m.media-amazon.com/images/I/81rTOPPP6iL._AC_SL1500_.jpg",
     note:"Trains and construction in one, with fun magnetic pieces added to the mix. Building the story alongside the track makes for really rich, open-ended pretend play.",
     search:"60 piece wooden train set magnetic kids"
   },
   {
     id:"p287", name:"110PCS Montessori Wooden Train Set", age_min:36, age_max:96,
-    dev_areas:["fine","cognitive","social","language"], tags:["trains","vehicles","constructive","pretend-play"], fam:"wooden-train",
+    dev_areas:["fine","cognitive","social","language"], tags:["trains","vehicles","constructive","pretend-play"], fam:"train-set",
     price:72, asin:null, afflink:"https://link.amazon/B0hFaIL2N", img:"https://m.media-amazon.com/images/I/91e3Z50M2GL._AC_SL1500_.jpg",
     note:"This is the ultimate set. If you want to get the lot, this is the one. I absolutely love that you can build a whole town to play out, so the possibilities really are endless.",
     search:"110 piece Montessori wooden train set town kids"
@@ -3245,7 +3245,9 @@ ${hasDelaySignals(answers)?`IMPORTANT CONTEXT: The parent's description suggests
 
 `:""}${answers.recipient&&answers.recipient!=="my-child"?`GIFT MODE: The person taking this quiz is choosing a gift for a child who is NOT their own. Never say "your child". Refer to the child as "this child" or "this little one". Return an empty string for every play_idea, no play ideas in gift mode. Frame each reason as why this makes a great gift for this specific child. For the curator note, speak to a thoughtful gift-giver: acknowledge the care they are putting into choosing well, and end with the sentiment that this child's parents know them best and any of these picks will land beautifully.
 
-`:""}GROUNDING RULE: Each toy's listing above tells you what it actually is and does. Base every reason and play idea ONLY on the product's real features. Never invent features it does not have. Think through the practical reality of the suggestion before writing it: if the toy itself gives the cues (lights, sounds, spoken commands, music), do not tell the parent to give the cue, the child responds to the toy. If a toy launches, flies, or travels a long way, suggest an open space like a park or oval rather than assuming a backyard is big enough. If an activity is messy, only suggest it somewhere that makes sense. Every play idea must be something a real parent could physically do with that exact product.
+`:""}INTEREST GROUNDING RULE: the child's interests are ONLY what the parent ticked or typed. Never infer an interest from the products you were given. If the list contains two train sets, that does not mean this child likes trains. Saying "since he's obsessed with trains" when the parent wrote diggers and dinosaurs is the single most damaging mistake you can make here, because it tells the parent nobody read what they wrote. When a pick does not match a stated interest, say what the toy is and why it suits them for another reason, or say plainly that it is a change from their usual.
+
+GROUNDING RULE: Each toy's listing above tells you what it actually is and does. Base every reason and play idea ONLY on the product's real features. Never invent features it does not have. Think through the practical reality of the suggestion before writing it: if the toy itself gives the cues (lights, sounds, spoken commands, music), do not tell the parent to give the cue, the child responds to the toy. If a toy launches, flies, or travels a long way, suggest an open space like a park or oval rather than assuming a backyard is big enough. If an activity is messy, only suggest it somewhere that makes sense. Every play idea must be something a real parent could physically do with that exact product.
 
 Unless GIFT MODE above applies, for EVERY toy always include a play idea. Never leave one blank. Use Brittany's style from her 30 Day Play Calendar: specific, active, one sentence, a little playful. Examples of her style:
 - "Set up a dinosaur hospital where the T-Rex has crashed and needs the doctor kit to fix his leg"
@@ -3263,7 +3265,11 @@ SPECIAL RULE FOR FUNCTIONAL OR EVERYDAY EQUIPMENT (learning towers, step stools,
 - Dressing doll: "Let them dress and undress the doll as a game before tackling their own buttons"
 And in the REASON for these functional items, it is good to also mention where they get used at mealtimes or in daily routines, and to connect that to self-care and independence where the parent picked it, by describing what the child does for themselves. Functional equipment is play AND practical, say both. ALWAYS include a play idea for functional equipment, never leave it blank, even if it does not match a stated interest (unless GIFT MODE applies).
 
-Then write a warm, individualised 2-3 sentence note from Brittany. It must feel personal to THIS family, never generic. If the parent gave lots of detail, reference something specific they said. If they gave very little, still make it feel individual by drawing on their actual quiz choices: their child's age (${ageLabel(answers.child_age)}), the goals they picked, the interests they ticked, or the occasion. Speak to their situation directly. No em dashes. Short sentences. End with this sentiment in Brittany's own words: every child develops at their own pace, and you know yours best. (If GIFT MODE applies, use the gift ending described there instead.)
+Then write a warm, individualised 2-3 sentence note from Brittany. It must feel personal to THIS family, never generic. If the parent gave lots of detail, reference something specific they said. If they gave very little, still make it feel individual by drawing on their actual quiz choices: their child's age (${ageLabel(answers.child_age)}), the goals they picked, the interests they ticked, or the occasion. Speak to their situation directly. No em dashes. Short sentences.
+
+NO REASSURANCE RULE FOR THIS NOTE: parents often mention a worry here, about speech, behaviour, frustration, sleep, eating, how their child compares to others. You must not predict how it will turn out, tell them it is normal, tell them it will come with time, or imply it needs no action. Brittany is a registered health practitioner and has not assessed this child, so a sentence like "the speech will come" is a clinical opinion she is not in a position to give. Acknowledge what they told you in plain words and move on to the toys. If they named a worry, you may say it is worth raising with their GP, child health nurse or an appropriate professional, and nothing more. Never say it is nothing to worry about.
+
+End with this sentiment in Brittany's own words: every child develops at their own pace, and you know yours best. (If GIFT MODE applies, use the gift ending described there instead.)
 
 VARIETY RULE: The five toys are deliberately varied. Never present two toys as interchangeable or repeat the same reasoning for two different toys. Each reason should make clear what this specific toy adds that the others don't.
 
