@@ -49,7 +49,7 @@ const PRODUCTS = [
     dev_areas:["sensory","gross","fine"], tags:["tummy-time","sensory","water"],
     price:39.99, asin:"B0DBH9PSP2", afflink:"https://www.amazon.com.au/dp/B0DBH9PSP2/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/71dCRSG7tWL._AC_SX679_.jpg",
-    note:"A favourite for tummy time. It keeps babies engaged long enough to actually build that core strength.",
+    note:"A favourite for tummy time. Most babies will stay on it a good while before they start complaining.",
     search:"Young Wonderer Sensory Water Mat tummy time"
   },
   {
@@ -57,7 +57,7 @@ const PRODUCTS = [
     dev_areas:["sensory","gross"], tags:["tummy-time","water","visual"],
     price:24.99, asin:"B0DBH9PSP2", afflink:"https://www.amazon.com.au/dp/B0DBH9PSP2/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/71dCRSG7tWL._AC_SX679_.jpg",
-    note:"Black and white, sensory, tummy time — everything a newborn needs in one mat.",
+    note:"Black and white, sensory, tummy time. Everything a newborn needs in one mat.",
     search:"High Contrast Black White Tummy Time Water Mat Young Wonderer"
   },
   // 4-12 months
@@ -66,7 +66,7 @@ const PRODUCTS = [
     dev_areas:["gross","sensory","cognitive"], tags:["cause-effect","crawling","movement"],
     price:22.99, asin:"B09TS9BLGS", afflink:"https://www.amazon.com.au/dp/B09TS9BLGS/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/61ey5f2SteL._AC_SX679_.jpg",
-    note:"Moves side to side and lights up — babies track it with their eyes and crawl after it. Great neck and core workout.",
+    note:"Moves side to side and lights up. Babies track it with their eyes and crawl after it. Great neck and core workout.",
     search:"crawling crab baby toy light music"
   },
   {
@@ -82,7 +82,7 @@ const PRODUCTS = [
     dev_areas:["fine","cognitive","language"], tags:["cause-effect"],
     price:24, asin:"B00GNAP830", afflink:"https://www.amazon.com.au/dp/B00GNAP830/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/6187i8MX97L._AC_SX679_.jpg",
-    note:"Buttons, shapes, music and flaps — lots of ways for little hands to explore cause and effect.",
+    note:"Buttons, shapes, music and flaps. Lots of ways for little hands to explore cause and effect.",
     search:"VTech Turn Learn Cube 150503"
   },
   {
@@ -90,7 +90,7 @@ const PRODUCTS = [
     dev_areas:["gross","sensory","cognitive"], tags:["cause-effect","crawling","movement"],
     price:20, asin:"B01D2TC31Y", afflink:"https://www.amazon.com.au/dp/B01D2TC31Y/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/71toQH2A1hL._AC_SX679_.jpg",
-    note:"Rolls away and lights up — babies crawl after it without realising they're doing gross motor work.",
+    note:"Rolls away and lights up. Babies set off after it and keep going.",
     search:"VTech Light Move Learning Ball crawl"
   },
   {
@@ -98,7 +98,7 @@ const PRODUCTS = [
     dev_areas:["sensory","fine","cognitive"], tags:["sensory","visual","grasping"],
     price:21.99, asin:"B0FG8FKQ9D", afflink:"https://www.amazon.com.au/dp/B0FG8FKQ9D/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/61TAdRAnNPL._AC_SX679_.jpg",
-    note:"Hangs on a pram or cot. Textures, crinkle sounds, and faces for early visual tracking and grasping.",
+    note:"Hangs on a pram or cot. Textures, crinkle sounds and faces to stare at and grab.",
     search:"Young Wonderer Hanging Sensory Toy Brooklyn Bear"
   },
   // 9-18 months
@@ -107,7 +107,7 @@ const PRODUCTS = [
     dev_areas:["cognitive","fine","sensory"], tags:["cause-effect","visual-tracking"],
     price:52, asin:"B01MG1Q1D8", afflink:"https://www.amazon.com.au/dp/B01MG1Q1D8/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/71UtdhcPgbL._AC_SX679_.jpg",
-    note:"Watch the balls go round. Builds anticipation and visual tracking and it's genuinely mesmerising.",
+    note:"Watch the balls go round and round. Babies follow them with their eyes and wait for the next one.",
     search:"INFANTINO Bop Drop Ball Tower marble track"
   },
   {
@@ -115,7 +115,7 @@ const PRODUCTS = [
     dev_areas:["gross","cognitive","sensory"], tags:["cause-effect","walking","movement"],
     price:27.99, asin:"B002NWJ1LW", afflink:"https://www.amazon.com.au/dp/B002NWJ1LW/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/61Au2YeaOIL._AC_SY879_.jpg",
-    note:"Push it along and watch the balls pop out. Great for early walkers — exciting, motivating, and simple.",
+    note:"Push it along and watch the balls pop out. Great for early walkers: exciting, motivating, and simple.",
     search:"TOMY E71161 Pic N Pop Toy multicoloured"
   },
   {
@@ -123,7 +123,7 @@ const PRODUCTS = [
     dev_areas:["fine","cognitive","sensory"], tags:["cause-effect","hand-strength","music"],
     price:53, asin:"B00712O2D6", afflink:"https://www.amazon.com.au/dp/B00712O2D6/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/71HkmCUbupL._AC_SX679_.jpg",
-    note:"Bash the balls through and play the xylophone. Hand strength, cause-and-effect, and music all at once.",
+    note:"Bash the balls through the holes and they land on the xylophone. Noise with a reason behind it.",
     search:"Hape Pound Tap Bench Xylophone toddler"
   },
   {
@@ -164,7 +164,7 @@ const PRODUCTS = [
     dev_areas:["cognitive","fine","language"], tags:["sorting","colours","open-ended"],
     price:18, asin:"B077XGPKWW", afflink:"https://www.amazon.com.au/dp/B077XGPKWW/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/51+q1OJkzKL._AC_SX679_.jpg",
-    note:"Sorting, stacking, pouring, hiding, pretend cooking. More versatile than they look — great bang for buck.",
+    note:"Sorting, stacking, pouring, hiding, pretend cooking. More versatile than they look, and great bang for buck.",
     search:"JCRBILW Rainbow Ball Cups Colour Sorting Toy"
   },
   {
@@ -180,7 +180,7 @@ const PRODUCTS = [
     dev_areas:["sensory","fine","cognitive"], tags:["sensory","water","stacking"],
     price:26, asin:"B07CXZQNGH", afflink:"https://www.amazon.com.au/dp/B07CXZQNGH/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/81H0n1CHiZL._AC_SX679_.jpg",
-    note:"Soft floating stacking cubes for bath time. Sensory input, cause-and-effect, and a reason to stay in the bath.",
+    note:"Soft floating stacking cubes. Scoop, pour, squirt, and a reason to stay in the bath a bit longer.",
     search:"Playgro Splash Learn Bath Blocks baby"
   },
   // 18m - 3yr
@@ -189,7 +189,7 @@ const PRODUCTS = [
     dev_areas:["cognitive","fine"], tags:["sorting","problem-solving","puzzle"],
     price:18, asin:"B00005RF5G", afflink:"https://www.amazon.com.au/dp/B00005RF5G/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/71SvToMje4L._AC_SX679_.jpg",
-    note:"A staple for good reason. Sorting shapes builds problem-solving, spatial reasoning, and fine motor in one hit.",
+    note:"A staple for good reason. Turning a shape around until it finally drops through the hole is the whole game.",
     search:"wooden shape sorter toddler toy"
   },
   {
@@ -197,7 +197,7 @@ const PRODUCTS = [
     dev_areas:["fine","cognitive","sensory"], tags:["sensory","constructive","open-ended"],
     price:40, asin:"B00DEBB3N0", afflink:"https://www.amazon.com.au/dp/B00DEBB3N0/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/71ZdC75TxgL._AC_SX679_.jpg",
-    note:"Suction cup building pieces that stick to any smooth surface — bathroom tiles, windows, high chairs. Genuinely creative.",
+    note:"Suction cup building pieces that stick to any smooth surface: bathroom tiles, windows, high chairs. Genuinely creative.",
     search:"Fat Brain Toys Squigz Starter Set 24 piece"
   },
   {
@@ -213,7 +213,7 @@ const PRODUCTS = [
     dev_areas:["gross"], tags:["balance","coordination","outdoor","movement"],
     price:65, asin:"B0BZC86CFM", afflink:"https://www.amazon.com.au/dp/B0BZC86CFM/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/81AbYrRWq-L._AC_SX679_.jpg",
-    note:"The best way to learn to ride a bike. Builds balance and core strength without the training wheel transition later.",
+    note:"The best way to learn to ride a bike. No training wheels to unlearn later, which is the main thing.",
     search:"12 inch balance bike toddler"
   },
   {
@@ -221,7 +221,7 @@ const PRODUCTS = [
     dev_areas:["sensory","social","gross","language"], tags:["sensory","pretend-play","movement","open-ended","music"],
     price:15, asin:"B0D9LZ3ZVQ", afflink:"https://www.amazon.com.au/dp/B0D9LZ3ZVQ/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/81kIJk6PcNL._AC_SX679_.jpg",
-    note:"Silks for play are one of the most underrated toys. Peek-a-boo, dress-up, dancing, sensory exploration — endless uses.",
+    note:"Silks for play are one of the most underrated toys. Peek-a-boo, dress-up, dancing, sensory exploration. Endless uses.",
     search:"JEOJEOY 9 Pcs Fabric Play Scarves Rainbow Dance"
   },
   {
@@ -277,7 +277,7 @@ const PRODUCTS = [
     dev_areas:["fine","cognitive"], tags:["constructive","creative","open-ended"],
     price:20, asin:"B0B9GV7QS5", afflink:"https://www.amazon.com.au/dp/B0B9GV7QS5/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/813pDXZnndL._AC_SX679_.jpg",
-    note:"A lovely alternative to traditional blocks. Creativity, problem-solving, and fine motor through open-ended building.",
+    note:"A lovely alternative to ordinary blocks. Open-ended, so what gets made is up to them.",
     search:"Flower Garden Building Toys 224 pcs kids STEM"
   },
   // 2-4 years
@@ -286,7 +286,7 @@ const PRODUCTS = [
     dev_areas:["fine","sensory","cognitive"], tags:["playdough","hand-strength","sensory"],
     price:18, asin:"B09Z21T1V2", afflink:"https://www.amazon.com.au/dp/B09Z21T1V2/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/81WEl2xX0cL._AC_SX679_.jpg",
-    note:"Play dough is one of the best fine motor and sensory tools out there. Tools add another layer of purposeful play.",
+    note:"Play dough earns its keep. The tools give them more to do with it than squashing.",
     search:"play dough tools set kids toddler"
   },
   {
@@ -294,7 +294,7 @@ const PRODUCTS = [
     dev_areas:["fine"], tags:["drawing","grip"],
     price:12, asin:"144134294X", afflink:"https://www.amazon.com.au/dp/144134294X/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/81QsxBeZ6FL._AC_SX679_.jpg",
-    note:"Egg shape naturally encourages a good grip. A really simple swap that makes a difference for pencil development.",
+    note:"The egg shape sits in the hand in a way skinny pencils don't. A cheap swap worth trying.",
     search:"egg crayons toddler grip"
   },
   {
@@ -302,7 +302,7 @@ const PRODUCTS = [
     dev_areas:["gross","cognitive","social"], tags:["outdoor","movement","balance","turn-taking"],
     price:22, asin:"B0D8JTKFRY", afflink:"https://www.amazon.com.au/dp/B0D8JTKFRY/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/71BpEZ11TRL._AC_SY879_.jpg",
-    note:"Red light green light is great for impulse control, listening skills, and coordination. And it's just fun.",
+    note:"Red light green light, with a toy that calls it. Kids run, freeze, and argue about who moved.",
     search:"Little Tikes Red Light Green Light Active Play toy"
   },
   {
@@ -310,7 +310,7 @@ const PRODUCTS = [
     dev_areas:["gross","sensory","cognitive"], tags:["balance","coordination","sensory","movement"],
     price:60, asin:"B0F28PLY7Z", afflink:"https://www.amazon.com.au/dp/B0F28PLY7Z/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/71e6uCuwgqL._AC_SX679_.jpg",
-    note:"Step on them and they light up and play music. Great for obstacle courses, balance practice, and the floor is lava.",
+    note:"Step on them and they light up and play music. Ours end up in obstacle courses and as lava stepping stones.",
     search:"Lehoo Castle Light Up Musical Stepping Stones kids"
   },
   {
@@ -326,7 +326,7 @@ const PRODUCTS = [
     dev_areas:["fine","cognitive","language"], tags:["animals","sorting","pretend-play","problem-solving"],
     price:35, asin:"B0D9268BYY", afflink:"https://www.amazon.com.au/dp/B0D9268BYY/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/41o0y6EgFDL._AC_.jpg",
-    note:"Animals, barns, and keys to unlock them. Vocabulary, sorting, fine motor, and pretend play all together.",
+    note:"Animals, barns, and keys that open them. Matching the key to the lock is the bit they get stuck on.",
     search:"Grarain Montessori Farm Animals Toys 10 piece set barns keys"
   },
   {
@@ -334,7 +334,7 @@ const PRODUCTS = [
     dev_areas:["social","language","fine","cognitive"], tags:["pretend-play","cooking","role-play"],
     price:65, asin:"B0FCSJDQHH", afflink:"https://www.amazon.com.au/dp/B0FCSJDQHH/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/7165vCFzWHL._AC_SX679_.jpg",
-    note:"A well-stocked play kitchen gets used for years. Language, social, fine motor, cognition — it hits everything.",
+    note:"A well-stocked play kitchen gets used for years. Cooking, serving, running a cafe, feeding the dog.",
     search:"kids play kitchen set toddler"
   },
   {
@@ -350,7 +350,7 @@ const PRODUCTS = [
     dev_areas:["sensory","fine","cognitive"], tags:["sensory","outdoor","water"],
     price:59, asin:"B07ZQ35ZVL", afflink:"https://www.amazon.com.au/dp/B07ZQ35ZVL/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/51f3Ja-c9vL._AC_SX679_.jpg",
-    note:"Sensory play done well. Hours of independent exploration, pouring, scooping, and problem-solving.",
+    note:"Pouring, scooping, burying, digging it out again. They'll get on with it on their own for ages.",
     search:"sand water activity table kids outdoor"
   },
   {
@@ -358,7 +358,7 @@ const PRODUCTS = [
     dev_areas:["fine","language","social"], tags:["hand-eye","turn-taking","vocabulary"],
     price:16, asin:"B07XDPJDBN", afflink:"https://www.amazon.com.au/dp/B07XDPJDBN/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/71Fd6w5qwDL._AC_SX679_.jpg",
-    note:"Catching fish with a magnetic rod is a surprisingly good hand-eye challenge. Good for turn-taking too.",
+    note:"Catching the fish with a magnetic rod is harder than it looks. Easy to play in pairs.",
     search:"wooden magnetic fishing set kids toy"
   },
   {
@@ -366,7 +366,7 @@ const PRODUCTS = [
     dev_areas:["social","cognitive"], tags:["turn-taking","anticipation","board-game"],
     price:25, asin:"B00CYQ24QG", afflink:"https://www.amazon.com.au/dp/B00CYQ24QG/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/81RpyENDxSL._AC_SY879_.jpg",
-    note:"Builds turn-taking and anticipation without being complicated. The belly popping never stops being funny.",
+    note:"Simple enough for a two year old to follow. The belly popping never stops being funny.",
     search:"Goliath Pop the Pig Game preschool"
   },
   {
@@ -390,7 +390,7 @@ const PRODUCTS = [
     dev_areas:["fine","cognitive","language","social"], tags:["fine-motor","animals","pretend-play","problem-solving"],
     price:37, asin:"B0CTK2YQXY", afflink:"https://www.amazon.com.au/dp/B0CTK2YQXY/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/81d14HaFFqL._AC_SX679_.jpg",
-    note:"Finger puppets hidden inside locked containers with number matching. Fine motor, language, and problem-solving.",
+    note:"Finger puppets hidden inside little locked boxes, each with a number to match. Working out which key goes where is the game.",
     search:"Coogam Fine Motor Finger Puppets Treasure Number Locks Pirate"
   },
   {
@@ -398,7 +398,7 @@ const PRODUCTS = [
     dev_areas:["social","cognitive","gross"], tags:["emotional-regulation","hand-eye","social","turn-taking"],
     price:48, asin:"B0D6GBTNNT", afflink:"https://www.amazon.com.au/dp/B0D6GBTNNT/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/81wEO6SWROL._AC_SX679_.jpg",
-    note:"Emotion cards plus a dart board — physical play and emotional literacy together. A great OT tool for home.",
+    note:"Emotion cards plus a dart board. Throw, then talk about where it landed. One I like for home.",
     search:"Garybank Emotional Dart Social Skills Activities Kids emotion cards"
   },
   // 4-8 years
@@ -407,7 +407,7 @@ const PRODUCTS = [
     dev_areas:["fine","cognitive","social","language"], tags:["constructive","pretend-play","blocks-tiles","vehicles"],
     price:30, asin:"B0DWF3TB7V", afflink:"https://www.amazon.com.au/dp/B0DWF3TB7V/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/81DegoOVGFL._AC_SX679_.jpg",
-    note:"Bluey LEGO is a winner for fans of the show. Building plus Bluey-world pretend play — a solid combo.",
+    note:"Bluey LEGO is a winner for fans of the show. Building plus Bluey-world pretend play. A solid combo.",
     search:"LEGO Bluey Beach Family Car Trip 11202 preschool"
   },
   {
@@ -415,7 +415,7 @@ const PRODUCTS = [
     dev_areas:["fine","language","cognitive"], tags:["pre-writing","letter-formation","reusable"],
     price:12, asin:"0723292086", afflink:"https://www.amazon.com.au/dp/0723292086/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/71FZXYfkYvL._SY522_.jpg",
-    note:"Reusable so they can practice as many times as they need. Good for letter formation and pencil grip.",
+    note:"Wipe clean, so they can do the same letter twenty times without going through a whole pad.",
     search:"wipe clean writing practice book kids preschool"
   },
   {
@@ -423,7 +423,7 @@ const PRODUCTS = [
     dev_areas:["fine"], tags:["scissors","hand-strength"],
     price:12, asin:"B0GXVZQMHL", afflink:"https://www.amazon.com.au/dp/B0GXVZQMHL/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/71lTxcPEVAL._AC_SX679_.jpg",
-    note:"Spring-loaded so kids get the opening motion for free. Good starting scissors for building hand strength.",
+    note:"Spring-loaded, so the scissors open themselves and the child only has to squeeze. A good first pair.",
     search:"spring loaded learning scissors kids safety"
   },
   {
@@ -431,7 +431,7 @@ const PRODUCTS = [
     dev_areas:["gross","social","cognitive"], tags:["turn-taking","hand-eye","board-game"],
     price:25, asin:"B0C3DNT9W3", afflink:"https://www.amazon.com.au/dp/B0C3DNT9W3/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/81T5qNcaVlL._AC_SX679_.jpg",
-    note:"Fast-paced, good for hand strength, crossing the midline, and friendly competition. A first board game classic.",
+    note:"Fast, loud, and over before anyone loses interest. A good first board game.",
     search:"Hungry Hungry Hippos Game preschool"
   },
   {
@@ -439,7 +439,7 @@ const PRODUCTS = [
     dev_areas:["social","cognitive"], tags:["turn-taking","counting","board-game"],
     price:18, asin:"B0BSXQDGT9", afflink:"https://www.amazon.com.au/dp/B0BSXQDGT9/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/81dAB6kwwGL._AC_SX679_.jpg",
-    note:"A solid first board game. Turn-taking, counting, and learning to handle not winning immediately.",
+    note:"A solid first board game. Counting, waiting your turn, and not winning, which is the hard part.",
     search:"My First Snakes and Ladders board game toddler"
   },
   {
@@ -455,7 +455,7 @@ const PRODUCTS = [
     dev_areas:["cognitive","social"], tags:["visual-perception","turn-taking","board-game","memory"],
     price:22, asin:"B077YGQ492", afflink:"https://www.amazon.com.au/dp/B077YGQ492/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/81DVfh0rFvL._AC_SX679_.jpg",
-    note:"Visual perception, quick processing, and great for mixed ages. Works in 5 minutes or an hour.",
+    note:"Spot the match before anyone else. Works for mixed ages, and for five minutes or an hour.",
     search:"Moose Spot It Classic Card Game"
   },
   {
@@ -463,7 +463,7 @@ const PRODUCTS = [
     dev_areas:["language","cognitive","social"], tags:["storytelling","vocabulary","creativity"],
     price:18, asin:"B08T5PDYWV", afflink:"https://www.amazon.com.au/dp/B08T5PDYWV/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/71V9THjd0tL._AC_SY879_.jpg",
-    note:"Roll and tell a story. Great for imaginative kids — builds narrative skills and vocabulary in a fun way.",
+    note:"Roll the dice, see what you get, make up the rest. One for kids who already love a story.",
     search:"Story Cubes storytelling dice game kids"
   },
   {
@@ -479,7 +479,7 @@ const PRODUCTS = [
     dev_areas:["gross","sensory","language","cognitive"], tags:["music","movement","sensory","cause-effect"],
     price:39, asin:"B07PPMQJBW", afflink:"https://www.amazon.com.au/dp/B07PPMQJBW/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/71H0J+lsC-L._AC_SX679_.jpg",
-    note:"Step to play music. Gross motor, rhythm, and sensory input — great for kids who love movement and sound together.",
+    note:"Step on it and it plays. One for kids who want to be moving and making noise at the same time.",
     search:"M SANMERSEN Piano Mat musical floor mat kids"
   },
   {
@@ -495,7 +495,7 @@ const PRODUCTS = [
     dev_areas:["cognitive","fine","gross"], tags:["constructive","cause-effect","problem-solving","STEM"],
     price:179, asin:"B0C21LRH2K", afflink:"https://www.amazon.com.au/dp/B0C21LRH2K/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/71xosN2CvgL._AC_SY300_SX300_QL70_ML2_.jpg",
-    note:"Build the tube system and watch balls zoom through it. Cause and effect, spatial reasoning, and engineering thinking.",
+    note:"Build the tube system, drop a ball in, watch where it comes out. Then change it and try again.",
     search:"Fat Brain Air Toobz Ball Tube Physics Toy"
   },
   {
@@ -503,7 +503,7 @@ const PRODUCTS = [
     dev_areas:["fine","cognitive"], tags:["craft","focus","problem-solving"],
     price:15, asin:"080484707X", afflink:"https://www.amazon.com.au/dp/080484707X/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/91ECrvwZ6eL._SY522_.jpg",
-    note:"Origami is brilliant for finger strength, focus, and following sequential steps. A calming activity that builds precision.",
+    note:"Origami asks for careful fingers and following one step at a time. Quiet work, and they end up with something to keep.",
     search:"origami craft kit kids beginner"
   },
   {
@@ -511,7 +511,7 @@ const PRODUCTS = [
     dev_areas:["fine","cognitive"], tags:["craft","focus","mindfulness","art"],
     price:20, asin:"B0CGZSNVMM", afflink:"https://www.amazon.com.au/dp/B0CGZSNVMM/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/81-Ln-ywhrL._AC_SX679_.jpg",
-    note:"Calming, focused, and beautiful results. Good for kids who like quiet crafts that feel purposeful.",
+    note:"Quiet, absorbing, and the results actually look good. One for kids who like a craft with a point to it.",
     search:"Diamond Painting Kits Kids Gem Art Keychains"
   },
   {
@@ -527,7 +527,7 @@ const PRODUCTS = [
     dev_areas:["fine","cognitive"], tags:["craft","focus","hand-eye","art"],
     price:30, asin:"B091GXM2Y6", afflink:"https://www.amazon.com.au/dp/B091GXM2Y6/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/91nStU0iH2L._AC_SX679_.jpg",
-    note:"Real sewing skills on felt projects — pillow, bag, keyring. Builds hand-eye coordination, focus, and pride in making something.",
+    note:"Real sewing on felt: a pillow, a bag, a keyring. They finish with something they made and will show everyone.",
     search:"KRAFUN Beginner Sewing Kit Kids 6 Projects"
   },
   {
@@ -535,7 +535,7 @@ const PRODUCTS = [
     dev_areas:["gross","social"], tags:["balance","coordination","turn-taking","movement","board-game"],
     price:25, asin:"B0723923ZP", afflink:"https://www.amazon.com.au/dp/B0723923ZP/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/51pLykE9KVL._AC_SX679_.jpg",
-    note:"Gross motor, coordination, following instructions, and loads of laughs. Works for mixed ages too.",
+    note:"Daft instructions, a lot of flailing about, and loads of laughs. Works for mixed ages.",
     search:"Twister Party Game Hasbro Air Moves"
   },
   {
@@ -543,7 +543,7 @@ const PRODUCTS = [
     dev_areas:["gross","cognitive","social"], tags:["hand-eye","reaction-time","listening","board-game"],
     price:40, asin:"B09JDMZ8X4", afflink:"https://www.amazon.com.au/dp/B09JDMZ8X4/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/71n6Ctm70mL._AC_SX679_.jpg",
-    note:"Fast, loud, and fun. Builds reaction time, listening skills, and hand-eye coordination.",
+    note:"Fast, loud, and fun. Everyone grabs for the same thing at the same time.",
     search:"Hasbro Bop It Extreme game"
   },
   {
@@ -559,7 +559,7 @@ const PRODUCTS = [
     dev_areas:["cognitive","social","language"], tags:["strategy","turn-taking","board-game","social"],
     price:35, asin:"B08BHHRSPK", afflink:"https://www.amazon.com.au/dp/B08BHHRSPK/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/81A0K5YsuxL._AC_SX679_.jpg",
-    note:"Decision-making, money concepts, turn-taking, and family connection. A classic for a reason.",
+    note:"Deciding what to buy, handling the money, waiting your turn. A classic for a reason.",
     search:"Game of Life Board Game Hasbro family"
   },
   {
@@ -583,7 +583,7 @@ const PRODUCTS = [
     dev_areas:["fine","cognitive"], tags:["craft","focus","art","fine-motor"],
     price:35, asin:"B0CZP42TND", afflink:"https://www.amazon.com.au/dp/B0CZP42TND/?tag=brittanyot0c-22",
     img:null,
-    note:"Poke-in art builds fine motor precision and focus through calming, creative craft. Beautiful results too.",
+    note:"Poke the pieces in one at a time until the picture appears. Slow, absorbing work, and it looks lovely finished.",
     search:"Skillmatics Poke-In Art Magical Princesses craft kit"
   },
   {
@@ -591,7 +591,7 @@ const PRODUCTS = [
     dev_areas:["gross","sensory","social"], tags:["outdoor","sensory","movement","breath-control"],
     price:30, asin:"B089KVTJPP", afflink:"https://www.amazon.com.au/dp/B089KVTJPP/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/81TyfJ1QGGL._AC_SX679_.jpg",
-    note:"Bubbles are genuinely therapeutic — breath control, visual tracking, chasing, and pure joy. This set is great value.",
+    note:"Blowing them, chasing them, popping them. Bubbles never get old and this set is good value.",
     search:"JOYIN Big Bubble Wands Set Giant Bubble Maker"
   },
   {
@@ -599,7 +599,7 @@ const PRODUCTS = [
     dev_areas:["fine","cognitive","social"], tags:["magnetic-tiles","constructive","open-ended","blocks-tiles"],
     price:45, asin:"B0B2QQL3MW", afflink:"https://www.amazon.com.au/dp/B0B2QQL3MW/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/71vWgpHjwsL._AC_SX679_.jpg",
-    note:"150 pieces gives real scope for big builds. Spatial reasoning, creativity, and fine motor in one open-ended set.",
+    note:"150 pieces is enough for proper big builds. Open-ended, so it never really gets finished.",
     search:"magnetic blocks building tiles 150 pcs kids STEM"
   },
   {
@@ -615,7 +615,7 @@ const PRODUCTS = [
     dev_areas:["gross","social","cognitive"], tags:["outdoor","movement","hand-eye","cause-effect"],
     price:45, asin:"B0CTG1HXKN", afflink:"https://www.amazon.com.au/dp/B0CTG1HXKN/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/61bpnyDQGHL._AC_SX679_.jpg",
-    note:"Three outdoor games in one — ring toss, stomp rocket, and jump. Good for active kids who need variety.",
+    note:"Three outdoor games in one: ring toss, stomp rocket, and jump. Good for active kids who need variety.",
     search:"Powza 3 in 1 Musical Jump Ring Toss Rocket Launcher kids outdoor"
   },
 
@@ -641,7 +641,7 @@ const PRODUCTS = [
     dev_areas:["gross","sensory"], tags:["vestibular","proprioceptive","movement","sensory","heavy-work","sports"],
     price:45, asin:"B008AK6WMC", afflink:"https://www.amazon.com.au/dp/B008AK6WMC/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/61SYSbIv+ZL._SX522_.jpg",
-    note:"One of the best vestibular and proprioceptive tools going. Lying prone and scooting builds core strength and upper body — kids love it.",
+    note:"Lie on your tummy and pull yourself along with your hands. Kids go hard at it.",
     search:"scooter board kids sensory OT therapy roller"
   },
   {
@@ -649,7 +649,7 @@ const PRODUCTS = [
     dev_areas:["sensory","gross"], tags:["proprioceptive","deep-pressure","sensory","vestibular","sports"],
     price:35, asin:"B0CQX932VD", afflink:"https://www.amazon.com.au/dp/B0CQX932VD/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/51GH5idognL._AC_SX679_.jpg",
-    note:"Deep pressure input from head to toe. Really calming for kids who seek proprioceptive input or need help with body awareness.",
+    note:"A stretchy tunnel to push and squash against. Kids who like a tight squeeze tend to get straight in it.",
     search:"body sock sensory compression suit kids proprioceptive"
   },
   {
@@ -657,7 +657,7 @@ const PRODUCTS = [
     dev_areas:["sensory","gross"], tags:["vestibular","proprioceptive","sensory","deep-pressure","swing","sports"],
     price:65, asin:"B0829WS6MW", afflink:"https://www.amazon.com.au/dp/B0829WS6MW/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/71xeJs9UJ-L._AC_SX679_.jpg",
-    note:"Vestibular and deep pressure input together — great for sensory seekers and kids who need help with regulation. Hangs from a doorframe or beam.",
+    note:"A hammock swing that wraps around while it moves. One for kids who like swinging and being squashed. Hangs from a doorframe or beam.",
     search:"lycra sensory swing kids therapy indoor cocoon"
   },
   {
@@ -665,7 +665,7 @@ const PRODUCTS = [
     dev_areas:["sensory","gross"], tags:["proprioceptive","heavy-work","sensory","movement","vestibular","sports"],
     price:189, asin:"B0GQDCZ8Z5", afflink:"https://www.amazon.com.au/dp/B0GQDCZ8Z5/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/61-tk0popiL._AC_SX679_.jpg",
-    note:"Jump into it, roll on it, crash into it. Proprioceptive input kids who need it absolutely love. Great paired with a lycra swing.",
+    note:"Jump into it, roll on it, crash into it. Kids who like a heavy landing love these. Pairs well with a lycra swing.",
     search:"crash mat sensory crash pad kids therapy bean bag"
   },
   {
@@ -673,7 +673,7 @@ const PRODUCTS = [
     dev_areas:["gross","sensory"], tags:["proprioceptive","vestibular","balance","heavy-work","sensory","sports"],
     price:25, asin:"B01M25TPKV", afflink:"https://www.amazon.com.au/dp/B01M25TPKV/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/91zwDDnfb5L._AC_SX679_.jpg",
-    note:"Sitting on it, rolling over it, bouncing on it — all great for core strength, balance, and vestibular input. Super versatile.",
+    note:"Sit on it, roll over it, bounce on it, flop on it. Gets used more ways than you'd expect.",
     search:"kids yoga exercise balance ball 45cm children sensory"
   },
   {
@@ -681,7 +681,7 @@ const PRODUCTS = [
     dev_areas:["gross","sensory"], tags:["proprioceptive","vestibular","tummy-time","heavy-work","balance","sports"],
     price:30, asin:"B01N7KH666", afflink:"https://www.amazon.com.au/dp/B01N7KH666/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/61E75yvmspL._AC_SX679_.jpg",
-    note:"The peanut shape stops it rolling away — great for tummy time with babies and for rolling proprioceptive input with toddlers.",
+    note:"The peanut shape stops it rolling away on you. Good for tummy time with babies, and toddlers like being rolled around on it.",
     search:"peanut ball therapy roller kids sensory tummy time"
   },
   {
@@ -697,7 +697,7 @@ const PRODUCTS = [
     dev_areas:["gross","sensory","cognitive","social"], tags:["climbing","movement","constructive","open-ended","soft-play"],
     price:139, asin:"B0FV12V5W7", afflink:"https://www.amazon.com.au/dp/B0FV12V5W7/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/71DGRdjP4cL._AC_SX679_.jpg",
-    note:"Cubbies, ramps, boats, obstacle courses — kids build their own adventures. Families rave about these and they genuinely get used for years.",
+    note:"Cubbies, ramps, boats, obstacle courses. Kids build their own adventures. Families rave about these and they genuinely get used for years.",
     search:"play couch kids foam modular nugget couch"
   },
   {
@@ -705,7 +705,7 @@ const PRODUCTS = [
     dev_areas:["sensory"], tags:["vestibular","sensory","self-regulation","focus"],
     price:55, asin:"B0G3TV75KV", afflink:"https://www.amazon.com.au/dp/B0G3TV75KV/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/51ZnCGayDtL._AC_SX679_.jpg",
-    note:"Spinning provides vestibular input that can help with focus and regulation. A lot of kids seek this — giving them a sanctioned way to do it is a win.",
+    note:"Some kids will spin all day given the chance. This gives them somewhere to do it that isn't the office chair.",
     search:"spinning sensory chair kids swivel wobble vestibular"
   },
 
@@ -715,7 +715,7 @@ const PRODUCTS = [
     dev_areas:["gross","cognitive","social"], tags:["outdoor","hand-eye","turn-taking","movement","sports"],
     price:20, asin:"B00AU0O7OU", afflink:"https://www.amazon.com.au/dp/B00AU0O7OU/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/712DRbBOwzL._AC_SX679_.jpg",
-    note:"Aiming, rolling, counting pins — hand-eye coordination and turn-taking without needing much space.",
+    note:"Aiming, rolling, and counting the pins back up. Barely needs any space.",
     search:"kids bowling set indoor outdoor toddler"
   },
   {
@@ -731,7 +731,7 @@ const PRODUCTS = [
     dev_areas:["gross","sensory"], tags:["proprioceptive","heavy-work","movement","sensory"],
     price:60, asin:"B0BVVRMFD6", afflink:"https://www.amazon.com.au/dp/B0BVVRMFD6/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/619LeVBTdAL._AC_SX679_.jpg",
-    note:"Solid proprioceptive input. Great for kids who need to get big energy out, especially before seated tasks.",
+    note:"Heavy, squashy, and made to be crashed into. One for kids with a lot of energy to get rid of.",
     search:"kids standing boxing bag punching bag freestanding"
   },
   {
@@ -739,7 +739,7 @@ const PRODUCTS = [
     dev_areas:["gross","cognitive","social"], tags:["hand-eye","reaction-time","outdoor","turn-taking","movement","sports"],
     price:22, asin:"B0GJL2ZSF8", afflink:"https://www.amazon.com.au/dp/B0GJL2ZSF8/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/61isSZ2xosL._AC_SX679_.jpg",
-    note:"Drop the stick, catch it before it hits the ground. Reaction time, hand-eye coordination, and competitive fun. Works inside too.",
+    note:"Drop the stick, catch it before it hits the floor. Quick, competitive, and it works inside.",
     search:"quick sticks reaction sticks game kids catch reflex"
   },
   {
@@ -747,7 +747,7 @@ const PRODUCTS = [
     dev_areas:["gross","sensory"], tags:["vestibular","coordination","movement","outdoor","bilateral","sports"],
     price:45, asin:"B0DZ64KXM7", afflink:"https://www.amazon.com.au/dp/B0DZ64KXM7/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/61ezTckD5GL._AC_SX679_.jpg",
-    note:"Twist and turn to move — no pedals or pushing needed. Builds bilateral coordination and vestibular processing. Kids are obsessed with these.",
+    note:"Twist the wheel side to side and it goes. No pedals, no pushing. Kids are obsessed with these.",
     search:"eezy peezy twist ride on swing car toddler"
   },
   {
@@ -755,7 +755,7 @@ const PRODUCTS = [
     dev_areas:["gross","sensory"], tags:["vestibular","movement","outdoor","sensory","sports"],
     price:139, asin:"B0GWR1V48F", afflink:"https://www.amazon.com.au/dp/B0GWR1V48F/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/61G8nv8BOwL._AC_SX679_.jpg",
-    note:"Repetitive movement up and over — vestibular input, anticipation, and the kind of thrill kids who love movement absolutely seek out.",
+    note:"Up and over, again and again. One for the kids who never want to get off.",
     search:"kids roller coaster ride on outdoor toddler"
   },
   {
@@ -763,7 +763,7 @@ const PRODUCTS = [
     dev_areas:["gross","sensory"], tags:["climbing","outdoor","strength","movement","vestibular"],
     price:299, asin:"B0CGQY9DCH", afflink:"https://www.amazon.com.au/dp/B0CGQY9DCH/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/61qgyqtxSXL._AC_SX679_.jpg",
-    note:"Climbing, sliding, hanging — all proprioceptive and vestibular input. If you have outdoor space, a climbing frame is one of the best investments you'll make.",
+    note:"Climbing, sliding, hanging upside down. If you have the outdoor space, a climbing frame is one of the best things you'll buy.",
     search:"kids climbing frame slide outdoor backyard"
   },
   {
@@ -771,7 +771,7 @@ const PRODUCTS = [
     dev_areas:["gross","sensory","cognitive"], tags:["heavy-work","outdoor","proprioceptive","life-skills"],
     price:25, asin:"B088PQZGX5", afflink:"https://www.amazon.com.au/dp/B088PQZGX5/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/71l6fRyi7AL._AC_SX679_.jpg",
-    note:"Loading and pushing a wheelbarrow is brilliant heavy work. Builds upper body strength, coordination, and a sense of real contribution.",
+    note:"Loading it up and pushing it is proper hard work. One for kids who want a real job in the garden.",
     search:"kids wheelbarrow garden toy outdoor play"
   },
   {
@@ -779,7 +779,7 @@ const PRODUCTS = [
     dev_areas:["gross","sensory","social"], tags:["vestibular","movement","balance","sensory","turn-taking","sports"],
     price:79, asin:"B0GTLQPDBY", afflink:"https://www.amazon.com.au/dp/B0GTLQPDBY/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/51Y6k83ImHL._AC_SX679_.jpg",
-    note:"Rock solo or with a friend. Great vestibular input and the cooperative element when two kids rock together builds social skills.",
+    note:"Rock on your own or with someone facing you. Two kids have to find the same rhythm, which is half the entertainment.",
     search:"trio rocker kids balance board vestibular three way"
   },
   {
@@ -787,7 +787,7 @@ const PRODUCTS = [
     dev_areas:["gross","sensory","cognitive"], tags:["crawling","movement","proprioceptive","vestibular","outdoor"],
     price:30, asin:"B0CBNZDSR5", afflink:"https://www.amazon.com.au/dp/B0CBNZDSR5/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/71G0twryyoL._AC_SX679_.jpg",
-    note:"Crawling through tunnels is brilliant proprioceptive input and supports motor planning. Fold it up and it goes anywhere.",
+    note:"Crawling through a tunnel is its own reward. Folds flat and goes in the boot.",
     search:"kids pop up play tunnel crawl tunnel toddler outdoor"
   },
   {
@@ -795,7 +795,7 @@ const PRODUCTS = [
     dev_areas:["gross","sensory","social"], tags:["vestibular","balance","outdoor","turn-taking","social","sports"],
     price:89, asin:"B07BKVSB27", afflink:"https://www.amazon.com.au/dp/B07BKVSB27/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/51zJGDUmRQL._AC_SX679_.jpg",
-    note:"More dynamic than a standard see saw — the swivel motion adds a vestibular challenge. Great cooperative play too.",
+    note:"More going on than a standard see saw, because it swivels as well as rocks. Takes two to work it.",
     search:"swivel see saw kids outdoor balance rocker"
   },
   {
@@ -803,7 +803,7 @@ const PRODUCTS = [
     dev_areas:["gross","social"], tags:["outdoor","hand-eye","coordination","movement","sports"],
     price:10, asin:"B0813DBQ36", afflink:"https://www.amazon.com.au/dp/B0813DBQ36/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/71g3xfUfNRL._AC_SX679_.jpg",
-    note:"Throwing and catching a frisbee is deceptively hard. Great for hand-eye coordination, timing, and bilateral movement.",
+    note:"Throwing and catching a frisbee is harder than it looks. Expect a lot of chasing at first.",
     search:"frisbee kids outdoor play"
   },
   {
@@ -834,7 +834,7 @@ const PRODUCTS = [
     dev_areas:["gross","cognitive","sensory"], tags:["outdoor","jumping","cause-effect","movement","proprioceptive","sports"],
     price:22, asin:"B0006O8Q7Y", afflink:"https://www.amazon.com.au/dp/B0006O8Q7Y/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/71mli4BTVvL._AC_SX679_.jpg",
-    note:"Stomp on the pad and the rocket flies. Running, jumping, chasing — and the cause-and-effect element keeps kids coming back.",
+    note:"Stomp on the pad and the rocket flies. Running, jumping, chasing, and the cause-and-effect element keeps kids coming back.",
     search:"step on rocket launcher kids stomp outdoor foam"
   },
 
@@ -843,14 +843,14 @@ const PRODUCTS = [
     id:"p101", name:"Bee Crawl Toy with Music & Lights", age_min:4, age_max:12,
     dev_areas:["gross","sensory","cognitive"], tags:["crawling","movement","cause-effect","music"],
     price:22, asin:"B07PBCC6VC", afflink:"https://www.amazon.com.au/dp/B07PBCC6VC/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81NpQsDvlAL._AC_SX679_.jpg",
-    note:"Moves in a zigzag pattern encouraging babies to track and chase it. Great for building crawling motivation and neck strength.",
+    note:"Zigzags across the floor so babies have to follow it with their eyes, then go after it.",
     search:"bee crawl toy baby music lights crawling"
   },
   {
     id:"p102", fam:"instrument-set", name:"Lehoo Castle Kids Musical Instruments Set", age_min:12, age_max:60,
     dev_areas:["sensory","language","fine","social"], tags:["music","rhythm","cause-effect","instruments"],
     price:28, asin:null, afflink:"https://link.amazon/B0f1MuLS1", img:"https://m.media-amazon.com/images/I/718lR46PMYL._AC_SL1500_.jpg",
-    note:"Shakers, tambourine, bells and more. Real instruments little hands can actually play. Banging out a rhythm builds coordination, listening skills and pure joy.",
+    note:"Shakers, tambourine, bells. Real instruments small hands can actually play, and loud enough to be satisfying.",
     search:"Lehoo Castle kids musical instruments set toddler"
   },
   {
@@ -878,7 +878,7 @@ const PRODUCTS = [
     id:"p106", name:"Wrist Rattles & Foot Finders Set", age_min:0, age_max:6,
     dev_areas:["sensory","gross","cognitive"], tags:["sensory","visual","body-awareness","tummy-time"],
     price:12, asin:"B0D8KK52KD", afflink:"https://www.amazon.com.au/dp/B0D8KK52KD/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/71WbRa7jzZL._AC_SX679_.jpg",
-    note:"Babies start to discover their own hands and feet through these. Builds body awareness and early sensory exploration from day one.",
+    note:"Wrist and ankle rattles. Babies move, hear a noise, and slowly work out it was them.",
     search:"wrist rattles foot finders baby set sensory"
   },
   {
@@ -899,14 +899,14 @@ const PRODUCTS = [
     id:"p109", name:"Lamaze My Friend Range (Interactive Plush)", age_min:0, age_max:12,
     dev_areas:["social","sensory","language"], tags:["sensory","social","faces","language","plush"],
     price:25, asin:"B000I2Q0FO", afflink:"https://www.amazon.com.au/dp/B000I2Q0FO/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/618sATXIZHL._AC_SX679_.jpg",
-    note:"Faces, textures, and sounds babies love. Great for early social development and visual engagement with faces.",
+    note:"Faces, textures and sounds. Babies stare at faces more than anything else, and this is full of them.",
     search:"Lamaze My Friend interactive plush baby toy faces"
   },
   {
     id:"p110", name:"Talking Toy Mattel Puppy", age_min:9, age_max:18,
     dev_areas:["language","social","cognitive"], tags:["language","cause-effect","animals","music"],
     price:28, asin:"B0D9MWMXSX", afflink:"https://www.amazon.com.au/dp/B0D9MWMXSX/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/71B4yVQEJZL._AC_SY879_.jpg",
-    note:"Press paws and ears to hear songs and phrases. Supports early word recognition and turn-taking with a toy.",
+    note:"Press the paws and ears for songs and phrases. Babies press the same one about forty times.",
     search:"Mattel talking puppy baby toy words songs"
   },
   {
@@ -920,21 +920,21 @@ const PRODUCTS = [
     id:"p112", name:"Barn Toy with Animals", age_min:12, age_max:36,
     dev_areas:["cognitive","language","social"], tags:["pretend-play","animals","cause-effect","language"],
     price:28, asin:"B0FFGQSKQN", afflink:"https://www.amazon.com.au/dp/B0FFGQSKQN/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81wKyFHYqJL._AC_SX679_.jpg",
-    note:"Open the barn, animals pop out or drop through. Vocabulary, animal sounds, and early pretend play all in one.",
+    note:"Open the barn and the animals pop out or drop through. Expect a lot of animal noises.",
     search:"wooden barn toy animals toddler farm playset"
   },
   {
     id:"p113", name:"DIY Busy Board / Sensory Board", age_min:12, age_max:36,
     dev_areas:["fine","cognitive","sensory"], tags:["fine-motor","problem-solving","sensory","cause-effect","selfcare"],
     price:35, asin:"B0DZNWQPLD", afflink:"https://www.amazon.com.au/dp/B0DZNWQPLD/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/815dLiPGZDL._AC_SX679_.jpg",
-    note:"Zippers, buckles, buttons, latches, locks. Brilliant for fine motor and self-care skill development all on one board.",
+    note:"Zippers, buckles, buttons, latches and locks, all on one board. Every fastening they'll meet on real clothes.",
     search:"busy board toddler sensory montessori fine motor latches"
   },
   {
     id:"p114", name:"Musical Dancing Duck Toy (walking ducks)", age_min:4, age_max:12,
     dev_areas:["gross","sensory","language"], tags:["crawling","movement","music","cause-effect"],
     price:55, asin:"B0DWWTGBJ1", afflink:"https://www.amazon.com.au/dp/B0DWWTGBJ1/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/61vNy2ayBfL._AC_SX679_.jpg",
-    note:"They walk in a line, hold hands, and sing. Movement and music together — great for crawling motivation and sensory regulation through rhythm.",
+    note:"They walk in a line, hold hands and sing. Babies tend to set off after them.",
     search:"musical walking dancing duck toy baby crawling"
   },
   // ── FROM 2 YEAR OLD GUIDE ──────────────────────────────────────────────────
@@ -942,35 +942,35 @@ const PRODUCTS = [
     id:"p115", name:"Ride-On Trike / Balance Bike with Pedals", age_min:24, age_max:48,
     dev_areas:["gross"], tags:["balance","coordination","outdoor","movement","bilateral","vehicles"],
     price:55, asin:"B0FPLQCZYM", afflink:"https://www.amazon.com.au/dp/B0FPLQCZYM/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/61ARxP8lIxL._AC_SX679_.jpg",
-    note:"The transition from balance bike to pedal trike. Builds bilateral coordination, leg strength, and steering control.",
+    note:"The step between a balance bike and a proper bike. Pedalling and steering at the same time takes a while.",
     search:"toddler trike ride on balance bike pedals 2 year old"
   },
   {
     id:"p116", name:"Large Outdoor Play Ball", age_min:12, age_max:60,
     dev_areas:["gross","social"], tags:["outdoor","movement","hand-eye","bilateral","throwing","sports"],
     price:12, asin:"B0FWBBQ7KW", afflink:"https://www.amazon.com.au/dp/B0FWBBQ7KW/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/71k5uVk+0CL._AC_SX679_.jpg",
-    note:"Rolling, kicking, throwing, chasing — a large ball is one of the most versatile gross motor tools you can own.",
+    note:"Rolling, kicking, throwing, chasing. A big ball earns its space more than most things.",
     search:"large outdoor play ball toddler kids"
   },
   {
     id:"p117", name:"Pretend Microphone Toy", age_min:24, age_max:60,
     dev_areas:["language","social","cognitive"], tags:["language","music","pretend-play","creative"],
     price:15, asin:"B08PYS8C3T", afflink:"https://www.amazon.com.au/dp/B08PYS8C3T/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81wWXPiLB5L._AC_SX679_.jpg",
-    note:"Singing, storytelling, putting on shows. Great for language confidence and creative play.",
+    note:"Singing, storytelling, putting on a show for whoever is in the room. Loud, in a good way.",
     search:"pretend microphone toy toddler kids singing"
   },
   {
     id:"p118", name:"Flash Card Reader / Interactive Learning System", age_min:24, age_max:60,
     dev_areas:["language","cognitive"], tags:["language","letters","numbers","cause-effect"],
     price:35, asin:"B0C1YLTG64", afflink:"https://www.amazon.com.au/dp/B0C1YLTG64/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/71l6HQcQZML._AC_SX679_.jpg",
-    note:"Slide in a card and hear the word, sound, or letter. Builds early literacy and vocabulary in a hands-on way.",
+    note:"Slide in a card and it reads out the word, sound or letter. They can use it without an adult sitting there.",
     search:"flash card reader kids interactive learning toy words letters"
   },
   {
     id:"p119", name:"Doll Pram & Nursery Accessories Set", age_min:18, age_max:60,
     dev_areas:["social","language","cognitive"], tags:["pretend-play","nurturing","role-play","social","emotions","dolls"],
     price:45, asin:"B0GVHL148L", afflink:"https://www.amazon.com.au/dp/B0GVHL148L/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81-y8Ffg+eL._AC_SX679_.jpg",
-    note:"Pram, bed, feeding accessories — this opens up rich nurturing pretend play that builds empathy and language.",
+    note:"Pram, bed, feeding bits. Opens up all the looking-after play, which some kids will do for hours.",
     search:"doll pram nursery set accessories toddler pretend play"
   },
   {
@@ -984,7 +984,7 @@ const PRODUCTS = [
     id:"p121", name:"Open Cup for Toddlers", age_min:12, age_max:36,
     dev_areas:["selfcare","fine"], tags:["drinking","independence","selfcare"],
     price:8, asin:"B0DBKDZRN1", afflink:"https://www.amazon.com.au/dp/B0DBKDZRN1/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/719QmnbIfVL._AC_SX679_.jpg",
-    note:"Learning to drink from an open cup is an important self-care milestone. Small, heavy-based cups work best.",
+    note:"For moving off a sippy cup. Small and heavy-based works best, because it doesn't tip the second they let go.",
     search:"open cup toddler kids drinking small heavy base"
   },
   {
@@ -998,14 +998,14 @@ const PRODUCTS = [
     id:"p123", name:"Toddler Sized Cutlery Set", age_min:12, age_max:36,
     dev_areas:["selfcare","fine"], tags:["feeding","independence","selfcare"],
     price:12, asin:"B0CPJLZB4T", afflink:"https://www.amazon.com.au/dp/B0CPJLZB4T/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/611g6pjlcqL._AC_SX679_.jpg",
-    note:"Properly sized cutlery makes self-feeding much more achievable. A simple swap that builds independence at mealtimes.",
+    note:"Cutlery actually sized for small hands. An adult fork is a big ask at that age.",
     search:"toddler cutlery set fork spoon kids sized"
   },
   {
     id:"p124", name:"Toys with Clothing / Dressing Doll", age_min:24, age_max:60,
     dev_areas:["fine","selfcare","social"], tags:["selfcare","fine-motor","pretend-play","independence","buttons","dolls"],
     price:22, asin:"B07JZ5ZBFC", afflink:"https://www.amazon.com.au/dp/B07JZ5ZBFC/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/51hCK-AgIUL._AC_SX679_.jpg",
-    note:"Dolls with zippers, buttons, and velcro help kids practice dressing skills on something other than themselves first.",
+    note:"Zippers, buttons and velcro on a doll, so they can have a go without anyone rushing them out the door.",
     search:"dressing doll toy buttons zippers velcro toddler fine motor"
   },
   // ── FROM 3 YEAR OLD GUIDE ─────────────────────────────────────────────────
@@ -1028,105 +1028,105 @@ const PRODUCTS = [
     id:"p127", name:"Agility Ladder for Kids", age_min:36, age_max:96,
     dev_areas:["gross"], tags:["coordination","bilateral","outdoor","movement","balance","sports"],
     price:20, asin:"B0C5JRD4QD", afflink:"https://www.amazon.com.au/dp/B0C5JRD4QD/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/61zNnh5RAuL._AC_SX679_.jpg",
-    note:"Stepping through rungs in different patterns is great for foot-eye coordination, motor planning, and bilateral integration.",
+    note:"Lay them out and step through the rungs, then change the pattern. Works inside on a rainy day.",
     search:"agility ladder kids exercise coordination outdoor"
   },
   {
     id:"p128", name:"Jungle Gym Climbing Dome", age_min:36, age_max:96,
     dev_areas:["gross","sensory"], tags:["climbing","outdoor","strength","movement","proprioceptive","vestibular","sports"],
     price:120, asin:"B0CGQY9DCH", afflink:"https://www.amazon.com.au/dp/B0CGQY9DCH/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/61qgyqtxSXL._AC_SX679_.jpg",
-    note:"More options than a standard frame — reach the top, hang upside down, set challenges. Great for confident movers.",
+    note:"More options than a standard frame: reach the top, hang upside down, set challenges. Great for confident movers.",
     search:"kids jungle gym climbing dome outdoor backyard"
   },
   {
     id:"p129", name:"Movement Foam Dice", age_min:24, age_max:72,
     dev_areas:["gross","cognitive","social"], tags:["movement","outdoor","balance","coordination","turn-taking","animals"],
     price:22, asin:"B096SKTL77", afflink:"https://www.amazon.com.au/dp/B096SKTL77/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/71n5en7LA3L._AC_SX679_.jpg",
-    note:"Roll the dice and do the movement — jump, hop, balance. Adds unpredictability to physical play and is great for obstacle courses.",
+    note:"Roll the dice and do the movement: jump, hop, balance. Adds unpredictability to physical play and is great for obstacle courses.",
     search:"movement foam dice kids action gross motor play"
   },
   {
     id:"p130", name:"Balance Scale Toy (Maths Scale)", age_min:36, age_max:72,
     dev_areas:["cognitive","language","fine"], tags:["problem-solving","sorting","numbers","cause-effect"],
     price:25, asin:"B085SMGQQH", afflink:"https://www.amazon.com.au/dp/B085SMGQQH/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/71o+2-jiTCL._AC_SX679_.jpg",
-    note:"Which side is heavier? Add and remove objects to balance it. Brilliant for early maths concepts and problem-solving exploration.",
+    note:"Which side is heavier? Add things, take things off, get it level. Then start again.",
     search:"balance scale toy kids learning maths heavy light"
   },
   {
     id:"p131", name:"Anatomy Body Puzzle", age_min:36, age_max:72,
     dev_areas:["cognitive","language"], tags:["puzzle","problem-solving","body-awareness","language"],
     price:28, asin:"B0FJBFVTNK", afflink:"https://www.amazon.com.au/dp/B0FJBFVTNK/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81Px15OhhCL._AC_SX679_.jpg",
-    note:"Skin, muscles, bones, organs — layer by layer. Introduces the human body in a hands-on, memorable way.",
+    note:"Skin, muscles, bones, organs, layer by layer. Introduces the human body in a hands-on, memorable way.",
     search:"anatomy body puzzle kids layers organs bones"
   },
   {
     id:"p132", name:"Glowing Marble Run", age_min:48, age_max:96,
     dev_areas:["cognitive","fine","sensory"], tags:["constructive","problem-solving","cause-effect","visual-tracking"],
     price:45, asin:"B07JL8QGLR", afflink:"https://www.amazon.com.au/dp/B07JL8QGLR/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81f0rpm6ZzL._AC_SX679_.jpg",
-    note:"Build the track, then adjust it to change how the marble moves. Problem-solving, spatial reasoning, and cause-and-effect.",
+    note:"Build the track, drop the marble, change the track when it doesn't work. That loop is the whole appeal.",
     search:"glowing marble run kids building toy glow dark"
   },
   {
     id:"p133", name:"Dress Up Costume Set (Princess / Doctor / Police / Chef / Pirate)", age_min:36, age_max:72,
     dev_areas:["social","language","cognitive"], tags:["pretend-play","role-play","empathy","social","creative"],
     price:25, asin:"B0B3RBXMMX", afflink:"https://www.amazon.com.au/dp/B0B3RBXMMX/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/71gp7CHfbHL._AC_SX679_.jpg",
-    note:"Dress up and become someone else for a while. Role play builds empathy, communication, and creativity — and it's always a hit.",
+    note:"Dress up and be someone else for a while. Always a hit, and the costumes get worn to the shops.",
     search:"kids dress up costume set princess doctor police pirate"
   },
   {
     id:"p134", name:"Fruit Stand Avalanche Balance Game", age_min:36, age_max:72,
     dev_areas:["fine","social","cognitive"], tags:["balance","fine-motor","turn-taking","hand-eye","board-game"],
     price:28, asin:"B0035EQDT0", afflink:"https://www.amazon.com.au/dp/B0035EQDT0/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/61QN1CufBYL._AC_SX679_.jpg",
-    note:"Place fruit on the stand without knocking it over. Fine motor precision, turn-taking, and crossing the midline. A favourite in my therapy kit.",
+    note:"Stack the fruit on the wobbly stand without bringing the lot down. One I keep in my work bag.",
     search:"fruit stand avalanche balance game kids stacking"
   },
   {
     id:"p135", name:"Hopscotch Mat (Foam or Fabric)", age_min:24, age_max:72,
     dev_areas:["gross","cognitive"], tags:["balance","coordination","bilateral","movement","counting"],
     price:20, asin:"B07Q313KVG", afflink:"https://www.amazon.com.au/dp/B07Q313KVG/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/61v4yxyeNVL._AC_SX679_.jpg",
-    note:"Hopping on one foot, bilateral coordination, counting, colour recognition. Works indoors and you can add challenges as they grow.",
+    note:"Hopping, counting squares, calling out colours. Works indoors, and you can make the rules harder as they grow.",
     search:"hopscotch mat kids foam fabric indoor outdoor"
   },
   {
     id:"p136", name:"Balance Beam Set (Curved Indoor Balance)", age_min:24, age_max:72,
     dev_areas:["gross","sensory","cognitive"], tags:["balance","coordination","vestibular","movement","outdoor"],
     price:55, asin:"B0FSV7BFZ5", afflink:"https://www.amazon.com.au/dp/B0FSV7BFZ5/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81tJ2PzatNL._AC_SX679_.jpg",
-    note:"Walking along a beam builds balance, core strength, and proprioceptive awareness. Curved sets can also be used as rocker boards.",
+    note:"Walk the beam without touching the floor. The curved pieces flip over and work as rockers too.",
     search:"kids balance beam set curved indoor outdoor play"
   },
   {
     id:"p137", name:"Magnetic Letter Set (Fridge Magnets)", age_min:24, age_max:60,
     dev_areas:["language","cognitive","fine"], tags:["letters","language","sorting","fine-motor"],
     price:18, asin:"B07KK5Y92W", afflink:"https://www.amazon.com.au/dp/B07KK5Y92W/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/714OXG3R42L._AC_SX679_.jpg",
-    note:"A fridge classic for early literacy. Hands-on letter recognition, spelling their name, and early phonics play.",
+    note:"A fridge classic. Finding the letters in their own name is usually where it starts.",
     search:"magnetic letter set fridge magnets kids alphabet"
   },
   {
     id:"p138", name:"Storytelling Dot Point Cards", age_min:48, age_max:96,
     dev_areas:["language","cognitive","social"], tags:["storytelling","vocabulary","creative","language"],
     price:15, asin:"B0CJHCM3B7", afflink:"https://www.amazon.com.au/dp/B0CJHCM3B7/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/61zciXAJ0TL._AC_SX679_.jpg",
-    note:"Dot points to build a story around. Sparks narrative thinking, vocabulary, and imagination in a structured but open-ended way.",
+    note:"Prompts to make a story around. Enough structure to get going, loose enough to go anywhere.",
     search:"storytelling dot point cards kids narrative prompts"
   },
   {
     id:"p139", name:"Dominos (Classic Set)", age_min:60, age_max:144,
     dev_areas:["cognitive","social","fine"], tags:["counting","turn-taking","problem-solving","board-game","fine-motor"],
     price:18, asin:"B0D6RZ1PHQ", afflink:"https://www.amazon.com.au/dp/B0D6RZ1PHQ/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/614LxsAQYgL._AC_SX679_.jpg",
-    note:"Matching, counting, turn-taking, and the very satisfying chain reaction when you line them up and knock them down.",
+    note:"Matching, counting, taking turns, and the very satisfying chain reaction when you line them up and knock them down.",
     search:"dominos classic set kids game counting"
   },
   {
     id:"p140", name:"Problem-Solving Balance Game (e.g. Penguin Trap / Stacking)", age_min:48, age_max:96,
     dev_areas:["cognitive","fine","social"], tags:["balance","problem-solving","fine-motor","turn-taking","board-game"],
     price:22, asin:"B0GCW6G6R9", afflink:"https://www.amazon.com.au/dp/B0GCW6G6R9/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/61CSiW5eyzL._AC_SX679_.jpg",
-    note:"Stack the pieces without toppling it. Spatial reasoning, fine motor control, and managing the tension of waiting your turn.",
+    note:"Stack the pieces without bringing it down. The waiting-your-turn tension is the best part.",
     search:"kids problem solving balance stacking game penguin"
   },
   {
     id:"p141", name:"Learn to Tie Shoelaces Board / Book", age_min:48, age_max:84,
     dev_areas:["fine","selfcare","cognitive"], tags:["fine-motor","selfcare","independence","hand-eye"],
     price:15, asin:"B0BM9F2B32", afflink:"https://www.amazon.com.au/dp/B0BM9F2B32/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/61XFvDBdUgL._AC_SY695_.jpg",
-    note:"A dedicated practice board means they can work on lacing without the frustration of being in a hurry. Important self-care milestone.",
+    note:"A lacing board means they can have a go at it when nobody is waiting by the door.",
     search:"learn tie shoelaces board kids practice lacing"
   },
   // ── FROM GIFTING GUIDE 0-12 ────────────────────────────────────────────────
@@ -1134,21 +1134,21 @@ const PRODUCTS = [
     id:"p142", name:"Musical Walking Duck Toy (Line of Ducks)", age_min:4, age_max:12,
     dev_areas:["gross","sensory","language"], tags:["crawling","movement","music","cause-effect"],
     price:55, asin:"B0DWWTGBJ1", afflink:"https://www.amazon.com.au/dp/B0DWWTGBJ1/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/61vNy2ayBfL._AC_SX679_.jpg",
-    note:"They walk in a line, hold hands, and sing. Movement plus rhythm — great for supporting crawling and early sensory regulation.",
+    note:"They walk in a line, hold hands and sing. Babies will often take off after them.",
     search:"musical walking duck toy baby line ducks singing crawling"
   },
   {
     id:"p143", name:"Ride-On Horse Toy", age_min:24, age_max:48,
     dev_areas:["gross","sensory","social"], tags:["vestibular","balance","pretend-play","movement"],
     price:39, asin:"B0B1MYQBJZ", afflink:"https://www.amazon.com.au/dp/B0B1MYQBJZ/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/61Ycy5kBC3L._AC_SX679_.jpg",
-    note:"Bounce, rock, and gallop. Vestibular input, core strength, and rich pretend play — kids care for their horse, feed it, take it places.",
+    note:"Bounce, rock and gallop. Kids look after their horse, feed it and take it places.",
     search:"ride on horse toy kids toddler bounce rocking"
   },
   {
     id:"p144", name:"Traffic Light Toy (Road Safety)", age_min:24, age_max:60,
     dev_areas:["cognitive","language","gross"], tags:["cause-effect","language","movement","road-safety"],
     price:35, asin:"B000OZ0A24", afflink:"https://www.amazon.com.au/dp/B000OZ0A24/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/61TOu3lbmRL._AC_SY879_.jpg",
-    note:"Stop and go concepts in a play-based, safe environment. I love this for kids working on traffic safety goals — really natural way to learn it.",
+    note:"Stop and go concepts in a play-based, safe environment. I love this for kids working on traffic safety goals. Really natural way to learn it.",
     search:"traffic light toy kids road safety stop go play"
   },
   {
@@ -1169,28 +1169,28 @@ const PRODUCTS = [
     id:"p147", name:"Treasure Chest Discovery Toy", age_min:24, age_max:72,
     dev_areas:["fine","cognitive","language"], tags:["fine-motor","problem-solving","cause-effect","numbers","colours"],
     price:44, asin:"B0CTK2YQXY", afflink:"https://www.amazon.com.au/dp/B0CTK2YQXY/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81d14HaFFqL._AC_SX679_.jpg",
-    note:"Unlock the chest with number or colour sequences. Fine motor, sequencing, and the excitement of unlocking surprises — a mix of mystery and skill building.",
+    note:"Open the chest with the right number or colour sequence. Getting it open is the whole point, and there's something inside.",
     search:"treasure chest toy kids mystery unlock numbers colours"
   },
   {
     id:"p148", name:"Busy Book (Perth-Made Activity Book)", age_min:36, age_max:72,
     dev_areas:["cognitive","fine","language","social"], tags:["fine-motor","pretend-play","sorting","numbers","letters"],
     price:90, asin:"B0DZNWQPLD", afflink:"https://www.amazon.com.au/dp/B0DZNWQPLD/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/815dLiPGZDL._AC_SX679_.jpg",
-    note:"A Perth-made all-in-one activity book. Pretend play, fine motor, early learning — colours, numbers, maths, even a map of Australia. Supports local and genuinely brilliant.",
+    note:"A Perth-made all-in-one activity book. Colours, numbers, early maths, even a map of Australia. Local, and genuinely well made.",
     search:"Busy Book kids activity learning pretend play Australia"
   },
   {
     id:"p149", name:"Nest Swing / Platform Swing", age_min:36, age_max:144,
     dev_areas:["sensory","gross","social"], tags:["vestibular","swing","outdoor","sensory","social","sports"],
     price:219, asin:"B082T3RJ2J", afflink:"https://www.amazon.com.au/dp/B082T3RJ2J/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81iLT87ekAL._AC_SX679_.jpg",
-    note:"Multiple kids can swing together on a nest swing — vestibular input plus the cooperative element. A backyard favourite.",
+    note:"Big enough for two or three kids to swing at once. A backyard favourite.",
     search:"nest swing platform swing kids outdoor backyard"
   },
   {
     id:"p150", name:"Kinetic Sand (Sensory Moulding Sand)", age_min:36, age_max:120,
     dev_areas:["sensory","fine","cognitive"], tags:["sensory","fine-motor","creative","tactile"],
     price:22, asin:"B0BRQXVSD4", afflink:"https://www.amazon.com.au/dp/B0BRQXVSD4/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81hBNp5LczL._AC_SX679_.jpg",
-    note:"Moulds like wet sand but stays clean and dry. Brilliant tactile input and one of the best calm-down sensory activities.",
+    note:"Moulds like wet sand but stays dry and doesn't go everywhere. One for kids who like their hands in something.",
     search:"kinetic sand kids sensory moulding sand set"
   },
   {
@@ -1204,14 +1204,14 @@ const PRODUCTS = [
     id:"p152", name:"Human Body Puzzle (Layered Anatomy)", age_min:36, age_max:72,
     dev_areas:["cognitive","language"], tags:["puzzle","body-awareness","language","problem-solving"],
     price:28, asin:"B09VJTKPHJ", afflink:"https://www.amazon.com.au/dp/B09VJTKPHJ/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/71+tywIKKiL._AC_SY879_.jpg",
-    note:"Layer by layer — skin, muscles, skeleton, organs. Introduces body awareness in a way kids remember because they can hold it.",
+    note:"Layer by layer: skin, muscles, skeleton, organs. They can take it apart and put it back, which is why it sticks.",
     search:"human body puzzle layered anatomy kids learning"
   },
   {
     id:"p153", name:"Truck and Construction Tool Play Set", age_min:24, age_max:60,
     dev_areas:["fine","cognitive","social"], tags:["vehicles","tool-use","pretend-play","constructive"],
     price:30, asin:"B0F6MZ6X3H", afflink:"https://www.amazon.com.au/dp/B0F6MZ6X3H/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/71rnLi7zcBL._AC_SX679_.jpg",
-    note:"Trucks to drive and tools to build with. Combines two interests kids often have together — vehicles and building.",
+    note:"Trucks to drive and tools to build with. Combines two interests kids often have together: vehicles and building.",
     search:"truck construction tool set kids play toys toddler"
   },
   {
@@ -1225,14 +1225,14 @@ const PRODUCTS = [
     id:"p155", name:"Puppet Theatre (Cardboard or Fabric)", age_min:36, age_max:84,
     dev_areas:["language","social","cognitive"], tags:["pretend-play","storytelling","creative","language"],
     price:35, asin:"B0DNML6FZ4", afflink:"https://www.amazon.com.au/dp/B0DNML6FZ4/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/71u2KlNCfsL._AC_SX679_.jpg",
-    note:"A stage for shows, stories, and characters. Puppet theatre builds language, narrative, and the confidence to perform.",
+    note:"A stage for shows and made-up stories. The puppet does the talking, which suits some kids.",
     search:"kids puppet theatre fabric foldable children plays"
   },
   {
     id:"p156", fam:"ball-run", name:"Connetix Ball Run Expansion Pack", age_min:48, age_max:120,
     dev_areas:["cognitive","fine","sensory"], tags:["constructive","cause-effect","problem-solving","magnetic-tiles","blocks-tiles","STEM"],
     price:85, asin:"B0BLCPYDL5", afflink:"https://www.amazon.com.au/dp/B0BLCPYDL5/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/61FHULJNkLL._AC_SX679_.jpg",
-    note:"Add tubes and funnels to magnetic tiles and watch balls run through. Engineering thinking and spatial reasoning at their best.",
+    note:"Add tubes and funnels to magnetic tiles and run the balls through. Redesigning it when the ball gets stuck is half the fun.",
     search:"Connetix ball run expansion pack magnetic tiles"
   },
   {
@@ -1246,28 +1246,28 @@ const PRODUCTS = [
     id:"p158", fam:"putty", name:"Therapy Putty / Resistive Putty Set", age_min:48, age_max:144,
     dev_areas:["fine","sensory"], tags:["hand-strength","sensory","fine-motor","tactile","fidget"],
     price:18, asin:"B07YF9X67Z", afflink:"https://www.amazon.com.au/dp/B07YF9X67Z/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/719lR4Gm+-L._AC_SX679_.jpg",
-    note:"Different resistance levels for different hand strength needs. Squeezing, stretching, hiding objects — great for hand strengthening and sensory input.",
+    note:"Comes in different resistances. Squeeze it, stretch it, hide little objects inside and dig them out again.",
     search:"therapy putty kids resistive hand strengthening sensory"
   },
   {
     id:"p159", name:"Sensory Bin Kit (Scoops, Funnels, Tweezers)", age_min:18, age_max:60,
     dev_areas:["sensory","fine","cognitive"], tags:["sensory","fine-motor","tactile","pouring","sorting"],
     price:20, asin:"B0GZ2JRJHZ", afflink:"https://www.amazon.com.au/dp/B0GZ2JRJHZ/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81bSi8nYMkL._AC_SX679_.jpg",
-    note:"Fill a bin with rice, beans, water beads, or kinetic sand and add these tools. Scooping, pouring, tweezering — so much fine motor and sensory work.",
+    note:"Fill a bin with rice, beans, water beads or kinetic sand and add these. Scooping, pouring, tweezering things out.",
     search:"sensory bin kit tools scoops funnels tweezers kids"
   },
   {
     id:"p160", name:"Liquid Motion Calm Down Timer / Sensory Bottle", age_min:12, age_max:144,
     dev_areas:["sensory","cognitive","social"], tags:["sensory","self-regulation","visual","calm-down"],
     price:15, asin:"B0C5CWKLNL", afflink:"https://www.amazon.com.au/dp/B0C5CWKLNL/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81-hXXrQphL._AC_SX679_.jpg",
-    note:"Flip it and watch the liquid move slowly down. Genuinely calming visual input — good for regulation, transitions, and focus.",
+    note:"Flip it and watch the liquid crawl down. Hard to look away from, which is the point.",
     search:"liquid motion timer calm down sensory bottle kids visual"
   },
   {
     id:"p161", name:"Textured Sensory Balls Set", age_min:0, age_max:60,
     dev_areas:["sensory","fine","gross"], tags:["sensory","tactile","grasping","fine-motor"],
     price:18, asin:"B09H7LSD22", afflink:"https://www.amazon.com.au/dp/B09H7LSD22/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/51K3Y-sXPfL._AC_SX679_.jpg",
-    note:"Different textures, sizes, and resistances. Great for tactile exploration at any age — from babies grasping to older kids squeezing for input.",
+    note:"Different textures, sizes, and resistances. Great for tactile exploration at any age, from babies grasping to older kids squeezing for input.",
     search:"textured sensory balls set kids tactile variety"
   },
   // ── FROM 5-6 YEAR GUIDE / GIFTING GUIDE 5-10 ─────────────────────────────
@@ -1275,14 +1275,14 @@ const PRODUCTS = [
     id:"p162", name:"Noodle Knock Out Game", age_min:48, age_max:120,
     dev_areas:["gross","social","cognitive"], tags:["outdoor","movement","turn-taking","hand-eye","social","sports"],
     price:22, asin:"B0F4KYG3BC", afflink:"https://www.amazon.com.au/dp/B0F4KYG3BC/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/31TYpvfcJBL._AC_SX679_.jpg",
-    note:"Knock pool noodles off pedestals with a ball. Active, funny, and great for hand-eye coordination and turn-taking.",
+    note:"Knock the pool noodles off their stands with a ball. Active, silly, and easy to set up in a backyard.",
     search:"noodle knock out game kids outdoor active"
   },
   {
     id:"p163", name:"Excavation Kit (Dino or Gem)", age_min:60, age_max:120,
     dev_areas:["cognitive","fine"], tags:["dinosaurs","science","STEM","problem-solving","fine-motor"],
     price:22, asin:"B0GGRD2PYY", afflink:"https://www.amazon.com.au/dp/B0GGRD2PYY/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/71hrjbTRzZL._AC_SX679_.jpg",
-    note:"Chip away to reveal the fossil or gem inside. Patience, fine motor control, and the thrill of discovery. Great for dino fans.",
+    note:"Chip away until the fossil or gem appears. Slow going, which is the appeal. One for dino fans.",
     search:"excavation kit kids dinosaur fossil gem dig"
   },
   {
@@ -1296,42 +1296,42 @@ const PRODUCTS = [
     id:"p165", name:"Early Years Printable Activity Book (Brittany Kidera)", age_min:36, age_max:60,
     dev_areas:["fine","cognitive","language"], tags:["pre-writing","letters","numbers","fine-motor","reusable"],
     price:15, asin:null, img:null,
-    note:"Designed by Brittany to support cognitive, language, and fine motor development through play-based activities. Laminate pages and reuse endlessly.",
+    note:"Designed by me, a paediatric OT, as play-based activities for the early years. Laminate the pages and reuse them.",
     search:"Early Years Activity Book Kidera Brittany OT printable"
   },
   {
     id:"p166", name:"Mess-Free Painting Set", age_min:36, age_max:60,
     dev_areas:["fine","sensory","cognitive"], tags:["drawing","art","sensory","creative","mark-making"],
     price:18, asin:"B084Y3DLFJ", afflink:"https://www.amazon.com.au/dp/B084Y3DLFJ/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81q13+KL29L._AC_SX679_.jpg",
-    note:"All the benefits of painting without the mess. Builds brush skills that transfer directly to pencil control later.",
+    note:"Painting without the mess. Water on the page, colour appears, dries, do it again.",
     search:"mess free painting set kids toddler no mess art"
   },
   {
     id:"p167", name:"Bingo Dot Markers (Daubers)", age_min:24, age_max:60,
     dev_areas:["fine","cognitive"], tags:["drawing","fine-motor","grip","pre-writing","colours"],
     price:15, asin:"B086XBXH34", afflink:"https://www.amazon.com.au/dp/B086XBXH34/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/71vi6YRNlbL._AC_SX679_.jpg",
-    note:"Big satisfying dots that build hand control and grip strength. Great for dot-to-dot activities, colour recognition, and early mark making.",
+    note:"Big satisfying dots, and no fiddly lids. A good first set of markers.",
     search:"bingo dot markers daubers kids art toddler"
   },
   {
     id:"p168", name:"Marvel Avengers Action Figure Set", age_min:60, age_max:120,
     dev_areas:["social","language","cognitive"], tags:["pretend-play","role-play","storytelling","social"],
     price:48, asin:"B0DNFR5VFK", afflink:"https://www.amazon.com.au/dp/B0DNFR5VFK/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/71Ysb6GKu9L._AC_SX679_.jpg",
-    note:"Character figures for open-ended pretend play. Superhero stories, good vs bad, rescue missions — rich imaginative play that kids come back to again and again.",
+    note:"Character figures for open-ended pretend play. Superhero stories, good vs bad, rescue missions. Rich imaginative play that kids come back to again and again.",
     search:"Marvel Avengers action figure set kids Iron Man"
   },
   {
     id:"p169", name:"Bike with Training Wheels (16 inch)", age_min:48, age_max:84,
     dev_areas:["gross"], tags:["balance","coordination","outdoor","movement","bilateral","vehicles"],
     price:120, asin:"B0DMV6BCW3", afflink:"https://www.amazon.com.au/dp/B0DMV6BCW3/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/71a-iKUhcfL._AC_SX679_.jpg",
-    note:"Pedalling builds leg strength and rhythm. Steering develops hand-eye coordination and core stability. A classic milestone.",
+    note:"Pedalling and steering at the same time takes a few goes. A classic, and they last.",
     search:"kids bike training wheels 16 inch pedal bicycle"
   },
   {
     id:"p170", name:"Melty Bead Set (Hama / Perler Beads)", age_min:60, age_max:120,
     dev_areas:["fine","cognitive"], tags:["fine-motor","focus","patterns","art","hand-eye"],
     price:22, asin:"B08M8YWJPT", afflink:"https://www.amazon.com.au/dp/B08M8YWJPT/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/816S1ti3FoS._AC_SX679_.jpg",
-    note:"Place tiny beads on a pegboard then iron to fuse. Precision, patience, pattern making, and pincer grip — excellent for older kids who like detailed craft.",
+    note:"Place tiny beads on a pegboard then iron to fuse. Precision, patience, pattern making, and pincer grip. Excellent for older kids who like detailed craft.",
     search:"melty beads hama perler bead set kids craft"
   },
   {
@@ -1345,21 +1345,21 @@ const PRODUCTS = [
     id:"p172", name:"Basket and Soft Toy Throwing Game", age_min:24, age_max:72,
     dev_areas:["gross","cognitive","social"], tags:["throwing","hand-eye","turn-taking","outdoor","movement","sports"],
     price:18, asin:"B0D8BRH5TC", afflink:"https://www.amazon.com.au/dp/B0D8BRH5TC/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81Jqn6EAB2L._AC_SX679_.jpg",
-    note:"Throw soft toys or balls into a basket from different distances. Turn-taking, aiming, and adjusting throw strength.",
+    note:"Throw soft toys or balls into the basket, then move further back. Easy to make harder.",
     search:"basket throwing game soft toys kids indoor outdoor"
   },
   {
     id:"p173", name:"Keezi Water Table with Umbrella (26pcs)", age_min:24, age_max:72,
     dev_areas:["sensory","fine","cognitive"], tags:["sensory","water","outdoor","pouring","sorting"],
     price:79, asin:"B0778F2NKQ", afflink:"https://www.amazon.com.au/dp/B0778F2NKQ/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/51esJP5lDXL._AC_SX679_.jpg",
-    note:"Waterwheel, boats, buckets, and a slide all in one. Outdoor water play that keeps kids busy for hours while building fine motor and sensory skills.",
+    note:"Waterwheel, boats, buckets and a slide in one. Outdoor water play that buys you an afternoon.",
     search:"Keezi Water Table Umbrella sandpit toys kids outdoor"
   },
   {
     id:"p174", name:"Duckie Goes On An Adventure High Contrast Bath Book", age_min:0, age_max:12,
     dev_areas:["sensory","language","cognitive"], tags:["visual","tummy-time","water","books","sensory"],
     price:20, asin:"0646879340", afflink:"https://www.amazon.com.au/dp/0646879340/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/71kBKnub47L._SY522_.jpg",
-    note:"High contrast black and white bath book. Sensory play in the bath plus early visual development and language. A lovely combination.",
+    note:"High contrast black and white, and it goes in the bath. Babies lock onto the pages.",
     search:"Duckie Goes On An Adventure High Contrast Bath Book baby"
   },
 
@@ -1368,7 +1368,7 @@ const PRODUCTS = [
     id:"p175", name:"Animal Barn Playset", age_min:12, age_max:36,
     dev_areas:["social","language","cognitive"], tags:["animals","pretend-play","cause-effect","language"],
     price:32.99, asin:null, afflink:"https://link.amazon/B0fNJdiYr", img:"https://m.media-amazon.com/images/I/81Wy6HIjoTL._AC_SL1500_.jpg",
-    note:"Open the doors, pop the animals in and out, make the sounds. Barn play is packed with early vocabulary and simple pretend play.",
+    note:"Open the doors, pop the animals in and out, make the sounds. Simple, and it gets played with daily for a good while.",
     search:"Animal Barn Playset kids"
   },
   {
@@ -1389,14 +1389,14 @@ const PRODUCTS = [
     id:"p178", name:"Skillmatics Guess in 10: Animal Kingdom", age_min:36, age_max:72,
     dev_areas:["language","cognitive","social"], tags:["animals","turn-taking","vocabulary","board-game","questions"], fam:"guess-in-10",
     price:15.29, asin:null, afflink:"https://link.amazon/B0hIlequT", img:"https://m.media-amazon.com/images/I/81zJwhaGlIL._AC_SX679_.jpg",
-    note:"Ask smart questions to guess the animal in ten. Builds question asking, categorising and vocabulary, all skills I work on in therapy constantly.",
+    note:"Ask ten questions and guess the animal. Kids have to think about what to ask, which is the fun of it.",
     search:"Skillmatics Guess in 10: Animal Kingdom kids"
   },
   {
     id:"p179", name:"LEGO Creator 3-in-1 Cute Animals", age_min:96, age_max:120,
     dev_areas:["fine","cognitive"], tags:["animals","constructive","blocks-tiles","problem-solving"], fam:"lego",
     price:31.49, asin:null, afflink:"https://link.amazon/B0flNdA3S", img:"https://m.media-amazon.com/images/I/81nXrJT7jkL._AC_SX679_.jpg",
-    note:"Build three different animals from one set. Following the instructions builds sequencing and visual perception, and rebuilding keeps it fresh.",
+    note:"Three different animals from one box. They can pull it apart and build the next one.",
     search:"LEGO Creator 3-in-1 Cute Animals kids"
   },
   {
@@ -1410,14 +1410,14 @@ const PRODUCTS = [
     id:"p181", name:"Weighted Dragon Plush", age_min:60, age_max:120,
     dev_areas:["sensory","social"], tags:["deep-pressure","plush","animals","self-regulation","calm-down"],
     price:57.94, asin:null, afflink:"https://link.amazon/B0dCMfh64", img:"https://m.media-amazon.com/images/I/51VD8R5RN4L._AC_SX679_.jpg",
-    note:"Weighted plush gives lovely calming deep pressure across the lap or shoulders. A cuddly regulation tool that doesn't look like one.",
+    note:"A weighted plush that sits across the lap or shoulders. Heavy, soft, and it looks like an ordinary toy.",
     search:"Weighted Dragon Plush kids"
   },
   {
     id:"p182", name:"Spot It! Animals Card Game", age_min:48, age_max:120,
     dev_areas:["cognitive","social"], tags:["animals","visual","reaction-time","card-game","turn-taking"],
     price:17.95, asin:null, afflink:"https://link.amazon/B02X5JKJZ", img:"https://m.media-amazon.com/images/I/71lMRod-nIL._AC_SX679_.jpg",
-    note:"Find the matching animal before everyone else. Fast, funny, and brilliant for visual scanning and processing speed.",
+    note:"Find the matching animal before anyone else does. Fast, funny, and over quickly.",
     search:"Spot It! Animals Card Game kids"
   },
   {
@@ -1438,35 +1438,35 @@ const PRODUCTS = [
     id:"p185", name:"Farm Animal Memory Cards", age_min:36, age_max:120,
     dev_areas:["cognitive","social"], tags:["animals","memory","turn-taking","card-game"], fam:"memory-cards",
     price:9.29, asin:null, afflink:"https://link.amazon/B05Xda5t4", img:"https://m.media-amazon.com/images/I/7180poFdu1L._SL1500_.jpg",
-    note:"A classic memory game with friendly farm faces. Working memory, turn-taking and a genuine chance for kids to beat the grown-ups.",
+    note:"A classic memory game with friendly farm faces. One of the few games where kids genuinely beat the grown-ups.",
     search:"Farm Animal Memory Cards kids"
   },
   {
     id:"p186", name:"I Spy Animals Book", age_min:24, age_max:48,
     dev_areas:["language","cognitive"], tags:["animals","books","visual","language"], fam:"i-spy-book",
     price:20.21, asin:null, afflink:"https://link.amazon/B0dbjwbzv", img:"https://m.media-amazon.com/images/I/61PYd0Em4LL._SL1000_.jpg",
-    note:"Search the page, find the animal, name it together. I spy books build visual scanning and vocabulary side by side.",
+    note:"Search the page, find the animal, name it together. Good for a long car trip.",
     search:"I Spy Animals Book kids"
   },
   {
     id:"p187", name:"Melissa & Doug Magnetic Fishing Game", age_min:36, age_max:60,
     dev_areas:["fine","cognitive"], tags:["animals","fine-motor","hand-eye","patience"], fam:"fishing-game",
     price:16.37, asin:null, afflink:"https://link.amazon/B0aq1iy3i", img:"https://m.media-amazon.com/images/I/817blwa0MZL._AC_SX679_.jpg",
-    note:"Steady hands and patience to hook each fish. Magnetic fishing is a quiet fine motor workout kids ask to repeat.",
+    note:"Steady hands and patience to hook each fish. Quiet, and they ask to do it again.",
     search:"Melissa & Doug Magnetic Fishing Game kids"
   },
   {
     id:"p188", name:"I Spy Ocean Animals Book", age_min:36, age_max:96,
     dev_areas:["language","cognitive"], tags:["animals","books","visual","language"], fam:"i-spy-book",
     price:19.21, asin:null, afflink:"https://link.amazon/B07qHSBLV", img:"https://m.media-amazon.com/images/I/71cycnoRvdL._SL1000_.jpg",
-    note:"Under the sea seek and find. Great for visual attention and ocean vocabulary, and it works beautifully as a calm-down activity.",
+    note:"An under the sea seek and find. Quiet, slow, and they'll go back to the same page twice.",
     search:"I Spy Ocean Animals Book kids"
   },
   {
     id:"p189", name:"Skillmatics Search & Find: Animals at Play", age_min:48, age_max:96,
     dev_areas:["cognitive","fine"], tags:["animals","visual","reusable","focus","mark-making"],
     price:19.99, asin:null, afflink:"https://link.amazon/B00oHlB50", img:"https://m.media-amazon.com/images/I/81nEi3D6b0L._AC_SL1500_.jpg",
-    note:"Wipe clean search and find boards you can use over and over. Visual scanning, focus and pen control in one reusable pack.",
+    note:"Wipe clean search and find boards you can use over and over. Good for a cafe or a waiting room.",
     search:"Skillmatics Search & Find: Animals at Play kids"
   },
   {
@@ -1480,7 +1480,7 @@ const PRODUCTS = [
     id:"p191", name:"Baby Einstein Ocean Explorers Bath Pals", age_min:3, age_max:48,
     dev_areas:["sensory","cognitive"], tags:["water","animals","sensory","bath","cause-effect"],
     price:22.55, asin:null, afflink:"https://link.amazon/B0fe2SAeq", img:"https://m.media-amazon.com/images/I/71e21inAv+L._AC_SL1500_.jpg",
-    note:"Bath time is sensory play time. Pouring, squeezing and splashing with ocean friends builds hand skills while they soak.",
+    note:"Pouring, squeezing and splashing while they're already in the bath. Makes getting in easier on the nights they resist.",
     search:"Baby Einstein Ocean Explorers Bath Pals kids"
   },
   {
@@ -1501,28 +1501,28 @@ const PRODUCTS = [
     id:"p194", name:"6 Piece Large Dinosaur Figures Set", age_min:36, age_max:120,
     dev_areas:["language","cognitive","social"], tags:["dinosaurs","animals","pretend-play","small-world"], fam:"animal-figures",
     price:57.99, asin:null, afflink:"https://link.amazon/B0cNdcdgK", img:"https://m.media-amazon.com/images/I/91J8hbHJvvL._AC_SL1500_.jpg",
-    note:"Big, realistic dinosaurs that hold up to serious play. Perfect for storytelling, sensory bins and backyard dino digs.",
+    note:"Big, realistic dinosaurs that survive being thrown. They end up in sensory bins and buried in the garden.",
     search:"6 Piece Large Dinosaur Figures Set kids"
   },
   {
     id:"p195", name:"Melissa & Doug Pet Vet Play Set", age_min:36, age_max:120,
     dev_areas:["social","language","cognitive"], tags:["animals","pretend-play","role-play","nurturing","empathy"], fam:"vet-set",
     price:52.9, asin:null, afflink:"https://link.amazon/B07fd56G4", img:"https://m.media-amazon.com/images/I/714NIH2CVFL._AC_SL1500_.jpg",
-    note:"Check-ups, bandages and lots of caring talk. Vet play builds empathy and language, and it's a lovely bridge for kids who find doctor visits scary.",
+    note:"Check-ups, bandages and a lot of caring talk. The animals get very thoroughly looked after.",
     search:"Melissa & Doug Pet Vet Play Set kids"
   },
   {
     id:"p196", name:"Critter Clinic Vet Set", age_min:24, age_max:120,
     dev_areas:["fine","social","cognitive"], tags:["animals","pretend-play","fine-motor","problem-solving","nurturing"], fam:"vet-set",
     price:99.99, asin:null, afflink:"https://link.amazon/B07Uw326b", img:"https://m.media-amazon.com/images/I/81EJpdwEpDL._AC_SL1500_.jpg",
-    note:"Six little doors, six keys, and patients waiting inside. The lock and key work is sneaky fine motor gold on top of the caring play.",
+    note:"Six little doors, six keys, and a patient behind each one. Matching key to door, then looking after whoever is inside.",
     search:"Critter Clinic Vet Set kids"
   },
   {
     id:"p197", name:"Hape Puppy Care Clinic Vet Set", age_min:36, age_max:120,
     dev_areas:["social","language","cognitive"], tags:["animals","pretend-play","role-play","nurturing","empathy"], fam:"vet-set",
     price:49.99, asin:null, afflink:"https://link.amazon/B0dV33seI", img:"https://m.media-amazon.com/images/I/81PQ6knFe0L._AC_SL1500_.jpg",
-    note:"A beautiful wooden clinic for looking after a poorly puppy. Nurturing pretend play that builds empathy and sequencing.",
+    note:"A wooden vet clinic for one very unwell puppy. Lovely thing, and the looking-after play runs for ages.",
     search:"Hape Puppy Care Clinic Vet Set kids"
   },
   {
@@ -1543,21 +1543,21 @@ const PRODUCTS = [
     id:"p200", name:"70 Lab Experiments Science Kit", age_min:96, age_max:120,
     dev_areas:["cognitive","fine"], tags:["STEM","science","experiments","problem-solving"], fam:"science-kit",
     price:34.99, asin:null, afflink:"https://link.amazon/B0f9whsfu", img:"https://m.media-amazon.com/images/I/81ooFv9f7kL._AC_SL1500_.jpg",
-    note:"Seventy experiments means weeks of what happens if. Following the steps builds sequencing and the results build a little scientist.",
+    note:"Seventy experiments, so weeks of what happens if. Follow the steps and see what you get.",
     search:"70 Lab Experiments Science Kit kids"
   },
   {
     id:"p201", name:"National Geographic Science Magic Kit", age_min:96, age_max:120,
     dev_areas:["cognitive","social"], tags:["STEM","science","experiments","performance"], fam:"science-kit",
     price:39.99, asin:null, afflink:"https://link.amazon/B0c9bE2RU", img:"https://m.media-amazon.com/images/I/81zJwByLeFL._AC_SL1500_.jpg",
-    note:"Science tricks they can perform for the family. Learning the science AND presenting the show builds confidence on both fronts.",
+    note:"Science tricks they can perform for the family. Learning the trick and putting on the show are two different jobs, and kids like both.",
     search:"National Geographic Science Magic Kit kids"
   },
   {
     id:"p202", name:"150 Science Experiments Kit", age_min:96, age_max:120,
     dev_areas:["cognitive","fine"], tags:["STEM","science","experiments","problem-solving"], fam:"science-kit",
     price:39.99, asin:null, afflink:"https://link.amazon/B09QQhUsc", img:"https://m.media-amazon.com/images/I/818eRP4CCUL._AC_SL1500_.jpg",
-    note:"A big box of proper experiments for a kid who asks why about everything. Independence, sequencing and real science thinking.",
+    note:"A big box of proper experiments for the kid who asks why about everything. Most of them they can run themselves.",
     search:"150 Science Experiments Kit kids"
   },
   {
@@ -1571,7 +1571,7 @@ const PRODUCTS = [
     id:"p204", name:"Electric Circuit Motor Kit", age_min:96, age_max:120,
     dev_areas:["cognitive","fine"], tags:["STEM","science","circuits","cause-effect","problem-solving"], fam:"circuit-kit",
     price:19.99, asin:null, afflink:"https://link.amazon/B0gJE5JZz", img:"https://m.media-amazon.com/images/I/61B5GfDiIYL._AC_SL1000_.jpg",
-    note:"Build a working circuit and watch the motor spin. Cause and effect at its most satisfying, and a great budget entry into electronics.",
+    note:"Snap the circuit together and the motor spins. A cheap way in to electronics.",
     search:"Electric Circuit Motor Kit kids"
   },
   {
@@ -1606,7 +1606,7 @@ const PRODUCTS = [
     id:"p209", name:"Learning Resources Code & Go Robot Mouse", age_min:48, age_max:120,
     dev_areas:["cognitive","fine"], tags:["STEM","coding","problem-solving","sequencing","cause-effect"], fam:"coding-robot",
     price:60.6, asin:null, afflink:"https://link.amazon/B0b4cnk1L", img:"https://m.media-amazon.com/images/I/81SVjjQPCWL._AC_SL1500_.jpg",
-    note:"Program the mouse to find the cheese, no screen needed. Screen-free coding that teaches sequencing and planning through play.",
+    note:"Press the arrows, send the mouse off, watch it get the route wrong. Coding with no screen.",
     search:"Learning Resources Code & Go Robot Mouse kids"
   },
   {
@@ -1655,7 +1655,7 @@ const PRODUCTS = [
     id:"p216", name:"UNO Card Game", age_min:84, age_max:120,
     dev_areas:["cognitive","social"], tags:["card-game","turn-taking","colours","numbers","board-game"],
     price:6.0, asin:null, afflink:"https://link.amazon/B05f6mBWE", img:"https://m.media-amazon.com/images/I/71ozbtH8PbL._AC_SL1500_.jpg",
-    note:"The classic for a reason. Colour and number matching, turn-taking, and coping when someone hits you with a draw four. All real skills.",
+    note:"The classic for a reason. Matching colours and numbers, and coping when someone hits you with a draw four.",
     search:"UNO Card Game kids"
   },
   {
@@ -1690,14 +1690,14 @@ const PRODUCTS = [
     id:"p221", name:"Guess Who", age_min:72, age_max:120,
     dev_areas:["language","cognitive","social"], tags:["board-game","questions","language","deduction","turn-taking"],
     price:19.99, asin:null, afflink:"https://link.amazon/B0dW5ZcfA", img:"https://m.media-amazon.com/images/I/81Y72Ho77dL._AC_SL1500_.jpg",
-    note:"Does your person wear glasses? Guess Who quietly teaches question asking, deduction and describing features. A therapy room staple for good reason.",
+    note:"Does your person wear glasses? A lot of thinking about what to ask next, hidden inside a simple game. One I use at work.",
     search:"Guess Who kids"
   },
   {
     id:"p222", name:"Monopoly Junior: Bluey Edition", age_min:60, age_max:120,
     dev_areas:["cognitive","social"], tags:["board-game","numbers","turn-taking","bluey"],
     price:22.0, asin:null, afflink:"https://link.amazon/B09NDA80D", img:"https://m.media-amazon.com/images/I/81DPZQ6tQYL._AC_SL1500_.jpg",
-    note:"A first board game with the Heeler family along for the ride. Counting, turn-taking and simple money concepts at just the right level.",
+    note:"A first board game with the Heeler family along for the ride. Counting, taking turns, and handling pretend money.",
     search:"Monopoly Junior: Bluey Edition kids"
   },
   {
@@ -1711,14 +1711,14 @@ const PRODUCTS = [
     id:"p224", name:"Pop Up Pirate", age_min:36, age_max:120,
     dev_areas:["fine","cognitive","social"], tags:["board-game","turn-taking","fine-motor","cause-effect","suspense"],
     price:14.95, asin:null, afflink:"https://link.amazon/B02qOPxKy", img:"https://m.media-amazon.com/images/I/812lSGtI33L._AC_SL1500_.jpg",
-    note:"Slide the swords in and wait for the pirate to pop. Turn-taking, fine motor and managing the suspense. Kids beg to play it again.",
+    note:"Slide the swords in and wait for the pirate to pop. The suspense is unbearable and they beg to play again.",
     search:"Pop Up Pirate kids"
   },
   {
     id:"p225", name:"Jenga", age_min:72, age_max:120,
     dev_areas:["fine","cognitive","social"], tags:["board-game","fine-motor","balance","turn-taking","hand-eye"],
     price:29.99, asin:null, afflink:"https://link.amazon/B08T6H9Ih", img:"https://m.media-amazon.com/images/I/81xyPFZTrfL._AC_SL1500_.jpg",
-    note:"Steady hands, careful planning and the delicious tension of a wobbling tower. Fine motor control under pressure, plus a big crash payoff.",
+    note:"Steady hands, careful planning, and the delicious tension of a wobbling tower. Then the crash.",
     search:"Jenga kids"
   },
   {
@@ -1746,21 +1746,21 @@ const PRODUCTS = [
     id:"p229", name:"Pop-Up Soccer Goal Set", age_min:72, age_max:120,
     dev_areas:["gross","social"], tags:["outdoor","sports","movement","coordination","bilateral"],
     price:57.0, asin:null, afflink:"https://link.amazon/B02hRPQa8", img:"https://m.media-amazon.com/images/I/81b7qvRpFSL._AC_SL1500_.jpg",
-    note:"A backyard goal turns kicking practice into a game. Striking a moving ball builds timing, balance and coordination, and it's World Cup year.",
+    note:"A backyard goal turns kicking about into an actual game. Hitting a moving ball takes practice.",
     search:"Pop-Up Soccer Goal Set kids"
   },
   {
     id:"p230", name:"Little Tikes T-Ball Set", age_min:18, age_max:36,
     dev_areas:["gross"], tags:["outdoor","sports","hand-eye","coordination","bilateral"],
     price:29.0, asin:null, afflink:"https://link.amazon/B06s4CGzx", img:"https://m.media-amazon.com/images/I/61nGSQIlFeL._AC_SL1500_.jpg",
-    note:"The ball sits still so little sluggers can connect. T-ball is the perfect first hitting sport, building hand-eye coordination without the frustration.",
+    note:"The ball sits still, so they actually connect with it. A better first go than someone pitching at them.",
     search:"Little Tikes T-Ball Set kids"
   },
   {
     id:"p231", name:"Totem Tennis Set", age_min:72, age_max:120,
     dev_areas:["gross"], tags:["outdoor","sports","hand-eye","coordination","reaction-time"],
     price:75.95, asin:null, afflink:"https://link.amazon/B02Gt20Dt", img:"https://m.media-amazon.com/images/I/51JvRnkHNBL._AC_SL1500_.jpg",
-    note:"An Aussie backyard classic. Tracking a ball on a string builds visual tracking and timing, and one kid can play solo when no one's free.",
+    note:"An Aussie backyard classic. One kid can play it on their own when nobody else is free.",
     search:"Totem Tennis Set kids"
   },
   {
@@ -1774,7 +1774,7 @@ const PRODUCTS = [
     id:"p233", name:"LEGO City Fire Rescue Boat", age_min:60, age_max:120,
     dev_areas:["fine","cognitive","social"], tags:["constructive","blocks-tiles","vehicles","pretend-play","lego"], fam:"lego",
     price:50.61, asin:"B0DHZVJST6", afflink:"https://www.amazon.com.au/dp/B0DHZVJST6?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81Vcy6pZ24L._AC_SL1500_.jpg",
-    note:"A rescue boat build with rescue missions to follow. Following LEGO instructions is brilliant for sequencing and visual perception.",
+    note:"A rescue boat to build, then rescue missions to run with it. The instructions are followable on their own.",
     search:"LEGO City Fire Rescue Boat kids"
   },
   {
@@ -1795,7 +1795,7 @@ const PRODUCTS = [
     id:"p236", name:"LEGO Friends Unicorn & Flamingo Pool Party", age_min:60, age_max:120,
     dev_areas:["fine","cognitive"], tags:["constructive","blocks-tiles","pretend-play","animals","lego"], fam:"lego",
     price:9.6, asin:"B0DWF4JFMF", afflink:"https://www.amazon.com.au/dp/B0DWF4JFMF?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81DrJVckQfL._AC_SL1500_.jpg",
-    note:"A pocket-money LEGO set with maximum cute factor. A great first build for small hands and short attention spans.",
+    note:"A pocket-money LEGO set that is very cute. Small enough to finish in one sitting.",
     search:"LEGO Friends Unicorn & Flamingo Pool Party kids"
   },
   {
@@ -1816,7 +1816,7 @@ const PRODUCTS = [
     id:"p239", name:"LEGO Friends Unicorn Dream Café", age_min:72, age_max:120,
     dev_areas:["fine","cognitive","social"], tags:["constructive","blocks-tiles","pretend-play","role-play","lego"], fam:"lego",
     price:47.99, asin:"B0FPVZ2B9Y", afflink:"https://www.amazon.com.au/dp/B0FPVZ2B9Y?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81GqoPqfLrL._AC_SL1500_.jpg",
-    note:"Cafe role play meets a satisfying build. Taking orders and serving customers is social skills practice in disguise.",
+    note:"A cafe to build, then a cafe to run. Taking orders and getting them wrong is most of the fun.",
     search:"LEGO Friends Unicorn Dream Café kids"
   },
   {
@@ -1858,7 +1858,7 @@ const PRODUCTS = [
     id:"p245", name:"LEGO Friends Cat Birthday Party & Tree House", age_min:72, age_max:120,
     dev_areas:["fine","cognitive","social"], tags:["constructive","blocks-tiles","animals","pretend-play","lego"], fam:"lego",
     price:31.2, asin:"B0DWDWMVZ4", afflink:"https://www.amazon.com.au/dp/B0DWDWMVZ4?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81FL73NR3DL._AC_SL1500_.jpg",
-    note:"A tree house build with a cat party inside it. Animal lovers get their fix while the fine motor work happens quietly.",
+    note:"A tree house to build with a cat party going on inside it. One for the animal obsessed.",
     search:"LEGO Friends Cat Birthday Party & Tree House kids"
   },
   {
@@ -1879,7 +1879,7 @@ const PRODUCTS = [
     id:"p248", name:"LEGO Disney Ariel's Magical Mini Palace", age_min:60, age_max:120,
     dev_areas:["fine","cognitive","social"], tags:["constructive","blocks-tiles","pretend-play","storytelling","lego"], fam:"lego",
     price:23.2, asin:"B0FPXJHB6S", afflink:"https://www.amazon.com.au/dp/B0FPXJHB6S?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/811fGe6WTTL._AC_SL1500_.jpg",
-    note:"An under-the-sea palace at a lovely price point. Compact builds like this are perfect confidence builders.",
+    note:"An under the sea palace, and not expensive. Small enough to finish in an afternoon.",
     search:"LEGO Disney Ariel's Magical Mini Palace kids"
   },
   {
@@ -1900,7 +1900,7 @@ const PRODUCTS = [
     id:"p251", name:"LEGO City Rides Construction Loader", age_min:60, age_max:120,
     dev_areas:["fine","cognitive"], tags:["constructive","blocks-tiles","vehicles","lego"], fam:"lego",
     price:9.0, asin:"B0H1YSKW8X", afflink:"https://www.amazon.com.au/dp/B0H1YSKW8X?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/713CdcEJQ8L._AC_SL1500_.jpg",
-    note:"A pocket-money loader build for little construction fans. Small sets are underrated for building independence.",
+    note:"A pocket-money loader for the digger-obsessed. Small sets like this they can usually do on their own.",
     search:"LEGO City Rides Construction Loader kids"
   },
   {
@@ -1914,7 +1914,7 @@ const PRODUCTS = [
     id:"p253", name:"Crazy Aaron's Thinking Putty", age_min:36, age_max:120,
     dev_areas:["sensory","fine"], tags:["sensory","fidget","hand-strength","tactile","calm-down"], fam:"putty",
     price:14.99, asin:null, afflink:"https://link.amazon/B0fLOwsag", img:"https://m.media-amazon.com/images/I/81J2cIswLwL._AC_SL1500_.jpg",
-    note:"The premium putty. Stretch it, snap it, sculpt it. Wonderful tactile input for busy hands and genuinely calming to work with.",
+    note:"The good putty. Stretch it, snap it, sculpt it. Something for hands that won't sit still.",
     search:"Crazy Aaron's Thinking Putty kids"
   },
   {
@@ -1935,7 +1935,7 @@ const PRODUCTS = [
     id:"p256", name:"Toddler Wooden Animal Jigsaw Puzzles", age_min:12, age_max:36,
     dev_areas:["cognitive","fine"], tags:["puzzle","jigsaw","animals","colours","shapes"], fam:"jigsaw",
     price:28.99, asin:"B07WK74S3V", afflink:"https://www.amazon.com.au/dp/B07WK74S3V?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/71yMMQ9m2HL._AC_SL1500_.jpg",
-    note:"Chunky wooden pieces for the very first puzzlers. Grasping, rotating and fitting builds fine motor and visual skills together.",
+    note:"Chunky wooden pieces with knobs, for a first puzzle. Turning the piece until it drops in is the whole job.",
     search:"Toddler Wooden Animal Jigsaw Puzzles kids"
   },
   {
@@ -1977,7 +1977,7 @@ const PRODUCTS = [
     id:"p262", name:"Ravensburger Disney Princess Puzzle (100pc)", age_min:72, age_max:120,
     dev_areas:["cognitive","fine"], tags:["puzzle","jigsaw","problem-solving","focus"], fam:"jigsaw",
     price:22.49, asin:"B0CQ59DYJJ", afflink:"https://www.amazon.com.au/dp/B0CQ59DYJJ?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/61pI0LMmpmL._AC_SL1024_.jpg",
-    note:"One hundred pieces is a proper sit-down challenge. Sustained focus, visual scanning and the pride of the finished picture.",
+    note:"One hundred pieces is a proper sit-down job. They'll want it left out so they can come back to it.",
     search:"Ravensburger Disney Princess Puzzle (100pc) kids"
   },
   {
@@ -2054,14 +2054,14 @@ const PRODUCTS = [
     id:"p273", name:"Electronic Dance Mat", age_min:36, age_max:120,
     dev_areas:["gross","sensory","cognitive"], tags:["music","movement","coordination","cause-effect","dance"],
     price:45, asin:null, afflink:"https://link.amazon/B06iNCATi", img:"https://m.media-amazon.com/images/I/81hLfap3RGL._AC_SL1500_.jpg",
-    note:"Step on the lights and follow the beat. Dancing along builds coordination, motor planning and rhythm, and it burns serious energy indoors.",
+    note:"Step on the lights and follow the beat. Gets a lot of energy out without anyone leaving the lounge room.",
     search:"kids electronic dance mat music lights"
   },
   {
     id:"p274", name:"Wooden Musical Instruments Set", age_min:36, age_max:120,
     dev_areas:["sensory","fine","social","language"], tags:["music","rhythm","instruments"], fam:"instrument-set",
     price:40, asin:null, afflink:"https://link.amazon/B0iVEOSjB", img:"https://m.media-amazon.com/images/I/81Rtx8wXZgL._AC_SL1500_.jpg",
-    note:"A beautiful wooden set of shakers, drums and more. Making music together builds rhythm, listening and turn-taking, and wooden instruments last for years.",
+    note:"A wooden set of shakers, drums and bells. Nicer to listen to than the plastic ones, and they last.",
     search:"wooden musical instruments set kids toddler"
   },
   {
@@ -2076,28 +2076,28 @@ const PRODUCTS = [
     id:"p276", name:"Aerial Silks / Hammock Swing", age_min:72, age_max:144,
     dev_areas:["gross","sensory"], tags:["sports","movement","vestibular","proprioceptive","climbing","heavy-work","swing"],
     price:132, asin:null, afflink:"https://link.amazon/B06oSypJO", img:"https://m.media-amazon.com/images/I/51F8lGFpyqL._AC_SL1098_.jpg",
-    note:"Climbing, hanging and spinning builds serious strength and body awareness, and the deep pressure is wonderfully regulating. You'll need somewhere sturdy to hang it, an outdoor monkey bar frame works well.",
+    note:"Climbing, hanging and spinning, all from one piece of kit. You'll need somewhere sturdy to hang it, and an outdoor monkey bar frame works well.",
     search:"kids aerial silks hammock swing"
   },
   {
     id:"p277", name:"Ninja Warrior Obstacle Course Kit", age_min:72, age_max:144,
     dev_areas:["gross","sensory","cognitive"], tags:["sports","outdoor","movement","climbing","strength","proprioceptive","motor-planning"],
     price:149, asin:null, afflink:"https://link.amazon/B07EjvjgH", img:"https://m.media-amazon.com/images/I/81HDiwi6VIL._AC_SL1500_.jpg",
-    note:"A backyard ninja course for climbing, swinging and balancing. Brilliant for motor planning, strength and the kind of big movement that helps kids focus afterwards. You'll need two solid trees or a park to set it up.",
+    note:"A backyard ninja course for climbing, swinging and balancing. You'll need two solid trees or a park to set it up.",
     search:"kids ninja warrior obstacle course slackline kit"
   },
   {
     id:"p278", name:"Cornhole Bean Bag Toss Set (Deluxe)", age_min:60, age_max:144,
     dev_areas:["gross","cognitive","social"], tags:["sports","outdoor","hand-eye","turn-taking","coordination"], fam:"cornhole",
     price:116, asin:null, afflink:"https://link.amazon/B0iRse7KA", img:"https://m.media-amazon.com/images/I/81X2xOX7UBL._AC_SL1500_.jpg",
-    note:"Aiming and tossing bean bags at the board builds hand-eye coordination and gentle competition. A brilliant one for the whole family to play together outdoors.",
+    note:"Toss the bean bags at the board and argue about the score. One the whole family will actually play.",
     search:"cornhole bean bag toss set kids outdoor"
   },
   {
     id:"p279", name:"Cornhole Bean Bag Toss Set (Value)", age_min:60, age_max:144,
     dev_areas:["gross","cognitive","social"], tags:["sports","outdoor","hand-eye","turn-taking","coordination"], fam:"cornhole",
     price:69, asin:null, afflink:"https://link.amazon/B08ckB90K", img:"https://m.media-amazon.com/images/I/61fR27mq97L._AC_SL1500_.jpg",
-    note:"The same great bean bag toss fun at a friendlier price. Aiming and throwing for hand-eye coordination, and everyone can join in.",
+    note:"The same bean bag toss fun at a friendlier price. Everyone can join in, including the grandparents.",
     search:"cornhole bean bag toss set kids budget"
   },
   {
@@ -2118,14 +2118,14 @@ const PRODUCTS = [
     id:"p282", fam:"crash-pad", name:"Sensory Crash Pad (Large)", age_min:36, age_max:144,
     dev_areas:["sensory","gross"], tags:["sports","proprioceptive","deep-pressure","heavy-work","sensory","movement"],
     price:145, asin:null, afflink:"https://link.amazon/B08L9MFbR", img:"https://m.media-amazon.com/images/I/71nrU-d2rqL._AC_SL1500_.jpg",
-    note:"Jumping and crashing into this gives powerful proprioceptive input, which is deeply regulating for movement seekers. For extra fun, pair it with climbing and a safe jump down onto the pad.",
+    note:"Made for jumping and crashing into. One for kids who go looking for a heavy landing. Pair it with something safe to climb and jump off.",
     search:"sensory crash pad kids large proprioceptive"
   },
   {
     id:"p283", name:"Adjustable Basketball Hoop", age_min:60, age_max:144,
     dev_areas:["gross","social"], tags:["sports","outdoor","hand-eye","coordination","throwing"],
     price:139, asin:null, afflink:"https://link.amazon/B00ae7Uec", img:"https://m.media-amazon.com/images/I/61hDmLa1F8L._AC_SL1500_.jpg",
-    note:"Shooting hoops builds hand-eye coordination, aim and gross motor power, and the height adjusts as they grow. Brilliant for the outdoorsy kid who loves throwing.",
+    note:"Shooting hoops in the driveway, and the height adjusts as they grow. One for the kid who throws everything anyway.",
     search:"kids adjustable basketball hoop outdoor"
   },
   {
@@ -2221,10 +2221,10 @@ const STEPS = [
   {
     id:"child_snapshot",
     question:"Tell me about your child right now",
-    subtitle:"What are they obsessed with? Favourite toys, characters or activities? How do they like to play — physical, creative, focused, social? Any skills or goals you're working on? The more you share, the better the match.",
+    subtitle:"What are they obsessed with? Favourite toys, characters or activities? How do they like to play: physical, creative, focused, social? Any skills or goals you're working on? The more you share, the better the match.",
     type:"text",
-    placeholder:"e.g. He's completely obsessed with trains and anything with wheels. Just started walking at 14 months. Loves being outside and has about 20 words. Very determined. Still mouths a lot of toys so nothing too small...",
-    optional:false,
+    optional:true,
+    optionalNote:"Optional. The more you write here, the closer the picks will be.",
   },
   {
     id:"interests",
@@ -2258,8 +2258,8 @@ const STEPS = [
     subtitle:"As an OT I always think about the why behind a toy. Pick anything that feels relevant, or just select the last option if you're not sure.",
     type:"multi",
     options:[
-      {value:"gross",         label:"Gross motor — movement, strength, coordination 🤸"},
-      {value:"fine",          label:"Fine motor — hand strength, grip, finger skills ✍️"},
+      {value:"gross",         label:"Gross motor: movement, strength, coordination 🤸"},
+      {value:"fine",          label:"Fine motor: hand strength, grip, finger skills ✍️"},
       {value:"language",      label:"Communication and language 💬"},
       {value:"cognitive",     label:"Problem-solving and learning 🧠"},
       {value:"social",        label:"Social skills, turn-taking and emotional regulation 🤝"},
@@ -2329,6 +2329,19 @@ function parseBudget(b){
 
 
 // Convert stored months value to the friendly age label used in the quiz
+// Q5's example has to match the age the parent just picked, or it reads as
+// written for someone else's child.
+function snapshotPlaceholder(months){
+  const m = Number(months);
+  if(!m) return "e.g. She's into animals and anything musical. Happiest outside. Gets frustrated when something is too tricky...";
+  if(m <= 7)  return "e.g. She's just started rolling and grabs at everything. Loves being sung to. Mouths every single toy so nothing small...";
+  if(m <= 12) return "e.g. He's crawling everywhere and pulling up on the furniture. Loves peek-a-boo. Still mouths most things so nothing small...";
+  if(m <= 24) return "e.g. He's completely obsessed with trains and anything with wheels. Just started walking. Loves being outside and has about 20 words. Still mouths a lot of toys so nothing too small...";
+  if(m <= 54) return "e.g. She's into dinosaurs and drawing. Will play on her own for a while but gets frustrated when something is tricky. Loves being read to at bedtime...";
+  if(m <= 84) return "e.g. He's big on Lego and soccer. Takes a while to settle after school. Prefers things with a clear goal over open-ended play...";
+  return "e.g. She's into craft and anything she can make herself. Reads a lot. Gets bored with toys quickly so it has to hold her attention...";
+}
+
 function ageLabel(months){
   const map={2:"0 to 3 months",4:"4 to 6 months",7:"7 to 12 months",13:"12 to 18 months",19:"18 months to 2 years",24:"2 years old",42:"3 to 4 years",54:"4 to 5 years",66:"5 to 6 years",84:"6 to 8 years",108:"8 to 10 years"};
   return map[months]||(months+" months");
@@ -2411,7 +2424,7 @@ function scoreProduct(p, answers){
     games:["board-game","card-game","word-game"],
     water:["water","sensory","breath-control","tactile","fidget"],science:["STEM","science","experiments","coding","circuits"],
   };
-  // Sensory dev area — direct boost for sensory-specific tags
+  // Sensory dev area: direct boost for sensory-specific tags
   if((answers.dev_focus||[]).includes("sensory")){
     const sensoryTags=["vestibular","proprioceptive","deep-pressure","sensory","fidget","stretchy","heavy-work","swing","soft-play"];
     if(p.tags.some(t=>sensoryTags.includes(t)))score+=4;
@@ -2420,7 +2433,7 @@ function scoreProduct(p, answers){
     const toolTags=["vestibular","proprioceptive","deep-pressure","fidget","heavy-work","swing","soft-play","self-regulation","calm-down","tactile"];
     if(p.tags.some(t=>toolTags.includes(t)))score+=5;
   }
-  // Active/movement play style — boost heavy work and outdoor
+  // Active/movement play style: boost heavy work and outdoor
   if((answers.play_style||[]).includes("active-physical")){
     const activeTags=["heavy-work","proprioceptive","vestibular","climbing","jumping","movement","outdoor"];
     if(p.tags.some(t=>activeTags.includes(t)))score+=2;
@@ -2540,7 +2553,7 @@ const STOCKING_FILLERS = [
     dev_areas:["fine", "gross"], tags:["art", "craft", "fine-motor", "gross-motor"],
     price:11.99, afflink:"https://www.amazon.com.au/dp/B009WLPEJA?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/P/B009WLPEJA.01._SCLZZZZZZZ_.jpg",
-    note:"So cute. A fun, crafty fine motor activity."
+    note:"So cute, and a nice fiddly craft to sit down with."
   },
   {
     id:"sf15", name:"Melissa & Doug Reusable Sticker Pad, Vehicles", ages:[42],
@@ -2582,7 +2595,7 @@ const STOCKING_FILLERS = [
     dev_areas:["fine"], tags:["art", "craft", "fine-motor"],
     price:15.0, afflink:"https://link.amazon/B062QcCLS",
     img:"https://m.media-amazon.com/images/I/81l-xfDvY-L._AC_SY300_SX300_QL70_ML2_.jpg",
-    note:"Rolling and cutting playdough is real resistance work for hand strength, with both hands doing different jobs at once."
+    note:"Rolling and cutting playdough takes some force, and both hands end up doing different jobs."
   },
   {
     id:"sf21", name:"Galt Fun Buttons, 40 pieces", ages:[42, 54, 66],
@@ -2652,7 +2665,7 @@ const STOCKING_FILLERS = [
     dev_areas:["gross", "language", "social"], tags:["board-game", "gross-motor", "language"],
     price:14.99, afflink:"https://www.amazon.com.au/dp/B01E6SKZRO?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/P/B01E6SKZRO.01._SCLZZZZZZZ_.jpg",
-    note:"Picture matching and turn-taking in a game that's over in ten minutes."
+    note:"Matching the pictures, taking turns, and the whole thing is over in ten minutes."
   },
   {
     id:"sf31", name:"Outdoor Nature Scavenger Hunt Cards", ages:[54, 66, 84],
@@ -2687,7 +2700,7 @@ const STOCKING_FILLERS = [
     dev_areas:["cognitive", "fine", "gross", "language", "sensory"], tags:["art", "craft", "gross-motor", "language", "pretend-play", "sensory"],
     price:14.99, afflink:"https://link.amazon/B0053dVHM",
     img:"https://m.media-amazon.com/images/I/71GLp4qfGNL._AC_SY300_SX300_QL70_ML2_.jpg",
-    note:"Squishing and squeezing dough is real hand strength work, wrapped up in a character they already care about."
+    note:"Squishing and squeezing dough, wrapped up in a character they already love."
   },
   {
     id:"sf36", name:"Go Fish Card Game", ages:[66],
@@ -3044,7 +3057,7 @@ function LoadingScreen(){
     <div style={{minHeight:"100vh",background:BG,display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",fontFamily:"system-ui",padding:"0 24px",textAlign:"center"}}>
       <img src={LOGO} alt="Kidera" style={{height:48,marginBottom:24}} onError={e=>{e.target.style.display="none";}}/>
       <div style={{fontSize:40,marginBottom:18,animation:"bounce 1s infinite"}}>🧸</div>
-      <div style={{fontSize:18,color:TEXT,fontWeight:700,marginBottom:10}}>This might take a minute</div>
+      <div style={{fontSize:18,color:TEXT,fontWeight:700,marginBottom:10}}>This takes a few seconds</div>
       <div key={i} style={{fontSize:15,color:K_GREEN,fontWeight:600,minHeight:22,animation:"fadeIn 0.5s ease"}}>{messages[i]}</div>
       <style>{`
         @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
@@ -3133,10 +3146,10 @@ function EmailGate({count,onUnlock,isGift}){
           <p style={{fontSize:15,color:TEXT,margin:"0 0 14px",lineHeight:1.5}}>
             Pop in your email and I will unlock your picks straight away. You will also get my monthly play and toy ideas, written by me.
           </p>
-          <form onSubmit={submit}>
+          <form onSubmit={submit} noValidate>
             <input type="email" value={email} onChange={(e)=>setEmail(e.target.value)} placeholder="you@email.com" autoComplete="email"
               style={{width:"100%",boxSizing:"border-box",padding:"14px 16px",fontSize:16,borderRadius:12,border:"1px solid "+BORDER,background:"#FFFFFF",color:TEXT,outline:"none",marginBottom:10}}/>
-            {err ? <p style={{color:K_PINK,fontSize:13,margin:"0 0 10px"}}>{err}</p> : null}
+            {err ? <p role="alert" style={{color:K_PINK,fontSize:13,margin:"0 0 10px"}}>{err}</p> : null}
             <button type="submit" disabled={busy}
               style={{width:"100%",padding:"15px 18px",fontSize:16,fontWeight:800,borderRadius:12,border:"none",cursor:busy?"default":"pointer",background:busy?MUTED:K_GREEN,color:"#FFFFFF"}}>
               {busy ? "Unlocking..." : "Show me my toy picks"}
@@ -3203,12 +3216,12 @@ JSON only: {"reason":"..."}`;
     const devLabelMap={gross:"gross motor",fine:"fine motor",cognitive:"problem-solving and learning",language:"communication and language",social:"social and emotional skills",sensory:"sensory",selfcare:"self-care and independence","sensory-tools":"sensory tools and regulation"};
     const FUNCTIONAL_IDS=["p120","p121","p122","p123","p124"]; // step stool, learning tower, cup, potty, cutlery, dressing doll
     const isFunctional=(p)=>FUNCTIONAL_IDS.includes(p.id)||/learning tower|step stool|cutlery|open cup|potty|toilet seat|dressing doll/i.test(p.name);
-    const productList=recs.map((p,i)=>`${i+1}. ${p.name} ($${p.price}) supports: ${p.dev_areas.map(d=>devLabelMap[d]||d).join(", ")}. What it is and does: ${p.note}${isFunctional(p)?" [FUNCTIONAL EVERYDAY EQUIPMENT, apply the special functional rule]":""}`).join("\n");
+    const productList=recs.map((p,i)=>`${i+1}. ${p.name} ($${p.price}) relates to: ${p.dev_areas.map(d=>devLabelMap[d]||d).join(", ")}. What it is and does: ${p.note}${isFunctional(p)?" [FUNCTIONAL EVERYDAY EQUIPMENT, apply the special functional rule]":""}`).join("\n");
     const goalsRaw=(answers.dev_focus||[]).filter(g=>g!=="no-preference");
     const goalsList=goalsRaw.map(g=>devLabelMap[g]||g).join(", ");
     const prompt=`You are Brittany, a paediatric occupational therapist with 8 years of experience and founder of Kidera, a children's development brand in Perth, Australia.
 
-Your writing style: warm, direct, genuine. Write like you're talking to a friend who trusts your expertise. Short sentences. Plain language. No em dashes. No AI words like "seamlessly", "fostering", "ensuring", "delve", "empowering", "testament", "navigate". Never use the words "workhorse", "arsenal" or "toolkit" when talking about children or their development. Specific and practical.
+Your writing style: warm, direct, genuine. Write like you're talking to a friend who trusts your expertise. Short sentences. Plain language. No em dashes. No AI words like "seamlessly", "fostering", "ensuring", "delve", "empowering", "testament", "navigate", "crucial", "unlock", "elevate", "harness", "robust", "foundational", "journey", "game-changer", "dive in". No rhetorical questions as transitions. Do not write "it is not X, it is Y". Never use the words "workhorse", "arsenal" or "toolkit" when talking about children or their development. Specific and practical.
 
 Parent's answers:
 ${summary}
@@ -3218,15 +3231,17 @@ ${productList}
 
 The development goals this parent told us they want to support: ${goalsList||"none specified, so focus on their interests and the child's described stage"}
 
-Write a warm reason for each toy. Where the quiz answers give you real material, connect the toy back to this specific child, to a development goal they chose, an interest they ticked, something they described, or the child's current stage. But NEVER invent or strain a connection that isn't there. If very little was shared (common for gifts), an honest, warm, age-based reason is better than a fake personal one. For example: \"We don't know heaps about this little one yet, but this is a reliable crowd pleaser at this age\" or lead with what the toy genuinely does for development at that age. Honest and warm beats forced and specific. Name the connection out loud. For example: "This one is brilliant for the fine motor goal you mentioned, because pressing the buttons builds the hand strength she'll later use for writing" or "Since he's obsessed with trains, this taps straight into that while sneaking in some problem-solving."
+CLAIMS RULE, THIS ONE OVERRIDES EVERYTHING ELSE: Brittany is an AHPRA registered health practitioner, so nothing you write may promise or imply a health or developmental outcome. Never say a toy builds, develops, improves, strengthens, boosts, supports, promotes, teaches or helps a skill, and never call anything therapeutic, calming or regulating. Do not say a toy is good for a skill. Write what the child will actually be DOING with it instead, and let the parent draw their own conclusion. "She has to turn the shape around until it drops in" is fine. "It builds her problem solving" is not. "He has to squeeze the tongs to pick the bugs up" is fine. "Great for hand strength" is not.
 
-Where a toy genuinely supports MORE THAN ONE of the goals or areas the parent cares about, say so. Do not limit a toy to a single goal. For example a lift-the-flap book is great for both fine motor and language, so name both. Toddler cutlery supports both fine motor and self-care. Only mention the goals that genuinely apply, do not stretch.
+Write a warm reason for each toy. Where the quiz answers give you real material, connect the toy back to this specific child, to a development goal they chose, an interest they ticked, something they described, or the child's current stage. But NEVER invent or strain a connection that isn't there. If very little was shared (common for gifts), an honest, warm, age-based reason is better than a fake personal one. For example: \"We don't know heaps about this little one yet, but this is a reliable crowd pleaser at this age\" or lead with what children this age usually enjoy about it. Honest and warm beats forced and specific. Name the connection out loud, in terms of what the child does. For example: "You mentioned fine motor, and this one is all small buttons and little catches to press" or "Since he's obsessed with trains, this taps straight into that, and there's a fair bit of working things out in it too."
 
-Even when a toy is picked because the child LOVES it (an interest match), still link it back to the development goals the parent chose wherever there is a real connection. For example if a child loves water drawing and the parent's goal is language, do not just say "she'll love this", also explain how it supports language, like "and it is a lovely language builder too, naming colours and objects as she paints." Interest and goal should both show up in the reason whenever both genuinely apply.
+Where a toy touches MORE THAN ONE of the areas the parent cares about, say so, again by describing what the child does. Do not limit a toy to a single area. A lift-the-flap book is small fingers lifting flaps and plenty to talk about on every page, so name both. Toddler cutlery is both a hand job and a mealtime one. Only mention the areas that genuinely apply, do not stretch.
 
-IMPORTANT COVERAGE RULE: The parent chose these development goals: ${goalsList||"(none)"}. Across the five reasons, make sure EVERY ONE of those goals is explicitly named and covered by at least one toy. If a toy supports one of their goals, say so directly using the goal's name, for example "good for your fine motor goal because...". Do not leave any chosen goal unmentioned.
+Even when a toy is picked because the child LOVES it (an interest match), still link it back to the development goals the parent chose wherever there is a real connection. For example if a child loves water drawing and the parent's goal is language, do not just say "she'll love this", also give them the language angle, like "and there is a lot to talk about while she paints, naming the colours and what she is making." Interest and goal should both show up in the reason whenever both genuinely apply.
 
-${hasDelaySignals(answers)?`IMPORTANT CONTEXT: The parent's description suggests this child may have developmental delays or additional needs. Some picks may be rated for younger ages on purpose. They were chosen to meet the child at their current developmental level, which is exactly the right approach. Frame every reason around what this child enjoys and can do right now and the next small step it builds, never around age. Never describe a toy as being for younger kids, for babies, or simple. Speak about the child with the same warmth and respect as any other child.
+IMPORTANT COVERAGE RULE: The parent told us they care about these areas: ${goalsList||"(none)"}. Across the five reasons, make sure EVERY ONE of them is picked up by at least one toy. Name the area the parent used, then say what the child will be doing, for example "you mentioned fine motor, and this one is all pinching and threading". Never say a toy is good for an area or that it builds one. Do not leave any chosen area unmentioned.
+
+${hasDelaySignals(answers)?`IMPORTANT CONTEXT: The parent's description suggests this child may have developmental delays or additional needs. Some picks may be rated for younger ages on purpose. They were chosen to meet the child at their current developmental level, which is exactly the right approach. Frame every reason around what this child enjoys and can do right now, never around age. Never describe a toy as being for younger kids, for babies, or simple. Speak about the child with the same warmth and respect as any other child.
 
 `:""}${answers.recipient&&answers.recipient!=="my-child"?`GIFT MODE: The person taking this quiz is choosing a gift for a child who is NOT their own. Never say "your child". Refer to the child as "this child" or "this little one". Return an empty string for every play_idea, no play ideas in gift mode. Frame each reason as why this makes a great gift for this specific child. For the curator note, speak to a thoughtful gift-giver: acknowledge the care they are putting into choosing well, and end with the sentiment that this child's parents know them best and any of these picks will land beautifully.
 
@@ -3238,15 +3253,15 @@ Unless GIFT MODE above applies, for EVERY toy always include a play idea. Never 
 - "Make it a challenge, can they stack it higher than last time before it falls?"
 - "Take it outside and draw a road system with chalk for the trucks to drive on"
 - "Hide small toys inside the kinetic sand and let them excavate like a palaeontologist"
-If the toy already matches the child's interest, the play idea should be a fresh new way to play with it, ideally one that also stretches a development goal the parent chose. For example if a child loves water drawing and the parent's goal is language, suggest "Name each thing as they paint it, or take turns drawing something and guessing what the other drew, to get lots of new words flowing." Always try to weave a chosen goal into the play idea where it fits naturally.
+If the toy already matches the child's interest, the play idea should be a fresh new way to play with it, ideally one that also touches on an area the parent chose. For example if a child loves water drawing and the parent's goal is language, suggest "Name each thing as they paint it, or take turns drawing something and guessing what the other drew." Always try to weave a chosen area into the play idea where it fits naturally.
 Keep play ideas brief, practical, and fun.
 
 SPECIAL RULE FOR FUNCTIONAL OR EVERYDAY EQUIPMENT (learning towers, step stools, toddler cutlery, open cups, potties, dressing dolls, anything practical rather than a typical toy): For these, the play idea should show how to bring the item INTO play, not just use it for its everyday function. Examples in Brittany's voice:
 - Toddler cutlery: "Bring it into play too, set up a teddy bear picnic, play restaurants, or use it to cut and serve playdough food"
-- Learning tower or step stool: "Pop them up at the bench and let them join in cooking or washing up. Being part of the everyday alongside you is rich, hands-on learning and play for a little one"
+- Learning tower or step stool: "Pop them up at the bench and let them join in cooking or washing up. Being part of the everyday alongside you is half the fun at that age"
 - Open cup: "Practice in the bath or at a tea party with the dolls first, where a spill doesn't matter"
 - Dressing doll: "Let them dress and undress the doll as a game before tackling their own buttons"
-And in the REASON for these functional items, it is good to also mention they help at mealtimes or daily routines, and to link that to the self-care and independence goal where the parent picked it. Functional equipment is play AND practical, say both. ALWAYS include a play idea for functional equipment, never leave it blank, even if it does not match a stated interest (unless GIFT MODE applies).
+And in the REASON for these functional items, it is good to also mention where they get used at mealtimes or in daily routines, and to connect that to self-care and independence where the parent picked it, by describing what the child does for themselves. Functional equipment is play AND practical, say both. ALWAYS include a play idea for functional equipment, never leave it blank, even if it does not match a stated interest (unless GIFT MODE applies).
 
 Then write a warm, individualised 2-3 sentence note from Brittany. It must feel personal to THIS family, never generic. If the parent gave lots of detail, reference something specific they said. If they gave very little, still make it feel individual by drawing on their actual quiz choices: their child's age (${ageLabel(answers.child_age)}), the goals they picked, the interests they ticked, or the occasion. Speak to their situation directly. No em dashes. Short sentences. End with this sentiment in Brittany's own words: every child develops at their own pace, and you know yours best. (If GIFT MODE applies, use the gift ending described there instead.)
 
@@ -3421,9 +3436,9 @@ JSON only (no markdown):
 
         {current.type==="text"&&(
           <div>
-            <textarea value={answers[current.id]||""} onChange={e=>setSingle(current.id,e.target.value)} placeholder={current.placeholder}
+            <textarea value={answers[current.id]||""} onChange={e=>setSingle(current.id,e.target.value)} placeholder={current.id==="child_snapshot"?snapshotPlaceholder(answers.child_age):current.placeholder}
               style={{width:"100%",minHeight:current.id==="child_snapshot"?140:100,padding:"14px 16px",borderRadius:12,border:`2px solid ${BORDER}`,fontSize:15,lineHeight:1.6,background:CARD,color:TEXT,resize:"vertical",outline:"none",boxSizing:"border-box",fontFamily:"system-ui"}}/>
-            {current.optional&&<p style={{fontSize:13,color:MUTED,marginTop:6}}>Optional. Skip if nothing comes to mind.</p>}
+            {current.optional&&<p style={{fontSize:13,color:MUTED,marginTop:6}}>{current.optionalNote||"Optional. Skip if nothing comes to mind."}</p>}
           </div>
         )}
 
