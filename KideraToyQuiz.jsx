@@ -677,7 +677,7 @@ const PRODUCTS = [
     search:"kids yoga exercise balance ball 45cm children sensory"
   },
   {
-    id:"p81", name:"Peanut Ball / Therapy Peanut Roller", age_min:12, age_max:72,
+    id:"p81", name:"Peanut Ball (Peanut-Shaped Exercise Ball)", age_min:12, age_max:72,
     dev_areas:["gross","sensory"], tags:["proprioceptive","vestibular","tummy-time","heavy-work","balance","sports"],
     price:30, asin:"B01N7KH666", afflink:"https://www.amazon.com.au/dp/B01N7KH666/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/61E75yvmspL._AC_SX679_.jpg",
@@ -1243,7 +1243,7 @@ const PRODUCTS = [
     search:"pop tubes sensory fidget set kids tactile"
   },
   {
-    id:"p158", fam:"putty", name:"Therapy Putty / Resistive Putty Set", age_min:48, age_max:144,
+    id:"p158", fam:"putty", name:"Resistive Hand Putty Set", age_min:48, age_max:144,
     dev_areas:["fine","sensory"], tags:["hand-strength","sensory","fine-motor","tactile","fidget"],
     price:18, asin:"B07YF9X67Z", afflink:"https://www.amazon.com.au/dp/B07YF9X67Z/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/719lR4Gm+-L._AC_SX679_.jpg",
     note:"Comes in different resistances. Squeeze it, stretch it, hide little objects inside and dig them out again.",
@@ -2156,6 +2156,266 @@ const PRODUCTS = [
     note:"This is the ultimate set. If you want to get the lot, this is the one. I absolutely love that you can build a whole town to play out, so the possibilities really are endless.",
     search:"110 piece Montessori wooden train set town kids"
   },
+  // Added Oct 2026 from Amazon AU research: 100+ ratings and 4.4 stars or more.
+  {
+    id:"p288", fam:"slime-kit", name:"Elmer's Glow in the Dark Slime Kit", age_min:72, age_max:120,
+    dev_areas:["fine","sensory"], tags:["craft","slime","messy","tactile","creative"],
+    price:20, asin:"B07GWTGGH1", afflink:"https://www.amazon.com.au/dp/B07GWTGGH1/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81gKxIeV5WL._AC_SL1500_.jpg",
+    note:"Everything to make your own glow-in-the-dark slime. They measure, mix and squish it, then turn the lights off to see it glow.",
+    search:"Elmers glow in the dark slime kit"
+  },
+  {
+    id:"p289", fam:"slime-kit", name:"Galt Slime Lab Science Kit", age_min:84, age_max:144,
+    dev_areas:["fine","cognitive"], tags:["slime","messy","science","experiments","STEM"],
+    price:14.9, asin:"B06XRGR78J", afflink:"https://www.amazon.com.au/dp/B06XRGR78J/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/610nUthzBrL._AC_SL1080_.jpg",
+    note:"A small science kit for making slime. They follow the steps, mix a batch and see what changes when they add more or less.",
+    search:"Galt slime lab science kit"
+  },
+  {
+    id:"p290", fam:"unicorn-craft", name:"Skillmatics Aqua Puffs Unicorns Craft Kit", age_min:48, age_max:120,
+    dev_areas:["fine"], tags:["craft","art","creative","unicorn"],
+    price:34.99, asin:"B0F9WFBTP5", afflink:"https://www.amazon.com.au/dp/B0F9WFBTP5/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/813jv0gP7UL._AC_SL1500_.jpg",
+    note:"A unicorn craft kit with lots of small pieces to place. They follow the picture and end up with something to show off.",
+    search:"Skillmatics Aqua Puffs unicorns craft kit"
+  },
+  {
+    id:"p291", fam:"unicorn-craft", name:"4M Mould & Paint Unicorns", age_min:60, age_max:144,
+    dev_areas:["fine"], tags:["craft","art","creative","unicorn"],
+    price:19.99, asin:"B0772VFWTN", afflink:"https://www.amazon.com.au/dp/B0772VFWTN/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/71hcH4+mkoL._AC_SL1500_.jpg",
+    note:"Pour plaster into the unicorn moulds, let it set, pop them out and paint them. A grown-up helps with the plaster mixing.",
+    search:"4M mould and paint unicorns"
+  },
+  {
+    id:"p292", fam:"unicorn-craft", name:"Skillmatics Storybook Art Kit: Unicorns & Princesses", age_min:60, age_max:120,
+    dev_areas:["fine","language"], tags:["craft","art","creative","storytelling","unicorn"],
+    price:34.99, asin:"B0CMH9HN74", afflink:"https://www.amazon.com.au/dp/B0CMH9HN74/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81SPy05b3kL._AC_SL1500_.jpg",
+    note:"An art kit that goes with a unicorn and princess story. They make the pictures as the story goes along.",
+    search:"Skillmatics storybook art kit unicorns princesses"
+  },
+  {
+    id:"p293", fam:"toilet-seat", name:"Potty Training Seat with Step Stool Ladder (Befol)", age_min:24, age_max:48,
+    dev_areas:["selfcare"], tags:["selfcare","independence","life-skills","toileting"],
+    price:49.98, asin:"B0CC5SR4FV", afflink:"https://www.amazon.com.au/dp/B0CC5SR4FV/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/61IXNWGZBML._AC_SL1500_.jpg",
+    note:"A smaller seat with a little ladder that sits on your own toilet. They climb up by themselves and their feet have somewhere to rest.",
+    search:"potty training seat step stool ladder toilet toddler"
+  },
+  {
+    id:"p294", fam:"toilet-seat", name:"Potty Training Seat with Step Stool Ladder (Fedicelly)", age_min:24, age_max:48,
+    dev_areas:["selfcare"], tags:["selfcare","independence","life-skills","toileting"],
+    price:45.98, asin:"B0H72LQ8YZ", afflink:"https://www.amazon.com.au/dp/B0H72LQ8YZ/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/61w2s0qV-NL._AC_SL1254_.jpg",
+    note:"A toddler seat and step ladder for the big toilet. They climb up on their own instead of being lifted.",
+    search:"potty training seat step stool ladder toilet toddler"
+  },
+  {
+    id:"p295", fam:"potty-book", name:"No More Nappies: A Potty-Training Book", age_min:24, age_max:36,
+    dev_areas:["language","selfcare"], tags:["books","toileting","selfcare","storytelling"],
+    price:6, asin:"1509836314", afflink:"https://www.amazon.com.au/dp/1509836314/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81fZHA1dDhL._SL1500_.jpg",
+    note:"A board book about using the potty, with Aussie and UK words like nappies. Read it together before you start and while it's happening.",
+    search:"no more nappies potty training board book toilet"
+  },
+  {
+    id:"p296", fam:"potty-book", name:"Ms Rachel: Potty Time with Bean", age_min:12, age_max:36,
+    dev_areas:["language","selfcare"], tags:["books","toileting","selfcare","storytelling"],
+    price:10, asin:"0241764394", afflink:"https://www.amazon.com.au/dp/0241764394/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81DM1WsVm8L._SL1500_.jpg",
+    note:"A Ms Rachel board book about Bean learning to use the potty. A familiar face for toddlers who already know her.",
+    search:"Ms Rachel potty time with Bean board book toilet"
+  },
+  {
+    id:"p297", fam:"potty-book", name:"Let's Go to the Potty!", age_min:12, age_max:36,
+    dev_areas:["language","selfcare"], tags:["books","toileting","selfcare","storytelling"],
+    price:13.5, asin:"1646119932", afflink:"https://www.amazon.com.au/dp/1646119932/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81QedS+0+CL._SL1500_.jpg",
+    note:"A picture book that goes through each step of using the potty, one page at a time.",
+    search:"lets go to the potty picture book toilet"
+  },
+  {
+    id:"p298", fam:"potty-chart", name:"Hey Duggee: My Potty Badge Sticker Activity Book", age_min:24, age_max:72,
+    dev_areas:["selfcare","fine"], tags:["toileting","selfcare","independence"],
+    price:11.7, asin:"140595146X", afflink:"https://www.amazon.com.au/dp/140595146X/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81B5ud3S7tL._SL1500_.jpg",
+    note:"A Hey Duggee sticker book for keeping track of potty goes. They add a sticker each time and can see the page filling up.",
+    search:"Hey Duggee potty badge sticker activity book toilet"
+  },
+  {
+    id:"p299", fam:"potty-chart", name:"Toilet Training Chart with Stickers (PUTSKA)", age_min:24, age_max:48,
+    dev_areas:["selfcare"], tags:["toileting","selfcare","independence"],
+    price:14.99, asin:"B08H8P66CQ", afflink:"https://www.amazon.com.au/dp/B08H8P66CQ/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81I-qUz2cxL._AC_SL1500_.jpg",
+    note:"A toilet chart and stickers to track how it's going. They pop a sticker on each time they go, and you can both see it.",
+    search:"toilet training potty chart stickers tracking"
+  },
+  {
+    id:"p300", name:"Tangle Jr. Fuzzies", age_min:72, age_max:144,
+    dev_areas:["fine","sensory"], tags:["fidget","tactile","sensory","fine-motor"],
+    price:19.99, asin:"B000S0TOS6", afflink:"https://www.amazon.com.au/dp/B000S0TOS6/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/51LyhAR90JL._AC_SL1000_.jpg",
+    note:"A twisty fidget with a soft fuzzy coating. It turns and loops in one hand and makes no noise, so it fits in a pocket at school.",
+    search:"Tangle Jr fuzzies fidget"
+  },
+  {
+    id:"p301", fam:"putty", name:"Crazy Aaron's Thinking Putty Mini Tin (Glow)", age_min:72, age_max:144,
+    dev_areas:["fine","sensory"], tags:["fidget","tactile","sensory","hand-strength"],
+    price:19, asin:"B07G8PC54S", afflink:"https://www.amazon.com.au/dp/B07G8PC54S/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/71rrsPaEaiL._AC_SL1399_.jpg",
+    note:"A small tin of putty that glows after time in the light. Stretch it, squash it, roll it. Small enough for a school bag.",
+    search:"Crazy Aarons thinking putty mini tin glow"
+  },
+  {
+    id:"p302", fam:"chew", name:"Sensory Chew Necklaces (9-Pack)", age_min:72, age_max:144,
+    dev_areas:["sensory"], tags:["fidget","chew","sensory","tactile"],
+    price:28.9, asin:"B0956YQS97", afflink:"https://www.amazon.com.au/dp/B0956YQS97/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/615SxoQ6nZS._AC_SL1500_.jpg",
+    note:"Silicone necklaces made for chewing. Nine in the pack, so there's one for home, one for the school bag and spares.",
+    search:"chew necklace silicone chewable kids"
+  },
+  {
+    id:"p303", fam:"bedtime-book", name:"Ten Minutes to Bed: Little Dragon", age_min:24, age_max:72,
+    dev_areas:["language"], tags:["books","storytelling","bedtime"],
+    price:15.99, asin:"0241464374", afflink:"https://www.amazon.com.au/dp/0241464374/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/91R2d5MD33L._SL1500_.jpg",
+    note:"A bedtime story about a little dragon who counts down the ten minutes to bed. Good to read once they're already in bed.",
+    search:"ten minutes to bed little dragon bedtime book"
+  },
+  {
+    id:"p304", fam:"night-light", name:"Silicone Touch Night Light", age_min:24, age_max:96,
+    dev_areas:["sensory","selfcare"], tags:["bedtime","visual","independence"],
+    price:22.94, asin:"B08T6D2724", afflink:"https://www.amazon.com.au/dp/B08T6D2724/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/61TV8Aeo5+L._AC_SL1500_.jpg",
+    note:"A soft silicone night light they can tap on and off themselves. Rechargeable, so there's no cord by the bed.",
+    search:"silicone touch night light kids rechargeable"
+  },
+  {
+    id:"p305", fam:"night-light", name:"Duck Silicone Night Light", age_min:24, age_max:96,
+    dev_areas:["sensory","selfcare"], tags:["bedtime","visual","independence","animals"],
+    price:23.39, asin:"B09135CFSF", afflink:"https://www.amazon.com.au/dp/B09135CFSF/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/61ifUtHpWZL._AC_SL1500_.jpg",
+    note:"A duck-shaped silicone night light. Tap it to turn it on. Rechargeable.",
+    search:"duck silicone night light kids rechargeable"
+  },
+  {
+    id:"p306", fam:"night-light", name:"Dreamegg Ok-to-Wake Clock with Night Light", age_min:24, age_max:72,
+    dev_areas:["selfcare"], tags:["bedtime","independence","visual"],
+    price:79.99, asin:"B0DHK56XRP", afflink:"https://www.amazon.com.au/dp/B0DHK56XRP/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/71J1Wag4GLL._AC_SL1500_.jpg",
+    note:"An ok-to-wake clock with a night light and white noise. The light shows them when it's time to get up, so they can check it themselves.",
+    search:"Dreamegg ok to wake sleep trainer clock night light"
+  },
+  {
+    id:"p307", fam:"bluey-bath", name:"Tomy Toomies Bluey Family Bath Pourers", age_min:18, age_max:36,
+    dev_areas:["sensory","fine"], tags:["water","bath","pouring","bluey","pretend-play"],
+    price:18, asin:"B0CP3WV78W", afflink:"https://www.amazon.com.au/dp/B0CP3WV78W/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/61+b-xbwGfL._AC_SL1500_.jpg",
+    note:"Bluey and her family as bath pourers. Fill them, tip them and watch where the water goes.",
+    search:"Toomies Bluey family pourers bath"
+  },
+  {
+    id:"p308", fam:"bluey-bath", name:"Bluey Shower & Scrub Bath Toy", age_min:18, age_max:48,
+    dev_areas:["sensory","selfcare"], tags:["water","bath","bluey","pretend-play"],
+    price:22.95, asin:"B0F6Y4ZG7F", afflink:"https://www.amazon.com.au/dp/B0F6Y4ZG7F/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/61FY6gpZ8qL._AC_SL1500_.jpg",
+    note:"A Bluey bath set for washing and scrubbing in the tub, with Bluey along for bath time.",
+    search:"Bluey shower scrub bath toy"
+  },
+  {
+    id:"p309", fam:"bluey-plush", name:"Bingo & Bluey Plush 2-Pack", age_min:36, age_max:72,
+    dev_areas:["social","language"], tags:["plush","dolls","bluey","pretend-play"],
+    price:32.77, asin:"B08GYCRTL4", afflink:"https://www.amazon.com.au/dp/B08GYCRTL4/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/814QEZpMDSL._AC_SL1500_.jpg",
+    note:"Soft Bluey and Bingo. For cuddles, bedtime and playing out their favourite episodes.",
+    search:"Bluey Bingo plush 2 pack"
+  },
+  {
+    id:"p310", name:"Bluey Family Figure 4-Pack", age_min:36, age_max:72,
+    dev_areas:["social","language"], tags:["bluey","pretend-play","small-world","storytelling"],
+    price:19, asin:"B083XNCRS3", afflink:"https://www.amazon.com.au/dp/B083XNCRS3/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/91tKWhd87gL._AC_SL1500_.jpg",
+    note:"Bluey, Bingo, Bandit and Chilli figures. Small enough to carry around and act out their own episodes.",
+    search:"Bluey family figure 4 pack"
+  },
+  {
+    id:"p311", fam:"wiggles-dress-up", name:"The Wiggles Yellow Wiggle Deluxe Costume", age_min:24, age_max:60,
+    dev_areas:["gross","social"], tags:["pretend-play","role-play","music","dance"],
+    price:29.85, asin:"B0F799VTPG", afflink:"https://www.amazon.com.au/dp/B0F799VTPG/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/51ao+SshulL._AC_SL1500_.jpg",
+    note:"The yellow Wiggle costume. Put the songs on and do the moves together.",
+    search:"The Wiggles yellow wiggle costume dress up"
+  },
+  {
+    id:"p312", fam:"wiggles-dress-up", name:"The Wiggles Yellow Wiggle Headband & Bows", age_min:36, age_max:60,
+    dev_areas:["gross","social"], tags:["pretend-play","role-play","music","dance"],
+    price:11.99, asin:"B076HNLSKV", afflink:"https://www.amazon.com.au/dp/B076HNLSKV/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/816esms57AL._AC_SL1500_.jpg",
+    note:"A yellow Wiggle headband and shoe bows. A quick dress-up for dancing along to the songs.",
+    search:"The Wiggles yellow wiggle headband shoe bows dress up"
+  },
+  {
+    id:"p313", name:"Wild Republic Mako Shark Plush", age_min:36, age_max:84,
+    dev_areas:["social","language"], tags:["plush","animals","pretend-play"],
+    price:14.95, asin:"B07BZVMCX4", afflink:"https://www.amazon.com.au/dp/B07BZVMCX4/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/71-Kzk0-ieL._AC_SL1500_.jpg",
+    note:"A soft mako shark. For cuddles and for the shark games they make up.",
+    search:"Wild Republic mako shark plush ocean"
+  },
+  {
+    id:"p314", name:"Realistic Shark Bath Figures (6 Pack)", age_min:36, age_max:84,
+    dev_areas:["language","sensory"], tags:["animals","water","bath","small-world","pretend-play"],
+    price:23.99, asin:"B07RV6SQ9G", afflink:"https://www.amazon.com.au/dp/B07RV6SQ9G/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/71iBH9uNszL._AC_SL1500_.jpg",
+    note:"Six realistic shark figures. Into the bath, the sandpit or a tub of water for their own ocean.",
+    search:"shark figures bath toys realistic ocean"
+  },
+  {
+    id:"p315", name:"Mudpuppy Go Shark! Card Game", age_min:48, age_max:84,
+    dev_areas:["social","cognitive"], tags:["card-game","turn-taking","animals"],
+    price:17.42, asin:"0735377375", afflink:"https://www.amazon.com.au/dp/0735377375/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81SWtzpP4OL._AC_SL1500_.jpg",
+    note:"A shark card game for a small group. Taking turns, asking for cards and waiting for the shark.",
+    search:"Mudpuppy Go Shark card game ocean"
+  },
+  {
+    id:"p316", name:"Hot Wheels Shark Chomp Transporter", age_min:48, age_max:96,
+    dev_areas:["fine","cognitive"], tags:["vehicles","animals","pretend-play"],
+    price:19.95, asin:"B08J4H1VYP", afflink:"https://www.amazon.com.au/dp/B08J4H1VYP/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81Mb53tpCnL._AC_SL1500_.jpg",
+    note:"A Hot Wheels truck shaped like a shark that chomps the cars. Comes with one car.",
+    search:"Hot Wheels shark chomp transporter"
+  },
+  {
+    id:"p317", fam:"jigsaw", name:"Peaceable Kingdom Shiny Shark Floor Puzzle (53pc)", age_min:60, age_max:84,
+    dev_areas:["cognitive","fine"], tags:["jigsaw","puzzle","animals","problem-solving"],
+    price:26, asin:"B09J5GCK67", afflink:"https://www.amazon.com.au/dp/B09J5GCK67/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/71J0Ze+cAWL._AC_SL1500_.jpg",
+    note:"A 53-piece floor puzzle of sharks with shiny bits. Big enough to spread out across the floor.",
+    search:"Peaceable Kingdom shiny shark floor puzzle ocean"
+  },
+  {
+    id:"p318", fam:"scarves", name:"Juggling Scarves for Kids", age_min:48, age_max:108,
+    dev_areas:["gross"], tags:["throwing","hand-eye","coordination","movement","dance"],
+    price:12.59, asin:"B07197RSHB", afflink:"https://www.amazon.com.au/dp/B07197RSHB/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/61hrmq97pbL._AC_SL1001_.jpg",
+    note:"Light scarves that float down slowly, so there's time to catch them. Throw one and catch it, then try two.",
+    search:"juggling scarves kids dance catching"
+  },
+  {
+    id:"p319", fam:"scarves", name:"Novelty Place Juggling & Dance Scarves (12pc)", age_min:48, age_max:108,
+    dev_areas:["gross"], tags:["throwing","hand-eye","coordination","movement","dance"],
+    price:17.95, asin:"B07V1SQR46", afflink:"https://www.amazon.com.au/dp/B07V1SQR46/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/71AiB+1qDfL._AC_SL1500_.jpg",
+    note:"Twelve floaty scarves for catching, waving and dancing. Enough for the whole family to join in.",
+    search:"juggling scarves dance kids 12 pack"
+  },
+  {
+    id:"p320", fam:"catch-set", name:"Sticky Paddle Toss and Catch Set", age_min:36, age_max:108,
+    dev_areas:["gross","social"], tags:["throwing","hand-eye","coordination","turn-taking","outdoor"],
+    price:23.86, asin:"B0DHLFVML4", afflink:"https://www.amazon.com.au/dp/B0DHLFVML4/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/71qp1C1U8YL._AC_SL1500_.jpg",
+    note:"Paddles and soft balls that stick where they land. Throw to each other and catch on the paddle instead of with hands.",
+    search:"toss and catch sticky paddle ball set"
+  },
+  {
+    id:"p321", fam:"catch-set", name:"Jalunth Sticky Paddle Ball Catch Set", age_min:36, age_max:144,
+    dev_areas:["gross","social"], tags:["throwing","hand-eye","coordination","turn-taking","outdoor"],
+    price:19.23, asin:"B08QRW7XV3", afflink:"https://www.amazon.com.au/dp/B08QRW7XV3/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81nbIMuKK4L._AC_SL1500_.jpg",
+    note:"Sticky paddles and balls for throwing and catching with a partner, inside or out.",
+    search:"sticky paddle ball catch set"
+  },
+  {
+    id:"p322", name:"Large Soft Foam Ball (7 inch, quiet)", age_min:48, age_max:108,
+    dev_areas:["gross"], tags:["throwing","hand-eye","gross-motor","movement"],
+    price:13.99, asin:"B0B3SXB72N", afflink:"https://www.amazon.com.au/dp/B0B3SXB72N/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/61Ga86j6lyL._AC_SL1500_.jpg",
+    note:"A big soft foam ball that's quiet when it bounces. A bigger ball to catch, and fine to use inside.",
+    search:"soft foam ball quiet 7 inch kids"
+  },
+  {
+    id:"p323", fam:"night-light", name:"Kids Ok-to-Wake Clock", age_min:24, age_max:72,
+    dev_areas:["selfcare"], tags:["bedtime","independence","visual"],
+    price:64.31, asin:"B09MDQNJ36", afflink:"https://www.amazon.com.au/dp/B09MDQNJ36/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/51w44TOkN1L._AC_SL1200_.jpg",
+    note:"A clock that changes colour when it's time to get up. They check the clock themselves instead of calling out to you. Ships from the US.",
+    search:"ok to wake clock kids toddler sleep trainer"
+  },
+  {
+    id:"p324", name:"Tonies The Wiggles: Dorothy the Dinosaur", age_min:36, age_max:72,
+    dev_areas:["language"], tags:["music","audio","wiggles","dinosaurs"],
+    price:60.87, asin:"B0GQKCJTNC", afflink:"https://www.amazon.com.au/dp/B0GQKCJTNC/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/71VHqOKSlgL._AC_SL1500_.jpg",
+    note:"A Dorothy the Dinosaur Tonie with Wiggles songs on it. It only plays on a Toniebox, so this one is for families who already have the player.",
+    search:"Tonies The Wiggles Dorothy the Dinosaur"
+  },
 ];
 
 // ─── QUIZ STEPS ──────────────────────────────────────────────────────────────
@@ -2321,6 +2581,7 @@ const STEPS = [
 const DEV_LABELS  = {gross:"Gross Motor",fine:"Fine Motor",cognitive:"Cognitive",language:"Language",social:"Social-Emotional",sensory:"Sensory",selfcare:"Self-Care"};
 const DEV_COLOURS = {gross:K_ORANGE,fine:K_BLUE,cognitive:"#9C6FDE",language:K_GREEN,social:K_YELLOW,sensory:K_PINK,selfcare:"#6BCB77"};
 
+function fmtPrice(n){const v=Number(n)||0;return Number.isInteger(v)?String(v):v.toFixed(2);}
 function budgetLine(b){
   const map={"under-20":"Each pick is under $20.","20-50":"Each pick is under $50, priced per toy, not in total.","50-100":"Each pick is under $100, priced per toy, not in total.","100-plus":"Picks start from $100, priced per toy."};
   return map[b]||"";
@@ -2385,7 +2646,8 @@ function hasNonverbalSignals(answers){
 // "Minecraft" in the description counts even if nobody ticked a box for it.
 const TYPED_INTERESTS=[
   ["animals",/\b(animals?|dogs?|pupp(y|ies)|cats?|kittens?|horses?|ponies|pony|farm|zoo|sharks?|whales?|dolphins?|fish|sea creatures?|birds?|bugs?|insects?|frogs?)\b/i],
-  ["water",/\b(water|bath|pool|swim\w*|beach|splash\w*|sand|slime|messy)\b/i],
+  ["water",/\b(water|bath|pool|swim\w*|beach|splash\w*)\b/i],
+  ["messy",/\b(sand|slime|messy|squish\w*|play-?doh|playdough|goo|gooey)\b/i],
   ["vehicles",/\b(diggers?|excavators?|trucks?|cars?|trains?|tractors?|buses|bus|fire ?engines?|vehicles?|planes?|rockets?)\b/i],
   ["dinosaurs",/\b(dinos?|dinosaurs?|t-?rex)\b/i],
   ["building",/\b(lego|duplo|build\w*|blocks|magna-?tiles|construct\w*|minecraft)\b/i],
@@ -2403,7 +2665,7 @@ function typedText(answers){return ((answers.child_snapshot||"")+" "+(answers.wi
 function effectiveInterests(answers){
   const ticked=(answers.interests||[]).filter(v=>v!=="not-sure");
   const text=typedText(answers);
-  const typed=TYPED_INTERESTS.filter(([,re])=>re.test(text)).map(([v])=>v);
+  const typed=TYPED_INTERESTS.filter(([,re])=>saidPositively(text,re)).map(([v])=>v);
   return [...new Set([...ticked,...typed])];
 }
 // Specific things the parent named ("sharks", "diggers") that a toy's own name
@@ -2420,11 +2682,68 @@ function hasDiagnosis(answers){
 function professionalAlreadyInvolved(answers){
   return hasDiagnosis(answers)||/(nurse|gp|doctor|paed\w*|therapist|teacher|kindy|daycare)\s+(said|says|has|have|flagged|mentioned|told|is|are|wants|suggested|noticed)/i.test(typedText(answers));
 }
+// Worries a parent types in their own words. Each one nudges up the toys that
+// fit it, so a parent who wrote "toilet training" sees the potty seat.
+const NEG_BEFORE=/(\bnot|n't|\bno|hates?|dislikes?|scared of|afraid of)\s+(\w+\s+)?$/i;
+// For worries, "not toilet trained" and "doesn't sleep" ARE the worry, so only
+// "already" or "fully" switch one off.
+const NEG_WORRY=/(already|fully)\s+$/i;
+function saidPositively(text,re,neg=NEG_BEFORE){
+  const g=new RegExp(re.source,re.flags.includes("g")?re.flags:re.flags+"g");
+  let m;while((m=g.exec(text))){if(!neg.test(text.slice(Math.max(0,m.index-24),m.index)))return true;}
+  return false;
+}
+const CALM_TAGS=["calm-down","self-regulation","mindfulness","breath-control","emotional-regulation"];
+const WORRIES=[
+  {key:"toilet",label:"toilet training",re:/\b(toilet\w*|potty|nappy|nappies)\b/i,
+    boost:p=>(p.id==="p122"||(p.tags||[]).includes("toileting"))?8:p.id==="p120"?4:0,
+    fits:p=>p.id==="p122"||(p.tags||[]).includes("toileting")||/potty|toilet/i.test(p.name+" "+(p.note||""))},
+  {key:"nails",label:"nail biting",re:/nail[- ]?bit\w*|bit(es|ing|e) (his |her |their |my )?(finger)?nails|chew(s|ing)? (on )?(his |her |their |my )?(clothes|sleeves?|shirts?|collars?|pencils?|everything)/i,
+    boost:p=>((p.tags||[]).includes("fidget")||p.fam==="putty"||(p.tags||[]).includes("tactile")||(p.tags||[]).includes("chew"))?6:0,
+    fits:p=>(p.tags||[]).includes("fidget")||(p.tags||[]).includes("chew")||p.fam==="putty"},
+  {key:"sleep",label:"sleep",re:/\b(sleep\w*|bedtime|bed time|settl(e|ing) (at night|for bed|to sleep)|wind(ing)? down|night wak\w*|wak(es|ing) (up )?(at night|a lot|often|early))\b/i,
+    boost:p=>((p.tags||[]).some(t=>CALM_TAGS.includes(t))||(p.tags||[]).includes("bedtime"))?5:0,
+    fits:p=>(p.tags||[]).some(t=>CALM_TAGS.includes(t))||(p.tags||[]).includes("bedtime")||/sleep|bedtime|night/i.test(p.name)},
+  {key:"feelings",label:null,re:/\b(anxious|anxiety|worrier|worries a lot|big feelings|meltdowns?|tantrums?|overwhelm\w*)\b/i,
+    boost:p=>((p.tags||[]).some(t=>CALM_TAGS.includes(t))||(p.tags||[]).includes("emotions"))?4:0},
+  {key:"coordination",label:null,re:/\b(dyspraxi\w*|clumsy|uncoordinated|coordination|bumps into|trips over|falls over)\b/i,
+    boost:p=>(p.tags||[]).some(t=>["balance","coordination","throwing","hand-eye","bilateral","motor-planning","gross-motor"].includes(t))?4:0,
+    fits:p=>(p.tags||[]).includes("throwing")||p.fam==="scarves"||p.fam==="catch-set"},
+];
+function worriesOf(answers){const t=typedText(answers);return WORRIES.filter(w=>saidPositively(t,w.re,NEG_WORRY));}
+// Shows, characters and themes a parent names. If nothing in the picks matches
+// one, the results say so instead of pretending.
+const THEMES=[
+  ["slime",/\bslime\b/i,/slime/i],["unicorn",/\bunicorns?\b/i,/unicorn/i],["Bluey",/\bbluey\b/i,/bluey/i],
+  ["Wiggles",/\bwiggles\b/i,/wiggles/i],["Paw Patrol",/\bpaw patrol\b/i,/paw patrol/i],["Peppa Pig",/\bpeppa\b/i,/peppa/i],
+  ["Minecraft",/\bminecraft\b/i,/minecraft/i],["Frozen",/\b(frozen|elsa)\b/i,/frozen|elsa/i],["Spider-Man",/\bspider[- ]?man\b/i,/spider[- ]?man/i],
+  ["Pok\u00e9mon",/\bpok[e\u00e9]mon\b/i,/pok[e\u00e9]mon/i],["mermaid",/\bmermaids?\b/i,/mermaid/i],["fairy",/\bfair(y|ies)\b/i,/fair(y|ies)/i],
+  ["shark",/\bsharks?\b/i,/shark|ocean/i],["dinosaur",/\b(dinos?|dinosaurs?|t-?rex)\b/i,/dino|t-?rex/i],["train",/\btrains?\b/i,/train/i],
+  ["space",/\b(space|planets?|astronauts?)\b/i,/\bspace ?(ship|station|rocket|themed)|outer space|planet|rocket|astronaut|solar system/i],["horse",/\b(horses?|pon(y|ies))\b/i,/horse|pony/i],
+  ["digger",/\b(diggers?|excavators?)\b/i,/digger|excavator|construction/i],["car",/\bcars?\b/i,/\bcars?\b|vehicle|hot wheels/i],
+];
+function joinList(a){return a.length<2?a.join(""):a.slice(0,-1).join(", ")+" or "+a[a.length-1];}
+function joinAnd(a){return a.length<2?a.join(""):a.slice(0,-1).join(", ")+" and "+a[a.length-1];}
+function libraryGapLine(answers,recs){
+  const t=typedText(answers);
+  const hayOf=p=>((p.name||"")+" "+(p.note||"")+" "+(p.search||"")+" "+(p.tags||[]).join(" "));
+  const themes=THEMES.filter(([,re,hit])=>saidPositively(t,re)&&!recs.some(p=>hit.test(hayOf(p)))).map(([l])=>l);
+  const worries=worriesOf(answers).filter(w=>w.label&&w.fits&&!recs.some(w.fits)).map(w=>w.label);
+  if(!themes.length&&!worries.length)return "";
+  const out=[];
+  if(themes.length)out.push(`I didn't find any ${joinList(themes)} toys for you today.`);
+  if(worries.length)out.push(`You mentioned ${joinAnd(worries)}. Nothing in today's picks fits ${worries.length>1?"those":"that"}.`);
+  out.push("My library only holds things I've chosen myself, so it won't have everything.");
+  return out.join(" ");
+}
 // One of each kind of toy. Products without their own family get one from their
 // name, so three soft books or three looking-after sets never fill a list.
 function famOf(p,answers){
   if(p.fam==="vet-set")return "care-play";
   if(p.fam)return p.fam;
+  if(["p42","p73","p100"].includes(p.id))return "rocket-launcher";
+  if(["p91","p128"].includes(p.id))return "climbing-frame";
+  if(p.id==="p122")return "toilet-seat";
   const n=(p.name||"").toLowerCase();
   if(/soft book|crinkle|cloth book|bath book|touch and feel/.test(n))return "soft-book";
   if(/doctor|vet\b|clinic|nursery|pram|hospital/.test(n))return "care-play";
@@ -2451,6 +2770,8 @@ function scoreProduct(p, answers){
   if(alreadyHave.includes("craft-supplies")&&(p.tags.includes("craft")||p.tags.includes("drawing")&&!p.tags.includes("vertical-surface")))return -1;
   if(alreadyHave.includes("pretend-play")&&p.tags.includes("pretend-play")&&!p.tags.includes("tool-use")&&!p.tags.includes("dinosaurs")&&!p.tags.includes("vehicles")&&!p.tags.includes("trains"))return -1;
   if(alreadyHave.includes("outdoor-toys")&&p.tags.includes("outdoor")&&p.dev_areas.length===1&&p.dev_areas[0]==="gross")return -1;
+  // A family with outdoor play equipment does not need more big backyard gear.
+  if(alreadyHave.includes("outdoor-toys")&&(p.tags.includes("climbing")||p.tags.includes("swing")||/climbing|slide|swing|trampoline|hoop|dome|jungle gym|cubby|sandpit|soccer goal|t-ball/i.test(p.name)))return -1;
   if(alreadyHave.includes("puzzles")&&(p.tags.includes("jigsaw")||p.fam==="jigsaw"))return -1;
   if(alreadyHave.includes("vehicles-already")&&p.tags.includes("vehicles")&&!p.tags.includes("constructive"))return -1;
   if(alreadyHave.includes("dolls-already")&&(p.tags.includes("dolls")||p.tags.includes("plush")||/soft toy|plush/i.test(p.name)))return -1;
@@ -2464,16 +2785,29 @@ function scoreProduct(p, answers){
   const FUNCTIONAL_IDS=["p120","p121","p122","p123","p124"];
   const devFocusGoals=(answers.dev_focus||[]);
   const selfcareWanted=devFocusGoals.includes("selfcare")||devFocusGoals.includes("no-preference")||devFocusGoals.length===0;
-  if(FUNCTIONAL_IDS.includes(p.id)&&!selfcareWanted)return -1;
+  const toiletWorry=worriesOf(answers).some(w=>w.key==="toilet");
+  if(FUNCTIONAL_IDS.includes(p.id)&&!selfcareWanted&&!(toiletWorry&&(p.id==="p122"||p.id==="p120")))return -1;
+  // Toilet training, chewing and sleep gear only shows when the parent raised it
+  // (or picked self-care, for the toilet things). Nobody needs a potty book by surprise.
+  const worryKeys=worriesOf(answers).map(w=>w.key);
+  if(p.tags.includes("toileting")&&!toiletWorry&&!devFocusGoals.includes("selfcare"))return -1;
+  if(p.tags.includes("chew")&&!worryKeys.includes("nails"))return -1;
+  if(p.fam==="night-light"&&!worryKeys.includes("sleep"))return -1;
 
 
   let score=_overAge?-Math.min(6,Math.ceil((age-p.age_max)/12)):0;
   // Prices sit inside the band the parent picked, not just under its ceiling.
   const[budgetMin]=parseBudget(answers.budget);
-  if(budgetMin>0&&p.price>=budgetMin)score+=2;
+  if(budgetMin>0&&p.price>=budgetMin)score+=4;
+  // Well under the band ranks lower, but never drops out: tiny babies' toys are cheap.
+  const budgetPenalty=(budgetMin>0&&p.price<budgetMin*0.5)?2:0;
   // A toy whose range tops out close to the child's age is near the end of its
   // life for them, and older kids notice when a pick is meant for little ones.
   if(age>=60&&!hasDelaySignals(answers)&&p.age_max<age+12)score-=3;
+  // Preschool sets (rated from 3 or younger) read as babyish to an 8 or 9 year old.
+  // Broad all-ages items (a fidget rated 3 to 12) are left alone.
+  if(age>=96&&!hasDelaySignals(answers)&&p.age_min<=36&&p.age_max<=120)return -1;
+  if(age>=72&&!hasDelaySignals(answers)&&p.age_min<=24&&p.age_max<=96)score-=3;
   // A child described as nonverbal or minimally verbal: down-rank games whose core
   // mechanic demands expressive language. Books and receptive-language toys stay.
   if(hasNonverbalSignals(answers)){
@@ -2499,7 +2833,7 @@ function scoreProduct(p, answers){
     sports:["sports"],
     gymnastics:["gymnastics","sports","balance","proprioceptive","vestibular","heavy-work"],
     games:["board-game","card-game","word-game"],
-    water:["water","pouring","bath","sand","slime","messy"],science:["STEM","science","experiments","coding","circuits"],
+    water:["water","pouring","bath"],messy:["sand","slime","messy","playdough","tactile"],science:["STEM","science","experiments","coding","circuits"],
   };
   // Sensory dev area: direct boost for sensory-specific tags
   if((answers.dev_focus||[]).includes("sensory")){
@@ -2524,6 +2858,11 @@ function scoreProduct(p, answers){
 
   const hay=((p.name||"")+" "+(p.note||"")+" "+(p.search||"")).toLowerCase();
   if(namedThings(answers).some(w=>w.length>=3&&hay.includes(w)))score+=3;
+  worriesOf(answers).forEach(w=>{score+=w.boost(p);});
+  // A character toy (Bluey, Wiggles) ranks lower unless the parent named that
+  // character. Plenty of kids love Bluey, but nobody asked us to guess.
+  const brand=THEMES.slice(2,10).find(([,,hit])=>hit.test(p.name||""));
+  if(brand&&!saidPositively(typedText(answers),brand[1]))score-=3;
 
   const playStyle=answers.play_style||[];
   if(playStyle.includes("active-physical")&&p.dev_areas.includes("gross"))score+=2;
@@ -2531,7 +2870,7 @@ function scoreProduct(p, answers){
   if(playStyle.includes("open-ended")&&p.tags.includes("open-ended"))score+=2;
   if(playStyle.includes("with-adults")&&(p.dev_areas.includes("social")||p.tags.includes("turn-taking")))score+=1;
   if(playStyle.includes("with-siblings-friends")&&p.tags.includes("turn-taking"))score+=1;
-  return score;
+  return score>=0?Math.max(0,score-budgetPenalty):score;
 }
 
 const INTEREST_CAP=2;
@@ -2937,9 +3276,35 @@ function getRecommendations(answers,count=5,excluded=[]){
 
   const CAP=effectiveInterests(answers).length<=1?3:INTEREST_CAP;
   const result=[];const usedAreas=new Set();const interestCount={};const famUsed=new Set();
-  const famBlocked=(p)=>{const f=famOf(p,answers);return !!f&&famUsed.has(f);}; // never two of the same kind (e.g. two science kits)
+  const isToilet=(p)=>p.id==="p122"||(p.tags||[]).includes("toileting");
+  // Never two of the same kind (e.g. two science kits), and at most two toilet
+  // training things, so one worry doesn't fill the whole list.
+  const famBlocked=(p)=>{const f=famOf(p,answers);if(f&&famUsed.has(f))return true;return isToilet(p)&&result.filter(isToilet).length>=2;};
   const take=(p)=>{result.push(p);p.dev_areas.forEach(a=>usedAreas.add(a));const f=famOf(p,answers);if(f)famUsed.add(f);
     (p._matchedInterests||[]).forEach(int=>{interestCount[int]=(interestCount[int]||0)+1;});};
+
+  // ── THEIR OWN WORDS: a worry the parent typed gets one toy that fits it ──
+  // (toilet training, nail biting, sleep), ahead of interest caps, at most two.
+  {let added=0;
+  for(const w of worriesOf(answers).filter(w=>w.fits)){
+    if(added>=2||result.length>=count)break;
+    if(result.some(w.fits))continue;
+    const pick=scored.find(p=>w.boost(p)>0&&w.fits(p)&&!result.find(r=>r.id===p.id)&&!famBlocked(p));
+    if(pick){take(pick);added++;}
+  }}
+
+  // A show, character or theme they named (Minecraft, Bluey, sharks) gets its
+  // best match in, even if that interest is already well covered. At most two.
+  {
+    const t=typedText(answers);const hayOf=p=>((p.name||"")+" "+(p.note||"")+" "+(p.search||"")+" "+(p.tags||[]).join(" "));
+    let added=0;
+    for(const [,re,hit] of THEMES){
+      if(added>=2||result.length>=count)break;
+      if(!saidPositively(t,re)||result.some(p=>hit.test(hayOf(p))))continue;
+      const pick=scored.find(p=>p.score>=0&&hit.test(hayOf(p))&&!result.find(r=>r.id===p.id)&&!famBlocked(p));
+      if(pick){take(pick);added++;}
+    }
+  }
 
   // ── GOAL COVERAGE: ensure at least one toy per chosen development goal ──
   const chosenGoals=(answers.dev_focus||[]).filter(g=>g!=="no-preference");
@@ -3185,9 +3550,11 @@ function normalizeAI(parsed, recs){
 // diagnosis to a GP, or uses a banned phrase is dropped or fixed here in code.
 const SAFETY_PROMISE=/(\bsafe(ly)?\b|\b(no|without|free of|zero)\s+(small|loose|tiny|little)\s+(loose\s+)?(parts|pieces|bits)\b|choke|choking|safe for (babies|bubs|her|him|them|your)|completely safe|perfectly safe|totally safe|100% safe|designed (to be )?safe|safe to mouth|nothing (small|loose))/i;
 const REFERRAL=/\b(gp|doctor|child health nurse|health nurse|paediatrician|pediatrician|speech pathologist|a professional|health professional)\b|get (it|him|her|them|this|that) checked|worth (checking|mentioning|raising)/i;
-const STOCK_LINES=/develops? at (their|his|her|its) own pace|makes sense at (his|her|their|this) age|(completely|totally|perfectly|very) normal|normal (at|for) (his|her|their|this) age|will (come|catch up) (in time|soon|with time)|nothing to worry about/i;
+const STOCK_LINES=/\bno rush\b|\bplenty of time\b|\b(he|she|they)('ll| will) get there\b|develops? at (their|his|her|its) own pace|makes sense at (his|her|their|this) age|(completely|totally|perfectly|very) normal|normal (at|for) (his|her|their|this) age|will (come|catch up) (in time|soon|with time)|nothing to worry about/i;
 const DEFICIT=/a change from (her|his|their) usual|instead of (lining|stimming|repeating)|(move|steer|get) (her|him|them) away from|break (the|her|his|their) habit/i;
 const MOUTHING=/\bmouth(s|ing|ed)?\b/i;
+const SALES=/\b(investment|worth every cent|pays for itself|must-have)\b/i;
+const OUTCOME=/\b(build|builds|building|boost|boosts|improve|improves|strengthen|strengthens|develop|develops)\s+(her|his|their|your child's|real)?\s*(connection|confidence|resilience|focus|regulation|skills?|strength|coordination|attention|calm)\b|\binstead of worrying\b|\bwhen (the )?anxiety\b|\bsettle (her|his|their) (thoughts|mind|nerves|worries)\b|\bcalm(s|ing)? (her|him|them) down\b|\bhelps? (her|him|them) (relax|calm|cope|settle)\b|\bsettle\b[^.]{0,30}\bmind\b|\b(great|good|huge|brilliant|perfect|ideal) for (her |his |their )?(social|language|speech|fine|gross|motor|emotional|cause|problem|focus|attention|regulation|development)|\b(language|skill|confidence)[- ]building\b|\bconvert\w* (that |their |his |her )?screen time|\baway from the (device|screen)s?\b|\bsustained focus\b/i;
 function splitSentences(t){return String(t||"").match(/[^.!?]+[.!?]+["')]*\s*|[^.!?]+$/g)||[];}
 function cleanText(t,answers,{isNote=false,fallback=""}={}){
   if(!t)return t;
@@ -3195,21 +3562,24 @@ function cleanText(t,answers,{isNote=false,fallback=""}={}){
   const mouthing=hasMouthingSignals(answers);
   let out=splitSentences(t).filter(x=>{
     if(SAFETY_PROMISE.test(x))return false;
+    if(SALES.test(x)||OUTCOME.test(x))return false;
     if(DEFICIT.test(x))return false;
     if(mouthing&&MOUTHING.test(x))return false;
     if(dropReferral&&REFERRAL.test(x))return false;
     if(isNote&&STOCK_LINES.test(x))return false;
     return true;
   }).join("").trim();
-  out=out.replace(/\ba game[- ]changer\b/gi,"a good fit").replace(/\bgame[- ]changer\b/gi,"good fit")
-    .replace(/\s*\u2014\s*/g,", ").replace(/\s{2,}/g," ");
+  if(answers.child_age>=60)out=out.replace(/\b(your |their )?(GP or (a |your )?)?child health nurse( or (a |your )?GP)?\b/gi,(m,pre)=>(pre||"")+"GP");
+  out=out.replace(/\bnavigat(e|es|ing) (through|around)\b/gi,"get $2").replace(/\bnavigat(e|es|ing)\b/gi,"work out")
+    .replace(/\ba game[- ]changer\b/gi,"a good fit").replace(/\bgame[- ]changer\b/gi,"good fit")
+    .replace(/\s*\u2014\s*/g,", ").replace(/\s+[-\u2013]\s+/g,", ").replace(/\s{2,}/g," ");
   return out||fallback;
 }
 function sanitizeAI(ai,answers,recs=[]){
   if(!ai)return ai;
   const isGift=answers.recipient&&answers.recipient!=="my-child";
   let note=cleanText(ai.curator_note,answers,{isNote:true});
-  if(note&&!/know (them|him|her|your child|yours|this child)/i.test(note)){
+  if(note&&!/\b(you|parents|they) know\b|\bknow\b[^.!?]{0,30}\bbest/i.test(note)){
     note=note+(isGift?" Their parents know them best.":" You know your child best.");
   }
   return{...ai,
@@ -3364,7 +3734,7 @@ ${productList}
 
 The development goals this parent told us they want to support: ${goalsList||"none specified, so focus on their interests and the child's described stage"}
 
-CLAIMS RULE, THIS ONE OVERRIDES EVERYTHING ELSE: Brittany is an AHPRA registered health practitioner, so nothing you write may promise or imply a health or developmental outcome. Never say a toy builds, develops, improves, strengthens, boosts, supports, promotes, teaches or helps a skill, and never call anything therapeutic, calming or regulating. Do not say a toy is good for a skill. Write what the child will actually be DOING with it instead, and let the parent draw their own conclusion. "She has to turn the shape around until it drops in" is fine. "It builds her problem solving" is not. "He has to squeeze the tongs to pick the bugs up" is fine. "Great for hand strength" is not.
+CLAIMS RULE, THIS ONE OVERRIDES EVERYTHING ELSE: if the parent mentioned anxiety, worry, sleep or behaviour, describe what the child does with the toy and stop there; never say or hint that the toy eases the worry, helps them settle, or gives their mind somewhere to go. Brittany is an AHPRA registered health practitioner, so nothing you write may promise or imply a health or developmental outcome. Never say a toy builds, develops, improves, strengthens, boosts, supports, promotes, teaches or helps a skill, and never call anything therapeutic, calming or regulating. Do not say a toy is good for a skill. Write what the child will actually be DOING with it instead, and let the parent draw their own conclusion. "She has to turn the shape around until it drops in" is fine. "It builds her problem solving" is not. "He has to squeeze the tongs to pick the bugs up" is fine. "Great for hand strength" is not.
 
 Write a warm reason for each toy. Where the quiz answers give you real material, connect the toy back to this specific child, to a development goal they chose, an interest they ticked, something they described, or the child's current stage. But NEVER invent or strain a connection that isn't there. If very little was shared (common for gifts), an honest, warm, age-based reason is better than a fake personal one. For example: \"We don't know heaps about this little one yet, but this is a reliable crowd pleaser at this age\" or lead with what children this age usually enjoy about it. Honest and warm beats forced and specific. Name the connection out loud, in terms of what the child does. For example: "You mentioned fine motor, and this one is all small buttons and little catches to press" or "Since he's obsessed with trains, this taps straight into that, and there's a fair bit of working things out in it too."
 
@@ -3376,7 +3746,7 @@ IMPORTANT COVERAGE RULE: The parent told us they care about these areas: ${goals
 
 ${hasDelaySignals(answers)?`IMPORTANT CONTEXT: The parent's description suggests this child may have developmental delays or additional needs. Some picks may be rated for younger ages on purpose. They were chosen to meet the child at their current developmental level, which is exactly the right approach. Frame every reason around what this child enjoys and can do right now, never around age. Never describe a toy as being for younger kids, for babies, or simple. Speak about the child with the same warmth and respect as any other child.
 
-`:""}${answers.recipient&&answers.recipient!=="my-child"?`GIFT MODE: The person taking this quiz is choosing a gift for a child who is NOT their own. Never say "your child". Refer to the child as "this child" or "this little one". Return an empty string for every play_idea, no play ideas in gift mode. Frame each reason as why this makes a great gift for this specific child. For the curator note, speak to the gift-giver plainly. Do not compliment them for choosing thoughtfully. Say which ONE pick you would choose if they can only buy one, and why, in a sentence. If they named a show or character, tie it in honestly (for example, Bluey and Bingo play doctors, so the doctor kit fits). End with the sentiment that this child's parents know them best. Never promise a pick will be perfect. Every toy still needs its own reason; never return an empty reason.
+`:""}${answers.recipient&&answers.recipient!=="my-child"?`GIFT MODE: The person taking this quiz is choosing a gift for a child who is NOT their own. Never say "your child". Refer to the child as "this child" or "this little one". Return an empty string for every play_idea, no play ideas in gift mode. Frame each reason as why this makes a great gift for this specific child. For the curator note, speak to the gift-giver plainly. Do not compliment them for choosing thoughtfully. If they can only buy one, say you would choose "${recs[0]&&recs[0].name}" (the Top pick, toy 1), and why, in a sentence. Never name a different toy as the one to buy. If they named a show or character, tie it in honestly (for example, Bluey and Bingo play doctors, so the doctor kit fits). End with the sentiment that this child's parents know them best. Never promise a pick will be perfect. Every toy still needs its own reason; never return an empty reason.
 
 `:""}INTEREST GROUNDING RULE: the child's interests are ONLY what the parent ticked or typed. Never infer an interest from the products you were given. If the list contains two train sets, that does not mean this child likes trains. Saying "since he's obsessed with trains" when the parent wrote diggers and dinosaurs is the single most damaging mistake you can make here, because it tells the parent nobody read what they wrote. When a pick does not match a stated interest, say what the toy is and why it suits them for another reason, or say plainly that it is a change from their usual.
 
@@ -3384,9 +3754,11 @@ ${hasMouthingSignals(answers)?`SMALL PARTS RULE: this parent has told us their c
 
 `:""}THEIR OWN WORDS RULE: what the parent typed matters more than the boxes they ticked. If they named a worry (talking, meltdowns, waiting their turn), that is why they came, so where a toy honestly connects to it, lead that toy's reason with the connection before other areas. If they named a show, character or favourite thing (Bluey, sharks, Minecraft), connect at least one toy to it where the play genuinely overlaps, and never claim a toy is branded or themed when it is not.
 
-FACTS RULE: say only what the parent said. Do not say the child already owns something unless the parent said so ("the diggers he already loves" is wrong if they only said he loves diggers). Do not change numbers or people (one cousin stays one cousin). Do not describe a feature the listing does not mention (a soft book's colours do not change).
+LIBRARY RULE: the toys come from a small library Brittany chose herself. If the parent named a show, character, theme or worry and none of the toys fits it, do not stretch a toy to fit or hint that it does. Do not apologise for it either; a separate line on the page already tells them.
 
-RESPECT RULE: never frame something the child does or loves as something to move them away from. Lining things up, repetitive play, stimming, special interests and preferring to play alone are how this child plays. Never write "a change from their usual" or "instead of lining up". Describe the toy, not a fix for the child.
+FACTS RULE: say only what the parent said. Never describe the child's personality, temperament or habits beyond what the parent wrote (do not call a child "curious", "busy", "cautious" or "a little scientist" unless the parent used that idea). Do not say the child already owns something unless the parent said so ("the diggers he already loves" is wrong if they only said he loves diggers). Do not change numbers or people (one cousin stays one cousin). Do not describe a feature the listing does not mention (a soft book's colours do not change).
+
+RESPECT RULE: never frame something the child does or loves as something to move them away from. That includes screens and video games: Brittany is not anti-screen, so never pitch a toy as a replacement for screen time. Lining things up, repetitive play, stimming, special interests and preferring to play alone are how this child plays. Never write "a change from their usual" or "instead of lining up". Describe the toy, not a fix for the child.
 
 SAFETY RULE: never say or imply a toy is safe, choke-free, has no small parts, or is suitable for a child who mouths things. You have not checked the listings. ${recs.some(r=>(r.tags||[]).includes("deep-pressure"))?"For the weighted item only (it is the one tagged for deep pressure), add that the parent should check the weight guidance on the listing and talk to their OT if they have one. Do not add this to any other toy.":""}
 
@@ -3412,7 +3784,7 @@ And in the REASON for these functional items, it is good to also mention where t
 
 Then write a warm, individualised 2-3 sentence note from Brittany. It must feel personal to THIS family, never generic. If the parent gave lots of detail, reference something specific they said. If they gave very little, still make it feel individual by drawing on their actual quiz choices: their child's age (${ageLabel(answers.child_age)}), the goals they picked, the interests they ticked, or the occasion. Speak to their situation directly. No em dashes. Short sentences.
 
-NO REASSURANCE RULE FOR THIS NOTE: parents often mention a worry here, about speech, behaviour, frustration, sleep, eating, how their child compares to others. You must not predict how it will turn out, tell them it is normal, tell them it will come with time, or imply it needs no action. Brittany is a registered health practitioner and has not assessed this child, so a sentence like "the speech will come" is a clinical opinion she is not in a position to give. Acknowledge what they told you in plain words and move on to the toys. ${professionalAlreadyInvolved(answers)?"This family has already told you a professional is involved or that their child has a diagnosis. Do NOT suggest they see a GP, nurse, paediatrician or any professional, and do not suggest getting anything checked. They have support already, and saying it tells them you did not read what they wrote.":"If they named a worry, you may say once, briefly, that it is worth raising with their GP or child health nurse, and nothing more."} Never say it is nothing to worry about. If they named a worry, give them ONE simple thing to try in everyday play that relates to it, written as an idea and never as a fix (for talking: "When he points, say the word for him and leave a little pause."). Do not promise it will help.
+NO REASSURANCE RULE FOR THIS NOTE: parents often mention a worry here, about speech, behaviour, frustration, sleep, eating, how their child compares to others. You must not predict how it will turn out, tell them it is normal, tell them it will come with time, or imply it needs no action. Brittany is a registered health practitioner and has not assessed this child, so a sentence like "the speech will come" is a clinical opinion she is not in a position to give. Acknowledge what they told you in plain words and move on to the toys. ${professionalAlreadyInvolved(answers)?"This family has already told you a professional is involved or that their child has a diagnosis. Do NOT suggest they see a GP, nurse, paediatrician or any professional, and do not suggest getting anything checked. They have support already, and saying it tells them you did not read what they wrote.":(answers.child_age>=60?"If they named a worry, you may say once, briefly, that it is worth raising with their GP, and nothing more. Do not mention a child health nurse; this child is school age.":"If they named a worry, you may say once, briefly, that it is worth raising with their GP or child health nurse, and nothing more.")} Never say it is nothing to worry about. If they named a worry, give them ONE simple thing to try in everyday play that relates to it, written as an idea and never as a fix (for talking: "When he points, say the word for him and leave a little pause."). Do not promise it will help.
 
 End with one short line in Brittany's own words that they know their child best. Do not use the phrase "develops at their own pace" or anything like it. (If GIFT MODE applies, use the gift ending described there instead.)
 
@@ -3471,7 +3843,7 @@ JSON only (no markdown):
       <div style={{background:K_YELLOW,padding:"28px 24px",textAlign:"center"}}>
         <img src={LOGO} alt="Kidera" style={{height:56,objectFit:"contain",marginBottom:10}} onError={e=>{e.target.style.display="none";}}/>
         <h1 style={{fontSize:"clamp(18px,4vw,26px)",fontWeight:800,color:TEXT,margin:"0 0 6px"}}>Your personalised toy picks</h1>
-        <p style={{fontSize:14,color:TEXT,margin:0,opacity:0.7}}>{isGift?"Matched to this child by a paediatric OT":"Matched to your child by a paediatric OT"}</p>
+        <p style={{fontSize:14,color:TEXT,margin:0,opacity:0.7}}>{isGift?"Picked for this child from a library chosen by a paediatric OT":"Picked for your child from a library chosen by a paediatric OT"}</p>
         {budgetLine(answers.budget)&&<p style={{fontSize:13,color:TEXT,margin:"6px 0 0",opacity:0.7}}>{budgetLine(answers.budget)}</p>}
       </div>
       <div style={{maxWidth:640,margin:"0 auto",padding:"0 20px"}}>
@@ -3495,7 +3867,7 @@ JSON only (no markdown):
               <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:10}}>
                 <div style={{width:26,height:26,borderRadius:"50%",background:i===0?K_GREEN:BORDER,display:"flex",alignItems:"center",justifyContent:"center",fontSize:12,fontWeight:700,color:i===0?"#fff":MUTED,flexShrink:0}}>{i+1}</div>
                 {i===0&&<div style={{fontSize:11,color:K_GREEN,letterSpacing:"0.1em",textTransform:"uppercase",fontWeight:700}}>Top pick</div>}
-                <div style={{fontSize:13,color:MUTED,marginLeft:"auto",fontWeight:600}}>~${toy.price} AUD</div>
+                <div style={{fontSize:13,color:MUTED,marginLeft:"auto",fontWeight:600}}>~${fmtPrice(toy.price)} AUD</div>
               </div>
               <h2 style={{fontSize:16,fontWeight:700,color:TEXT,margin:"0 0 8px",lineHeight:1.3}}>{toy.name}</h2>
               <div style={{display:"flex",flexWrap:"wrap",gap:5,marginBottom:12}}>
@@ -3531,6 +3903,7 @@ JSON only (no markdown):
             </div>
           </div>
           <p style={{fontSize:14,lineHeight:1.8,color:TEXT,margin:"0 0 10px"}}>{result.curator_note}</p>
+          {libraryGapLine(answers,result.recs)&&<p style={{fontSize:14,lineHeight:1.8,color:TEXT,margin:"0 0 10px"}}>{libraryGapLine(answers,result.recs)}</p>}
           <p style={{fontSize:12,color:MUTED,margin:0}}>Questions? <a href="mailto:brittany@kidera.com.au" style={{color:K_GREEN}}>brittany@kidera.com.au</a></p>
         </div>
 
