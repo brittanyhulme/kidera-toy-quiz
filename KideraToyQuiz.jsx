@@ -677,7 +677,7 @@ const PRODUCTS = [
     search:"kids yoga exercise balance ball 45cm children sensory"
   },
   {
-    id:"p81", name:"Peanut Ball / Therapy Peanut Roller", age_min:12, age_max:72,
+    id:"p81", name:"Peanut Ball (Peanut-Shaped Exercise Ball)", age_min:12, age_max:72,
     dev_areas:["gross","sensory"], tags:["proprioceptive","vestibular","tummy-time","heavy-work","balance","sports"],
     price:30, asin:"B01N7KH666", afflink:"https://www.amazon.com.au/dp/B01N7KH666/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/61E75yvmspL._AC_SX679_.jpg",
@@ -1243,7 +1243,7 @@ const PRODUCTS = [
     search:"pop tubes sensory fidget set kids tactile"
   },
   {
-    id:"p158", fam:"putty", name:"Therapy Putty / Resistive Putty Set", age_min:48, age_max:144,
+    id:"p158", fam:"putty", name:"Resistive Hand Putty Set", age_min:48, age_max:144,
     dev_areas:["fine","sensory"], tags:["hand-strength","sensory","fine-motor","tactile","fidget"],
     price:18, asin:"B07YF9X67Z", afflink:"https://www.amazon.com.au/dp/B07YF9X67Z/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/719lR4Gm+-L._AC_SX679_.jpg",
     note:"Comes in different resistances. Squeeze it, stretch it, hide little objects inside and dig them out again.",
@@ -2156,6 +2156,266 @@ const PRODUCTS = [
     note:"This is the ultimate set. If you want to get the lot, this is the one. I absolutely love that you can build a whole town to play out, so the possibilities really are endless.",
     search:"110 piece Montessori wooden train set town kids"
   },
+  // Added Oct 2026 from Amazon AU research: 100+ ratings and 4.4 stars or more.
+  {
+    id:"p288", fam:"slime-kit", name:"Elmer's Glow in the Dark Slime Kit", age_min:72, age_max:120,
+    dev_areas:["fine","sensory"], tags:["craft","slime","messy","tactile","creative"],
+    price:20, asin:"B07GWTGGH1", afflink:"https://www.amazon.com.au/dp/B07GWTGGH1/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81gKxIeV5WL._AC_SL1500_.jpg",
+    note:"Everything to make your own glow-in-the-dark slime. They measure, mix and squish it, then turn the lights off to see it glow.",
+    search:"Elmers glow in the dark slime kit"
+  },
+  {
+    id:"p289", fam:"slime-kit", name:"Galt Slime Lab Science Kit", age_min:84, age_max:144,
+    dev_areas:["fine","cognitive"], tags:["slime","messy","science","experiments","STEM"],
+    price:14.9, asin:"B06XRGR78J", afflink:"https://www.amazon.com.au/dp/B06XRGR78J/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/610nUthzBrL._AC_SL1080_.jpg",
+    note:"A small science kit for making slime. They follow the steps, mix a batch and see what changes when they add more or less.",
+    search:"Galt slime lab science kit"
+  },
+  {
+    id:"p290", fam:"unicorn-craft", name:"Skillmatics Aqua Puffs Unicorns Craft Kit", age_min:48, age_max:120,
+    dev_areas:["fine"], tags:["craft","art","creative","unicorn"],
+    price:34.99, asin:"B0F9WFBTP5", afflink:"https://www.amazon.com.au/dp/B0F9WFBTP5/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/813jv0gP7UL._AC_SL1500_.jpg",
+    note:"A unicorn craft kit with lots of small pieces to place. They follow the picture and end up with something to show off.",
+    search:"Skillmatics Aqua Puffs unicorns craft kit"
+  },
+  {
+    id:"p291", fam:"unicorn-craft", name:"4M Mould & Paint Unicorns", age_min:60, age_max:144,
+    dev_areas:["fine"], tags:["craft","art","creative","unicorn"],
+    price:19.99, asin:"B0772VFWTN", afflink:"https://www.amazon.com.au/dp/B0772VFWTN/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/71hcH4+mkoL._AC_SL1500_.jpg",
+    note:"Pour plaster into the unicorn moulds, let it set, pop them out and paint them. A grown-up helps with the plaster mixing.",
+    search:"4M mould and paint unicorns"
+  },
+  {
+    id:"p292", fam:"unicorn-craft", name:"Skillmatics Storybook Art Kit: Unicorns & Princesses", age_min:60, age_max:120,
+    dev_areas:["fine","language"], tags:["craft","art","creative","storytelling","unicorn"],
+    price:34.99, asin:"B0CMH9HN74", afflink:"https://www.amazon.com.au/dp/B0CMH9HN74/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81SPy05b3kL._AC_SL1500_.jpg",
+    note:"An art kit that goes with a unicorn and princess story. They make the pictures as the story goes along.",
+    search:"Skillmatics storybook art kit unicorns princesses"
+  },
+  {
+    id:"p293", fam:"toilet-seat", name:"Potty Training Seat with Step Stool Ladder (Befol)", age_min:24, age_max:48,
+    dev_areas:["selfcare"], tags:["selfcare","independence","life-skills","toileting"],
+    price:49.98, asin:"B0CC5SR4FV", afflink:"https://www.amazon.com.au/dp/B0CC5SR4FV/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/61IXNWGZBML._AC_SL1500_.jpg",
+    note:"A smaller seat with a little ladder that sits on your own toilet. They climb up by themselves and their feet have somewhere to rest.",
+    search:"potty training seat step stool ladder toilet toddler"
+  },
+  {
+    id:"p294", fam:"toilet-seat", name:"Potty Training Seat with Step Stool Ladder (Fedicelly)", age_min:24, age_max:48,
+    dev_areas:["selfcare"], tags:["selfcare","independence","life-skills","toileting"],
+    price:45.98, asin:"B0H72LQ8YZ", afflink:"https://www.amazon.com.au/dp/B0H72LQ8YZ/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/61w2s0qV-NL._AC_SL1254_.jpg",
+    note:"A toddler seat and step ladder for the big toilet. They climb up on their own instead of being lifted.",
+    search:"potty training seat step stool ladder toilet toddler"
+  },
+  {
+    id:"p295", fam:"potty-book", name:"No More Nappies: A Potty-Training Book", age_min:24, age_max:36,
+    dev_areas:["language","selfcare"], tags:["books","toileting","selfcare","storytelling"],
+    price:6, asin:"1509836314", afflink:"https://www.amazon.com.au/dp/1509836314/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81fZHA1dDhL._SL1500_.jpg",
+    note:"A board book about using the potty, with Aussie and UK words like nappies. Read it together before you start and while it's happening.",
+    search:"no more nappies potty training board book toilet"
+  },
+  {
+    id:"p296", fam:"potty-book", name:"Ms Rachel: Potty Time with Bean", age_min:12, age_max:36,
+    dev_areas:["language","selfcare"], tags:["books","toileting","selfcare","storytelling"],
+    price:10, asin:"0241764394", afflink:"https://www.amazon.com.au/dp/0241764394/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81DM1WsVm8L._SL1500_.jpg",
+    note:"A Ms Rachel board book about Bean learning to use the potty. A familiar face for toddlers who already know her.",
+    search:"Ms Rachel potty time with Bean board book toilet"
+  },
+  {
+    id:"p297", fam:"potty-book", name:"Let's Go to the Potty!", age_min:12, age_max:36,
+    dev_areas:["language","selfcare"], tags:["books","toileting","selfcare","storytelling"],
+    price:13.5, asin:"1646119932", afflink:"https://www.amazon.com.au/dp/1646119932/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81QedS+0+CL._SL1500_.jpg",
+    note:"A picture book that goes through each step of using the potty, one page at a time.",
+    search:"lets go to the potty picture book toilet"
+  },
+  {
+    id:"p298", fam:"potty-chart", name:"Hey Duggee: My Potty Badge Sticker Activity Book", age_min:24, age_max:72,
+    dev_areas:["selfcare","fine"], tags:["toileting","selfcare","independence"],
+    price:11.7, asin:"140595146X", afflink:"https://www.amazon.com.au/dp/140595146X/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81B5ud3S7tL._SL1500_.jpg",
+    note:"A Hey Duggee sticker book for keeping track of potty goes. They add a sticker each time and can see the page filling up.",
+    search:"Hey Duggee potty badge sticker activity book toilet"
+  },
+  {
+    id:"p299", fam:"potty-chart", name:"Toilet Training Chart with Stickers (PUTSKA)", age_min:24, age_max:48,
+    dev_areas:["selfcare"], tags:["toileting","selfcare","independence"],
+    price:14.99, asin:"B08H8P66CQ", afflink:"https://www.amazon.com.au/dp/B08H8P66CQ/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81I-qUz2cxL._AC_SL1500_.jpg",
+    note:"A toilet chart and stickers to track how it's going. They pop a sticker on each time they go, and you can both see it.",
+    search:"toilet training potty chart stickers tracking"
+  },
+  {
+    id:"p300", name:"Tangle Jr. Fuzzies", age_min:72, age_max:144,
+    dev_areas:["fine","sensory"], tags:["fidget","tactile","sensory","fine-motor"],
+    price:19.99, asin:"B000S0TOS6", afflink:"https://www.amazon.com.au/dp/B000S0TOS6/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/51LyhAR90JL._AC_SL1000_.jpg",
+    note:"A twisty fidget with a soft fuzzy coating. It turns and loops in one hand and makes no noise, so it fits in a pocket at school.",
+    search:"Tangle Jr fuzzies fidget"
+  },
+  {
+    id:"p301", fam:"putty", name:"Crazy Aaron's Thinking Putty Mini Tin (Glow)", age_min:72, age_max:144,
+    dev_areas:["fine","sensory"], tags:["fidget","tactile","sensory","hand-strength"],
+    price:19, asin:"B07G8PC54S", afflink:"https://www.amazon.com.au/dp/B07G8PC54S/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/71rrsPaEaiL._AC_SL1399_.jpg",
+    note:"A small tin of putty that glows after time in the light. Stretch it, squash it, roll it. Small enough for a school bag.",
+    search:"Crazy Aarons thinking putty mini tin glow"
+  },
+  {
+    id:"p302", fam:"chew", name:"Sensory Chew Necklaces (9-Pack)", age_min:72, age_max:144,
+    dev_areas:["sensory"], tags:["fidget","chew","sensory","tactile"],
+    price:28.9, asin:"B0956YQS97", afflink:"https://www.amazon.com.au/dp/B0956YQS97/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/615SxoQ6nZS._AC_SL1500_.jpg",
+    note:"Silicone necklaces made for chewing. Nine in the pack, so there's one for home, one for the school bag and spares.",
+    search:"chew necklace silicone chewable kids"
+  },
+  {
+    id:"p303", fam:"bedtime-book", name:"Ten Minutes to Bed: Little Dragon", age_min:24, age_max:72,
+    dev_areas:["language"], tags:["books","storytelling","bedtime"],
+    price:15.99, asin:"0241464374", afflink:"https://www.amazon.com.au/dp/0241464374/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/91R2d5MD33L._SL1500_.jpg",
+    note:"A bedtime story about a little dragon who counts down the ten minutes to bed. Good to read once they're already in bed.",
+    search:"ten minutes to bed little dragon bedtime book"
+  },
+  {
+    id:"p304", fam:"night-light", name:"Silicone Touch Night Light", age_min:24, age_max:96,
+    dev_areas:["sensory","selfcare"], tags:["bedtime","visual","independence"],
+    price:22.94, asin:"B08T6D2724", afflink:"https://www.amazon.com.au/dp/B08T6D2724/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/61TV8Aeo5+L._AC_SL1500_.jpg",
+    note:"A soft silicone night light they can tap on and off themselves. Rechargeable, so there's no cord by the bed.",
+    search:"silicone touch night light kids rechargeable"
+  },
+  {
+    id:"p305", fam:"night-light", name:"Duck Silicone Night Light", age_min:24, age_max:96,
+    dev_areas:["sensory","selfcare"], tags:["bedtime","visual","independence","animals"],
+    price:23.39, asin:"B09135CFSF", afflink:"https://www.amazon.com.au/dp/B09135CFSF/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/61ifUtHpWZL._AC_SL1500_.jpg",
+    note:"A duck-shaped silicone night light. Tap it to turn it on. Rechargeable.",
+    search:"duck silicone night light kids rechargeable"
+  },
+  {
+    id:"p306", fam:"night-light", name:"Dreamegg Ok-to-Wake Clock with Night Light", age_min:24, age_max:72,
+    dev_areas:["selfcare"], tags:["bedtime","independence","visual"],
+    price:79.99, asin:"B0DHK56XRP", afflink:"https://www.amazon.com.au/dp/B0DHK56XRP/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/71J1Wag4GLL._AC_SL1500_.jpg",
+    note:"An ok-to-wake clock with a night light and white noise. The light shows them when it's time to get up, so they can check it themselves.",
+    search:"Dreamegg ok to wake sleep trainer clock night light"
+  },
+  {
+    id:"p307", fam:"bluey-bath", name:"Tomy Toomies Bluey Family Bath Pourers", age_min:18, age_max:36,
+    dev_areas:["sensory","fine"], tags:["water","bath","pouring","bluey","pretend-play"],
+    price:18, asin:"B0CP3WV78W", afflink:"https://www.amazon.com.au/dp/B0CP3WV78W/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/61+b-xbwGfL._AC_SL1500_.jpg",
+    note:"Bluey and her family as bath pourers. Fill them, tip them and watch where the water goes.",
+    search:"Toomies Bluey family pourers bath"
+  },
+  {
+    id:"p308", fam:"bluey-bath", name:"Bluey Shower & Scrub Bath Toy", age_min:18, age_max:48,
+    dev_areas:["sensory","selfcare"], tags:["water","bath","bluey","pretend-play"],
+    price:22.95, asin:"B0F6Y4ZG7F", afflink:"https://www.amazon.com.au/dp/B0F6Y4ZG7F/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/61FY6gpZ8qL._AC_SL1500_.jpg",
+    note:"A Bluey bath set for washing and scrubbing in the tub, with Bluey along for bath time.",
+    search:"Bluey shower scrub bath toy"
+  },
+  {
+    id:"p309", fam:"bluey-plush", name:"Bingo & Bluey Plush 2-Pack", age_min:36, age_max:72,
+    dev_areas:["social","language"], tags:["plush","dolls","bluey","pretend-play"],
+    price:32.77, asin:"B08GYCRTL4", afflink:"https://www.amazon.com.au/dp/B08GYCRTL4/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/814QEZpMDSL._AC_SL1500_.jpg",
+    note:"Soft Bluey and Bingo. For cuddles, bedtime and playing out their favourite episodes.",
+    search:"Bluey Bingo plush 2 pack"
+  },
+  {
+    id:"p310", name:"Bluey Family Figure 4-Pack", age_min:36, age_max:72,
+    dev_areas:["social","language"], tags:["bluey","pretend-play","small-world","storytelling"],
+    price:19, asin:"B083XNCRS3", afflink:"https://www.amazon.com.au/dp/B083XNCRS3/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/91tKWhd87gL._AC_SL1500_.jpg",
+    note:"Bluey, Bingo, Bandit and Chilli figures. Small enough to carry around and act out their own episodes.",
+    search:"Bluey family figure 4 pack"
+  },
+  {
+    id:"p311", fam:"wiggles-dress-up", name:"The Wiggles Yellow Wiggle Deluxe Costume", age_min:24, age_max:60,
+    dev_areas:["gross","social"], tags:["pretend-play","role-play","music","dance"],
+    price:29.85, asin:"B0F799VTPG", afflink:"https://www.amazon.com.au/dp/B0F799VTPG/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/51ao+SshulL._AC_SL1500_.jpg",
+    note:"The yellow Wiggle costume. Put the songs on and do the moves together.",
+    search:"The Wiggles yellow wiggle costume dress up"
+  },
+  {
+    id:"p312", fam:"wiggles-dress-up", name:"The Wiggles Yellow Wiggle Headband & Bows", age_min:36, age_max:60,
+    dev_areas:["gross","social"], tags:["pretend-play","role-play","music","dance"],
+    price:11.99, asin:"B076HNLSKV", afflink:"https://www.amazon.com.au/dp/B076HNLSKV/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/816esms57AL._AC_SL1500_.jpg",
+    note:"A yellow Wiggle headband and shoe bows. A quick dress-up for dancing along to the songs.",
+    search:"The Wiggles yellow wiggle headband shoe bows dress up"
+  },
+  {
+    id:"p313", name:"Wild Republic Mako Shark Plush", age_min:36, age_max:84,
+    dev_areas:["social","language"], tags:["plush","animals","pretend-play"],
+    price:14.95, asin:"B07BZVMCX4", afflink:"https://www.amazon.com.au/dp/B07BZVMCX4/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/71-Kzk0-ieL._AC_SL1500_.jpg",
+    note:"A soft mako shark. For cuddles and for the shark games they make up.",
+    search:"Wild Republic mako shark plush ocean"
+  },
+  {
+    id:"p314", name:"Realistic Shark Bath Figures (6 Pack)", age_min:36, age_max:84,
+    dev_areas:["language","sensory"], tags:["animals","water","bath","small-world","pretend-play"],
+    price:23.99, asin:"B07RV6SQ9G", afflink:"https://www.amazon.com.au/dp/B07RV6SQ9G/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/71iBH9uNszL._AC_SL1500_.jpg",
+    note:"Six realistic shark figures. Into the bath, the sandpit or a tub of water for their own ocean.",
+    search:"shark figures bath toys realistic ocean"
+  },
+  {
+    id:"p315", name:"Mudpuppy Go Shark! Card Game", age_min:48, age_max:84,
+    dev_areas:["social","cognitive"], tags:["card-game","turn-taking","animals"],
+    price:17.42, asin:"0735377375", afflink:"https://www.amazon.com.au/dp/0735377375/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81SWtzpP4OL._AC_SL1500_.jpg",
+    note:"A shark card game for a small group. Taking turns, asking for cards and waiting for the shark.",
+    search:"Mudpuppy Go Shark card game ocean"
+  },
+  {
+    id:"p316", name:"Hot Wheels Shark Chomp Transporter", age_min:48, age_max:96,
+    dev_areas:["fine","cognitive"], tags:["vehicles","animals","pretend-play"],
+    price:19.95, asin:"B08J4H1VYP", afflink:"https://www.amazon.com.au/dp/B08J4H1VYP/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81Mb53tpCnL._AC_SL1500_.jpg",
+    note:"A Hot Wheels truck shaped like a shark that chomps the cars. Comes with one car.",
+    search:"Hot Wheels shark chomp transporter"
+  },
+  {
+    id:"p317", fam:"jigsaw", name:"Peaceable Kingdom Shiny Shark Floor Puzzle (53pc)", age_min:60, age_max:84,
+    dev_areas:["cognitive","fine"], tags:["jigsaw","puzzle","animals","problem-solving"],
+    price:26, asin:"B09J5GCK67", afflink:"https://www.amazon.com.au/dp/B09J5GCK67/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/71J0Ze+cAWL._AC_SL1500_.jpg",
+    note:"A 53-piece floor puzzle of sharks with shiny bits. Big enough to spread out across the floor.",
+    search:"Peaceable Kingdom shiny shark floor puzzle ocean"
+  },
+  {
+    id:"p318", fam:"scarves", name:"Juggling Scarves for Kids", age_min:48, age_max:108,
+    dev_areas:["gross"], tags:["throwing","hand-eye","coordination","movement","dance"],
+    price:12.59, asin:"B07197RSHB", afflink:"https://www.amazon.com.au/dp/B07197RSHB/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/61hrmq97pbL._AC_SL1001_.jpg",
+    note:"Light scarves that float down slowly, so there's time to catch them. Throw one and catch it, then try two.",
+    search:"juggling scarves kids dance catching"
+  },
+  {
+    id:"p319", fam:"scarves", name:"Novelty Place Juggling & Dance Scarves (12pc)", age_min:48, age_max:108,
+    dev_areas:["gross"], tags:["throwing","hand-eye","coordination","movement","dance"],
+    price:17.95, asin:"B07V1SQR46", afflink:"https://www.amazon.com.au/dp/B07V1SQR46/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/71AiB+1qDfL._AC_SL1500_.jpg",
+    note:"Twelve floaty scarves for catching, waving and dancing. Enough for the whole family to join in.",
+    search:"juggling scarves dance kids 12 pack"
+  },
+  {
+    id:"p320", fam:"catch-set", name:"Sticky Paddle Toss and Catch Set", age_min:36, age_max:108,
+    dev_areas:["gross","social"], tags:["throwing","hand-eye","coordination","turn-taking","outdoor"],
+    price:23.86, asin:"B0DHLFVML4", afflink:"https://www.amazon.com.au/dp/B0DHLFVML4/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/71qp1C1U8YL._AC_SL1500_.jpg",
+    note:"Paddles and soft balls that stick where they land. Throw to each other and catch on the paddle instead of with hands.",
+    search:"toss and catch sticky paddle ball set"
+  },
+  {
+    id:"p321", fam:"catch-set", name:"Jalunth Sticky Paddle Ball Catch Set", age_min:36, age_max:144,
+    dev_areas:["gross","social"], tags:["throwing","hand-eye","coordination","turn-taking","outdoor"],
+    price:19.23, asin:"B08QRW7XV3", afflink:"https://www.amazon.com.au/dp/B08QRW7XV3/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81nbIMuKK4L._AC_SL1500_.jpg",
+    note:"Sticky paddles and balls for throwing and catching with a partner, inside or out.",
+    search:"sticky paddle ball catch set"
+  },
+  {
+    id:"p322", name:"Large Soft Foam Ball (7 inch, quiet)", age_min:48, age_max:108,
+    dev_areas:["gross"], tags:["throwing","hand-eye","gross-motor","movement"],
+    price:13.99, asin:"B0B3SXB72N", afflink:"https://www.amazon.com.au/dp/B0B3SXB72N/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/61Ga86j6lyL._AC_SL1500_.jpg",
+    note:"A big soft foam ball that's quiet when it bounces. A bigger ball to catch, and fine to use inside.",
+    search:"soft foam ball quiet 7 inch kids"
+  },
+  {
+    id:"p323", fam:"night-light", name:"Kids Ok-to-Wake Clock", age_min:24, age_max:72,
+    dev_areas:["selfcare"], tags:["bedtime","independence","visual"],
+    price:64.31, asin:"B09MDQNJ36", afflink:"https://www.amazon.com.au/dp/B09MDQNJ36/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/51w44TOkN1L._AC_SL1200_.jpg",
+    note:"A clock that changes colour when it's time to get up. They check the clock themselves instead of calling out to you. Ships from the US.",
+    search:"ok to wake clock kids toddler sleep trainer"
+  },
+  {
+    id:"p324", name:"Tonies The Wiggles: Dorothy the Dinosaur", age_min:36, age_max:72,
+    dev_areas:["language"], tags:["music","audio","wiggles","dinosaurs"],
+    price:60.87, asin:"B0GQKCJTNC", afflink:"https://www.amazon.com.au/dp/B0GQKCJTNC/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/71VHqOKSlgL._AC_SL1500_.jpg",
+    note:"A Dorothy the Dinosaur Tonie with Wiggles songs on it. It only plays on a Toniebox, so this one is for families who already have the player.",
+    search:"Tonies The Wiggles Dorothy the Dinosaur"
+  },
 ];
 
 // ─── QUIZ STEPS ──────────────────────────────────────────────────────────────
@@ -2436,18 +2696,19 @@ function saidPositively(text,re,neg=NEG_BEFORE){
 const CALM_TAGS=["calm-down","self-regulation","mindfulness","breath-control","emotional-regulation"];
 const WORRIES=[
   {key:"toilet",label:"toilet training",re:/\b(toilet\w*|potty|nappy|nappies)\b/i,
-    boost:p=>p.id==="p122"?8:p.id==="p120"?4:0,
-    fits:p=>p.id==="p122"||/potty|toilet/i.test(p.name+" "+(p.note||""))},
-  {key:"nails",label:"nail biting",re:/nail[- ]?bit\w*|bit(es|ing|e) (his |her |their |my )?(finger)?nails|chew(s|ing)? (on )?(his|her|their )?(clothes|sleeves?|shirts?|collars?|pencils?|everything)/i,
-    boost:p=>((p.tags||[]).includes("fidget")||p.fam==="putty"||(p.tags||[]).includes("tactile"))?6:0,
-    fits:p=>(p.tags||[]).includes("fidget")||p.fam==="putty"},
+    boost:p=>(p.id==="p122"||(p.tags||[]).includes("toileting"))?8:p.id==="p120"?4:0,
+    fits:p=>p.id==="p122"||(p.tags||[]).includes("toileting")||/potty|toilet/i.test(p.name+" "+(p.note||""))},
+  {key:"nails",label:"nail biting",re:/nail[- ]?bit\w*|bit(es|ing|e) (his |her |their |my )?(finger)?nails|chew(s|ing)? (on )?(his |her |their |my )?(clothes|sleeves?|shirts?|collars?|pencils?|everything)/i,
+    boost:p=>((p.tags||[]).includes("fidget")||p.fam==="putty"||(p.tags||[]).includes("tactile")||(p.tags||[]).includes("chew"))?6:0,
+    fits:p=>(p.tags||[]).includes("fidget")||(p.tags||[]).includes("chew")||p.fam==="putty"},
   {key:"sleep",label:"sleep",re:/\b(sleep\w*|bedtime|bed time|settl(e|ing) (at night|for bed|to sleep)|wind(ing)? down|night wak\w*|wak(es|ing) (up )?(at night|a lot|often|early))\b/i,
-    boost:p=>(p.tags||[]).some(t=>CALM_TAGS.includes(t))?5:0,
-    fits:p=>(p.tags||[]).some(t=>CALM_TAGS.includes(t))||/sleep|bedtime|night/i.test(p.name)},
+    boost:p=>((p.tags||[]).some(t=>CALM_TAGS.includes(t))||(p.tags||[]).includes("bedtime"))?5:0,
+    fits:p=>(p.tags||[]).some(t=>CALM_TAGS.includes(t))||(p.tags||[]).includes("bedtime")||/sleep|bedtime|night/i.test(p.name)},
   {key:"feelings",label:null,re:/\b(anxious|anxiety|worrier|worries a lot|big feelings|meltdowns?|tantrums?|overwhelm\w*)\b/i,
     boost:p=>((p.tags||[]).some(t=>CALM_TAGS.includes(t))||(p.tags||[]).includes("emotions"))?4:0},
   {key:"coordination",label:null,re:/\b(dyspraxi\w*|clumsy|uncoordinated|coordination|bumps into|trips over|falls over)\b/i,
-    boost:p=>(p.tags||[]).some(t=>["balance","coordination","throwing","bilateral","motor-planning","gross-motor"].includes(t))?3:0},
+    boost:p=>(p.tags||[]).some(t=>["balance","coordination","throwing","hand-eye","bilateral","motor-planning","gross-motor"].includes(t))?4:0,
+    fits:p=>(p.tags||[]).includes("throwing")||p.fam==="scarves"||p.fam==="catch-set"},
 ];
 function worriesOf(answers){const t=typedText(answers);return WORRIES.filter(w=>saidPositively(t,w.re,NEG_WORRY));}
 // Shows, characters and themes a parent names. If nothing in the picks matches
@@ -2458,7 +2719,7 @@ const THEMES=[
   ["Minecraft",/\bminecraft\b/i,/minecraft/i],["Frozen",/\b(frozen|elsa)\b/i,/frozen|elsa/i],["Spider-Man",/\bspider[- ]?man\b/i,/spider[- ]?man/i],
   ["Pok\u00e9mon",/\bpok[e\u00e9]mon\b/i,/pok[e\u00e9]mon/i],["mermaid",/\bmermaids?\b/i,/mermaid/i],["fairy",/\bfair(y|ies)\b/i,/fair(y|ies)/i],
   ["shark",/\bsharks?\b/i,/shark|ocean/i],["dinosaur",/\b(dinos?|dinosaurs?|t-?rex)\b/i,/dino|t-?rex/i],["train",/\btrains?\b/i,/train/i],
-  ["space",/\b(space|planets?|astronauts?)\b/i,/space|planet|rocket|astronaut/i],["horse",/\b(horses?|pon(y|ies))\b/i,/horse|pony/i],
+  ["space",/\b(space|planets?|astronauts?)\b/i,/\bspace ?(ship|station|rocket|themed)|outer space|planet|rocket|astronaut|solar system/i],["horse",/\b(horses?|pon(y|ies))\b/i,/horse|pony/i],
   ["digger",/\b(diggers?|excavators?)\b/i,/digger|excavator|construction/i],["car",/\bcars?\b/i,/\bcars?\b|vehicle|hot wheels/i],
 ];
 function joinList(a){return a.length<2?a.join(""):a.slice(0,-1).join(", ")+" or "+a[a.length-1];}
@@ -2482,6 +2743,7 @@ function famOf(p,answers){
   if(p.fam)return p.fam;
   if(["p42","p73","p100"].includes(p.id))return "rocket-launcher";
   if(["p91","p128"].includes(p.id))return "climbing-frame";
+  if(p.id==="p122")return "toilet-seat";
   const n=(p.name||"").toLowerCase();
   if(/soft book|crinkle|cloth book|bath book|touch and feel/.test(n))return "soft-book";
   if(/doctor|vet\b|clinic|nursery|pram|hospital/.test(n))return "care-play";
@@ -2525,6 +2787,12 @@ function scoreProduct(p, answers){
   const selfcareWanted=devFocusGoals.includes("selfcare")||devFocusGoals.includes("no-preference")||devFocusGoals.length===0;
   const toiletWorry=worriesOf(answers).some(w=>w.key==="toilet");
   if(FUNCTIONAL_IDS.includes(p.id)&&!selfcareWanted&&!(toiletWorry&&(p.id==="p122"||p.id==="p120")))return -1;
+  // Toilet training, chewing and sleep gear only shows when the parent raised it
+  // (or picked self-care, for the toilet things). Nobody needs a potty book by surprise.
+  const worryKeys=worriesOf(answers).map(w=>w.key);
+  if(p.tags.includes("toileting")&&!toiletWorry&&!devFocusGoals.includes("selfcare"))return -1;
+  if(p.tags.includes("chew")&&!worryKeys.includes("nails"))return -1;
+  if(p.fam==="night-light"&&!worryKeys.includes("sleep"))return -1;
 
 
   let score=_overAge?-Math.min(6,Math.ceil((age-p.age_max)/12)):0;
@@ -2591,6 +2859,10 @@ function scoreProduct(p, answers){
   const hay=((p.name||"")+" "+(p.note||"")+" "+(p.search||"")).toLowerCase();
   if(namedThings(answers).some(w=>w.length>=3&&hay.includes(w)))score+=3;
   worriesOf(answers).forEach(w=>{score+=w.boost(p);});
+  // A character toy (Bluey, Wiggles) ranks lower unless the parent named that
+  // character. Plenty of kids love Bluey, but nobody asked us to guess.
+  const brand=THEMES.slice(2,10).find(([,,hit])=>hit.test(p.name||""));
+  if(brand&&!saidPositively(typedText(answers),brand[1]))score-=3;
 
   const playStyle=answers.play_style||[];
   if(playStyle.includes("active-physical")&&p.dev_areas.includes("gross"))score+=2;
@@ -3004,7 +3276,10 @@ function getRecommendations(answers,count=5,excluded=[]){
 
   const CAP=effectiveInterests(answers).length<=1?3:INTEREST_CAP;
   const result=[];const usedAreas=new Set();const interestCount={};const famUsed=new Set();
-  const famBlocked=(p)=>{const f=famOf(p,answers);return !!f&&famUsed.has(f);}; // never two of the same kind (e.g. two science kits)
+  const isToilet=(p)=>p.id==="p122"||(p.tags||[]).includes("toileting");
+  // Never two of the same kind (e.g. two science kits), and at most two toilet
+  // training things, so one worry doesn't fill the whole list.
+  const famBlocked=(p)=>{const f=famOf(p,answers);if(f&&famUsed.has(f))return true;return isToilet(p)&&result.filter(isToilet).length>=2;};
   const take=(p)=>{result.push(p);p.dev_areas.forEach(a=>usedAreas.add(a));const f=famOf(p,answers);if(f)famUsed.add(f);
     (p._matchedInterests||[]).forEach(int=>{interestCount[int]=(interestCount[int]||0)+1;});};
 
