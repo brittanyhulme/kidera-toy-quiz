@@ -3795,7 +3795,10 @@ function parseAI(text){
   const t=String(text||"").replace(/```json|```/g,"");
   const a=t.indexOf("{"),b=t.lastIndexOf("}");
   if(a<0||b<=a)return null;
-  try{return JSON.parse(t.slice(a,b+1));}catch{return null;}
+  const s=t.slice(a,b+1);
+  try{return JSON.parse(s);}catch{ /* try the repair below */ }
+  // Sonnet sometimes leaves a comma before a closing } or ], which JSON rejects.
+  try{return JSON.parse(s.replace(/,\s*([}\]])/g,"$1"));}catch{return null;}
 }
 
 // Map AI output to the recs by explicit key (n), falling back to product-name match,
