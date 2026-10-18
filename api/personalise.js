@@ -38,8 +38,10 @@ export default async function handler(req, res) {
         "anthropic-version": "2023-06-01",
       },
       body: JSON.stringify({
-        model: "claude-haiku-4-5-20251001",
-        max_tokens: Math.min(max_tokens || 1400, 1500), // safety cap
+        // Sonnet follows the quiz's hard rules (no mouthing, no health claims,
+        // only real product features) far more reliably than Haiku did.
+        model: "claude-sonnet-4-5-20250929",
+        max_tokens: Math.min(max_tokens || 1400, 2000), // safety cap
         messages,
       }),
     });
