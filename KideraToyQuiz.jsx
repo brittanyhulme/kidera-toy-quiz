@@ -2749,6 +2749,20 @@ const STEPS = [
 
 const DEV_LABELS  = {gross:"Gross Motor",fine:"Fine Motor",cognitive:"Cognitive",language:"Language",social:"Social-Emotional",sensory:"Sensory",selfcare:"Self-Care"};
 const DEV_COLOURS = {gross:K_ORANGE,fine:K_BLUE,cognitive:"#9C6FDE",language:K_GREEN,social:K_YELLOW,sensory:K_PINK,selfcare:"#6BCB77"};
+// Imports can carry areas the page has no label for. "Regulation" folds into
+// sensory (it is never shown as a label, it reads as a claim), and anything
+// else without a label is dropped, so no card shows a blank chip.
+PRODUCTS.forEach(p=>{p.dev_areas=[...new Set((p.dev_areas||[]).map(a=>a==="regulation"?"sensory":a))].filter(a=>DEV_LABELS[a]);});
+// A few tags from the October import that pull toys into the wrong interests.
+{const fix={p352:{drop:["art","craft","creative"]},p386:{drop:["animals"],add:["movement","gross"]}};
+  PRODUCTS.forEach(p=>{const f=fix[p.id];if(!f)return;p.tags=[...new Set(p.tags.filter(t=>!(f.drop||[]).includes(t)).concat(f.add||[]))];});}
+// The chips on a card: the areas this parent picked come first, then the rest,
+// and never more than three, so a busy board doesn't claim to do everything.
+function chipAreas(toy,answers){
+  const goals=new Set((answers.dev_focus||[]).map(g=>g==="sensory-tools"?"sensory":g));
+  const areas=(toy.dev_areas||[]).filter(a=>DEV_LABELS[a]);
+  return [...areas.filter(a=>goals.has(a)),...areas.filter(a=>!goals.has(a))].slice(0,3);
+}
 
 function fmtPrice(n){const v=Number(n)||0;return Number.isInteger(v)?String(v):v.toFixed(2);}
 function budgetLine(b){
@@ -2800,9 +2814,11 @@ function hasMouthingSignals(answers){
   const text=((answers.child_snapshot||"")+" "+(answers.wildcard||"")).toLowerCase();
   // "mouth" on its own is not enough. An Australian parent saying their kid has a
   // big mouth on them is describing a talker, not a choking risk.
-  const mouths=/(in\s+(his|her|their|its|the)\s+mouth|mouths?\s+(everything|things|toys|them|it)|mouthing\b|still\s+mouths?\b|chew(s|ing)?\s+(on|everything|things|toys)|swallow)/i.test(text);
+  const mouths=/(in\s+(his|her|their|its|the)\s+mouth|mouths?\s+(everything|things|toys|them|it|anything)|mouthing\b|still\s+mouths?\b|chew(s|ing)?\s+(on\s+)?(everything|things|toys|anything|his|her|their|my|the|clothes|sleeves?|shirts?|collars?|pencils?)|bit(es|ing)\s+(everything|things|toys)|swallow)/i.test(text);
   const noSmall=/(no(thing)?\s+(with\s+)?(tiny|small|little)\s+(piece|part|bit)s?|avoid\s+(tiny|small)\s+(piece|part)s?|too\s+many\s+small\s+pieces|choking|chok(e|ing)\s+hazard|small\s+parts?\s+(risk|worry|concern))/i.test(text);
-  return mouths || noSmall;
+  // Ticking "explores with hands and mouth" is the parent telling us the same thing.
+  const ticked=(answers.play_style||[]).includes("exploring-mouthing");
+  return mouths || noSmall || ticked;
 }
 
 function hasNonverbalSignals(answers){
@@ -2840,8 +2856,8 @@ function effectiveInterests(answers){
 // Specific things the parent named ("sharks", "diggers") that a toy's own name
 // or description also mentions get a direct nudge up.
 function namedThings(answers){
-  const m=typedText(answers).match(/\b(sharks?|whales?|dolphins?|horses?|unicorns?|dinosaurs?|diggers?|trucks?|trains?|tractors?|rockets?|planes?|cats?|dogs?|pupp(?:y|ies)|farm|ocean|space|lego|duplo|water|sand|drums?|bubbles?|slime|minecraft|magnets?|marble)\b/g)||[];
-  return [...new Set(m.map(w=>w.replace(/(ies)$/,"y").replace(/s$/,"")))];
+  const m=typedText(answers).match(/\b(sharks?|whales?|dolphins?|horses?|unicorns?|dinosaurs?|diggers?|trucks?|trains?|tractors?|rockets?|planes?|cats?|dogs?|pupp(?:y|ies)|farm|ocean|space|lego|duplo|water|sand|drums?|bubbles?|slime|minecraft|magnets?|marble|garden(?:ing)?|veggie|soccer|football|fair(?:y|ies)|kittens?)\b/g)||[];
+  return [...new Set(m.map(w=>w.replace(/^gardening$/,"garden").replace(/^veggie$/,"garden").replace(/(ies)$/,"y").replace(/s$/,"")))];
 }
 // A diagnosis or a professional already involved. When this is true the family
 // has support, so the results must not send them off to a GP.
@@ -2849,7 +2865,9 @@ function hasDiagnosis(answers){
   return /(diagnos\w*|\badhd\b|\badd\b|autis\w*|\basd\b|dyspraxi\w*|cerebral\s+palsy|down\s+syndrome|\bfasd\b|paediatrician|pediatrician|psycholog\w*|speech\s+(path\w*|therap\w*)|\bot\b|occupational\s+therap\w*|\bndis\b)/i.test(typedText(answers));
 }
 function professionalAlreadyInvolved(answers){
-  return hasDiagnosis(answers)||/(nurse|gp|doctor|paed\w*|therapist|teacher|kindy|daycare)\s+(said|says|has|have|flagged|mentioned|told|is|are|wants|suggested|noticed)/i.test(typedText(answers));
+  return hasDiagnosis(answers)||/(nurse|gp|doctor|paed\w*|therapist|teacher|kindy|daycare)\s+(said|says|has|have|flagged|mentioned|told|is|are|wants|suggested|noticed)/i.test(typedText(answers))
+    // On a waitlist or already referred counts too: they have been through the GP.
+    ||/(wait(ing)?[\s-]?list|referr(ed|al)|assessment (booked|coming|soon)|seeing (a|an|the) (speechie|speech|ot|psych\w*|paed\w*))/i.test(typedText(answers));
 }
 // Worries a parent types in their own words. Each one nudges up the toys that
 // fit it, so a parent who wrote "toilet training" sees the potty seat.
@@ -2867,8 +2885,11 @@ const WORRIES=[
   {key:"toilet",label:"toilet training",re:/\b(toilet\w*|potty|nappy|nappies)\b/i,
     boost:p=>(p.id==="p122"||(p.tags||[]).includes("toileting"))?8:p.id==="p120"?4:0,
     fits:p=>p.id==="p122"||(p.tags||[]).includes("toileting")||/potty|toilet/i.test(p.name+" "+(p.note||""))},
-  {key:"nails",label:"nail biting",re:/nail[- ]?bit\w*|bit(es|ing|e) (his |her |their |my )?(finger)?nails|chew(s|ing)? (on )?(his |her |their |my )?(clothes|sleeves?|shirts?|collars?|pencils?|everything)/i,
-    boost:p=>((p.tags||[]).includes("fidget")||p.fam==="putty"||(p.tags||[]).includes("tactile")||(p.tags||[]).includes("chew"))?6:0,
+  // Nail biting and chewing share the same toys, but the page names the one the
+  // parent actually wrote. Saying "nail biting" to a parent who wrote "chews his
+  // shirt" tells them nobody read it.
+  {key:"nails",label:t=>/nail/i.test(t)?(/chew/i.test(t)?"nail biting and chewing":"nail biting"):"chewing",re:/nail[- ]?bit\w*|bit(es|ing|e) (his |her |their |my )?(finger)?nails|chew(s|ing)? (on )?(his |her |their |my )?(clothes|sleeves?|shirts?|collars?|pencils?|everything|anything)/i,
+    boost:p=>(p.tags||[]).includes("chew")?8:((p.tags||[]).includes("fidget")||p.fam==="putty"||(p.tags||[]).includes("tactile"))?6:0,
     fits:p=>(p.tags||[]).includes("fidget")||(p.tags||[]).includes("chew")||p.fam==="putty"},
   {key:"sleep",label:"sleep",re:/\b(sleep\w*|bedtime|bed time|settl(e|ing) (at night|for bed|to sleep)|wind(ing)? down|night wak\w*|wak(es|ing) (up )?(at night|a lot|often|early))\b/i,
     boost:p=>((p.tags||[]).some(t=>CALM_TAGS.includes(t))||(p.tags||[]).includes("bedtime"))?5:0,
@@ -2890,14 +2911,18 @@ const THEMES=[
   ["shark",/\bsharks?\b/i,/shark|ocean/i],["dinosaur",/\b(dinos?|dinosaurs?|t-?rex)\b/i,/dino|t-?rex/i],["train",/\btrains?\b/i,/train/i],
   ["space",/\b(space|planets?|astronauts?)\b/i,/\bspace ?(ship|station|rocket|themed)|outer space|planet|rocket|astronaut|solar system/i],["horse",/\b(horses?|pon(y|ies))\b/i,/horse|pony/i],
   ["digger",/\b(diggers?|excavators?)\b/i,/digger|excavator|construction/i],["car",/\bcars?\b/i,/\bcars?\b|vehicle|hot wheels/i],
+  // Things parents type that no checkbox covers.
+  // These match on the toy's name only: "buried in the garden" in a note doesn't make dinosaurs a garden toy.
+  ["garden",/\b(garden\w*|veggie (patch|garden)|planting|watering the)\b/i,/garden|wheelbarrow|watering can/i,true],["tractor",/\btractors?\b/i,/tractor/i,true],
+  ["bubble",/\bbubbles?\b/i,/bubble/i,true],["cat",/\b(cats?|kittens?)\b/i,/\b(cats?|kittens?)\b/i,true],["soccer",/\b(soccer|football)\b/i,/soccer|football/i,true],
 ];
 function joinList(a){return a.length<2?a.join(""):a.slice(0,-1).join(", ")+" or "+a[a.length-1];}
 function joinAnd(a){return a.length<2?a.join(""):a.slice(0,-1).join(", ")+" and "+a[a.length-1];}
 function libraryGapLine(answers,recs){
   const t=typedText(answers);
-  const hayOf=p=>((p.name||"")+" "+(p.note||"")+" "+(p.search||"")+" "+(p.tags||[]).join(" "));
-  const themes=THEMES.filter(([,re,hit])=>saidPositively(t,re)&&!recs.some(p=>hit.test(hayOf(p)))).map(([l])=>l);
-  const worries=worriesOf(answers).filter(w=>w.label&&w.fits&&!recs.some(w.fits)).map(w=>w.label);
+  const hayOf=(p,nameOnly)=>nameOnly?(p.name||""):((p.name||"")+" "+(p.note||"")+" "+(p.search||"")+" "+(p.tags||[]).join(" "));
+  const themes=THEMES.filter(([,re,hit,nameOnly])=>saidPositively(t,re)&&!recs.some(p=>hit.test(hayOf(p,nameOnly)))).map(([l])=>l);
+  const worries=worriesOf(answers).filter(w=>w.label&&w.fits&&!recs.some(w.fits)).map(w=>typeof w.label==="function"?w.label(t):w.label);
   if(!themes.length&&!worries.length)return "";
   const out=[];
   if(themes.length)out.push(`I didn't find any ${joinList(themes)} toys for you today.`);
@@ -2922,6 +2947,26 @@ function famOf(p,answers){
   if(!wantsBooks&&(p.tags||[]).includes("books"))return "book";
   return null;
 }
+// A second family from the name, for lines and kinds of toy that new imports
+// don't tag: two DUPLO sets, two play food sets or two scooters never share a list.
+const NAME_FAMS=[
+  ["big-bricks",/\bduplo\b|mega bloks/],["lego",/\blego\b/],
+  ["magnetic-tiles",/magna-?tiles|magnetic (tiles|blocks)/],["marble-run",/marble|gravitrax/],["ball-run",/ball run|air toobz/],
+  ["play-food",/\bfood\b|time to eat|ice cream|pizza|tea (party|set)|kitchen|barista|\bcafe\b/],["shop-play",/supermarket|cash register/],
+  ["water-table",/water table/],["water-wow",/water wow/],["bath-toy",/\bbath(time|tub)?\b/],
+  ["ride-on",/scooter|trike|tricycle|balance bike|cozy coupe|ride[- ]on/],["stepping-stones",/stepping stones/],
+  ["crayons-markers",/crayons?\b|markers?\b/],["bead-craft",/\bbeads?\b|\bloom\b|bracelet/],["sticker-art",/sticker/],
+  ["audio-player",/yoto|toniebox/],["rocket-launcher",/rocket (air )?launcher|stomp rocket/],["walkie-talkie",/walkie/],
+  ["camera",/camera/],["playdough",/play-?doh|playdough/],["busy-board",/busy (board|book)/],["dress-up",/dress-?up|costume/],
+  ["rush-hour",/rush hour/],["ticket-to-ride",/ticket to ride/],["connect-4",/connect 4/],["uno",/\buno\b/],["bluey-playset",/bluey.*(house|playset)/],
+];
+function famsOf(p,answers){
+  const out=[];const f=famOf(p,answers);if(f)out.push(f);
+  const n=(p.name||"").toLowerCase();
+  const nf=NAME_FAMS.find(([,re])=>re.test(n));if(nf&&!out.includes(nf[0]))out.push(nf[0]);
+  if((p.tags||[]).includes("card-game")&&!out.includes("card-game"))out.push("card-game");
+  return out;
+}
 
 function scoreProduct(p, answers){
   const age=answers.child_age;
@@ -2929,7 +2974,9 @@ function scoreProduct(p, answers){
   const _overAge=age>p.age_max;
   if(_overAge&&!hasDelaySignals(answers))return -1;
   const[,budgetMax]=parseBudget(answers.budget);
-  if(p.price>budgetMax)return -1;
+  // The page says "each pick is under $X", so $X itself is over.
+  const strictMax=["under-20","20-50","50-100"].includes(answers.budget);
+  if(p.price>budgetMax||(strictMax&&p.price>=budgetMax))return -1;
 
   const alreadyHave=answers.already_have||[];
   // Hard exclusions
@@ -2945,7 +2992,8 @@ function scoreProduct(p, answers){
   if(alreadyHave.includes("vehicles-already")&&p.tags.includes("vehicles")&&!p.tags.includes("constructive"))return -1;
   if(alreadyHave.includes("dolls-already")&&(p.tags.includes("dolls")||p.tags.includes("plush")||/soft toy|plush/i.test(p.name)))return -1;
   if(alreadyHave.includes("dinosaurs-already")&&p.tags.includes("dinosaurs")&&!(p.fam==="jigsaw"||p.tags.includes("constructive")))return -1;
-  if(alreadyHave.includes("sensory-fidget")&&(p.tags.includes("fidget")||p.fam==="putty"))return -1;
+  // A chew tool is its own thing, not another fidget, so it stays in.
+  if(alreadyHave.includes("sensory-fidget")&&(p.tags.includes("fidget")||p.fam==="putty")&&!p.tags.includes("chew"))return -1;
   if(alreadyHave.includes("stem-already")&&(p.fam==="science-kit"||p.fam==="circuit-kit"))return -1;
 
   // Functional/everyday equipment (cups, potty, step stool, cutlery, dressing doll) is only relevant
@@ -2960,16 +3008,23 @@ function scoreProduct(p, answers){
   // (or picked self-care, for the toilet things). Nobody needs a potty book by surprise.
   const worryKeys=worriesOf(answers).map(w=>w.key);
   if(p.tags.includes("toileting")&&!toiletWorry&&!devFocusGoals.includes("selfcare"))return -1;
-  if(p.tags.includes("chew")&&!worryKeys.includes("nails"))return -1;
+  if(p.tags.includes("chew")&&!worryKeys.includes("nails")&&!hasMouthingSignals(answers))return -1;
   if(p.fam==="night-light"&&!worryKeys.includes("sleep"))return -1;
+  // Therapy gear (body socks, crash pads, therapy balls, weighted things) only
+  // shows when the parent asked for sensory or therapy support. It's a toy quiz,
+  // and a soccer-mad seven year old's birthday list is no place for a body sock.
+  const therapyGear=(p.tags||[]).includes("deep-pressure")||["p76","p79","p80","p81","p84"].includes(p.id);
+  const sensoryAsked=devFocusGoals.includes("sensory")||devFocusGoals.includes("sensory-tools")||(answers.occasion||[]).includes("therapy-support");
+  if(therapyGear&&!sensoryAsked)return -1;
 
 
   let score=_overAge?-Math.min(6,Math.ceil((age-p.age_max)/12)):0;
   // Prices sit inside the band the parent picked, not just under its ceiling.
   const[budgetMin]=parseBudget(answers.budget);
   if(budgetMin>0&&p.price>=budgetMin)score+=4;
-  // Well under the band ranks lower, but never drops out: tiny babies' toys are cheap.
-  const budgetPenalty=(budgetMin>0&&p.price<budgetMin*0.5)?2:0;
+  // Under the band ranks lower, and well under it ranks a lot lower, but never
+  // drops out: tiny babies' toys are cheap and a short list is worse.
+  const budgetPenalty=budgetMin>0&&p.price<budgetMin?(p.price<budgetMin*0.5?7:4):0;
   // A toy whose range tops out close to the child's age is near the end of its
   // life for them, and older kids notice when a pick is meant for little ones.
   if(age>=60&&!hasDelaySignals(answers)&&p.age_max<age+12)score-=3;
@@ -3021,7 +3076,9 @@ function scoreProduct(p, answers){
   p._matchedInterests=[];
   interests.forEach(interest=>{
     const mapped=directTagMap[interest]||[];
-    const matchCount=p.tags.filter(t=>mapped.includes(t)).length;
+    // Capped at two tags per interest, so a toy with five pretend-play tags
+    // doesn't outrank one that matches what the parent actually typed.
+    const matchCount=Math.min(2,p.tags.filter(t=>mapped.includes(t)).length);
     if(matchCount>0){score+=matchCount*4;p._matchedInterests.push(interest);}
   });
 
@@ -3427,7 +3484,7 @@ function stockingCandidates(answers,excluded){
       return {...p,age_min:age,age_max:age,score:s,_matchedInterests:[],fam:undefined};});
 }
 
-function getRecommendations(answers,count=5,excluded=[]){
+function getRecommendations(answers,count=5,excluded=[],kept=[]){
   const stockingMode=(answers.occasion||[]).includes("christmas-stocking");
   let scored=PRODUCTS
     .filter(p=>!excluded.includes(p.id))
@@ -3444,12 +3501,14 @@ function getRecommendations(answers,count=5,excluded=[]){
   }
 
   const CAP=effectiveInterests(answers).length<=1?3:INTEREST_CAP;
-  const result=[];const usedAreas=new Set();const interestCount={};const famUsed=new Set();
+  const result=[];const usedAreas=new Set();const interestCount={};
+  // On a swap, the toys staying on the page count too: no second DUPLO set.
+  const famUsed=new Set(kept.flatMap(k=>famsOf(k,answers)));
   const isToilet=(p)=>p.id==="p122"||(p.tags||[]).includes("toileting");
   // Never two of the same kind (e.g. two science kits), and at most two toilet
   // training things, so one worry doesn't fill the whole list.
-  const famBlocked=(p)=>{const f=famOf(p,answers);if(f&&famUsed.has(f))return true;return isToilet(p)&&result.filter(isToilet).length>=2;};
-  const take=(p)=>{result.push(p);p.dev_areas.forEach(a=>usedAreas.add(a));const f=famOf(p,answers);if(f)famUsed.add(f);
+  const famBlocked=(p)=>{if(famsOf(p,answers).some(f=>famUsed.has(f)))return true;return isToilet(p)&&result.filter(isToilet).length>=2;};
+  const take=(p)=>{result.push(p);p.dev_areas.forEach(a=>usedAreas.add(a));famsOf(p,answers).forEach(f=>famUsed.add(f));
     (p._matchedInterests||[]).forEach(int=>{interestCount[int]=(interestCount[int]||0)+1;});};
 
   // ── THEIR OWN WORDS: a worry the parent typed gets one toy that fits it ──
@@ -3465,12 +3524,12 @@ function getRecommendations(answers,count=5,excluded=[]){
   // A show, character or theme they named (Minecraft, Bluey, sharks) gets its
   // best match in, even if that interest is already well covered. At most two.
   {
-    const t=typedText(answers);const hayOf=p=>((p.name||"")+" "+(p.note||"")+" "+(p.search||"")+" "+(p.tags||[]).join(" "));
+    const t=typedText(answers);const hayOf=(p,nameOnly)=>nameOnly?(p.name||""):((p.name||"")+" "+(p.note||"")+" "+(p.search||"")+" "+(p.tags||[]).join(" "));
     let added=0;
-    for(const [,re,hit] of THEMES){
+    for(const [,re,hit,nameOnly] of THEMES){
       if(added>=2||result.length>=count)break;
-      if(!saidPositively(t,re)||result.some(p=>hit.test(hayOf(p))))continue;
-      const pick=scored.find(p=>p.score>=0&&hit.test(hayOf(p))&&!result.find(r=>r.id===p.id)&&!famBlocked(p));
+      if(!saidPositively(t,re)||result.some(p=>hit.test(hayOf(p,nameOnly))))continue;
+      const pick=scored.find(p=>p.score>=0&&hit.test(hayOf(p,nameOnly))&&!result.find(r=>r.id===p.id)&&!famBlocked(p));
       if(pick){take(pick);added++;}
     }
   }
@@ -3539,7 +3598,7 @@ function getRecommendations(answers,count=5,excluded=[]){
         if(result[i].score<sc){sc=result[i].score;idx=i;}
       }
       if(idx<0)return false;
-      result.splice(idx,1,cand);protectedIds.add(cand.id);return true;
+      result.splice(idx,1,cand);protectedIds.add(cand.id);famsOf(cand,answers).forEach(f=>famUsed.add(f));return true;
     };
     if(!result.some(HI)){
       const cand=scored.find(p=>HI(p)&&!result.find(r=>r.id===p.id)&&!famBlocked(p));
@@ -3556,8 +3615,10 @@ function getRecommendations(answers,count=5,excluded=[]){
       const canRemove=r=>!LO(r)&&!protectedIds.has(r.id)&&(!HI(r)||result.filter(HI).length>1);
       if(!replaceWeakest(cand,canRemove))break;
     }
-    result.sort((a,b)=>b.score-a.score);
   }
+  // The Top pick is the strongest match overall. Picks that came in for a worry
+  // or a theme the parent typed stay on the list, just not always first.
+  result.sort((a,b)=>b.score-a.score);
   return result.slice(0,count);
 }
 
@@ -3728,6 +3789,15 @@ function LoadingScreen(){
 }
 
 
+// The reply should be JSON. Take the outermost {...} so stray words or code
+// fences around it don't break the page; return null if it still won't parse.
+function parseAI(text){
+  const t=String(text||"").replace(/```json|```/g,"");
+  const a=t.indexOf("{"),b=t.lastIndexOf("}");
+  if(a<0||b<=a)return null;
+  try{return JSON.parse(t.slice(a,b+1));}catch{return null;}
+}
+
 // Map AI output to the recs by explicit key (n), falling back to product-name match,
 // so a shuffled or shifted AI response can never put text on the wrong card.
 function normalizeAI(parsed, recs){
@@ -3756,17 +3826,26 @@ const REFERRAL=/\b(gp|doctor|child health nurse|health nurse|paediatrician|pedia
 const STOCK_LINES=/\bno rush\b|\bplenty of time\b|\b(he|she|they)('ll| will) get there\b|develops? at (their|his|her|its) own pace|makes sense at (his|her|their|this) age|(completely|totally|perfectly|very) normal|normal (at|for) (his|her|their|this) age|will (come|catch up) (in time|soon|with time)|nothing to worry about/i;
 const DEFICIT=/a change from (her|his|their) usual|instead of (lining|stimming|repeating)|(move|steer|get) (her|him|them) away from|break (the|her|his|their) habit/i;
 const MOUTHING=/\bmouth(s|ing|ed)?\b/i;
+// HARD RULE: no toy is ever described as something to mouth, chew, bite or suck
+// unless it is a chew tool. This runs on every result, whatever the parent wrote.
+const MOUTH_WORDS=/\b(mouth\w*|chew\w*|teeth\w*|teething|gnaw\w*|suck(s|ing)?\s+on|bit(e|es|ing)\s+(on|it|them|down))\b/i;
+const isChewTool=p=>!!p&&(p.tags||[]).includes("chew");
+// One child, not a category: no "classic ADHD", no "autistic kids love".
+const GENERALISE=/\bclassic (adhd|autis\w*|asd|sensory)\b|\b(adhd|autistic|asd|sensory)[- ](kids?|children|brains?|combo|thing|trait)s?\b|\btypical (of )?(adhd|autis\w*)\b|\b(all|most|many) (adhd|autistic) (kids|children)\b/i;
 const SALES=/\b(investment|worth every cent|pays for itself|must-have)\b/i;
 const OUTCOME=/\b(build|builds|building|boost|boosts|improve|improves|strengthen|strengthens|develop|develops)\s+(her|his|their|your child's|real)?\s*(connection|confidence|resilience|focus|regulation|skills?|strength|coordination|attention|calm)\b|\binstead of worrying\b|\bwhen (the )?anxiety\b|\bsettle (her|his|their) (thoughts|mind|nerves|worries)\b|\bcalm(s|ing)? (her|him|them) down\b|\bhelps? (her|him|them) (relax|calm|cope|settle)\b|\bsettle\b[^.]{0,30}\bmind\b|\b(great|good|huge|brilliant|perfect|ideal) for (her |his |their )?(social|language|speech|fine|gross|motor|emotional|cause|problem|focus|attention|regulation|development)|\b(language|skill|confidence)[- ]building\b|\bconvert\w* (that |their |his |her )?screen time|\baway from the (device|screen)s?\b|\bsustained focus\b/i;
 function splitSentences(t){return String(t||"").match(/[^.!?]+[.!?]+["')]*\s*|[^.!?]+$/g)||[];}
-function cleanText(t,answers,{isNote=false,fallback=""}={}){
+function cleanText(t,answers,{isNote=false,fallback="",toy=null,recs=[]}={}){
   if(!t)return t;
   const dropReferral=professionalAlreadyInvolved(answers);
   const mouthing=hasMouthingSignals(answers);
+  // In the note, chewing can only come up when a chew tool is one of the picks.
+  const chewAllowed=isNote?recs.some(isChewTool):isChewTool(toy);
   let out=splitSentences(t).filter(x=>{
     if(SAFETY_PROMISE.test(x))return false;
     if(SALES.test(x)||OUTCOME.test(x))return false;
-    if(DEFICIT.test(x))return false;
+    if(DEFICIT.test(x)||GENERALISE.test(x))return false;
+    if(MOUTH_WORDS.test(x)&&!(chewAllowed&&/chew/i.test(x)&&!MOUTHING.test(x)))return false;
     if(mouthing&&MOUTHING.test(x))return false;
     if(dropReferral&&REFERRAL.test(x))return false;
     if(isNote&&STOCK_LINES.test(x))return false;
@@ -3781,13 +3860,19 @@ function cleanText(t,answers,{isNote=false,fallback=""}={}){
 function sanitizeAI(ai,answers,recs=[]){
   if(!ai)return ai;
   const isGift=answers.recipient&&answers.recipient!=="my-child";
-  let note=cleanText(ai.curator_note,answers,{isNote:true});
+  let note=cleanText(ai.curator_note,answers,{isNote:true,recs});
+  // Gift mode: the one to buy is always the Top pick on the page, never another.
+  if(note&&isGift&&recs[0]){
+    const top=recs[0].name.toLowerCase().slice(0,16);
+    note=splitSentences(note).map(x=>/\b(only (buy|get|pick|choose|grab|go for) one|pick (just )?one|(can|could) only (buy|get|pick|choose)|one to (buy|get))\b/i.test(x)&&!x.toLowerCase().includes(top)
+      ?`If you can only get one, I'd go with the ${recs[0].name}. `:x).join("").trim();
+  }
   if(note&&!/\b(you|parents|they) know\b|\bknow\b[^.!?]{0,30}\bbest/i.test(note)){
-    note=note+(isGift?" Their parents know them best.":" You know your child best.");
+    note=note+(isGift?" You and their family know them best.":" You know your child best.");
   }
   return{...ai,
-    personalised_reasons:(ai.personalised_reasons||[]).map((r,i)=>cleanText(r,answers,{fallback:(recs[i]&&recs[i].note)||""})||(recs[i]&&recs[i].note)||""),
-    play_ideas:(ai.play_ideas||[]).map(r=>cleanText(r,answers)),
+    personalised_reasons:(ai.personalised_reasons||[]).map((r,i)=>cleanText(r,answers,{toy:recs[i],fallback:(recs[i]&&recs[i].note)||""})||(recs[i]&&recs[i].note)||""),
+    play_ideas:(ai.play_ideas||[]).map((r,i)=>isGift?"":cleanText(r,answers,{toy:recs[i]})),
     curator_note:note,
   };
 }
@@ -3892,115 +3977,112 @@ export default function KideraToyQuiz(){
   }
 
   async function callAI(recs,singleIndex=null){
+    const isGift=!!(answers.recipient&&answers.recipient!=="my-child");
+    const mouthing=hasMouthingSignals(answers);
     const summary=`Child's age: ${ageLabel(answers.child_age)}
+Buying for: ${isGift?"a child who is NOT their own (this is a present)":"their own child"}
 Occasion: ${Array.isArray(answers.occasion)?(answers.occasion.join(", ")||"not specified"):(answers.occasion||"not specified")}. Budget: ${answers.budget}.
-Parent's description of their child: "${answers.child_snapshot||"not provided"}"
-Buying for: ${answers.recipient==="my-child"||!answers.recipient?"their own child":"a child who is NOT their own (this is a gift)"}
-Interests ticked: ${(answers.interests||[]).filter(v=>v!=="not-sure").join(", ")||"not sure / none specified"}
-Development goals the parent wants to support: ${(answers.dev_focus||[]).join(", ")||"none specified"}
-How the child likes to play: ${(answers.play_style||[]).filter(v=>v!=="not-sure").join(", ")||"not sure / not specified"}
+What they wrote about the child: "${answers.child_snapshot||"nothing"}"
+Interests ticked: ${(answers.interests||[]).filter(v=>v!=="not-sure").join(", ")||"none"}
+Areas they'd like to support: ${(answers.dev_focus||[]).join(", ")||"none"}
+How the child likes to play: ${(answers.play_style||[]).filter(v=>v!=="not-sure").join(", ")||"not specified"}
 Already have plenty of: ${(answers.already_have||[]).join(", ")||"nothing specified"}
-Extra notes: ${answers.wildcard||"none"}`;
+Anything else: ${answers.wildcard||"nothing"}`;
+
+    const VOICE=`HOW BRITTANY WRITES
+Warm, practical and Australian, like a friend who happens to be an OT. Plain words, short sentences, one idea per sentence. Name the actual toy, the actual thing the child does with it, and the actual interest the parent mentioned. Australian spelling (colour, favourite, mum). No em dashes. No rhetorical questions. Never write "it's not X, it's Y". Never use these words: delve, crucial, pivotal, tapestry, foundational, robust, seamless, seamlessly, landscape, realm, elevate, unlock, harness, journey, game-changer, dive in, navigate, fostering, ensuring, empowering, testament, workhorse, arsenal, toolkit, must-have, investment, worth every cent, mesmerising.`;
+
+    const RULES=`HARD RULES. These override everything else.
+1. MOUTHING. Never suggest, describe or hint at a child putting a toy in their mouth, chewing it, biting it or sucking it, unless that toy is marked [CHEW TOOL]. This holds even when the parent says their child mouths or chews things. No "he can mouth them", no "something for his hands and mouth". For every other toy, talk about hands, eyes, ears and body only.
+2. SAFETY. Never say or imply a toy is safe, choke-free, sturdy, or free of small parts. You haven't seen the box.
+3. NO HEALTH CLAIMS. Brittany is an AHPRA registered health practitioner, so nothing may promise or imply a health or developmental outcome. Never say a toy builds, develops, improves, strengthens, boosts, supports, promotes, teaches or helps a skill. Never call a toy calming, regulating or therapeutic, and never say it eases worry, helps with sleep or settles a busy mind. Describe what the child DOES ("he squeezes the tongs to grab each bug") and let the parent join the dots. "Great for hand strength" is out.
+4. ONLY WHAT THEY SAID. Use only what the parent typed or ticked. Don't describe the child's personality beyond their words. Don't say the child already owns something unless the parent said so. Never generalise about a diagnosis ("classic ADHD", "autistic kids love") and talk about this one child only. Never guess an interest from the toy list.
+5. ONLY WHAT THE TOY DOES. Describe only what that toy's listing says. Brittany's listing notes sometimes mention other products or her own opinion; describe this toy, not the others. If a listing is thin, keep the reason simple rather than filling gaps. Think through how the toy or game really works before you write. Most games mean taking turns (board games, card games, cornhole, Connect 4), so never say a game has no turns or no waiting. Something that launches straight up can't be steered. Don't add lights, sounds or moving parts the listing doesn't mention.
+6. RESPECT. Lining things up, repetition, stimming, special interests, playing alone and screens are all fine. Never pitch a toy as a way to move a child away from any of them.`;
+
+    const PLAY=`Every toy gets a play idea, all five of them. Play ideas are one sentence each: specific, active and a little playful, like Brittany's 30 Day Play Calendar ("Set up a dinosaur hospital where the T-Rex needs the doctor kit to fix his leg." "Take it outside and draw a chalk road for the trucks."). It must work with that exact toy in a real house or park, and it must fit the child the parent described:
+- Few words or a late talker: offer two choices or let them point or show. The fun never depends on them saying a word.
+- A worrier or a perfectionist: keep it low stakes. No timers, scores or races.
+- Nothing messy in bed. Anything that launches or flies goes to a park or oval.${mouthing?`
+- No loose small extras, like beads, buttons, coins, dry pasta or rice, or water beads.`:""}`;
+
+    const markers=(p)=>`${(p.tags||[]).includes("chew")?" [CHEW TOOL: made to be chewed]":""}${/learning tower|step stool|cutlery|open cup|potty|toilet seat|dressing doll/i.test(p.name)||["p120","p121","p122","p123","p124"].includes(p.id)?" [EVERYDAY EQUIPMENT]":""}`;
+    const devLabelMap={gross:"gross motor",fine:"fine motor",cognitive:"problem-solving and learning",language:"communication and language",social:"social and emotional skills",sensory:"sensory",selfcare:"self-care and independence","sensory-tools":"sensory tools"};
 
     if(singleIndex!==null){
       const toy=recs[singleIndex];
-      const prompt=`You are Brittany, a paediatric OT and Kidera founder. You write like a knowledgeable friend, warm and direct. Short sentences. No jargon. No em dashes. No AI words like "seamlessly", "fostering", "ensuring".
+      const prompt=`You are writing one card for Kidera's toy quiz, in the voice of Brittany Hulme, a paediatric OT in Perth and Kidera's founder. The parent swapped a toy, and this is the replacement. It's a toy guide, about play, not therapy.
 
-Child: ${summary}
-
-The toy: "${toy.name}". What it actually is and does: ${toy.note}
-
-Write ONE sentence explaining why this toy is a good match for this specific child. Draw on what the parent described and only on the product's real features. Be specific, not generic.
-
-JSON only: {"reason":"..."}`;
-      const res=await fetch("/api/personalise",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({max_tokens:200,messages:[{role:"user",content:prompt}]})});
-      const data=await res.json();
-      const one=JSON.parse(data.content.map(b=>b.text||"").join("").replace(/```json|```/g,"").trim());
-      return{...one,reason:cleanText(one.reason,answers,{fallback:toy.note})};
-    }
-
-    const devLabelMap={gross:"gross motor",fine:"fine motor",cognitive:"problem-solving and learning",language:"communication and language",social:"social and emotional skills",sensory:"sensory",selfcare:"self-care and independence","sensory-tools":"sensory tools and regulation"};
-    const FUNCTIONAL_IDS=["p120","p121","p122","p123","p124"]; // step stool, learning tower, cup, potty, cutlery, dressing doll
-    const isFunctional=(p)=>FUNCTIONAL_IDS.includes(p.id)||/learning tower|step stool|cutlery|open cup|potty|toilet seat|dressing doll/i.test(p.name);
-    const productList=recs.map((p,i)=>`${i+1}. ${p.name} ($${p.price}) relates to: ${p.dev_areas.map(d=>devLabelMap[d]||d).join(", ")}. What it is and does: ${p.note}${isFunctional(p)?" [FUNCTIONAL EVERYDAY EQUIPMENT, apply the special functional rule]":""}`).join("\n");
-    const goalsRaw=(answers.dev_focus||[]).filter(g=>g!=="no-preference");
-    const goalsList=goalsRaw.map(g=>devLabelMap[g]||g).join(", ");
-    const prompt=`You are Brittany, a paediatric occupational therapist with 8 years of experience and founder of Kidera, a children's development brand in Perth, Australia.
-
-Your writing style: warm, direct, genuine. Write like you're talking to a friend who trusts your expertise. Short sentences. Plain language. No em dashes. No AI words like "seamlessly", "fostering", "ensuring", "delve", "empowering", "testament", "navigate", "crucial", "unlock", "elevate", "harness", "robust", "foundational", "journey", "game-changer", "dive in". No rhetorical questions as transitions. Do not write "it is not X, it is Y". Never use the words "workhorse", "arsenal" or "toolkit" when talking about children or their development. Specific and practical.
-
-Parent's answers:
+WHAT THEY TOLD US
 ${summary}
 
-Toys to personalise (with the development areas each one supports):
+THE TOY: ${toy.name}${markers(toy)}. Areas: ${toy.dev_areas.map(d=>devLabelMap[d]||d).join(", ")}. What it is: ${toy.note}
+
+${VOICE}
+
+${RULES}
+
+Write a reason of one or two sentences on why this toy suits this child, using what the parent told us and only the toy's real features.${isGift?` This is a present, so say "this little one" or the child's name, never "your child", and leave play_idea as an empty string.`:`
+${PLAY}`}
+
+JSON only: {"reason":"...","play_idea":"..."}`;
+      const res=await fetch("/api/personalise",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({max_tokens:400,messages:[{role:"user",content:prompt}]})});
+      const data=await res.json();
+      const one=parseAI(data.content.map(b=>b.text||"").join(""))||{};
+      return{reason:cleanText(one.reason,answers,{toy,fallback:toy.note}),play_idea:isGift?"":cleanText(one.play_idea||"",answers,{toy})};
+    }
+
+    const productList=recs.map((p,i)=>`${i+1}. ${p.name} ($${fmtPrice(p.price)})${markers(p)}. Areas: ${p.dev_areas.map(d=>devLabelMap[d]||d).join(", ")}. What it is: ${p.note}`).join("\n");
+    const goalsList=(answers.dev_focus||[]).filter(g=>g!=="no-preference").map(g=>devLabelMap[g]||g).join(", ");
+    const referral=professionalAlreadyInvolved(answers)
+      ?"They've told us about a diagnosis, a professional who is already involved, or a waitlist. Don't suggest a GP, nurse or any professional, and don't suggest getting anything checked."
+      :(answers.child_age>=60
+        ?"If they named a worry about how their child is going, you may say once, briefly, that it's worth raising with their GP. Nothing more, and no child health nurse at this age."
+        :"If they named a worry about how their child is going, you may say once, briefly, that it's worth raising with their GP or child health nurse. Nothing more.");
+
+    const prompt=`You are writing the results page for Kidera's toy quiz, in the voice of Brittany Hulme, a paediatric occupational therapist in Perth and the founder of Kidera. Someone has told us about a child, and the quiz has matched five toys from Brittany's own library. Your job is to tell them, toy by toy, why it suits this child${isGift?"":" and how to play with it"}. This is a toy guide. It's about play, not therapy, and it doesn't need to solve anything.
+
+WHAT THEY TOLD US
+${summary}
+
+THE FIVE TOYS (in order, and toy 1 is the Top pick)
 ${productList}
 
-The development goals this parent told us they want to support: ${goalsList||"none specified, so focus on their interests and the child's described stage"}
+${VOICE}
 
-CLAIMS RULE, THIS ONE OVERRIDES EVERYTHING ELSE: if the parent mentioned anxiety, worry, sleep or behaviour, describe what the child does with the toy and stop there; never say or hint that the toy eases the worry, helps them settle, or gives their mind somewhere to go. Brittany is an AHPRA registered health practitioner, so nothing you write may promise or imply a health or developmental outcome. Never say a toy builds, develops, improves, strengthens, boosts, supports, promotes, teaches or helps a skill, and never call anything therapeutic, calming or regulating. Do not say a toy is good for a skill. Write what the child will actually be DOING with it instead, and let the parent draw their own conclusion. "She has to turn the shape around until it drops in" is fine. "It builds her problem solving" is not. "He has to squeeze the tongs to pick the bugs up" is fine. "Great for hand strength" is not.
+${RULES}
 
-Write a warm reason for each toy. Where the quiz answers give you real material, connect the toy back to this specific child, to a development goal they chose, an interest they ticked, something they described, or the child's current stage. But NEVER invent or strain a connection that isn't there. If very little was shared (common for gifts), an honest, warm, age-based reason is better than a fake personal one. For example: \"We don't know heaps about this little one yet, but this is a reliable crowd pleaser at this age\" or lead with what children this age usually enjoy about it. Honest and warm beats forced and specific. Name the connection out loud, in terms of what the child does. For example: "You mentioned fine motor, and this one is all small buttons and little catches to press" or "Since he's obsessed with trains, this taps straight into that, and there's a fair bit of working things out in it too."
+THE REASONS (one per toy, two or three sentences)
+Lead with why this toy suits THIS child: an interest they named, how they like to play, their age, or an area they picked. Say the link plainly ("You said she loves buttons, and this board is covered in them"). If a toy covers more than one area they picked, say so by describing what the child does. Only name an area if it's in that toy's areas list. ${goalsList?`They picked: ${goalsList}. Across the five reasons, pick up each of these at least once where a toy honestly fits, and leave out any that don't.`:"They didn't pick any areas, so lean on their interests and the child's age."}
+If a pick doesn't match a stated interest, don't stretch it to fit. Say what it is and why it's a good one at this age.
+If they typed a worry (talking, sleep, meltdowns, toileting), you don't need to fix it. Mention it only where a toy really connects through play, and never promise anything.
+Every toy gets its own point. Don't repeat a reason across toys, and don't lean on the same phrase (like "lots to talk about") more than once.
 
-Where a toy touches MORE THAN ONE of the areas the parent cares about, say so, again by describing what the child does. Do not limit a toy to a single area. A lift-the-flap book is small fingers lifting flaps and plenty to talk about on every page, so name both. Toddler cutlery is both a hand job and a mealtime one. Only mention the areas that genuinely apply, do not stretch.
+${isGift?`THE PLAY IDEAS
+This is a present, so leave every play_idea as an empty string.`:`THE PLAY IDEAS
+${PLAY}
+For toys marked [EVERYDAY EQUIPMENT] (step stools, cutlery, cups, potty seats, dressing dolls), the play idea brings it into play, like a teddy bear picnic with the cutlery, and the reason can mention where it gets used in the day.`}
 
-Even when a toy is picked because the child LOVES it (an interest match), still link it back to the development goals the parent chose wherever there is a real connection. For example if a child loves water drawing and the parent's goal is language, do not just say "she'll love this", also give them the language angle, like "and there is a lot to talk about while she paints, naming the colours and what she is making." Interest and goal should both show up in the reason whenever both genuinely apply.
+BRITTANY'S NOTE (two or three sentences)
+Speak to this ${isGift?"gift-giver":"family"}. Mention something specific they wrote, or if they wrote very little, the child's age (${ageLabel(answers.child_age)}), what they ticked, or the occasion. Keep it about the child and the toys. The toys come from Brittany's library and this list was matched from it, so don't say she hand-picked this list for them.
+If they mentioned a worry, you can acknowledge it in plain words. Don't predict how it will go, don't say it's normal or that it will come with time, and never say there's nothing to worry about. ${referral} If it fits, you can add one small, everyday idea related to it (for talking: "When she points, say the word for her and leave a little pause."), written as an idea and never a fix.
+${isGift?`This is a present for someone else's child. Say "this little one" or the child's name, never "your child". Don't praise the gift-giver for being thoughtful. If they can only buy one, say you'd go with "${recs[0]&&recs[0].name}" (toy 1, the Top pick) and why, in one sentence, and never name a different toy as the one to buy. If they named a show or character, tie it in honestly. End with one short line that they and the child's family know this child best.`:`End with one short line, in Brittany's words, that they know their child best. Never use "develops at their own pace" or anything like it.`}
+${hasDelaySignals(answers)?`
+Some picks may be rated for younger children on purpose, to meet this child where they are right now. Talk about what this child enjoys and can do, never about age, and never call a toy babyish, simple or for younger kids.
+`:""}${recs.some(r=>(r.tags||[]).includes("deep-pressure"))?`
+For the weighted item only (the one tagged for deep pressure), add that they should check the weight guidance on the listing. Don't add this to any other toy.
+`:""}
+FORMAT
+Number the items to match the toy list exactly: n=1 is toy 1, and so on. Put the toy's name in "product" as a check. JSON only, no markdown:
+{"items":[{"n":1,"product":"...","reason":"...","play_idea":"..."},{"n":2,"product":"...","reason":"...","play_idea":"..."},{"n":3,"product":"...","reason":"...","play_idea":"..."},{"n":4,"product":"...","reason":"...","play_idea":"..."},{"n":5,"product":"...","reason":"...","play_idea":"..."}],"curator_note":"..."}`;
 
-IMPORTANT COVERAGE RULE: The parent told us they care about these areas: ${goalsList||"(none)"}. Across the five reasons, make sure EVERY ONE of them is picked up by at least one toy. Name the area the parent used, then say what the child will be doing, for example "you mentioned fine motor, and this one is all pinching and threading". Never say a toy is good for an area or that it builds one. Only name an area for a toy when that area is in the toy's own list above ("relates to:"). If no toy honestly fits one of the areas, leave it out rather than stretch.
-
-${hasDelaySignals(answers)?`IMPORTANT CONTEXT: The parent's description suggests this child may have developmental delays or additional needs. Some picks may be rated for younger ages on purpose. They were chosen to meet the child at their current developmental level, which is exactly the right approach. Frame every reason around what this child enjoys and can do right now, never around age. Never describe a toy as being for younger kids, for babies, or simple. Speak about the child with the same warmth and respect as any other child.
-
-`:""}${answers.recipient&&answers.recipient!=="my-child"?`GIFT MODE: The person taking this quiz is choosing a gift for a child who is NOT their own. Never say "your child". Refer to the child as "this child" or "this little one". Return an empty string for every play_idea, no play ideas in gift mode. Frame each reason as why this makes a great gift for this specific child. For the curator note, speak to the gift-giver plainly. Do not compliment them for choosing thoughtfully. If they can only buy one, say you would choose "${recs[0]&&recs[0].name}" (the Top pick, toy 1), and why, in a sentence. Never name a different toy as the one to buy. If they named a show or character, tie it in honestly (for example, Bluey and Bingo play doctors, so the doctor kit fits). End with the sentiment that this child's parents know them best. Never promise a pick will be perfect. Every toy still needs its own reason; never return an empty reason.
-
-`:""}INTEREST GROUNDING RULE: the child's interests are ONLY what the parent ticked or typed. Never infer an interest from the products you were given. If the list contains two train sets, that does not mean this child likes trains. Saying "since he's obsessed with trains" when the parent wrote diggers and dinosaurs is the single most damaging mistake you can make here, because it tells the parent nobody read what they wrote. When a pick does not match a stated interest, say what the toy is and why it suits them for another reason, or say plainly that it is a change from their usual.
-
-${hasMouthingSignals(answers)?`SMALL PARTS RULE: this parent has told us their child still puts things in their mouth, or has asked for nothing with small pieces. The results page already tells them to check the age rating and the listing themselves, so do not repeat it, do not promise any toy is safe, and do not reassure them about choking. Never suggest a play idea that adds loose small items such as beads, buttons, coins, dry rice, pasta or water beads.
-
-`:""}THEIR OWN WORDS RULE: what the parent typed matters more than the boxes they ticked. If they named a worry (talking, meltdowns, waiting their turn), that is why they came, so where a toy honestly connects to it, lead that toy's reason with the connection before other areas. If they named a show, character or favourite thing (Bluey, sharks, Minecraft), connect at least one toy to it where the play genuinely overlaps, and never claim a toy is branded or themed when it is not.
-
-LIBRARY RULE: the toys come from a small library Brittany chose herself. If the parent named a show, character, theme or worry and none of the toys fits it, do not stretch a toy to fit or hint that it does. Do not apologise for it either; a separate line on the page already tells them.
-
-FACTS RULE: say only what the parent said. Never describe the child's personality, temperament or habits beyond what the parent wrote (do not call a child "curious", "busy", "cautious" or "a little scientist" unless the parent used that idea). Do not say the child already owns something unless the parent said so ("the diggers he already loves" is wrong if they only said he loves diggers). Do not change numbers or people (one cousin stays one cousin). Do not describe a feature the listing does not mention (a soft book's colours do not change).
-
-RESPECT RULE: never frame something the child does or loves as something to move them away from. That includes screens and video games: Brittany is not anti-screen, so never pitch a toy as a replacement for screen time. Lining things up, repetitive play, stimming, special interests and preferring to play alone are how this child plays. Never write "a change from their usual" or "instead of lining up". Describe the toy, not a fix for the child.
-
-SAFETY RULE: never say or imply a toy is safe, choke-free, has no small parts, or is suitable for a child who mouths things. You have not checked the listings. ${recs.some(r=>(r.tags||[]).includes("deep-pressure"))?"For the weighted item only (it is the one tagged for deep pressure), add that the parent should check the weight guidance on the listing and talk to their OT if they have one. Do not add this to any other toy.":""}
-
-PLAIN WORDS RULE: no sales language ("pays for itself", "worth every cent", "investment", "game-changer", "must-have"). Keep each reason to three sentences at most.
-
-GROUNDING RULE: Each toy's listing above tells you what it actually is and does. Base every reason and play idea ONLY on the product's real features. Never invent features it does not have. Think through the practical reality of the suggestion before writing it: if the toy itself gives the cues (lights, sounds, spoken commands, music), do not tell the parent to give the cue, the child responds to the toy. If a toy launches, flies, or travels a long way, suggest an open space like a park or oval rather than assuming a backyard is big enough. If an activity is messy, only suggest it somewhere that makes sense. Every play idea must be something a real parent could physically do with that exact product.
-
-Unless GIFT MODE above applies, for EVERY toy always include a play idea. Never leave one blank. Use Brittany's style from her 30 Day Play Calendar: specific, active, one sentence, a little playful. Examples of her style:
-- "Set up a dinosaur hospital where the T-Rex has crashed and needs the doctor kit to fix his leg"
-- "Use the scarves for peek-a-boo or wave them around like ocean waves while you sing a song"
-- "Make it a challenge, can they stack it higher than last time before it falls?"
-- "Take it outside and draw a road system with chalk for the trucks to drive on"
-- "Hide small toys inside the kinetic sand and let them excavate like a palaeontologist"
-If the toy already matches the child's interest, the play idea should be a fresh new way to play with it, ideally one that also touches on an area the parent chose. For example if a child loves water drawing and the parent's goal is language, suggest "Name each thing as they paint it, or take turns drawing something and guessing what the other drew." Always try to weave a chosen area into the play idea where it fits naturally.
-Keep play ideas brief, practical, and fun.
-
-SPECIAL RULE FOR FUNCTIONAL OR EVERYDAY EQUIPMENT (learning towers, step stools, toddler cutlery, open cups, potties, dressing dolls, anything practical rather than a typical toy): For these, the play idea should show how to bring the item INTO play, not just use it for its everyday function. Examples in Brittany's voice:
-- Toddler cutlery: "Bring it into play too, set up a teddy bear picnic, play restaurants, or use it to cut and serve playdough food"
-- Learning tower or step stool: "Pop them up at the bench and let them join in cooking or washing up. Being part of the everyday alongside you is half the fun at that age"
-- Open cup: "Practice in the bath or at a tea party with the dolls first, where a spill doesn't matter"
-- Dressing doll: "Let them dress and undress the doll as a game before tackling their own buttons"
-And in the REASON for these functional items, it is good to also mention where they get used at mealtimes or in daily routines, and to connect that to self-care and independence where the parent picked it, by describing what the child does for themselves. Functional equipment is play AND practical, say both. ALWAYS include a play idea for functional equipment, never leave it blank, even if it does not match a stated interest (unless GIFT MODE applies).
-
-Then write a warm, individualised 2-3 sentence note from Brittany. It must feel personal to THIS family, never generic. If the parent gave lots of detail, reference something specific they said. If they gave very little, still make it feel individual by drawing on their actual quiz choices: their child's age (${ageLabel(answers.child_age)}), the goals they picked, the interests they ticked, or the occasion. Speak to their situation directly. No em dashes. Short sentences.
-
-NO REASSURANCE RULE FOR THIS NOTE: parents often mention a worry here, about speech, behaviour, frustration, sleep, eating, how their child compares to others. You must not predict how it will turn out, tell them it is normal, tell them it will come with time, or imply it needs no action. Brittany is a registered health practitioner and has not assessed this child, so a sentence like "the speech will come" is a clinical opinion she is not in a position to give. Acknowledge what they told you in plain words and move on to the toys. ${professionalAlreadyInvolved(answers)?"This family has already told you a professional is involved or that their child has a diagnosis. Do NOT suggest they see a GP, nurse, paediatrician or any professional, and do not suggest getting anything checked. They have support already, and saying it tells them you did not read what they wrote.":(answers.child_age>=60?"If they named a worry, you may say once, briefly, that it is worth raising with their GP, and nothing more. Do not mention a child health nurse; this child is school age.":"If they named a worry, you may say once, briefly, that it is worth raising with their GP or child health nurse, and nothing more.")} Never say it is nothing to worry about. If they named a worry, give them ONE simple thing to try in everyday play that relates to it, written as an idea and never as a fix (for talking: "When he points, say the word for him and leave a little pause."). Do not promise it will help.
-
-End with one short line in Brittany's own words that they know their child best. Do not use the phrase "develops at their own pace" or anything like it. (If GIFT MODE applies, use the gift ending described there instead.)
-
-VARIETY RULE: The five toys are deliberately varied. Never present two toys as interchangeable or repeat the same reasoning for two different toys. Each reason should make clear what this specific toy adds that the others don't.
-
-ALIGNMENT RULE: Number every item to match the numbered toy list above exactly. The object with n=1 must be about toy 1 and no other toy, n=2 about toy 2, and so on. Repeat the product name in the "product" field as a check.
-
-JSON only (no markdown):
-{"items":[{"n":1,"product":"exact name of toy 1","reason":"...","play_idea":"..."},{"n":2,"product":"...","reason":"...","play_idea":"..."},{"n":3,"product":"...","reason":"...","play_idea":"..."},{"n":4,"product":"...","reason":"...","play_idea":"..."},{"n":5,"product":"...","reason":"...","play_idea":"..."}],"curator_note":"..."}`;
-
-    const res=await fetch("/api/personalise",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({max_tokens:1500,messages:[{role:"user",content:prompt}]})});
-    const data=await res.json();
-    const parsed=JSON.parse(data.content.map(b=>b.text||"").join("").replace(/```json|```/g,"").trim());
+    // Ask once, and if the reply isn't clean JSON, ask one more time before
+    // falling back to Brittany's own notes. (The API allows one call per 2 seconds.)
+    const ask=async()=>{const res=await fetch("/api/personalise",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({max_tokens:2000,messages:[{role:"user",content:prompt}]})});
+      const data=await res.json();return parseAI((data.content||[]).map(b=>b.text||"").join(""));};
+    let parsed=await ask().catch(()=>null);
+    if(!parsed||!Array.isArray(parsed.items)){await new Promise(r=>setTimeout(r,2100));parsed=await ask();}
+    if(!parsed)throw new Error("Unreadable reply");
     return sanitizeAI(normalizeAI(parsed,recs),answers,recs);
   }
 
@@ -4022,11 +4104,11 @@ JSON only (no markdown):
     const keptIds=result.recs.filter((_,i)=>i!==index).map(r=>r.id);
     setExcludedIds(newExcluded);setSwappingIndex(index);
     try{
-      const replacement=getRecommendations({...answers},1,[...newExcluded,...keptIds]);
+      const replacement=getRecommendations({...answers},1,[...newExcluded,...keptIds],result.recs.filter((_,i)=>i!==index));
       if(!replacement.length){setSwappingIndex(null);return;}
       const newToy=replacement[0];
       let reason=newToy.note;let playIdea="";
-      try{const ai=await callAI([newToy],0);reason=ai.reason||newToy.note;}catch{}
+      try{const ai=await callAI([newToy],0);reason=ai.reason||newToy.note;playIdea=ai.play_idea||"";}catch{}
       setResult(prev=>{
         const newRecs=[...prev.recs];newRecs[index]=newToy;
         const newReasons=[...prev.personalised_reasons];newReasons[index]=reason;
@@ -4060,7 +4142,7 @@ JSON only (no markdown):
         )}
         {hasMouthingSignals(answers)&&(
           <div style={{background:`${K_YELLOW}2E`,border:`1px solid ${K_YELLOW}`,borderRadius:12,padding:"11px 15px",marginTop:12,fontSize:13.5,color:TEXT,lineHeight:1.5}}>
-            You mentioned small parts. These picks go by the maker's age rating, and anything rated 3 and up can still have small pieces in it. Have a look at the listing yourself before you hand it over.
+            You mentioned mouthing or small parts. These picks go by the maker's age rating, and anything rated 3 and up can still have small pieces in it. Check each listing yourself before you hand it over. Only a toy sold as a chew tool is made to go in the mouth.
           </div>
         )}
         {result.recs.map((toy,i)=>(
@@ -4074,7 +4156,7 @@ JSON only (no markdown):
               </div>
               <h2 style={{fontSize:16,fontWeight:700,color:TEXT,margin:"0 0 8px",lineHeight:1.3}}>{toy.name}</h2>
               <div style={{display:"flex",flexWrap:"wrap",gap:5,marginBottom:12}}>
-                {toy.dev_areas.map(a=>(<span key={a} style={{fontSize:11,padding:"2px 9px",borderRadius:20,background:`${DEV_COLOURS[a]}22`,color:DEV_COLOURS[a],fontWeight:600,border:`1px solid ${DEV_COLOURS[a]}44`}}>{DEV_LABELS[a]}</span>))}
+                {chipAreas(toy,answers).map(a=>(<span key={a} style={{fontSize:11,padding:"2px 9px",borderRadius:20,background:`${DEV_COLOURS[a]}22`,color:DEV_COLOURS[a],fontWeight:600,border:`1px solid ${DEV_COLOURS[a]}44`}}>{DEV_LABELS[a]}</span>))}
               </div>
               <p style={{fontSize:14,color:TEXT,lineHeight:1.7,margin:"0 0 10px"}}>{result.personalised_reasons[i]}</p>
               {result.play_ideas&&result.play_ideas[i]&&(
