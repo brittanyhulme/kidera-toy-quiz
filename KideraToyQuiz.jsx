@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 // ─── BRAND ───────────────────────────────────────────────────────────────────
 const LOGO = "https://images.squarespace-cdn.com/content/v1/63f6a22a05d1f52c5fbc9958/828c459a-9f72-4475-8cc5-b0045694bd96/Primary+Logo.png?format=300w";
@@ -2761,7 +2761,12 @@ PRODUCTS.forEach(p=>{p.dev_areas=[...new Set((p.dev_areas||[]).map(a=>a==="regul
 function chipAreas(toy,answers){
   const goals=new Set((answers.dev_focus||[]).map(g=>g==="sensory-tools"?"sensory":g));
   const areas=(toy.dev_areas||[]).filter(a=>DEV_LABELS[a]);
-  return [...areas.filter(a=>goals.has(a)),...areas.filter(a=>!goals.has(a))].slice(0,3);
+  // It's a toy guide, so clinical-sounding areas only show when the parent picked them.
+  const quiet=new Set(["sensory","selfcare","regulation"]);
+  const hit=areas.filter(a=>goals.has(a));
+  const rest=areas.filter(a=>!goals.has(a)&&!quiet.has(a));
+  const out=[...hit,...rest].slice(0,hit.length?3:2);
+  return out.length?out:areas.slice(0,1);
 }
 
 function fmtPrice(n){const v=Number(n)||0;return Number.isInteger(v)?String(v):v.toFixed(2);}
@@ -2910,23 +2915,39 @@ const THEMES=[
   ["Pok\u00e9mon",/\bpok[e\u00e9]mon\b/i,/pok[e\u00e9]mon/i],["mermaid",/\bmermaids?\b/i,/mermaid/i],["fairy",/\bfair(y|ies)\b/i,/fair(y|ies)/i],
   ["shark",/\bsharks?\b/i,/shark|ocean/i],["dinosaur",/\b(dinos?|dinosaurs?|t-?rex)\b/i,/dino|t-?rex/i],["train",/\btrains?\b/i,/train/i],
   ["space",/\b(space|planets?|astronauts?)\b/i,/\bspace ?(ship|station|rocket|themed)|outer space|planet|rocket|astronaut|solar system/i],["horse",/\b(horses?|pon(y|ies))\b/i,/horse|pony/i],
-  ["digger",/\b(diggers?|excavators?)\b/i,/digger|excavator|construction/i],["car",/\bcars?\b/i,/\bcars?\b|vehicle|hot wheels/i],
+  ["digger",/\b(diggers?|excavators?)\b/i,/digger|excavator|construction|bulldozer|backhoe|dump truck/i,true],["car",/\bcars?\b/i,/\bcars?\b|vehicle|hot wheels/i],
   // Things parents type that no checkbox covers.
   // These match on the toy's name only: "buried in the garden" in a note doesn't make dinosaurs a garden toy.
   ["garden",/\b(garden\w*|veggie (patch|garden)|planting|watering the)\b/i,/garden|wheelbarrow|watering can/i,true],["tractor",/\btractors?\b/i,/tractor/i,true],
-  ["bubble",/\bbubbles?\b/i,/bubble/i,true],["cat",/\b(cats?|kittens?)\b/i,/\b(cats?|kittens?)\b/i,true],["soccer",/\b(soccer|football)\b/i,/soccer|football/i,true],
+  ["bubble",/\bbubbles?\b/i,/bubble/i,true],["cat",/\b(cats?|kittens?)\b/i,/(?<!taco )\b(cats?|kittens?)\b/i,true],["soccer",/\b(soccer|football)\b/i,/soccer|football/i,true],
+  ["farm",/\b(farms?|farm animals?)\b/i,/farm|barn|tractor/i,true],["fire truck",/\bfire ?(trucks?|engines?|fighters?|station)\b/i,/fire (truck|engine|station)/i,true],
+  ["doctor",/\b(playing doctors?|doctors? and nurses|doctor kit|vet kit|playing vets?)\b/i,/doctor|\bvet\b|medical/i,true],["kitchen",/\b(cooking|baking|play kitchen|chef)\b/i,/kitchen|cook|bak(e|ing)|tea set/i,true],
+  ["dress-up",/\b(dress(ing)?[- ]?up|costumes?)\b/i,/dress[- ]?up|costume/i,true],["shop",/\b(playing shops?|shopkeeper|cash register)\b/i,/shop|cash register|checkout/i,true],
+  ["puppet",/\bpuppets?\b/i,/puppet/i,true],["magnetic tile",/\b(magna ?-?tiles?|magnetic tiles|connetix)\b/i,/magna|connetix|magnetic tile/i,true],
+  ["playdough",/\b(play ?-?doh|playdough|play dough)\b/i,/play-?doh|dough/i,true],["scooter or bike",/\b(scooters?|bikes?|trikes?)\b/i,/scooter|bike|trike/i,true],
+  ["princess",/\bprincess(es)?\b/i,/princess/i,true],["superhero",/\bsuper ?heroes?\b/i,/super ?hero|spider|batman|marvel/i,true],
+  ["bug",/\b(bugs?|insects?|beetles?|butterfl\w+)\b/i,/bug|insect|butterfl|beetle/i,true],["camping",/\bcamping\b/i,/camp|tent/i,true],
+  ["plane",/\b(planes?|aeroplanes?|airplanes?|helicopters?)\b/i,/plane|helicopter|airport/i,true],["fishing",/\bfishing\b/i,/fishing/i,true],
+  ["dolls house",/\bdoll'?s? ?houses?\b/i,/doll.?s? ?house/i,true],["footy",/\b(footy|afl)\b/i,/footy|afl/i,true],["cricket",/\bcricket\b/i,/cricket/i,true],
+  ["basketball",/\bbasketball\b/i,/basketball|hoop/i,true],["drum",/\bdrums?\b/i,/drum/i,true],["dog",/\b(dogs?|pupp(y|ies))\b/i,/\bdogs?\b|pupp/i,true],
 ];
 function joinList(a){return a.length<2?a.join(""):a.slice(0,-1).join(", ")+" or "+a[a.length-1];}
 function joinAnd(a){return a.length<2?a.join(""):a.slice(0,-1).join(", ")+" and "+a[a.length-1];}
+// Themes the parent named that the library has nothing for at this age.
+function gapThemes(answers,recs){
+  const t=typedText(answers);const age=answers.child_age||0;
+  const hayOf=(p,nameOnly)=>nameOnly?(p.name||""):((p.name||"")+" "+(p.note||"")+" "+(p.search||"")+" "+(p.tags||[]).join(" "));
+  const fitsAge=p=>(p.age_min||0)<=age+6&&(p.age_max==null||p.age_max>=age-6);
+  return THEMES.filter(([,re,hit,nameOnly])=>saidPositively(t,re)&&!recs.some(p=>hit.test(hayOf(p,nameOnly)))&&!PRODUCTS.some(p=>fitsAge(p)&&hit.test(hayOf(p,nameOnly)))).map(([l])=>l);
+}
 function libraryGapLine(answers,recs){
   const t=typedText(answers);
-  const hayOf=(p,nameOnly)=>nameOnly?(p.name||""):((p.name||"")+" "+(p.note||"")+" "+(p.search||"")+" "+(p.tags||[]).join(" "));
-  const themes=THEMES.filter(([,re,hit,nameOnly])=>saidPositively(t,re)&&!recs.some(p=>hit.test(hayOf(p,nameOnly)))).map(([l])=>l);
+  const themes=gapThemes(answers,recs);
   const worries=worriesOf(answers).filter(w=>w.label&&w.fits&&!recs.some(w.fits)).map(w=>typeof w.label==="function"?w.label(t):w.label);
   if(!themes.length&&!worries.length)return "";
   const out=[];
-  if(themes.length)out.push(`I didn't find any ${joinList(themes)} toys for you today.`);
-  if(worries.length)out.push(`You mentioned ${joinAnd(worries)}. Nothing in today's picks fits ${worries.length>1?"those":"that"}.`);
+  if(themes.length)out.push(`I don't have any ${joinList(themes)} toys in my library yet.`);
+  if(worries.length)out.push(`You mentioned ${joinAnd(worries)}. Nothing in these picks fits ${worries.length>1?"those":"that"}.`);
   out.push("My library only holds things I've chosen myself, so it won't have everything.");
   return out.join(" ");
 }
@@ -3759,15 +3780,8 @@ function FeedbackWidget(){
 function LoadingScreen(){
   const messages=[
     "Matching all the info you shared...",
-    "Making sure they will love these",
-    "Finding a just right challenge",
-    "Adding a little OT flair",
-    "Generating play tips just for you",
-    "Scrutinising the toy aisle",
-    "Checking everything is age appropriate",
-    "Lining up the perfect picks",
-    "Thinking like a paediatric OT",
-    "Almost there, good things take a sec",
+    "Looking through Brittany's library...",
+    "Lining up your picks...",
   ];
   const[i,setI]=useState(0);
   useEffect(()=>{
@@ -3778,7 +3792,7 @@ function LoadingScreen(){
     <div style={{minHeight:"100vh",background:BG,display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",fontFamily:"system-ui",padding:"0 24px",textAlign:"center"}}>
       <img src={LOGO} alt="Kidera" style={{height:48,marginBottom:24}} onError={e=>{e.target.style.display="none";}}/>
       <div style={{fontSize:40,marginBottom:18,animation:"bounce 1s infinite"}}>🧸</div>
-      <div style={{fontSize:18,color:TEXT,fontWeight:700,marginBottom:10}}>This takes a few seconds</div>
+      <div style={{fontSize:18,color:TEXT,fontWeight:700,marginBottom:10}}>Finding your picks</div>
       <div key={i} style={{fontSize:15,color:K_GREEN,fontWeight:600,minHeight:22,animation:"fadeIn 0.5s ease"}}>{messages[i]}</div>
       <style>{`
         @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
@@ -3881,7 +3895,9 @@ function sanitizeAI(ai,answers,recs=[]){
 }
 
 // ─── EMAIL GATE: unlock results ─────────────────────────────────
-function EmailGate({count,onUnlock,isGift}){
+function EmailGate({recs,onUnlock,isGift}){
+  const count=recs.length;
+  const preview=recs.slice(0,2);
   const [email,setEmail] = useState("");
   const [busy,setBusy]   = useState(false);
   const [err,setErr]     = useState("");
@@ -3931,13 +3947,38 @@ function EmailGate({count,onUnlock,isGift}){
         <img src={LOGO} alt="Kidera" style={{height:56,objectFit:"contain",marginBottom:10}} onError={(e)=>{e.target.style.display="none";}}/>
         <h1 style={{fontSize:"clamp(18px,4vw,26px)",fontWeight:800,color:TEXT,margin:"0 0 6px"}}>Your picks are ready</h1>
         <p style={{fontSize:14,color:TEXT,margin:0,opacity:0.75}}>
-          {count} toys matched {isGift ? "to this child" : "to your child"} by a paediatric OT.
+          Here are the top {preview.length} of {count}, matched {isGift ? "to this child" : "to your child"} from a library chosen by a paediatric OT.
         </p>
       </div>
       <div style={{maxWidth:560,margin:"0 auto",padding:"0 20px"}}>
-        <div style={{background:CARD,border:"1px solid "+BORDER,borderRadius:16,padding:"24px 20px",marginTop:20}}>
+        {preview.map((toy,i)=>(
+          <div key={toy.id} style={{background:CARD,borderRadius:16,border:"1px solid "+BORDER,marginTop:18,overflow:"hidden",boxShadow:"0 2px 8px rgba(0,0,0,0.05)"}}>
+            <ProductImage toy={toy}/>
+            <div style={{padding:"16px 20px 18px"}}>
+              <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:8}}>
+                <div style={{width:24,height:24,borderRadius:"50%",background:i===0?K_GREEN:BORDER,display:"flex",alignItems:"center",justifyContent:"center",fontSize:12,fontWeight:700,color:i===0?"#fff":MUTED,flexShrink:0}}>{i+1}</div>
+                {i===0&&<div style={{fontSize:11,color:K_GREEN,letterSpacing:"0.1em",textTransform:"uppercase",fontWeight:700}}>Top pick</div>}
+                <div style={{fontSize:13,color:MUTED,marginLeft:"auto",fontWeight:600}}>~${fmtPrice(toy.price)} AUD</div>
+              </div>
+              <h2 style={{fontSize:16,fontWeight:700,color:TEXT,margin:"0 0 6px",lineHeight:1.3}}>{toy.name}</h2>
+              <p style={{fontSize:14,color:TEXT,lineHeight:1.6,margin:0}}><strong>Brittany's note:</strong> {toy.note}</p>
+            </div>
+          </div>
+        ))}
+        {count>preview.length&&(
+          <div style={{display:"flex",gap:8,marginTop:14}}>
+            {recs.slice(preview.length).map((toy,i)=>(
+              <div key={toy.id} aria-hidden="true" style={{flex:1,height:64,borderRadius:12,border:"1px dashed "+BORDER,background:"#FFFFFF",display:"flex",alignItems:"center",justifyContent:"center",fontSize:13,color:MUTED,fontWeight:700}}>Pick {preview.length+i+1} 🔒</div>
+            ))}
+          </div>
+        )}
+        <div style={{background:CARD,border:"1px solid "+BORDER,borderRadius:16,padding:"24px 20px",marginTop:18}}>
+          <h2 style={{fontSize:18,fontWeight:800,color:TEXT,margin:"0 0 8px"}}>See all {count} picks</h2>
+          <p style={{fontSize:15,color:TEXT,margin:"0 0 10px",lineHeight:1.5}}>
+            Pop in your email to see all {count}, with direct links{isGift ? "" : ", play ideas"} and why each one suits {isGift ? "this child" : "your child"}.
+          </p>
           <p style={{fontSize:15,color:TEXT,margin:"0 0 14px",lineHeight:1.5}}>
-            Pop in your email and I will unlock your picks straight away. You will also get my monthly play and toy ideas, written by me.
+            Already have one, or it's not quite right? Once you're in, you can swap any pick and I'll find another one based on your answers.
           </p>
           <form onSubmit={submit} noValidate>
             <input type="email" value={email} onChange={(e)=>setEmail(e.target.value)} placeholder="you@email.com" autoComplete="email"
@@ -3945,11 +3986,11 @@ function EmailGate({count,onUnlock,isGift}){
             {err ? <p role="alert" style={{color:K_PINK,fontSize:13,margin:"0 0 10px"}}>{err}</p> : null}
             <button type="submit" disabled={busy}
               style={{width:"100%",padding:"15px 18px",fontSize:16,fontWeight:800,borderRadius:12,border:"none",cursor:busy?"default":"pointer",background:busy?MUTED:K_GREEN,color:"#FFFFFF"}}>
-              {busy ? "Unlocking..." : "Show me my toy picks"}
+              {busy ? "Unlocking..." : `Show me all ${count} picks`}
             </button>
           </form>
           <p style={{fontSize:12,color:MUTED,margin:"12px 0 0",lineHeight:1.5}}>
-            No spam, unsubscribe any time. I will never share your email.
+            You'll also get my monthly play and toy ideas, written by me. No spam, unsubscribe any time, and I'll never share your email.
           </p>
         </div>
       </div>
@@ -3962,6 +4003,7 @@ export default function KideraToyQuiz(){
   const[step,setStep]=useState(0);const[answers,setAnswers]=useState({});
   const[result,setResult]=useState(null);const[gateOpen,setGateOpen]=useState(false);const[loading,setLoading]=useState(false);
   const[swappingIndex,setSwappingIndex]=useState(null);const[excludedIds,setExcludedIds]=useState([]);
+  const runRef=useRef(null);
 
   const current=STEPS[step];
   const isGift=answers.recipient&&answers.recipient!=="my-child";
@@ -3990,7 +4032,8 @@ Interests ticked: ${(answers.interests||[]).filter(v=>v!=="not-sure").join(", ")
 Areas they'd like to support: ${(answers.dev_focus||[]).join(", ")||"none"}
 How the child likes to play: ${(answers.play_style||[]).filter(v=>v!=="not-sure").join(", ")||"not specified"}
 Already have plenty of: ${(answers.already_have||[]).join(", ")||"nothing specified"}
-Anything else: ${answers.wildcard||"nothing"}`;
+Anything else: ${answers.wildcard||"nothing"}${gapThemes(answers,recs).length?`
+Not in Brittany's library yet: ${joinList(gapThemes(answers,recs))} toys. None of the five toys is one, so never say or hint that a toy covers ${gapThemes(answers,recs).length>1?"them":"it"}, in the reasons or the note. The page tells them about the gap separately.`:""}`;
 
     const VOICE=`HOW BRITTANY WRITES
 Warm, practical and Australian, like a friend who happens to be an OT. Plain words, short sentences, one idea per sentence. Name the actual toy, the actual thing the child does with it, and the actual interest the parent mentioned. Australian spelling (colour, favourite, mum). No em dashes. No rhetorical questions. Never write "it's not X, it's Y". Never use these words: delve, crucial, pivotal, tapestry, foundational, robust, seamless, seamlessly, landscape, realm, elevate, unlock, harness, journey, game-changer, dive in, navigate, fostering, ensuring, empowering, testament, workhorse, arsenal, toolkit, must-have, investment, worth every cent, mesmerising.`;
@@ -4004,7 +4047,7 @@ Warm, practical and Australian, like a friend who happens to be an OT. Plain wor
 6. RESPECT. Lining things up, repetition, stimming, special interests, playing alone and screens are all fine. Never pitch a toy as a way to move a child away from any of them.`;
 
     const PLAY=`Every toy gets a play idea, all five of them. Play ideas are one sentence each: specific, active and a little playful, like Brittany's 30 Day Play Calendar ("Set up a dinosaur hospital where the T-Rex needs the doctor kit to fix his leg." "Take it outside and draw a chalk road for the trucks."). It must work with that exact toy in a real house or park, and it must fit the child the parent described:
-- Few words or a late talker: offer two choices or let them point or show. The fun never depends on them saying a word.
+- Few words or a late talker: offer two choices or let them point or show, and give the grown-up one word to say as they play, then a pause ("say 'splash!' and wait"). If the parent mentions signs, the grown-up signs the word as well. The fun never depends on the child saying a word.
 - A worrier or a perfectionist: keep it low stakes. No timers, scores or races.
 - Nothing messy in bed. Anything that launches or flies goes to a park or oval.${mouthing?`
 - No loose small extras, like beads, buttons, coins, dry pasta or rice, or water beads.`:""}`;
@@ -4091,14 +4134,20 @@ Number the items to match the toy list exactly: n=1 is toy 1, and so on. Put the
 
   async function handleSubmit(){
     setLoading(true);
-    try{
-      const recs=getRecommendations(answers,5,excludedIds);
-      const ai=await callAI(recs);
-      setResult({recs,play_ideas:ai.play_ideas||recs.map(()=>""),...ai});
-    }catch{
-      const recs=getRecommendations(answers,5,excludedIds);
-      setResult({recs,personalised_reasons:recs.map(p=>p.note),play_ideas:recs.map(()=>""),curator_note:"These picks are matched to your child's age, interests and development. Trust your instincts, and remember the best toy is always one that sparks real joy for them."});
-    }finally{setLoading(false);}
+    const run={};runRef.current=run;
+    const recs=getRecommendations(answers,5,excludedIds);
+    const fallback={personalised_reasons:recs.map(p=>p.note),play_ideas:recs.map(()=>""),curator_note:"These picks are matched to the age, interests and goals you told me about. You know them best."};
+    const build=(o)=>o.ok?{recs,play_ideas:o.ai.play_ideas||recs.map(()=>""),...o.ai,pending:false}:{recs,...fallback,pending:false};
+    let done=null;
+    const aiRun=callAI(recs).then(ai=>{done={ok:true,ai};},()=>{done={ok:false};});
+    // A short pause so the loading screen doesn't flash, then straight to the picks.
+    await new Promise(r=>setTimeout(r,1500));
+    if(runRef.current!==run)return;
+    setResult(done?build(done):{recs,...fallback,pending:true});
+    setLoading(false);
+    await aiRun;
+    if(runRef.current!==run)return;
+    setResult(prev=>prev&&prev.pending&&prev.recs===recs?build(done):prev);
   }
 
   async function handleSwap(index){
@@ -4121,10 +4170,10 @@ Number the items to match the toy list exactly: n=1 is toy 1, and so on. Put the
     }finally{setSwappingIndex(null);}
   }
 
-  function reset(){setStep(0);setAnswers({});setResult(null);setGateOpen(false);setLoading(false);setSwappingIndex(null);setExcludedIds([]);}
+  function reset(){runRef.current=null;setStep(0);setAnswers({});setResult(null);setGateOpen(false);setLoading(false);setSwappingIndex(null);setExcludedIds([]);}
 
   // ── RESULT ─────────────────────────────────────────────────────────────────
-  if(result&&!gateOpen)return(<EmailGate count={(result.recs||[]).length} isGift={isGift} onUnlock={()=>setGateOpen(true)}/>);
+  if(result&&!gateOpen)return(<EmailGate recs={result.recs||[]} isGift={isGift} onUnlock={()=>{setGateOpen(true);try{window.scrollTo(0,0);}catch{ /* not in a browser */ }}}/>);
 
   if(result)return(
     <div style={{minHeight:"100vh",background:BG,fontFamily:"system-ui,sans-serif",paddingBottom:60}}>
@@ -4145,7 +4194,9 @@ Number the items to match the toy list exactly: n=1 is toy 1, and so on. Put the
         )}
         {hasMouthingSignals(answers)&&(
           <div style={{background:`${K_YELLOW}2E`,border:`1px solid ${K_YELLOW}`,borderRadius:12,padding:"11px 15px",marginTop:12,fontSize:13.5,color:TEXT,lineHeight:1.5}}>
-            You mentioned mouthing or small parts. These picks go by the maker's age rating, and anything rated 3 and up can still have small pieces in it. Check each listing yourself before you hand it over. Only a toy sold as a chew tool is made to go in the mouth.
+            {(answers.child_age||0)<13
+              ?"You mentioned mouthing. Babies explore with their mouths, so check each listing says it suits your baby's age before you hand it over."
+              :"You mentioned mouthing or small parts. These picks go by the maker's age rating, and anything rated 3 and up can still have small pieces in it. Check each listing yourself before you hand it over. Only a toy sold as a chew tool is made to go in the mouth."}
           </div>
         )}
         {result.recs.map((toy,i)=>(
@@ -4161,8 +4212,9 @@ Number the items to match the toy list exactly: n=1 is toy 1, and so on. Put the
               <div style={{display:"flex",flexWrap:"wrap",gap:5,marginBottom:12}}>
                 {chipAreas(toy,answers).map(a=>(<span key={a} style={{fontSize:11,padding:"2px 9px",borderRadius:20,background:`${DEV_COLOURS[a]}22`,color:DEV_COLOURS[a],fontWeight:600,border:`1px solid ${DEV_COLOURS[a]}44`}}>{DEV_LABELS[a]}</span>))}
               </div>
-              <p style={{fontSize:14,color:TEXT,lineHeight:1.7,margin:"0 0 10px"}}>{result.personalised_reasons[i]}</p>
-              {result.play_ideas&&result.play_ideas[i]&&(
+              <p style={{fontSize:14,color:result.pending?MUTED:TEXT,lineHeight:1.7,margin:"0 0 10px"}}>{result.personalised_reasons[i]}</p>
+              {result.pending&&<p style={{fontSize:12.5,color:K_GREEN,fontWeight:600,margin:"-4px 0 12px"}}>Writing why this one suits {isGift?"them":"your child"}...</p>}
+              {!result.pending&&result.play_ideas&&result.play_ideas[i]&&(
                 <div style={{background:`${K_GREEN}12`,borderRadius:10,padding:"10px 14px",marginBottom:14,display:"flex",gap:10,alignItems:"flex-start"}}>
                   <span style={{fontSize:16,flexShrink:0}}>💡</span>
                   <p style={{fontSize:13,color:TEXT,lineHeight:1.6,margin:0}}><strong>Play idea:</strong> {result.play_ideas[i]}</p>
@@ -4173,8 +4225,8 @@ Number the items to match the toy list exactly: n=1 is toy 1, and so on. Put the
                   style={{display:"inline-flex",alignItems:"center",gap:6,background:K_YELLOW,color:TEXT,fontWeight:700,fontSize:13,padding:"9px 18px",borderRadius:10,textDecoration:"none"}}>
                   View on Amazon AU
                 </a>
-                <button onClick={()=>handleSwap(i)} disabled={swappingIndex!==null}
-                  style={{fontSize:13,color:MUTED,background:"none",border:`1px solid ${BORDER}`,borderRadius:8,padding:"9px 14px",cursor:swappingIndex!==null?"default":"pointer"}}>
+                <button onClick={()=>handleSwap(i)} disabled={swappingIndex!==null||!!result.pending}
+                  style={{fontSize:13,color:MUTED,background:"none",border:`1px solid ${BORDER}`,borderRadius:8,padding:"9px 14px",cursor:swappingIndex!==null||result.pending?"default":"pointer",opacity:result.pending?0.5:1}}>
                   {swappingIndex===i?"Finding a swap...":"🔄 Swap this (already have it or not quite right)"}
                 </button>
               </div>
@@ -4190,7 +4242,7 @@ Number the items to match the toy list exactly: n=1 is toy 1, and so on. Put the
               <div style={{fontSize:12,color:MUTED}}>Paediatric OT and Kidera founder</div>
             </div>
           </div>
-          <p style={{fontSize:14,lineHeight:1.8,color:TEXT,margin:"0 0 10px"}}>{result.curator_note}</p>
+          <p style={{fontSize:14,lineHeight:1.8,color:result.pending?MUTED:TEXT,margin:"0 0 10px"}}>{result.pending?"Writing my note for you. It'll pop up here in a few seconds.":result.curator_note}</p>
           {libraryGapLine(answers,result.recs)&&<p style={{fontSize:14,lineHeight:1.8,color:TEXT,margin:"0 0 10px"}}>{libraryGapLine(answers,result.recs)}</p>}
           <p style={{fontSize:12,color:MUTED,margin:0}}>Questions? <a href="mailto:brittany@kidera.com.au" style={{color:K_GREEN}}>brittany@kidera.com.au</a></p>
         </div>
