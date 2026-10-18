@@ -256,15 +256,7 @@ const PRODUCTS = [
     search:"Young Wonderer High Contrast Baby Book"
   },
   {
-    id:"p2", fam:"water-mat", name:"Young Wonderer Sensory Water Mat", age_min:0, age_max:12,
-    dev_areas:["sensory","gross","fine"], tags:["tummy-time","sensory","water"],
-    price:39.99, asin:"B0DBH9PSP2", afflink:"https://www.amazon.com.au/dp/B0DBH9PSP2/?tag=brittanyot0c-22",
-    img:"https://m.media-amazon.com/images/I/71dCRSG7tWL._AC_SX679_.jpg",
-    note:"A favourite for tummy time. Most babies will stay on it a good while before they start complaining.",
-    search:"Young Wonderer Sensory Water Mat tummy time"
-  },
-  {
-    id:"p3", fam:"water-mat", name:"High Contrast Black & White Tummy Time Water Mat", age_min:0, age_max:12,
+    id:"p3", fam:"water-mat", name:"Young Wonderer High Contrast Tummy Time Water Mat", age_min:0, age_max:12,
     dev_areas:["sensory","gross"], tags:["tummy-time","water","visual"],
     price:24.99, asin:"B0DBH9PSP2", afflink:"https://www.amazon.com.au/dp/B0DBH9PSP2/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/71dCRSG7tWL._AC_SX679_.jpg",
@@ -599,7 +591,7 @@ const PRODUCTS = [
   {
     id:"p44", name:"Coogam Fine Motor Finger Puppets Treasure Box", age_min:36, age_max:72,
     dev_areas:["fine","cognitive","language","social"], tags:["fine-motor","animals","pretend-play","problem-solving"],
-    price:37, asin:"B0CTK2YQXY", afflink:"https://www.amazon.com.au/dp/B0CTK2YQXY/?tag=brittanyot0c-22",
+    price:35.99, asin:"B0CTK2YQXY", afflink:"https://www.amazon.com.au/dp/B0CTK2YQXY/?tag=brittanyot0c-22",
     img:"https://m.media-amazon.com/images/I/81d14HaFFqL._AC_SX679_.jpg",
     note:"Finger puppets hidden inside little locked boxes, each with a number to match. Working out which key goes where is the game.",
     search:"Coogam Fine Motor Finger Puppets Treasure Number Locks Pirate"
@@ -970,14 +962,6 @@ const PRODUCTS = [
     search:"kids roller coaster ride on outdoor toddler"
   },
   {
-    id:"p91", name:"Kids Climbing Frame with Slide", age_min:24, age_max:84,
-    dev_areas:["gross","sensory"], tags:["climbing","outdoor","strength","movement","vestibular"],
-    price:299, asin:"B0CGQY9DCH", afflink:"https://www.amazon.com.au/dp/B0CGQY9DCH/?tag=brittanyot0c-22",
-    img:"https://m.media-amazon.com/images/I/61qgyqtxSXL._AC_SX679_.jpg",
-    note:"Climbing, sliding, hanging upside down. If you have the outdoor space, a climbing frame is one of the best things you'll buy.",
-    search:"kids climbing frame slide outdoor backyard"
-  },
-  {
     id:"p92", name:"Wheelbarrow / Kids Garden Wheelbarrow", age_min:24, age_max:60,
     dev_areas:["gross","sensory","cognitive"], tags:["heavy-work","outdoor","proprioceptive","life-skills"],
     price:25, asin:"B088PQZGX5", afflink:"https://www.amazon.com.au/dp/B088PQZGX5/?tag=brittanyot0c-22",
@@ -1140,13 +1124,6 @@ const PRODUCTS = [
     price:35, asin:"B0DZNWQPLD", afflink:"https://www.amazon.com.au/dp/B0DZNWQPLD/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/815dLiPGZDL._AC_SX679_.jpg",
     note:"Zippers, buckles, buttons, latches and locks, all on one board. Every fastening they'll meet on real clothes.",
     search:"busy board toddler sensory montessori fine motor latches"
-  },
-  {
-    id:"p114", name:"Musical Dancing Duck Toy (walking ducks)", age_min:4, age_max:12,
-    dev_areas:["gross","sensory","language"], tags:["crawling","movement","music","cause-effect"],
-    price:55, asin:"B0DWWTGBJ1", afflink:"https://www.amazon.com.au/dp/B0DWWTGBJ1/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/61vNy2ayBfL._AC_SX679_.jpg",
-    note:"They walk in a line, hold hands and sing. Babies tend to set off after them.",
-    search:"musical walking dancing duck toy baby crawling"
   },
   // ── FROM 2 YEAR OLD GUIDE ──────────────────────────────────────────────────
   {
@@ -1344,7 +1321,7 @@ const PRODUCTS = [
   {
     id:"p142", name:"Musical Walking Duck Toy (Line of Ducks)", age_min:4, age_max:12,
     dev_areas:["gross","sensory","language"], tags:["crawling","movement","music","cause-effect"],
-    price:55, asin:"B0DWWTGBJ1", afflink:"https://www.amazon.com.au/dp/B0DWWTGBJ1/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/61vNy2ayBfL._AC_SX679_.jpg",
+    price:19.99, asin:"B0DWWTGBJ1", afflink:"https://www.amazon.com.au/dp/B0DWWTGBJ1/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/61vNy2ayBfL._AC_SX679_.jpg",
     note:"They walk in a line, hold hands and sing. Babies will often take off after them.",
     search:"musical walking duck toy baby line ducks singing crawling"
   },
@@ -1375,20 +1352,6 @@ const PRODUCTS = [
     price:28, asin:"B07H8YXV1L", afflink:"https://www.amazon.com.au/dp/B07H8YXV1L/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/51OQosG1piL._AC_SX679_.jpg",
     note:"A very Australian classic. Press the tummy and hear B1 and B2. Brilliant for early language, familiar characters, and cause-and-effect play.",
     search:"Bananas in Pyjamas talking plush toy B1 B2"
-  },
-  {
-    id:"p147", name:"Treasure Chest Discovery Toy", age_min:24, age_max:72,
-    dev_areas:["fine","cognitive","language"], tags:["fine-motor","problem-solving","cause-effect","numbers","colours"],
-    price:44, asin:"B0CTK2YQXY", afflink:"https://www.amazon.com.au/dp/B0CTK2YQXY/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/81d14HaFFqL._AC_SX679_.jpg",
-    note:"Open the chest with the right number or colour sequence. Getting it open is the whole point, and there's something inside.",
-    search:"treasure chest toy kids mystery unlock numbers colours"
-  },
-  {
-    id:"p148", name:"Busy Book (Perth-Made Activity Book)", age_min:36, age_max:72,
-    dev_areas:["cognitive","fine","language","social"], tags:["fine-motor","pretend-play","sorting","numbers","letters"],
-    price:90, asin:"B0DZNWQPLD", afflink:"https://www.amazon.com.au/dp/B0DZNWQPLD/?tag=brittanyot0c-22", img:"https://m.media-amazon.com/images/I/815dLiPGZDL._AC_SX679_.jpg",
-    note:"A Perth-made all-in-one activity book. Colours, numbers, early maths, even a map of Australia. Local, and genuinely well made.",
-    search:"Busy Book kids activity learning pretend play Australia"
   },
   {
     id:"p149", name:"Nest Swing / Platform Swing", age_min:36, age_max:144,
@@ -3000,7 +2963,7 @@ function famOf(p,answers){
   if(p.fam==="vet-set")return "care-play";
   if(p.fam)return p.fam;
   if(["p42","p73","p100"].includes(p.id))return "rocket-launcher";
-  if(["p91","p128"].includes(p.id))return "climbing-frame";
+  if(p.id==="p128")return "climbing-frame";
   if(p.id==="p122")return "toilet-seat";
   const n=(p.name||"").toLowerCase();
   if(/soft book|crinkle|cloth book|bath book|touch and feel/.test(n))return "soft-book";
