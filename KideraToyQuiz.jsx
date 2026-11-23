@@ -3994,6 +3994,7 @@ function EmailGate({recs,onUnlock,isGift}){
               </div>
               <h2 style={{fontSize:16,fontWeight:700,color:TEXT,margin:"0 0 6px",lineHeight:1.3}}>{toy.name}</h2>
               <p style={{fontSize:14,color:TEXT,lineHeight:1.6,margin:0}}><strong>Brittany's note:</strong> {toy.note}</p>
+              <a href={buildUrl(toy)} target="_blank" rel="noopener noreferrer" style={{display:"inline-flex",alignItems:"center",gap:6,background:K_YELLOW,color:TEXT,fontWeight:700,fontSize:13,padding:"9px 18px",borderRadius:10,textDecoration:"none",marginTop:12}}>View on Amazon AU</a>
             </div>
           </div>
         ))}
@@ -4007,10 +4008,10 @@ function EmailGate({recs,onUnlock,isGift}){
         <div style={{background:CARD,border:"1px solid "+BORDER,borderRadius:16,padding:"24px 20px",marginTop:18}}>
           <h2 style={{fontSize:18,fontWeight:800,color:TEXT,margin:"0 0 8px"}}>See all {count} picks</h2>
           <p style={{fontSize:15,color:TEXT,margin:"0 0 10px",lineHeight:1.5}}>
-            Pop in your email to see all {count}, with direct links{isGift ? "" : ", play ideas"} and why each one suits {isGift ? "this child" : "your child"}.
+            Pop in your email to see all {count}{isGift ? "" : ", with play ideas"} and why each one suits {isGift ? "this child" : "your child"}.
           </p>
           <p style={{fontSize:15,color:TEXT,margin:"0 0 14px",lineHeight:1.5}}>
-            Already have one, or it's not quite right? Once you're in, you can swap any pick and I'll find another one based on your answers.
+            You can also swap any pick as many times as you like. I'll keep finding new ones from my library, matched to your answers.
           </p>
           <form onSubmit={submit} noValidate>
             <input type="email" value={email} onChange={(e)=>setEmail(e.target.value)} placeholder="you@email.com" autoComplete="email"
@@ -4034,7 +4035,7 @@ function EmailGate({recs,onUnlock,isGift}){
 export default function KideraToyQuiz(){
   const[step,setStep]=useState(0);const[answers,setAnswers]=useState({});
   const[result,setResult]=useState(null);const[gateOpen,setGateOpen]=useState(false);const[loading,setLoading]=useState(false);
-  const[swappingIndex,setSwappingIndex]=useState(null);const[excludedIds,setExcludedIds]=useState([]);
+  const[swappingIndex,setSwappingIndex]=useState(null);const[swapEmpty,setSwapEmpty]=useState(null);const[excludedIds,setExcludedIds]=useState([]);
   const runRef=useRef(null);
 
   const current=STEPS[step];
@@ -4189,7 +4190,7 @@ Number the items to match the toy list exactly: n=1 is toy 1, and so on. Put the
     setExcludedIds(newExcluded);setSwappingIndex(index);
     try{
       const replacement=getRecommendations({...answers},1,[...newExcluded,...keptIds],result.recs.filter((_,i)=>i!==index));
-      if(!replacement.length){setSwappingIndex(null);return;}
+      if(!replacement.length){setSwappingIndex(null);setSwapEmpty(index);return;}
       const newToy=replacement[0];
       let reason=newToy.note;let playIdea="";
       try{const ai=await callAI([newToy],0);reason=ai.reason||newToy.note;playIdea=ai.play_idea||"";}catch{}
@@ -4261,6 +4262,7 @@ Number the items to match the toy list exactly: n=1 is toy 1, and so on. Put the
                   style={{fontSize:13,color:MUTED,background:"none",border:`1px solid ${BORDER}`,borderRadius:8,padding:"9px 14px",cursor:swappingIndex!==null||result.pending?"default":"pointer",opacity:result.pending?0.5:1}}>
                   {swappingIndex===i?"Finding a swap...":"🔄 Swap this (already have it or not quite right)"}
                 </button>
+                {swapEmpty===i&&<p style={{fontSize:13,color:MUTED,margin:"4px 0 0",flexBasis:"100%",lineHeight:1.5}}>That's every match I have for these answers. Change an answer to see different picks.</p>}
               </div>
             </div>
           </div>
